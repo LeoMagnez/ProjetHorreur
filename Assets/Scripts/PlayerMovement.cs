@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private MoveSettings _settings = null;
+    [SerializeField] private MoveSettings[] _settings = null;
     [SerializeField] private GameObject _spray;
 
     private Vector3 _moveDirection;
@@ -18,7 +18,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        DefaultMovement();
+
+        
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            RunningMovement();
+        }
+        else
+        {
+            DefaultMovement();
+        }
         Spray();
     }
 
@@ -31,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_controller.isGrounded)
         {
-            Debug.Log("Si tu vois ça c'est pas normal");
             Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //stockage des input
 
             if(input.x != 0 && input.y != 0)
@@ -39,9 +48,9 @@ public class PlayerMovement : MonoBehaviour
                 input *= 0.777f; //Normalise le Vector2 "input". Empêche de bouger plus vite en allant en diagonale
             }
 
-            _moveDirection.x = input.x * _settings.speed;
-            _moveDirection.z = input.y * _settings.speed;
-            _moveDirection.y = -_settings.speed;
+            _moveDirection.x = input.x * _settings[0].speed;
+            _moveDirection.z = input.y * _settings[0].speed;
+            _moveDirection.y = -_settings[0].speed;
 
             _moveDirection = transform.TransformDirection(_moveDirection);
 
@@ -53,13 +62,42 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            _moveDirection.y -= _settings.gravity * Time.deltaTime;
+            _moveDirection.y -= _settings[0].gravity * Time.deltaTime;
+        }
+    }
+
+    private void RunningMovement()
+    {
+        if (_controller.isGrounded)
+        {
+            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //stockage des input
+
+            if (input.x != 0 && input.y != 0)
+            {
+                input *= 0.777f; //Normalise le Vector2 "input". Empêche de bouger plus vite en allant en diagonale
+            }
+
+            _moveDirection.x = input.x * _settings[1].speed;
+            _moveDirection.z = input.y * _settings[1].speed;
+            _moveDirection.y = -_settings[1].speed;
+
+            _moveDirection = transform.TransformDirection(_moveDirection);
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Jump();
+            }
+
+        }
+        else
+        {
+            _moveDirection.y -= _settings[1].gravity * Time.deltaTime;
         }
     }
 
     private void Jump()
     {
-        _moveDirection.y += _settings.jumpForce;
+        _moveDirection.y += _settings[0].jumpForce;
     }
 
     public void Spray()
