@@ -1,35 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private MoveSettings[] _settings = null;
+    [SerializeField] private CinemachineVirtualCamera vcam;
     [SerializeField] private GameObject _spray;
 
     private Vector3 _moveDirection;
     public CharacterController _controller;
 
+    [Header("Idle cam values")]
+    public float idleCamNoiseAmplitude;
+    public float idleCamNoiseFrequency;
+
+    [Header("Walking cam values")]
+    public float walkingCamNoiseAmplitude;
+    public float walkingCamNoiseFrequency;
+
+    [Header("Running can values")]
+    public float runningCamNoiseAmplitude;
+    public float runningCamNoiseFrequency;
+
+    public bool isIdle = true;
+    public bool isRunnning = false;
+
+
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
+        vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = idleCamNoiseAmplitude;
+        vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = idleCamNoiseFrequency;
     }
 
     // Update is called once per frame
     private void Update()
     {
 
-        
-
         if (Input.GetKey(KeyCode.H))
         {
+            isRunnning = true;
             RunningMovement();
         }
         else
         {
+            isRunnning = false;
             DefaultMovement();
         }
         Spray();
+        CamMouvement();
+
+        
     }
 
     private void FixedUpdate()
@@ -46,6 +69,15 @@ public class PlayerMovement : MonoBehaviour
             if(input.x != 0 && input.y != 0)
             {
                 input *= 0.777f; //Normalise le Vector2 "input". Empêche de bouger plus vite en allant en diagonale
+            }
+
+            if(input.x != 0 || input.y != 0)
+            {
+                isIdle = false;
+            }
+            else
+            {
+                isIdle = true;
             }
 
             _moveDirection.x = input.x * _settings[0].speed;
@@ -118,4 +150,25 @@ public class PlayerMovement : MonoBehaviour
         }
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 2f, Color.red);
     }
+
+    public void CamMouvement()
+    {
+        if(!isIdle && !isRunnning)
+        {
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = walkingCamNoiseAmplitude;
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = walkingCamNoiseFrequency;
+        }
+        else if (isRunnning)
+        {
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = runningCamNoiseAmplitude;
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = runningCamNoiseFrequency;
+        }
+        else
+        {
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = idleCamNoiseAmplitude;
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = idleCamNoiseFrequency;
+        }
+    }
+
+
 }

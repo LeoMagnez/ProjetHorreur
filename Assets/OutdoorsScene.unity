@@ -1742,8 +1742,17 @@ MonoBehaviour:
   _settings:
   - {fileID: 11400000, guid: 66ccd064a06d08c4da03a0c3f04ddda6, type: 2}
   - {fileID: 11400000, guid: 5cb8fc7037c6e444f8cbbd98907cd970, type: 2}
+  vcam: {fileID: 319642818}
   _spray: {fileID: 966131418}
   _controller: {fileID: 757124182}
+  idleCamNoiseAmplitude: 0.3
+  idleCamNoiseFrequency: 0.5
+  walkingCamNoiseAmplitude: 0.4
+  walkingCamNoiseFrequency: 1
+  runningCamNoiseAmplitude: 0.6
+  runningCamNoiseFrequency: 1.5
+  isIdle: 1
+  isRunnning: 0
 --- !u!1 &872646208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2043,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1449793301}
   m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &951131007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951131009}
+  - component: {fileID: 951131008}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &951131008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951131007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 2cfb72c621044634c8b88f441bc367b8, type: 2}
+--- !u!4 &951131009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951131007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966131418
 GameObject:
