@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_controller.isGrounded)
         {
-            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //stockage des input
+            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //stockage des inputs
 
             if(input.x != 0 && input.y != 0)
             {
