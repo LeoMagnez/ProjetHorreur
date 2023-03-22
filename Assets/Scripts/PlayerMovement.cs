@@ -86,11 +86,6 @@ public class PlayerMovement : MonoBehaviour
 
             _moveDirection = transform.TransformDirection(_moveDirection);
 
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Jump();
-            }
-
         }
         else
         {
@@ -115,21 +110,12 @@ public class PlayerMovement : MonoBehaviour
 
             _moveDirection = transform.TransformDirection(_moveDirection);
 
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Jump();
-            }
 
         }
         else
         {
             _moveDirection.y -= _settings[1].gravity * Time.deltaTime;
         }
-    }
-
-    private void Jump()
-    {
-        _moveDirection.y += _settings[0].jumpForce;
     }
 
     public void Spray()
@@ -151,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 2f, Color.red);
     }
 
-    public void CamMouvement()
+    public void CamMouvement() //Change the cinemachine virtual camera's noise according to the player's sate (idle, walking, running)
     {
         if(!isIdle && !isRunnning)
         {
