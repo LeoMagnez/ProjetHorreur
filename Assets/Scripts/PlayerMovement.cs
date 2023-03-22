@@ -20,17 +20,19 @@ public class PlayerMovement : MonoBehaviour
     public float walkingCamNoiseAmplitude;
     public float walkingCamNoiseFrequency;
 
-    [Header("Running can values")]
+    [Header("Running cam values")]
     public float runningCamNoiseAmplitude;
     public float runningCamNoiseFrequency;
 
-    public bool isIdle = true;
-    public bool isRunnning = false;
+    private bool isIdle = true;
+    private bool isRunnning = false;
 
 
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
+
+        //player is idle on awake
         vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = idleCamNoiseAmplitude;
         vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = idleCamNoiseFrequency;
     }
@@ -64,11 +66,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_controller.isGrounded)
         {
-            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //stockage des input
+            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //inputs
 
             if(input.x != 0 && input.y != 0)
             {
-                input *= 0.777f; //Normalise le Vector2 "input". Empêche de bouger plus vite en allant en diagonale
+                input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
             }
 
             if(input.x != 0 || input.y != 0)
@@ -97,11 +99,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_controller.isGrounded)
         {
-            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //stockage des input
+            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //inputs
 
             if (input.x != 0 && input.y != 0)
             {
-                input *= 0.777f; //Normalise le Vector2 "input". Empêche de bouger plus vite en allant en diagonale
+                input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
             }
 
             _moveDirection.x = input.x * _settings[1].speed;
@@ -141,16 +143,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!isIdle && !isRunnning)
         {
+            //adjust frequency and amplitude when the player is walking
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = walkingCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = walkingCamNoiseFrequency;
         }
         else if (isRunnning)
         {
+            //adjust frequency and amplitude when the player is running
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = runningCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = runningCamNoiseFrequency;
         }
         else
         {
+            //adjust frequency and amplitude when the player is idle
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = idleCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = idleCamNoiseFrequency;
         }
