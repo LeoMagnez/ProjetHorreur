@@ -25,7 +25,7 @@ public class CameraManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("oui je marche");
-            ScreenCapture.CaptureScreenshot("D:\\Unity Project\\ProjetHorreur\\Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
+            ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
             AssetDatabase.Refresh();
         }
     }
