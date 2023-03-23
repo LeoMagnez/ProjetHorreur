@@ -53,7 +53,7 @@ public class CameraManager : MonoBehaviour
         {
             Debug.Log("oui je marche");
             ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
-            AssetDatabase.Refresh();
+            //AssetDatabase.Refresh();
         }
 
     }
