@@ -20,8 +20,8 @@ public class CameraManager : MonoBehaviour
     private void Update()
     {
         cameraUp();
-        takePhoto();
         changeMaterial();
+        takePhoto();
     }
 
     private void cameraUp()
