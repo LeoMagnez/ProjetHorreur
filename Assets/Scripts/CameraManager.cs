@@ -19,18 +19,31 @@ public class CameraManager : MonoBehaviour
 
     private void Update()
     {
-        cameraUp();
+        if (Input.GetMouseButtonUp(1)) 
+        {
+            if (!_isCameraUp)
+            {
+                cameraUp();
+            }
+            else 
+            {
+                cameraDown();
+            }
+        }
+        //cameraUp();
         changeMaterial();
         takePhoto();
     }
 
     private void cameraUp()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            _isCameraUp= true;
-            UI.SetActive(true);
-        }
+        _isCameraUp = true;
+        UI.SetActive(true);
+    }
+    private void cameraDown()
+    {
+        _isCameraUp = false;
+        UI.SetActive(false);
     }
 
     private void takePhoto()
