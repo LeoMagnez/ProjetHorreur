@@ -11,10 +11,13 @@ public class CameraManager : MonoBehaviour
 
     private bool _isCameraUp = false;
 
+    public bool _takingPhoto = false;
+
     public GameObject UI;
 
     public MeshRenderer MeshRenderer;
-    public Material material;
+    public Material _whiteMaterial;
+    public Material _blackMaterial;
     public Texture image;
 
     public RenderTexture rt;
@@ -36,6 +39,11 @@ public class CameraManager : MonoBehaviour
         takePhoto();
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
+
     private void cameraUp()
     {
         _isCameraUp = true;
@@ -52,20 +60,55 @@ public class CameraManager : MonoBehaviour
         //Possibilité de mettre une condition pour limiter le nombre de prise de photo avec _screenNumber
         if (Input.GetMouseButtonDown(0) && _isCameraUp)
         {
+            _takingPhoto = true;
+            Raycast();
             Debug.Log("oui je marche");
             //ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
             //AssetDatabase.Refresh();
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
             _screenNumber++;
+
         }
 
     }
     private void changeMaterial()
     {
-        MeshRenderer.material.SetTexture("_BaseMap", image);
+        //MeshRenderer.material.SetTexture("_BaseMap", image);
     }
 
+    public void Raycast()
+    {
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, 50f))
+        {
+            
+            //Debug.Log("Did Hit");
+            if (hit.transform.tag == "_photoImportante" && _takingPhoto)
+            {
+                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
+                Debug.Log("Je détecte quelque chose d'important");
 
+                MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
+                _takingPhoto = false;
+            }
+
+            else
+            {
+                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            }
+        }
+        else
+        {
+            Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 1000, Color.red);
+            Debug.Log("Did not Hit");
+            if (_takingPhoto)
+            {
+                MeshRenderer.GetComponent<MeshRenderer>().material = _whiteMaterial;
+                _takingPhoto = false;
+            }
+        }
+    }
 
 
 }

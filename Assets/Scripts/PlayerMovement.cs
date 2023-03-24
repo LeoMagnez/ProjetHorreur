@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             isRunnning = false;
             DefaultMovement();
         }
-        Spray();
+        //Spray();
         CamMouvement();
 
         
