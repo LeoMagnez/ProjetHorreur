@@ -17,6 +17,7 @@ public class CameraManager : MonoBehaviour
     public Material material;
     public Texture image;
 
+    public RenderTexture rt;
     private void Update()
     {
         if (Input.GetMouseButtonUp(1)) 
@@ -52,8 +53,10 @@ public class CameraManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && _isCameraUp)
         {
             Debug.Log("oui je marche");
-            ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
+            //ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
             //AssetDatabase.Refresh();
+            SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
+            _screenNumber++;
         }
 
     }
@@ -61,6 +64,8 @@ public class CameraManager : MonoBehaviour
     {
         MeshRenderer.material.SetTexture("_BaseMap", image);
     }
+
+
 
 
 }
