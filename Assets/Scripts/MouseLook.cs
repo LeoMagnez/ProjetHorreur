@@ -16,12 +16,15 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
         mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 

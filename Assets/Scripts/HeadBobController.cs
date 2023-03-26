@@ -7,11 +7,17 @@ public class HeadBobController : MonoBehaviour
 
     [SerializeField] private bool _enable = true; //Désactive le HeadBob si besoin
 
-    [Header("Courbes de Lissajous")]
+    [Header("Première Courbe de Lissajous")]
     [SerializeField, Range(0, 10f)] private float _amplitudeA = 1f;
     [SerializeField, Range(0, 10f)] private float _amplitudeB = 0.15f;
     [SerializeField, Range(0, 10f)] private float _frequencyA = 0.01f;
     [SerializeField, Range(0, 10f)] private float _frequencyB = 0.01f;
+
+    [Header("Deuxième Courbe de Lissajous")]
+    [SerializeField, Range(0, 10f)] private float _amplitudeC = 1f;
+    [SerializeField, Range(0, 10f)] private float _amplitudeD = 0.15f;
+    [SerializeField, Range(0, 10f)] private float _frequencyC = 0.01f;
+    [SerializeField, Range(0, 10f)] private float _frequencyD = 0.01f;
 
     [Header("Paramètres supplémentaires")]
     [SerializeField, Range(0, 0.1f)] private float _offsetAmplitude;
@@ -76,9 +82,17 @@ public class HeadBobController : MonoBehaviour
         pos.y = _amplitudeB * Mathf.Sin(_frequencyB * Time.time + 0f);
 
         //Léger offset de la courbe de manière aléatoire 
-        randomOffset += Random.insideUnitSphere * _offsetAmplitude;
+        /*randomOffset += Random.insideUnitSphere * _offsetAmplitude;
         randomOffset = Vector3.ClampMagnitude(randomOffset, 0.05f);
-        pos += randomOffset;
+        pos += randomOffset;*/
+
+        Vector3 pos2 = Vector3.zero;
+
+        pos2.x = _amplitudeC * Mathf.Sin(_frequencyC * Time.time + 0f);
+        pos2.y = _amplitudeD * Mathf.Sin(_frequencyD * Time.time + 0f);
+
+        pos = pos + pos2;
+
 
         return pos;
     }
@@ -96,7 +110,7 @@ public class HeadBobController : MonoBehaviour
     private Vector3 FocusTarget() //Stabilisation du mouvement
     {
         Vector3 pos = new Vector3(transform.position.x, transform.position.y + _cameraHolder.localPosition.y, transform.position.z);
-        pos += _cameraHolder.forward * 15.0f;
+        pos += _cameraHolder.forward * 200.0f;
         return pos;
     }
 }
