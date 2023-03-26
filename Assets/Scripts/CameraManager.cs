@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +22,26 @@ public class CameraManager : MonoBehaviour
     public Material _blackMaterial;
     public Texture image;
 
+    public List<Image> _takenPictures = new List<Image>();
+    public Texture2D test;
+
     public RenderTexture rt;
+
+    private void Start()
+    {
+
+        if(test != null)
+        {
+            Debug.Log("J'ai un truc");
+        }
+        else
+        {
+            Debug.Log("J'ai rien trouvé");
+        }
+
+        test = Resources.Load<Texture2D>("capture0");
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonUp(1)) 
@@ -67,7 +88,9 @@ public class CameraManager : MonoBehaviour
             //AssetDatabase.Refresh();
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
             _screenNumber++;
-
+            Image temp = Resources.Load("Assets\\Screenshot\\capture" + _screenNumber + ".png") as Image;
+            _takenPictures.Add(temp);
+            //"Assets\\Screenshot\\capture" + _screenNumber + ".png"
         }
 
     }
