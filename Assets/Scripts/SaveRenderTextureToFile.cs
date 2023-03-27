@@ -12,7 +12,7 @@ public class SaveRenderTextureToFile
 
         RenderTexture.active = rt;
         Graphics.Blit(rt, rt);
-        Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
+        Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB48, false);
         tex.ReadPixels(new Rect(0, 0, rt.width , rt.height), 0, 0);
         RenderTexture.active = null;
 

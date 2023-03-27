@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera vcam;
     [SerializeField] private GameObject _spray;
 
+
     private Vector3 _moveDirection;
     public CharacterController _controller;
 

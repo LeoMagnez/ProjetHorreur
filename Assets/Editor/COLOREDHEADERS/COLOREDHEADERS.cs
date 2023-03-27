@@ -14,6 +14,8 @@ using UnityEditor;
 /// F: Added some base setups for common categories.
 /// </summary>
 /// 
+
+
 #if UNITY_EDITOR
 [InitializeOnLoad]
 public static class HierarchyWindowGroupHeader
