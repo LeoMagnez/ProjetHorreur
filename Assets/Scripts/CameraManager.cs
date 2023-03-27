@@ -9,9 +9,10 @@ using UnityEngine.UI;
 public class CameraManager : MonoBehaviour
 
 {
+    public static CameraManager instance { get; private set; }
     private int _screenNumber = 0;
 
-    private bool _isCameraUp = false;
+    public bool _isCameraUp = false;
 
     public bool _takingPhoto = false;
 
@@ -29,6 +30,13 @@ public class CameraManager : MonoBehaviour
 
     public GameObject _porte;
 
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(gameObject);    // Suppression d'une instance précédente (sécurité...sécurité...)
+
+        instance = this;
+    }
     private void Start()
     {
 
