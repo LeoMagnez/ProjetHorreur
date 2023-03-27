@@ -19,7 +19,7 @@ public class SaveRenderTextureToFile
         byte[] bytes;
         bytes = tex.EncodeToPNG();
 
-        string path = "Assets\\Screenshot\\capture" + _screenNumber + ".png";
+        string path = "Assets\\Resources\\capture" + _screenNumber + ".png";
         System.IO.File.WriteAllBytes(path, bytes);
         AssetDatabase.ImportAsset(path);
         Debug.Log("Saved to " + path);
