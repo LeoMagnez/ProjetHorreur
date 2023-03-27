@@ -36,6 +36,7 @@ public static class HierarchyWindowGroupHeader
 
         
 
+
         if (gameObject != null && gameObject.name.StartsWith("---", StringComparison.Ordinal))
         {
             bool _hasfound = false;
