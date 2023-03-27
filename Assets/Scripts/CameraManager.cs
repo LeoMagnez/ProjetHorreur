@@ -106,7 +106,7 @@ public class CameraManager : MonoBehaviour
     }
     private void changeMaterial()
     {
-        //MeshRenderer.material.SetTexture("_BaseMap", image);
+        MeshRenderer.material.SetTexture("_BaseMap", Resources.Load<Texture2D>("capture" + _screenNumber));
     }
 
     public void Raycast()
