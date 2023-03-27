@@ -149,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (isRunnning && !isIdle)
         {
+
             //adjust frequency and amplitude when the player is running
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = runningCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = runningCamNoiseFrequency;
