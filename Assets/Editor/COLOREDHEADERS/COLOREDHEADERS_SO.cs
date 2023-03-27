@@ -7,6 +7,7 @@ using System;
 public class COLOREDHEADERS_SO : ScriptableObject
 {
 
+
     [Serializable]
     public struct ColoredTitle
     {
