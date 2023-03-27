@@ -14,6 +14,8 @@ public class CameraManager : MonoBehaviour
 
     public bool _isCameraUp = false;
 
+    public bool _isUIup = false;
+
     public bool _takingPhoto = false;
 
     public GameObject UI;
@@ -71,10 +73,21 @@ public class CameraManager : MonoBehaviour
                 cameraDown();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!_isUIup)
+            {
+                UIup();
+            }
+            else
+            {
+                UIdown();
+            }
+        }
         //cameraUp();
         changeMaterial();
         takePhoto();
-        affichageUI();
     }
 
     private void FixedUpdate()
@@ -96,6 +109,18 @@ public class CameraManager : MonoBehaviour
         //UI.SetActive(false);
     }
 
+    private void UIup()
+    {
+        _isUIup = true;
+        _cameraUI.SetTrigger("UICameraUp");
+    }
+    private void UIdown()
+    {
+        _isUIup = false;
+        _cameraUI.SetTrigger("UICameraDown");
+    }
+
+
     private void takePhoto()
     {
         //Possibilité de mettre une condition pour limiter le nombre de prise de photo avec _screenNumber
@@ -115,13 +140,7 @@ public class CameraManager : MonoBehaviour
 
     }
 
-    private void affichageUI() 
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            _cameraUI.SetTrigger("UICameraUp");
-        }
-    }
+   
     private void changeMaterial()
     {
         MeshRenderer.material.SetTexture("_BaseMap", Resources.Load<Texture2D>("capture" + _screenNumber));
