@@ -22,7 +22,7 @@ public class CameraManager : MonoBehaviour
     public Material _blackMaterial;
     public Texture image;
 
-    public List<Image> _takenPictures = new List<Image>();
+    public List<Texture2D> _takenPictures = new List<Texture2D>();
     public Texture2D test;
 
     public RenderTexture rt;
@@ -87,9 +87,9 @@ public class CameraManager : MonoBehaviour
             //ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
             //AssetDatabase.Refresh();
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
-            _screenNumber++;
-            Image temp = Resources.Load("Assets\\Screenshot\\capture" + _screenNumber + ".png") as Image;
+            Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
             _takenPictures.Add(temp);
+            _screenNumber++;
             //"Assets\\Screenshot\\capture" + _screenNumber + ".png"
         }
 
