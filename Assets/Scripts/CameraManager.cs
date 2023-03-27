@@ -27,6 +27,8 @@ public class CameraManager : MonoBehaviour
 
     public RenderTexture rt;
 
+    public GameObject _porte;
+
     private void Start()
     {
 
@@ -89,7 +91,7 @@ public class CameraManager : MonoBehaviour
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
             Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
             _takenPictures.Add(temp);
-            _screenNumber++;
+            _screenNumber++;    
             //"Assets\\Screenshot\\capture" + _screenNumber + ".png"
         }
 
@@ -114,6 +116,7 @@ public class CameraManager : MonoBehaviour
 
                 MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
                 _takingPhoto = false;
+                _porte.SetActive(true);
             }
 
             else
