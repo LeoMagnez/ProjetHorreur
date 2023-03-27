@@ -122,7 +122,7 @@ public class CameraManager : MonoBehaviour
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 Debug.Log("Je détecte quelque chose d'important");
 
-                MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
+                //MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
                 _takingPhoto = false;
                 _porte.SetActive(true);
             }
@@ -138,7 +138,7 @@ public class CameraManager : MonoBehaviour
             Debug.Log("Did not Hit");
             if (_takingPhoto)
             {
-                MeshRenderer.GetComponent<MeshRenderer>().material = _whiteMaterial;
+                //MeshRenderer.GetComponent<MeshRenderer>().material = _whiteMaterial;
                 _takingPhoto = false;
             }
         }
