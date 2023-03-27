@@ -30,6 +30,8 @@ public class CameraManager : MonoBehaviour
 
     public GameObject _porte;
 
+    public Animator _cameraUp;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -78,12 +80,15 @@ public class CameraManager : MonoBehaviour
     private void cameraUp()
     {
         _isCameraUp = true;
-        UI.SetActive(true);
+        _cameraUp.SetTrigger("camera_activation");
+        //UI.SetActive(true);
     }
     private void cameraDown()
     {
         _isCameraUp = false;
-        UI.SetActive(false);
+
+        _cameraUp.SetTrigger("camera_desactivation");
+        //UI.SetActive(false);
     }
 
     private void takePhoto()
