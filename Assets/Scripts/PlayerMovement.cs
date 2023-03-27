@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
     public float runningCamNoiseAmplitude;
     public float runningCamNoiseFrequency;
 
+    [Header("Holding Camera cam values")]
+    public float holdingCamNoiseAmplitude;
+    public float holdingCamNoiseFrequency;
+
     private bool isIdle = true;
     private bool isRunnning = false;
 
@@ -41,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKey(KeyCode.H))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             isRunnning = true;
             RunningMovement();
@@ -51,7 +55,12 @@ public class PlayerMovement : MonoBehaviour
             isRunnning = false;
             DefaultMovement();
         }
-        //Spray();
+
+        if (CameraManager.instance._isCameraUp)
+        {
+            HoldingCamMovement();
+        }
+
         CamMouvement();
 
         
@@ -120,39 +129,56 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Spray()
+    private void HoldingCamMovement()
     {
-
-        if (Input.GetKeyDown(KeyCode.K))
+        if (_controller.isGrounded)
         {
-            RaycastHit hit;
+            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //inputs
 
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, 2f))
+            if (input.x != 0 && input.y != 0)
             {
-                Instantiate(_spray, hit.point + Camera.main.transform.TransformDirection(Vector3.forward) * 0f, Camera.main.transform.rotation);
-                
-                Debug.Log("hit");
+                input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
             }
+
+            _moveDirection.x = input.x * _settings[2].speed;
+            _moveDirection.z = input.y * _settings[2].speed;
+            _moveDirection.y = -_settings[2].speed;
+
+            _moveDirection = transform.TransformDirection(_moveDirection);
 
 
         }
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 2f, Color.red);
+        else
+        {
+            _moveDirection.y -= _settings[2].gravity * Time.deltaTime;
+        }
     }
+
 
     public void CamMouvement() //Change the cinemachine virtual camera's noise according to the player's sate (idle, walking, running)
     {
-        if(!isIdle && !isRunnning)
+        if(!isIdle && !isRunnning &&!CameraManager.instance._isCameraUp)
         {
             //adjust frequency and amplitude when the player is walking
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = walkingCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = walkingCamNoiseFrequency;
         }
-        else if (isRunnning)
+        else if (isRunnning && !isIdle && !CameraManager.instance._isCameraUp)
         {
+
             //adjust frequency and amplitude when the player is running
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = runningCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = runningCamNoiseFrequency;
         }
+
+        else if (CameraManager.instance._isCameraUp)
+        {
+
+            //adjust frequency and amplitude when the player is holding the camera
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = holdingCamNoiseAmplitude;
+            vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = holdingCamNoiseFrequency;
+        }
+
         else
         {
             //adjust frequency and amplitude when the player is idle
