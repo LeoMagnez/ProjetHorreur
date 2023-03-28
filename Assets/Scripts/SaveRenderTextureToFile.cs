@@ -12,14 +12,14 @@ public class SaveRenderTextureToFile
 
         RenderTexture.active = rt;
         Graphics.Blit(rt, rt);
-        Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
+        Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB48, false);
         tex.ReadPixels(new Rect(0, 0, rt.width , rt.height), 0, 0);
         RenderTexture.active = null;
 
         byte[] bytes;
         bytes = tex.EncodeToPNG();
 
-        string path = "Assets\\Screenshot\\capture" + _screenNumber + ".png";
+        string path = "Assets\\Resources\\capture" + _screenNumber + ".png";
         System.IO.File.WriteAllBytes(path, bytes);
         AssetDatabase.ImportAsset(path);
         Debug.Log("Saved to " + path);

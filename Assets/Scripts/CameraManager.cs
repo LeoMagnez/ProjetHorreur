@@ -9,9 +9,12 @@ using UnityEngine.UI;
 public class CameraManager : MonoBehaviour
 
 {
+    public static CameraManager instance { get; private set; }
     private int _screenNumber = 0;
 
-    private bool _isCameraUp = false;
+    public bool _isCameraUp = false;
+
+    public bool _isUIup = false;
 
     public bool _takingPhoto = false;
 
@@ -22,11 +25,26 @@ public class CameraManager : MonoBehaviour
     public Material _blackMaterial;
     public Texture image;
 
-    public List<Image> _takenPictures = new List<Image>();
+    public List<Texture2D> _takenPictures = new List<Texture2D>();
     public Texture2D test;
 
     public RenderTexture rt;
 
+    public GameObject _porte;
+
+    public Animator _camera;
+
+    public Animator _cameraUI;
+
+    
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(gameObject);    // Suppression d'une instance précédente (sécurité...sécurité...)
+
+        instance = this;
+    }
     private void Start()
     {
 
@@ -55,6 +73,18 @@ public class CameraManager : MonoBehaviour
                 cameraDown();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!_isUIup)
+            {
+                UIup();
+            }
+            else
+            {
+                UIdown();
+            }
+        }
         //cameraUp();
         changeMaterial();
         takePhoto();
@@ -68,12 +98,28 @@ public class CameraManager : MonoBehaviour
     private void cameraUp()
     {
         _isCameraUp = true;
-        UI.SetActive(true);
+        _camera.SetTrigger("camera_activation");
+        //UI.SetActive(true);
     }
     private void cameraDown()
     {
         _isCameraUp = false;
-        UI.SetActive(false);
+        _camera.SetTrigger("camera_desactivation");
+        //UI.SetActive(false);
+    }
+
+    private void UIup()
+    {
+        _isUIup = true;
+        _cameraUI.SetTrigger("UICameraUp");
+
+    }
+
+    private void UIdown()
+    {
+        _isUIup = false;
+        _cameraUI.SetTrigger("UICameraDown");
+
     }
 
     private void takePhoto()
@@ -87,16 +133,16 @@ public class CameraManager : MonoBehaviour
             //ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
             //AssetDatabase.Refresh();
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
-            _screenNumber++;
-            Image temp = Resources.Load("Assets\\Screenshot\\capture" + _screenNumber + ".png") as Image;
+            Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
             _takenPictures.Add(temp);
+            _screenNumber++;    
             //"Assets\\Screenshot\\capture" + _screenNumber + ".png"
         }
 
     }
     private void changeMaterial()
     {
-        //MeshRenderer.material.SetTexture("_BaseMap", image);
+        MeshRenderer.material.SetTexture("_BaseMap", Resources.Load<Texture2D>("capture" + _screenNumber));
     }
 
     public void Raycast()
@@ -112,8 +158,9 @@ public class CameraManager : MonoBehaviour
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 Debug.Log("Je détecte quelque chose d'important");
 
-                MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
+                //MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
                 _takingPhoto = false;
+                _porte.SetActive(true);
             }
 
             else
@@ -127,7 +174,7 @@ public class CameraManager : MonoBehaviour
             Debug.Log("Did not Hit");
             if (_takingPhoto)
             {
-                MeshRenderer.GetComponent<MeshRenderer>().material = _whiteMaterial;
+                //MeshRenderer.GetComponent<MeshRenderer>().material = _whiteMaterial;
                 _takingPhoto = false;
             }
         }
