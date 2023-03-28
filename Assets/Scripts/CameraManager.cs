@@ -32,9 +32,13 @@ public class CameraManager : MonoBehaviour
 
     public GameObject _porte;
 
+    public GameObject _objetImportant;
+
     public Animator _camera;
 
     public Animator _cameraUI;
+
+    public GameObject _lightCamera;
 
     
 
@@ -67,10 +71,12 @@ public class CameraManager : MonoBehaviour
             if (!_isCameraUp)
             {
                 cameraUp();
+                _lightCamera.SetActive(true);
             }
             else 
             {
                 cameraDown();
+                _lightCamera.SetActive(false);
             }
         }
 
@@ -160,6 +166,7 @@ public class CameraManager : MonoBehaviour
 
                 //MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
                 _takingPhoto = false;
+                _objetImportant.SetActive(false);
                 _porte.SetActive(true);
             }
 
