@@ -14,6 +14,8 @@ public class CameraManager : MonoBehaviour
 
     public bool _isCameraUp = false;
 
+    public bool _isUIup = false;
+
     public bool _takingPhoto = false;
 
     public GameObject UI;
@@ -29,6 +31,12 @@ public class CameraManager : MonoBehaviour
     public RenderTexture rt;
 
     public GameObject _porte;
+
+    public Animator _camera;
+
+    public Animator _cameraUI;
+
+    
 
     private void Awake()
     {
@@ -65,6 +73,18 @@ public class CameraManager : MonoBehaviour
                 cameraDown();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!_isUIup)
+            {
+                UIup();
+            }
+            else
+            {
+                UIdown();
+            }
+        }
         //cameraUp();
         changeMaterial();
         takePhoto();
@@ -78,12 +98,28 @@ public class CameraManager : MonoBehaviour
     private void cameraUp()
     {
         _isCameraUp = true;
-        UI.SetActive(true);
+        _camera.SetTrigger("camera_activation");
+        //UI.SetActive(true);
     }
     private void cameraDown()
     {
         _isCameraUp = false;
-        UI.SetActive(false);
+        _camera.SetTrigger("camera_desactivation");
+        //UI.SetActive(false);
+    }
+
+    private void UIup()
+    {
+        _isUIup = true;
+        _cameraUI.SetTrigger("UICameraUp");
+
+    }
+
+    private void UIdown()
+    {
+        _isUIup = false;
+        _cameraUI.SetTrigger("UICameraDown");
+
     }
 
     private void takePhoto()
