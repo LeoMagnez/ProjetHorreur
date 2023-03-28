@@ -167,7 +167,7 @@ public class CameraManager : MonoBehaviour
                 //MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
                 _takingPhoto = false;
                 _objetImportant.SetActive(false);
-                _porte.SetActive(true);
+                _porte.SetActive(false);
             }
 
             else
