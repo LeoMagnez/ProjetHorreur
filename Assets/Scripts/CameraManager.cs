@@ -45,21 +45,21 @@ public class CameraManager : MonoBehaviour
     private void Awake()
     {
         if (instance != null && instance != this)
-            Destroy(gameObject);    // Suppression d'une instance précédente (sécurité...sécurité...)
+            Destroy(gameObject);    // Suppression d'une instance précédente
 
         instance = this;
     }
     private void Start()
     {
 
-        if(test != null)
+        /*if(test != null)
         {
             Debug.Log("J'ai un truc");
         }
         else
         {
             Debug.Log("J'ai rien trouvé");
-        }
+        }*/
 
         test = Resources.Load<Texture2D>("capture0");
     }
@@ -70,12 +70,12 @@ public class CameraManager : MonoBehaviour
         {
             if (!_isCameraUp)
             {
-                cameraUp();
+                CameraUp();
                 _lightCamera.SetActive(true);
             }
             else 
             {
-                cameraDown();
+                CameraDown();
                 _lightCamera.SetActive(false);
             }
         }
@@ -91,9 +91,9 @@ public class CameraManager : MonoBehaviour
                 UIdown();
             }
         }
-        //cameraUp();
-        changeMaterial();
-        takePhoto();
+        //CameraUp();
+        //ChangeMaterial();
+        TakePhoto();
     }
 
     private void FixedUpdate()
@@ -101,13 +101,13 @@ public class CameraManager : MonoBehaviour
         
     }
 
-    private void cameraUp()
+    private void CameraUp()
     {
         _isCameraUp = true;
         _camera.SetTrigger("camera_activation");
         //UI.SetActive(true);
     }
-    private void cameraDown()
+    private void CameraDown()
     {
         _isCameraUp = false;
         _camera.SetTrigger("camera_desactivation");
@@ -128,28 +128,35 @@ public class CameraManager : MonoBehaviour
 
     }
 
-    private void takePhoto()
+    private void TakePhoto()
     {
         //Possibilité de mettre une condition pour limiter le nombre de prise de photo avec _screenNumber
         if (Input.GetMouseButtonDown(0) && _isCameraUp)
         {
             _takingPhoto = true;
             Raycast();
-            Debug.Log("oui je marche");
-            //ScreenCapture.CaptureScreenshot("Assets\\Screenshot\\capture" + _screenNumber++ + ".png");
-            //AssetDatabase.Refresh();
+            //Debug.Log("oui je marche");
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
             Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
             _takenPictures.Add(temp);
             _screenNumber++;    
-            //"Assets\\Screenshot\\capture" + _screenNumber + ".png"
+
+            foreach(Texture2D picture in _takenPictures) //Crée un nouveau materiau pour chaque photo prise
+            {
+                
+                Material mat = new Material(Shader.Find("HDRP/Lit")); //Crée un materiau HDRP Lit
+                AssetDatabase.CreateAsset(mat, "Assets/Resources/M_capture" + _screenNumber +".mat"); //Remplacer cette ligne par l'attribution sur les planes
+                mat.SetTexture("_BaseColorMap", temp); //Change la Base Map du nouveau matériau par la dernière photo prise
+
+                Debug.Log("Material créé : " + mat.name + " at : " + AssetDatabase.GetAssetPath(mat)); 
+            }
         }
 
     }
-    private void changeMaterial()
+    /*private void ChangeMaterial()
     {
         MeshRenderer.material.SetTexture("_BaseMap", Resources.Load<Texture2D>("capture" + _screenNumber));
-    }
+    }*/
 
     public void Raycast()
     {
