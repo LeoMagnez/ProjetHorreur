@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 68fe8c5b14f9dae48a71e7a50c53ca68,
+    type: 2}
   m_LightingSettings: {fileID: 1286562604}
 --- !u!196 &4
 NavMeshSettings:
@@ -75685,8 +75686,8 @@ LightingSettings:
   m_AlbedoBoost: 1
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 1
-  m_BakeBackend: 1
-  m_LightmapMaxSize: 1024
+  m_BakeBackend: 2
+  m_LightmapMaxSize: 512
   m_BakeResolution: 40
   m_Padding: 2
   m_LightmapCompression: 3
@@ -92663,7 +92664,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1706078646
 MeshCollider:
