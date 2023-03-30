@@ -42,13 +42,14 @@ public class CameraManager : MonoBehaviour
 
     public GameObject _lightCamera;
 
+    [SerializeField] GameObject _cameraUIParent;
+
     public bool canPlay;
 
     int planePlacement = 3;
     
 
 
-    
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -148,6 +149,7 @@ public class CameraManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && _isCameraUp)
         {
             _takingPhoto = true;
+
             Raycast();
 
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
@@ -156,11 +158,12 @@ public class CameraManager : MonoBehaviour
             _screenNumber++;
 
             GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Plane); //Crée une plane
-            plane.transform.position = new Vector3(planePlacement, 3, 0); //Set la position de la plane
-            plane.transform.localScale = new Vector3(1.8f, 1, 1);
+            plane.transform.SetParent(_cameraUIParent.transform); //Définit la plane créée en tant qu'enfant de l'appareil photo
+            plane.transform.position = new Vector3(12, 3, 30); //Set la position de la plane
+            plane.transform.localScale = new Vector3(0.0160898194f, 0.00827652309f, 0.0111839399f); //Set la taille de la plane
             _photoPlanes.Add(plane.GetComponent<MeshRenderer>()); //Ajoute le Mesh Renderer de chaque plane dans une liste
-
             planePlacement = planePlacement + 20; //Incrémente la position de chaque nouvelle plane
+
 
             for(int i = 0; i < _takenPictures.Count; i++) //attribue les photos aux materials des planes
             {
