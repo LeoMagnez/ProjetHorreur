@@ -19,6 +19,7 @@ using UnityEditor;
 
 
 
+
 #if UNITY_EDITOR
 [InitializeOnLoad]
 public static class HierarchyWindowGroupHeader
