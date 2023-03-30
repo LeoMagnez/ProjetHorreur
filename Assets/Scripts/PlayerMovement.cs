@@ -44,24 +44,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (CameraManager.instance.canPlay)
         {
-            isRunnning = true;
-            RunningMovement();
-        }
-        else
-        {
-            isRunnning = false;
-            DefaultMovement();
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                isRunnning = true;
+                RunningMovement();
+            }
+            else
+            {
+                isRunnning = false;
+                DefaultMovement();
+            }
+
+            if (CameraManager.instance._isCameraUp)
+            {
+                HoldingCamMovement();
+            }
+
+            CamMouvement();
         }
 
-        if (CameraManager.instance._isCameraUp)
-        {
-            HoldingCamMovement();
-        }
 
-        CamMouvement();
 
         
     }
@@ -73,35 +77,39 @@ public class PlayerMovement : MonoBehaviour
 
     private void DefaultMovement()
     {
-        if (_controller.isGrounded)
+        if(CameraManager.instance.canPlay)
         {
-            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //inputs
-
-            if(input.x != 0 && input.y != 0)
+            if (_controller.isGrounded)
             {
-                input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
-            }
+                Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //inputs
 
-            if(input.x != 0 || input.y != 0)
-            {
-                isIdle = false;
+                if (input.x != 0 && input.y != 0)
+                {
+                    input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
+                }
+
+                if (input.x != 0 || input.y != 0)
+                {
+                    isIdle = false;
+                }
+                else
+                {
+                    isIdle = true;
+                }
+
+                _moveDirection.x = input.x * _settings[0].speed;
+                _moveDirection.z = input.y * _settings[0].speed;
+                _moveDirection.y = -_settings[0].speed;
+
+                _moveDirection = transform.TransformDirection(_moveDirection);
+
             }
             else
             {
-                isIdle = true;
+                _moveDirection.y -= _settings[0].gravity * Time.deltaTime;
             }
-
-            _moveDirection.x = input.x * _settings[0].speed;
-            _moveDirection.z = input.y * _settings[0].speed;
-            _moveDirection.y = -_settings[0].speed;
-
-            _moveDirection = transform.TransformDirection(_moveDirection);
-
         }
-        else
-        {
-            _moveDirection.y -= _settings[0].gravity * Time.deltaTime;
-        }
+
     }
 
     private void RunningMovement()

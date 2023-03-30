@@ -26,6 +26,7 @@ public class CameraManager : MonoBehaviour
     public Texture image;
 
     public List<Texture2D> _takenPictures = new List<Texture2D>();
+    public List<MeshRenderer> _photoPlanes = new List<MeshRenderer>();
     public Texture2D test;
 
     public RenderTexture rt;
@@ -40,8 +41,13 @@ public class CameraManager : MonoBehaviour
 
     public GameObject _lightCamera;
 
+    public bool canPlay;
+
+    int planePlacement = 3;
     
 
+
+    
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -51,7 +57,7 @@ public class CameraManager : MonoBehaviour
     }
     private void Start()
     {
-
+        canPlay = true;
         /*if(test != null)
         {
             Debug.Log("J'ai un truc");
@@ -66,28 +72,31 @@ public class CameraManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(1)) 
+        if (Input.GetMouseButtonUp(1) && !_isUIup) 
         {
             if (!_isCameraUp)
             {
                 CameraUp();
                 _lightCamera.SetActive(true);
             }
-            else 
+            else
             {
                 CameraDown();
                 _lightCamera.SetActive(false);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !_isCameraUp)
         {
             if (!_isUIup)
             {
+
+                _lightCamera.SetActive(false);
                 UIup();
             }
             else
             {
+
                 UIdown();
             }
         }
@@ -116,6 +125,8 @@ public class CameraManager : MonoBehaviour
 
     private void UIup()
     {
+        _isCameraUp = false;
+        canPlay = false;
         _isUIup = true;
         _cameraUI.SetTrigger("UICameraUp");
 
@@ -123,6 +134,8 @@ public class CameraManager : MonoBehaviour
 
     private void UIdown()
     {
+        
+        canPlay = true;
         _isUIup = false;
         _cameraUI.SetTrigger("UICameraDown");
 
@@ -138,17 +151,31 @@ public class CameraManager : MonoBehaviour
             //Debug.Log("oui je marche");
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
             Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
-            _takenPictures.Add(temp);
-            _screenNumber++;    
+            _takenPictures.Add(SaveRenderTextureToFile.tex);
+            _screenNumber++;
+            Material mat = new Material(Shader.Find("HDRP/Lit")); //Crée un materiau HDRP Lit
 
-            foreach(Texture2D picture in _takenPictures) //Crée un nouveau materiau pour chaque photo prise
+            foreach (Texture2D picture in _takenPictures) //Crée un nouveau materiau pour chaque photo prise
             {
                 
-                Material mat = new Material(Shader.Find("HDRP/Lit")); //Crée un materiau HDRP Lit
-                AssetDatabase.CreateAsset(mat, "Assets/Resources/M_capture" + _screenNumber +".mat"); //Remplacer cette ligne par l'attribution sur les planes
+                
+                //AssetDatabase.CreateAsset(mat, "Assets/Resources/M_capture" + _screenNumber +".mat"); //Remplacer cette ligne par l'attribution sur les planes
                 mat.SetTexture("_BaseColorMap", temp); //Change la Base Map du nouveau matériau par la dernière photo prise
 
-                Debug.Log("Material créé : " + mat.name + " at : " + AssetDatabase.GetAssetPath(mat)); 
+                Debug.Log("Material créé : " + mat.name + " at : " + AssetDatabase.GetAssetPath(mat));
+
+            }
+
+            GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Plane);
+            plane.transform.position = new Vector3(planePlacement, 3, 0);
+            _photoPlanes.Add(plane.GetComponent<MeshRenderer>());
+            
+            planePlacement = planePlacement + 5;
+
+            foreach (MeshRenderer map in _photoPlanes)
+            {
+
+                map.material.SetTexture("_BaseColorMap", temp);
             }
         }
 

@@ -5,6 +5,10 @@ using System.Text.RegularExpressions;
 
 public class SaveRenderTextureToFile
 {
+    
+
+    public static Texture2D tex;
+
     [MenuItem("Assets/Save RenderTexture to file")]
     public static void SaveRTToFile(RenderTexture rt, int _screenNumber)
     {
@@ -12,8 +16,9 @@ public class SaveRenderTextureToFile
 
         RenderTexture.active = rt;
         Graphics.Blit(rt, rt);
-        Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB48, false);
+        tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
         tex.ReadPixels(new Rect(0, 0, rt.width , rt.height), 0, 0);
+        tex.Apply();
         RenderTexture.active = null;
 
         byte[] bytes;
@@ -21,7 +26,7 @@ public class SaveRenderTextureToFile
 
         string path = "Assets\\Resources\\capture" + _screenNumber + ".png";
         System.IO.File.WriteAllBytes(path, bytes);
-        AssetDatabase.ImportAsset(path);
+        //AssetDatabase.ImportAsset(path);
         Debug.Log("Saved to " + path);
     }
 
