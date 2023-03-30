@@ -12,6 +12,7 @@ public class CameraManager : MonoBehaviour
     public static CameraManager instance { get; private set; }
     private int _screenNumber = 0;
 
+
     public bool _isCameraUp = false;
 
     public bool _isUIup = false;
@@ -148,35 +149,25 @@ public class CameraManager : MonoBehaviour
         {
             _takingPhoto = true;
             Raycast();
-            //Debug.Log("oui je marche");
+
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
             Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
             _takenPictures.Add(SaveRenderTextureToFile.tex);
             _screenNumber++;
-            Material mat = new Material(Shader.Find("HDRP/Lit")); //Crée un materiau HDRP Lit
 
-            foreach (Texture2D picture in _takenPictures) //Crée un nouveau materiau pour chaque photo prise
+            GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Plane); //Crée une plane
+            plane.transform.position = new Vector3(planePlacement, 3, 0); //Set la position de la plane
+            plane.transform.localScale = new Vector3(1.8f, 1, 1);
+            _photoPlanes.Add(plane.GetComponent<MeshRenderer>()); //Ajoute le Mesh Renderer de chaque plane dans une liste
+
+            planePlacement = planePlacement + 20; //Incrémente la position de chaque nouvelle plane
+
+            for(int i = 0; i < _takenPictures.Count; i++) //attribue les photos aux materials des planes
             {
-                
-                
-                //AssetDatabase.CreateAsset(mat, "Assets/Resources/M_capture" + _screenNumber +".mat"); //Remplacer cette ligne par l'attribution sur les planes
-                mat.SetTexture("_BaseColorMap", temp); //Change la Base Map du nouveau matériau par la dernière photo prise
-
-                Debug.Log("Material créé : " + mat.name + " at : " + AssetDatabase.GetAssetPath(mat));
-
+                _photoPlanes[i].material.SetTexture("_BaseColorMap", _takenPictures[i]);
             }
 
-            GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Plane);
-            plane.transform.position = new Vector3(planePlacement, 3, 0);
-            _photoPlanes.Add(plane.GetComponent<MeshRenderer>());
-            
-            planePlacement = planePlacement + 5;
 
-            foreach (MeshRenderer map in _photoPlanes)
-            {
-
-                map.material.SetTexture("_BaseColorMap", temp);
-            }
         }
 
     }
