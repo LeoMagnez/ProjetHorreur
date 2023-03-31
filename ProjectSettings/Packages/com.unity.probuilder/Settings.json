@@ -15,12 +15,12 @@
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-                "key": "editor.showSceneInfo",
+                "key": "experimental.enabled",
                 "value": "{\"m_Value\":false}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-                "key": "experimental.enabled",
+                "key": "editor.showSceneInfo",
                 "value": "{\"m_Value\":false}"
             },
             {
@@ -31,12 +31,18 @@
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+                "key": "UnityEngine.ProBuilder.ProBuilderEditor-isUtilityWindow",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+>>>>>>> Stashed changes
                 "key": "ShapeComponent.ResetSettings",
                 "value": "{\"m_Value\":false}"
             },
             {
-<<<<<<< Updated upstream
-=======
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "editor.showEditorNotifications",
                 "value": "{\"m_Value\":false}"
@@ -62,9 +68,32 @@
                 "value": "{\"m_Value\":false}"
             },
             {
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
                 "key": "UnityEngine.ProBuilder.ProBuilderEditor-isUtilityWindow",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+>>>>>>> Stashed changes
+=======
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "smoothing.showSettings",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "smoothing.showPreview",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "smoothing.showNormals",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "smoothing.showHelp",
                 "value": "{\"m_Value\":false}"
             },
             {
@@ -81,7 +110,7 @@
             {
                 "type": "UnityEngine.ProBuilder.SelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "editor.selectMode",
-                "value": "{\"m_Value\":1}"
+                "value": "{\"m_Value\":8}"
             },
             {
                 "type": "UnityEngine.ProBuilder.SelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -136,7 +165,7 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize",
-                "value": "{\"m_Value\":{\"x\":-0.8059217929840088,\"y\":0.5868988633155823,\"z\":-0.6037368774414063}}"
+                "value": "{\"m_Value\":{\"x\":1.0,\"y\":4.0,\"z\":-3.0}}"
             },
             {
                 "type": "UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -170,12 +199,12 @@
             },
             {
                 "type": "UnityEngine.ProBuilder.Shapes.Shape, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "key": "ShapeBuilder.Cube",
+                "key": "ShapeBuilder.Arch",
                 "value": "{}"
             },
             {
                 "type": "UnityEngine.ProBuilder.Shapes.Shape, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "key": "ShapeBuilder.Arch",
+                "key": "ShapeBuilder.Cube",
                 "value": "{}"
             },
             {
@@ -186,7 +215,7 @@
             {
                 "type": "System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "ExtrudeFaces.distance",
-                "value": "{\"m_Value\":0.5}"
+                "value": "{\"m_Value\":-0.4699999988079071}"
             }
         ]
     }
