@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
+
+
 public class GalleryManager : MonoBehaviour
 {
 
@@ -11,14 +15,30 @@ public class GalleryManager : MonoBehaviour
     private int nbOfPicsPerPage;
 
 
+
+    int _indexGallery = 0;
+
+    [System.Serializable]
+    public class AnimatedImageCameraMenu
+    {
+        public int index;
+        public Image image;
+        public Animator animator;
+    }
+
+
+
+
     [SerializeField]
-    public List<Image> imagesUI;
+    public List<AnimatedImageCameraMenu> imagesUI;
 
 
     Coroutine loadingCoro;
 
+    [HideInInspector]
+    public List<Animator> animators;
 
-
+    AnimatedImageCameraMenu curSelectedImage = null;
 
 
     private void OnEnable()
@@ -35,7 +55,17 @@ public class GalleryManager : MonoBehaviour
 
         for (int i = 0; i < ((_spritecount < imagesUI.Count)? _spritecount : imagesUI.Count); i++)
         {
-            imagesUI[i].sprite = CameraManager.instance._spriteList[i + nbOfPicsPerPage * pageIndex];
+
+            if((i + nbOfPicsPerPage * pageIndex) < CameraManager.instance._spriteList.Count)
+            {
+
+                imagesUI[i].image.sprite = CameraManager.instance._spriteList[i + nbOfPicsPerPage * pageIndex];
+
+            }
+            else
+            {
+                imagesUI[i].image.sprite = null;
+            }
 
             
         }
@@ -54,16 +84,66 @@ public class GalleryManager : MonoBehaviour
     }
 
 
+    private void SelectImage(AnimatedImageCameraMenu _imagetoselect)
+    {
+        if (curSelectedImage != null)
+            curSelectedImage.animator.SetTrigger("Unfocus");
 
+
+        curSelectedImage = _imagetoselect;
+
+        curSelectedImage.animator.SetTrigger("Focus");
+
+        _indexGallery = curSelectedImage.index;
+
+    }
+
+
+    /// <summary>
+    /// -1 => previous / 1 => next
+    /// </summary>
+    /// <param name="_dir"></param>
+    public void selectNextOrPrevious(int _dir)
+    {
+        _indexGallery += _dir;
+
+        bool _hasChangedPage = false;
+
+        if(_indexGallery < 0)
+        {
+            _indexGallery = imagesUI.Count + _indexGallery;
+            _hasChangedPage = true;
+
+            if(pageIndex > 0)
+            {
+                pageIndex--;
+            }
+        }
+        else if(_indexGallery >= imagesUI.Count)
+        {
+            _indexGallery %= imagesUI.Count;
+            _hasChangedPage = true;
+            pageIndex++;
+
+            //Mettre une sécurité pour qu'on puisse pas changer de page s'il n'y a pas de photo après
+
+        }
+
+        SelectImage(imagesUI[_indexGallery]);
+
+        if (_hasChangedPage)
+            OnGalleryUpdatePage();
+
+    }
 
 
     WaitForSeconds loadingDelay = new WaitForSeconds(0.3f);
 
     IEnumerator DisplayPics()
     {
-        foreach (Image _image in imagesUI)
+        foreach (AnimatedImageCameraMenu _image in imagesUI)
         {
-            _image.color = Color.black;
+            _image.image.color = Color.black;
         }
 
 
@@ -71,7 +151,7 @@ public class GalleryManager : MonoBehaviour
         {
             yield return loadingDelay;
 
-            imagesUI[i].color = Color.white;
+            imagesUI[i].image.color = Color.white;
         }
 
         loadingCoro = null;

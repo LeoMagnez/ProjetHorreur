@@ -54,23 +54,8 @@ public class CameraManager : MonoBehaviour
     [Header("References")]
     [SerializeField] GalleryManager galleryManager;
 
-    int _indexGallery = 0;
 
 
-    [SerializeField]
-    private Animator _animator;
-
-
-    [SerializeField]
-    private Animator _animator2;
-
-
-    [SerializeField]
-    private Animator _animator3;
-
-
-    [SerializeField]
-    private Animator _animator4;
 
 
     private void Awake()
@@ -111,7 +96,7 @@ public class CameraManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && !_isCameraUp)
+        if (Input.GetKeyDown(KeyCode.Tab) && !_isCameraUp)
         {
             if (!_isUIup)
             {
@@ -130,59 +115,16 @@ public class CameraManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D) && !canPlay)
         {
 
-            if(_indexGallery == 0)
-            {
-                _animator.SetTrigger("Focus");
-                _animator4.SetTrigger("Unfocus");
-                _indexGallery++;
-            }
-            else if( _indexGallery == 1)
-            {
-                _animator.SetTrigger("Unfocus");
-                _animator2.SetTrigger("Focus");
-                _indexGallery++;
-            }
-            else if (_indexGallery == 2)
-            {
-                _animator2.SetTrigger("Unfocus");
-                _animator3.SetTrigger("Focus");
-                _indexGallery++;
-            }
-            else if (_indexGallery == 3)
-            {
-                _animator3.SetTrigger("Unfocus");
-                _animator4.SetTrigger("Focus");
-                _indexGallery = 0;
-            }
+            galleryManager.selectNextOrPrevious(1);
+
         }
 
-       /* if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
+       if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
         {
-            if (_indexGallery == 0)
-            {
-                _animator3.SetTrigger("Unfocus");
-                _animator4.SetTrigger("Focus");
-                _indexGallery++;
-            }
-            else if (_indexGallery == 1)
-            {
-                _animator2.SetTrigger("Unfocus");
-                _animator3.SetTrigger("Focus");
-                _indexGallery++;
-            }
-            else if (_indexGallery == 2)
-            {
-                _animator.SetTrigger("Unfocus");
-                _animator2.SetTrigger("Focus");
-                _indexGallery++;
-            }
-            else if (_indexGallery == 3)
-            {
-                _animator.SetTrigger("Focus");
-                _animator4.SetTrigger("Unfocus");
-                _indexGallery = 0;
-            }
-        }*/
+
+            galleryManager.selectNextOrPrevious(-1);
+
+        }
 
             //CameraUp();
             //ChangeMaterial();
