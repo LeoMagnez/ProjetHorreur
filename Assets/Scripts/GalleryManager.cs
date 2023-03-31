@@ -12,10 +12,11 @@ public class GalleryManager : MonoBehaviour
 
 
     [SerializeField]
-    List<Image> imagesUI;
+    public List<Image> imagesUI;
 
 
     Coroutine loadingCoro;
+
 
 
 
@@ -34,9 +35,16 @@ public class GalleryManager : MonoBehaviour
 
         for (int i = 0; i < ((_spritecount < imagesUI.Count)? _spritecount : imagesUI.Count); i++)
         {
-            imagesUI[i].sprite = CameraManager.instance._spriteList[i + nbOfPicsPerPage* pageIndex];
+            imagesUI[i].sprite = CameraManager.instance._spriteList[i + nbOfPicsPerPage * pageIndex];
+
+            
         }
 
+       /* if (Input.GetKeyDown(KeyCode.K))
+        {
+
+            _animator.SetBool("Focus", true);
+        }*/
 
         if (loadingCoro != null)
             StopCoroutine(loadingCoro);
@@ -44,6 +52,9 @@ public class GalleryManager : MonoBehaviour
         loadingCoro = StartCoroutine(DisplayPics());
 
     }
+
+
+
 
 
     WaitForSeconds loadingDelay = new WaitForSeconds(0.3f);

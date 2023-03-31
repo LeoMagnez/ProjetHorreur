@@ -54,6 +54,24 @@ public class CameraManager : MonoBehaviour
     [Header("References")]
     [SerializeField] GalleryManager galleryManager;
 
+    int _indexGallery = 0;
+
+
+    [SerializeField]
+    private Animator _animator;
+
+
+    [SerializeField]
+    private Animator _animator2;
+
+
+    [SerializeField]
+    private Animator _animator3;
+
+
+    [SerializeField]
+    private Animator _animator4;
+
 
     private void Awake()
     {
@@ -100,6 +118,7 @@ public class CameraManager : MonoBehaviour
 
                 _lightCamera.SetActive(false);
                 UIup();
+
             }
             else
             {
@@ -107,9 +126,67 @@ public class CameraManager : MonoBehaviour
                 UIdown();
             }
         }
-        //CameraUp();
-        //ChangeMaterial();
-        TakePhoto();
+
+        if (Input.GetKeyDown(KeyCode.D) && !canPlay)
+        {
+
+            if(_indexGallery == 0)
+            {
+                _animator.SetTrigger("Focus");
+                _animator4.SetTrigger("Unfocus");
+                _indexGallery++;
+            }
+            else if( _indexGallery == 1)
+            {
+                _animator.SetTrigger("Unfocus");
+                _animator2.SetTrigger("Focus");
+                _indexGallery++;
+            }
+            else if (_indexGallery == 2)
+            {
+                _animator2.SetTrigger("Unfocus");
+                _animator3.SetTrigger("Focus");
+                _indexGallery++;
+            }
+            else if (_indexGallery == 3)
+            {
+                _animator3.SetTrigger("Unfocus");
+                _animator4.SetTrigger("Focus");
+                _indexGallery = 0;
+            }
+        }
+
+       /* if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
+        {
+            if (_indexGallery == 0)
+            {
+                _animator3.SetTrigger("Unfocus");
+                _animator4.SetTrigger("Focus");
+                _indexGallery++;
+            }
+            else if (_indexGallery == 1)
+            {
+                _animator2.SetTrigger("Unfocus");
+                _animator3.SetTrigger("Focus");
+                _indexGallery++;
+            }
+            else if (_indexGallery == 2)
+            {
+                _animator.SetTrigger("Unfocus");
+                _animator2.SetTrigger("Focus");
+                _indexGallery++;
+            }
+            else if (_indexGallery == 3)
+            {
+                _animator.SetTrigger("Focus");
+                _animator4.SetTrigger("Unfocus");
+                _indexGallery = 0;
+            }
+        }*/
+
+            //CameraUp();
+            //ChangeMaterial();
+            TakePhoto();
     }
 
     private void FixedUpdate()
@@ -140,6 +217,9 @@ public class CameraManager : MonoBehaviour
         _isUIup = true;
         _cameraUI.SetTrigger("UICameraUp");
 
+
+
+
     }
 
     private void UIdown()
@@ -167,19 +247,6 @@ public class CameraManager : MonoBehaviour
             _spriteList.Add(_temp);
             _screenNumber++;
 
-
-            //photo1.sprite = _spriteList[0 % 4 ];
-
-
-
-            /*
-            if(_spriteList.Count > 1)
-                photo2.sprite = _spriteList[_screenNumber % 4];
-            if (_spriteList.Count > 2)
-                photo3.sprite = _spriteList[_screenNumber % 4 ];
-            if (_spriteList.Count > 3)
-                photo4.sprite = _spriteList[_screenNumber % 4 ];
-            */
         }
 
     }
