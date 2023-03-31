@@ -23,8 +23,16 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CameraManager.instance.canPlay)
+        {
+            move();
+        }
         
 
+    }
+
+    void move()
+    {
         mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
@@ -33,6 +41,5 @@ public class MouseLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
         player.Rotate(Vector3.up * mouseY);
-
     }
 }
