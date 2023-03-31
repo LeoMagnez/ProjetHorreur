@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using System.Runtime.CompilerServices;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,8 +30,9 @@ public class PlayerMovement : MonoBehaviour
     public float holdingCamNoiseFrequency;
 
     private bool isIdle = true;
-    private bool isRunnning = false;
-
+    private bool isRunning = false;
+    private float _staminaTimer = 5;
+    private bool canRun = true;
 
     private void Awake()
     {
@@ -48,12 +50,22 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                isRunnning = true;
-                RunningMovement();
+                    if (_staminaTimer > 0 && canRun)
+                    {
+                        isRunning = true;
+                        RunningMovement();
+                        _staminaTimer -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        canRun = false;
+                        isRunning = false;
+                        DefaultMovement();
+                    }              
             }
             else
             {
-                isRunnning = false;
+                isRunning = false;
                 DefaultMovement();
             }
 
@@ -64,10 +76,6 @@ public class PlayerMovement : MonoBehaviour
 
             CamMouvement();
         }
-
-
-
-        
     }
 
     private void FixedUpdate()
@@ -108,8 +116,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 _moveDirection.y -= _settings[0].gravity * Time.deltaTime;
             }
-        }
 
+            if (_staminaTimer <= 5.1) 
+            {
+                _staminaTimer += Time.deltaTime;
+            }
+            if (_staminaTimer >= 5.0) 
+            {
+                canRun = true;
+            }
+        }
     }
 
     private void RunningMovement()
@@ -165,13 +181,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void CamMouvement() //Change the cinemachine virtual camera's noise according to the player's sate (idle, walking, running)
     {
-        if(!isIdle && !isRunnning &&!CameraManager.instance._isCameraUp)
+        if(!isIdle && !isRunning &&!CameraManager.instance._isCameraUp)
         {
             //adjust frequency and amplitude when the player is walking
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = walkingCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = walkingCamNoiseFrequency;
         }
-        else if (isRunnning && !isIdle && !CameraManager.instance._isCameraUp)
+        else if (isRunning && !isIdle && !CameraManager.instance._isCameraUp)
         {
 
 
