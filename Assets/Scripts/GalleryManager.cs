@@ -137,7 +137,7 @@ public class GalleryManager : MonoBehaviour
     }
 
 
-    WaitForSeconds loadingDelay = new WaitForSeconds(0.3f);
+    WaitForSeconds loadingDelay = new WaitForSeconds(0.05f);
 
     IEnumerator DisplayPics()
     {
