@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class CameraManager : MonoBehaviour
@@ -26,6 +27,8 @@ public class CameraManager : MonoBehaviour
     public Texture image;
 
     public List<Texture2D> _takenPictures = new List<Texture2D>();
+    public List<Sprite> _spriteList = new List<Sprite>();
+
     public List<MeshRenderer> _photoPlanes = new List<MeshRenderer>();
     public Texture2D test;
 
@@ -45,8 +48,11 @@ public class CameraManager : MonoBehaviour
 
     public bool canPlay;
 
-    int planePlacement = 3;
-    
+    int pageNumber = 0;
+
+
+    [Header("References")]
+    [SerializeField] GalleryManager galleryManager;
 
 
     private void Awake()
@@ -126,6 +132,9 @@ public class CameraManager : MonoBehaviour
 
     private void UIup()
     {
+        //Chargement des images de gallerie
+        galleryManager.OnGalleryUpdatePage();
+
         _isCameraUp = false;
         canPlay = false;
         _isUIup = true;
@@ -135,7 +144,7 @@ public class CameraManager : MonoBehaviour
 
     private void UIdown()
     {
-        
+
         canPlay = true;
         _isUIup = false;
         _cameraUI.SetTrigger("UICameraDown");
@@ -153,30 +162,27 @@ public class CameraManager : MonoBehaviour
 
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
             Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
-            _takenPictures.Add(SaveRenderTextureToFile.tex);
+            Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f));
+            //_takenPictures.Add(SaveRenderTextureToFile.tex);
+            _spriteList.Add(_temp);
             _screenNumber++;
 
-            GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Plane); //Crée une plane
-            plane.transform.SetParent(_cameraUIParent.transform); //Définit la plane créée en tant qu'enfant de l'appareil photo
-            plane.transform.position = new Vector3(12, 3, 30); //Set la position de la plane
-            plane.transform.localScale = new Vector3(0.0160898194f, 0.00827652309f, 0.0111839399f); //Set la taille de la plane
-            _photoPlanes.Add(plane.GetComponent<MeshRenderer>()); //Ajoute le Mesh Renderer de chaque plane dans une liste
-            planePlacement = planePlacement + 20; //Incrémente la position de chaque nouvelle plane
+
+            //photo1.sprite = _spriteList[0 % 4 ];
 
 
-            for(int i = 0; i < _takenPictures.Count; i++) //attribue les photos aux materials des planes
-            {
-                _photoPlanes[i].material.SetTexture("_BaseColorMap", _takenPictures[i]);
-            }
 
-
+            /*
+            if(_spriteList.Count > 1)
+                photo2.sprite = _spriteList[_screenNumber % 4];
+            if (_spriteList.Count > 2)
+                photo3.sprite = _spriteList[_screenNumber % 4 ];
+            if (_spriteList.Count > 3)
+                photo4.sprite = _spriteList[_screenNumber % 4 ];
+            */
         }
 
     }
-    /*private void ChangeMaterial()
-    {
-        MeshRenderer.material.SetTexture("_BaseMap", Resources.Load<Texture2D>("capture" + _screenNumber));
-    }*/
 
     public void Raycast()
     {
