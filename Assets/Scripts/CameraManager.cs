@@ -117,14 +117,17 @@ public class CameraManager : MonoBehaviour
 
             galleryManager.selectNextOrPrevious(1);
 
+
         }
 
        if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
-        {
+       {
 
             galleryManager.selectNextOrPrevious(-1);
 
-        }
+       }
+
+
 
             //CameraUp();
             //ChangeMaterial();

@@ -24,6 +24,10 @@ public class GalleryManager : MonoBehaviour
         public int index;
         public Image image;
         public Animator animator;
+        public string _focus;
+        public string _unfocus;
+
+
     }
 
 
@@ -32,13 +36,18 @@ public class GalleryManager : MonoBehaviour
     [SerializeField]
     public List<AnimatedImageCameraMenu> imagesUI;
 
+ 
 
     Coroutine loadingCoro;
 
     [HideInInspector]
     public List<Animator> animators;
 
+    [HideInInspector]
+    public bool zoomedOnPhoto = false;
+
     AnimatedImageCameraMenu curSelectedImage = null;
+
 
 
     private void OnEnable()
@@ -46,6 +55,43 @@ public class GalleryManager : MonoBehaviour
         nbOfPicsPerPage = imagesUI.Count;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && curSelectedImage != null)
+        {
+            curSelectedImage.animator.SetTrigger("ZoomIn");
+            zoomedOnPhoto = true;
+
+            if (zoomedOnPhoto)
+            {
+                foreach(AnimatedImageCameraMenu image in imagesUI)
+                {
+                    if(image != curSelectedImage)
+                    {
+                        image.image.gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && curSelectedImage != null && zoomedOnPhoto)
+        {
+            curSelectedImage.animator.SetTrigger("ZoomOut");
+            zoomedOnPhoto = false;
+
+            if (!zoomedOnPhoto)
+            {
+                foreach (AnimatedImageCameraMenu image in imagesUI)
+                {
+                    if (image != curSelectedImage)
+                    {
+                        image.image.gameObject.SetActive(true);
+                    }
+                }
+            }
+        }
+
+    }
 
 
     public void OnGalleryUpdatePage()
@@ -53,10 +99,10 @@ public class GalleryManager : MonoBehaviour
 
         int _spritecount = CameraManager.instance._spriteList.Count;
 
-        for (int i = 0; i < ((_spritecount < imagesUI.Count)? _spritecount : imagesUI.Count); i++)
+        for (int i = 0; i < ((_spritecount < imagesUI.Count) ? _spritecount : imagesUI.Count); i++)
         {
 
-            if((i + nbOfPicsPerPage * pageIndex) < CameraManager.instance._spriteList.Count)
+            if ((i + nbOfPicsPerPage * pageIndex) < CameraManager.instance._spriteList.Count)
             {
 
                 imagesUI[i].image.sprite = CameraManager.instance._spriteList[i + nbOfPicsPerPage * pageIndex];
@@ -67,17 +113,17 @@ public class GalleryManager : MonoBehaviour
                 imagesUI[i].image.sprite = null;
             }
 
-            
+
         }
 
-       /* if (Input.GetKeyDown(KeyCode.K))
-        {
-
-            _animator.SetBool("Focus", true);
-        }*/
 
         if (loadingCoro != null)
             StopCoroutine(loadingCoro);
+
+        foreach(var image in imagesUI)
+        {
+            image.image.gameObject.SetActive(true);
+        }
 
         loadingCoro = StartCoroutine(DisplayPics());
 
@@ -86,17 +132,18 @@ public class GalleryManager : MonoBehaviour
 
     private void SelectImage(AnimatedImageCameraMenu _imagetoselect)
     {
-        if (curSelectedImage != null)
-            curSelectedImage.animator.SetTrigger("Unfocus");
 
+        if (curSelectedImage != null)
+        {
+            curSelectedImage.animator.SetTrigger(curSelectedImage._unfocus);
+        }
 
         curSelectedImage = _imagetoselect;
-
-        curSelectedImage.animator.SetTrigger("Focus");
-
+        curSelectedImage.animator.SetTrigger(curSelectedImage._focus);
         _indexGallery = curSelectedImage.index;
-
+    
     }
+
 
 
     /// <summary>
@@ -105,21 +152,26 @@ public class GalleryManager : MonoBehaviour
     /// <param name="_dir"></param>
     public void selectNextOrPrevious(int _dir)
     {
+        if (zoomedOnPhoto)
+        {
+            return;
+        }
+
         _indexGallery += _dir;
 
         bool _hasChangedPage = false;
 
-        if(_indexGallery < 0)
+        if (_indexGallery < 0)
         {
             _indexGallery = imagesUI.Count + _indexGallery;
             _hasChangedPage = true;
 
-            if(pageIndex > 0)
+            if (pageIndex > 0)
             {
                 pageIndex--;
             }
         }
-        else if(_indexGallery >= imagesUI.Count)
+        else if (_indexGallery >= imagesUI.Count)
         {
             _indexGallery %= imagesUI.Count;
             _hasChangedPage = true;
@@ -130,6 +182,8 @@ public class GalleryManager : MonoBehaviour
         }
 
         SelectImage(imagesUI[_indexGallery]);
+
+
 
         if (_hasChangedPage)
             OnGalleryUpdatePage();
@@ -156,5 +210,6 @@ public class GalleryManager : MonoBehaviour
 
         loadingCoro = null;
     }
+
 
 }
