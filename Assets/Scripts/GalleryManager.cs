@@ -68,7 +68,7 @@ public class GalleryManager : MonoBehaviour
                 {
                     if(image != curSelectedImage)
                     {
-                        image.image.gameObject.SetActive(false);
+                        image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
                     }
                 }
             }
@@ -85,7 +85,7 @@ public class GalleryManager : MonoBehaviour
                 {
                     if (image != curSelectedImage)
                     {
-                        image.image.gameObject.SetActive(true);
+                        image.image.gameObject.SetActive(true); //reactive les images quand on dezoome
                     }
                 }
             }
