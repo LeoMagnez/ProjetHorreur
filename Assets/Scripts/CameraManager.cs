@@ -36,6 +36,8 @@ public class CameraManager : MonoBehaviour
 
     public bool canPlay;
 
+    [SerializeField] bool _importantPhoto = false;
+
     [Header("GameObjects")]
 
     public GameObject UI;
@@ -219,8 +221,19 @@ public class CameraManager : MonoBehaviour
             Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber); //convertit la photo en Texture2D
             Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f)); //transforme la photo en sprite pour l'ajouter à la galerie
             //_takenPictures.Add(SaveRenderTextureToFile.tex);
-            _spriteList.Add(_temp); //ajoute la photo à la liste
+
+            if (_importantPhoto)
+            {
+                _spriteList.Insert(0, _temp); //si une photo est importante, l'ajoute en haut de la galerie
+            }
+            else
+            {
+                _spriteList.Add(_temp); //ajoute la photo à la liste
+            }
+
             _screenNumber++; //incrémente le nom de la photo pour pouvoir en prendre à l'infini
+
+
 
         }
 
@@ -238,6 +251,7 @@ public class CameraManager : MonoBehaviour
             //Debug.Log("Did Hit");
             if (hit.transform.tag == "_photoImportante" && _takingPhoto)
             {
+                _importantPhoto = true;
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 Debug.Log("Je détecte quelque chose d'important");
 

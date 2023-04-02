@@ -76,6 +76,12 @@ public class PlayerMovement : MonoBehaviour
 
             CamMouvement();
         }
+
+        else
+        {
+            isIdle = true;
+            MovementForbidden();
+        }
     }
 
     private void FixedUpdate()
@@ -125,6 +131,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 canRun = true;
             }
+        }
+
+        else
+        {
+            isIdle = true;      
         }
     }
 
@@ -178,6 +189,34 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void MovementForbidden()
+    {
+        vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = idleCamNoiseAmplitude;
+        vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = idleCamNoiseFrequency;
+
+        if (_controller.isGrounded)
+        {
+            Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //inputs
+
+            if (input.x != 0 && input.y != 0)
+            {
+                input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
+            }
+
+            _moveDirection.x = input.x * _settings[3].speed;
+            _moveDirection.z = input.y * _settings[3].speed;
+            _moveDirection.y = -_settings[3].speed;
+
+            _moveDirection = transform.TransformDirection(_moveDirection);
+
+
+        }
+        else
+        {
+            _moveDirection.y -= _settings[3].gravity * Time.deltaTime;
+        }
+    }
+
 
     public void CamMouvement() //Change the cinemachine virtual camera's noise according to the player's sate (idle, walking, running)
     {
@@ -204,7 +243,7 @@ public class PlayerMovement : MonoBehaviour
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = holdingCamNoiseFrequency;
         }
 
-        else
+        else if(isIdle)
         {
             //adjust frequency and amplitude when the player is idle
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = idleCamNoiseAmplitude;
