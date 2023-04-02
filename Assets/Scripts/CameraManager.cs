@@ -1,3 +1,13 @@
+/*ETPA 2022 - 2023 // JV2.1 PROJET S4 - GROUPE 4 // CameraManager.cs
+ 
+ Programmers - ALBOUYS Evangeline, MAGNEZ Léo, POULAIN--BONNET Matisse
+
+ Le but de ce script est de gérer la mécanique principale du jeu : prendre des photos de l'environnement et utiliser certaines
+d'entre elles pour modifier la position de certains objets. 
+
+/!\ Ce script est directement relié au script "GalleryManager.cs" /!\
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -90,73 +100,64 @@ public class CameraManager : MonoBehaviour
     #region START
     private void Start()
     {
-        canPlay = true;
-        /*if(test != null)
-        {
-            Debug.Log("J'ai un truc");
-        }
-        else
-        {
-            Debug.Log("J'ai rien trouvé");
-        }*/
-
-        test = Resources.Load<Texture2D>("capture0");
+        canPlay = true; //Permet de jouer au start
     }
     #endregion
 
     #region UPDATE
     private void Update()
     {
+        //Si on appuie sur clic-droit, et que l'on est pas en train de naviguer la galerie, sors l'appareil photo
         if (Input.GetMouseButtonUp(1) && !_isUIup) 
         {
             if (!_isCameraUp)
             {
-                CameraUp();
-                _lightCamera.SetActive(true);
+                CameraUp(); //lève l'appareil
+                _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on sort l'appareil
             }
             else
             {
-                CameraDown();
-                _lightCamera.SetActive(false);
+                CameraDown();//range l'appareil
+                _lightCamera.SetActive(false); //désactive la lumière du flash lorsque l'appareil est rangé
             }
         }
 
+
+        //Si on appuie sur Tab et que l'appareil photo est rangé alors ouvre la galerie
         if (Input.GetKeyDown(KeyCode.Tab) && !_isCameraUp)
         {
             if (!_isUIup)
             {
 
-                _lightCamera.SetActive(false);
-                UIup();
+                _lightCamera.SetActive(false); //désactive la lumière du flash lorsqu'on est dans la galerie
+                UIup();//entre dans la galerie
 
             }
             else
             {
 
-                UIdown();
+                UIdown();//sort de la galerie
             }
         }
 
+        //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
         if (Input.GetKeyDown(KeyCode.D) && !canPlay)
         {
 
-            galleryManager.selectNextOrPrevious(1);
+            galleryManager.selectNextOrPrevious(1); //navigue vers la droite
 
 
         }
 
-       if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
-       {
+        //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
+        if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
+        {
 
-            galleryManager.selectNextOrPrevious(-1);
+            galleryManager.selectNextOrPrevious(-1); //navigue vers la gauche
 
-       }
+        }
 
-
-
-            //CameraUp();
-            //ChangeMaterial();
-            TakePhoto();
+        TakePhoto(); //Vérifie si on peut prendre une photo
     }
     #endregion
 
@@ -170,14 +171,14 @@ public class CameraManager : MonoBehaviour
     #region CAMERA_OBJECT
     private void CameraUp()
     {
-        _isCameraUp = true;
-        _camera.SetTrigger("camera_activation");
+        _isCameraUp = true; //passe ce flag en true (empêche d'aller dans la galerie si on s'apprête à prendre une photo)
+        _camera.SetTrigger("camera_activation"); //joue l'animation où le joueur lève l'appareil photo
         //UI.SetActive(true);
     }
     private void CameraDown()
     {
-        _isCameraUp = false;
-        _camera.SetTrigger("camera_desactivation");
+        _isCameraUp = false;//passe ce flag en false (autorise l'ouverture de la galerie)
+        _camera.SetTrigger("camera_desactivation");//joue l'animation où le joueur baisse l'appareil photo
         //UI.SetActive(false);
     }
     #endregion
@@ -189,17 +190,17 @@ public class CameraManager : MonoBehaviour
         galleryManager.OnGalleryUpdatePage();
 
         _isCameraUp = false;
-        canPlay = false;
-        _isUIup = true;
-        _cameraUI.SetTrigger("UICameraUp");
+        canPlay = false; //empêche le joueur de bouger lorsqu'il est dans la galerie
+        _isUIup = true; //empêche le joueur de passer en mode photo lorsqu'il est dans la galerie
+        _cameraUI.SetTrigger("UICameraUp"); //joue l'animation d'ouverture de la galerie
     }
 
     private void UIdown()
     {
 
-        canPlay = true;
-        _isUIup = false;
-        _cameraUI.SetTrigger("UICameraDown");
+        canPlay = true; //autorise le joueur à bouger lorsque la galerie est fermée
+        _isUIup = false; //permet le joueur de passer en mode photo une fois la galerie fermée
+        _cameraUI.SetTrigger("UICameraDown");//joue l'animation de fermeture de la galerie
 
     }
     #endregion
@@ -207,19 +208,19 @@ public class CameraManager : MonoBehaviour
     #region TAKE_PHOTO
     private void TakePhoto()
     {
-        //Possibilité de mettre une condition pour limiter le nombre de prise de photo avec _screenNumber
+        //Si on appuie sur clic gauche avec l'appareil photo levé, prend une photo
         if (Input.GetMouseButtonDown(0) && _isCameraUp)
         {
             _takingPhoto = true;
 
-            Raycast();
+            Raycast(); //vérifie si la photo prise est une "photo importante"
 
-            SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber);
-            Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber);
-            Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f));
+            SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber); //sauvegarde la photo dans une render texture et l'encode en PNG pour pouvoir aller la visionner
+            Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber); //convertit la photo en Texture2D
+            Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f)); //transforme la photo en sprite pour l'ajouter à la galerie
             //_takenPictures.Add(SaveRenderTextureToFile.tex);
-            _spriteList.Add(_temp);
-            _screenNumber++;
+            _spriteList.Add(_temp); //ajoute la photo à la liste
+            _screenNumber++; //incrémente le nom de la photo pour pouvoir en prendre à l'infini
 
         }
 

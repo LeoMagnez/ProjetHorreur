@@ -1,3 +1,13 @@
+/*ETPA 2022 - 2023 // JV2.1 PROJET S4 - GROUPE 4 // GalleryManager.cs
+ 
+ Programmers - ALBOUYS Evangeline, MAGNEZ Léo, POULAIN--BONNET Matisse
+
+ Le but de ce script est de gérer la galerie de l'appareil photo, notamment la navigation à l'intérieur de celle-ci ainsi que la
+possibilité de sélectionner n'importe quelle photo et de zoomer dessus. 
+
+/!\ Ce script est directement relié au script "CameraManager.cs" /!\
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,14 +19,8 @@ using UnityEngine.UI;
 
 public class GalleryManager : MonoBehaviour
 {
+    public static GalleryManager instance { get; private set; }
 
-    private int pageIndex = 0;
-
-    private int nbOfPicsPerPage;
-
-
-
-    int _indexGallery = 0;
 
     [System.Serializable]
     public class AnimatedImageCameraMenu
@@ -31,17 +35,25 @@ public class GalleryManager : MonoBehaviour
     }
 
 
+    private int pageIndex = 0;
+
+    private int nbOfPicsPerPage;
+
+    int _indexGallery = 0;
 
 
-    [SerializeField]
-    public List<AnimatedImageCameraMenu> imagesUI;
 
  
 
     Coroutine loadingCoro;
 
+    [Header("Lists")]
+    [SerializeField]
+    public List<AnimatedImageCameraMenu> imagesUI;
+
     [HideInInspector]
     public List<Animator> animators;
+
 
     [HideInInspector]
     public bool zoomedOnPhoto = false;
@@ -53,6 +65,14 @@ public class GalleryManager : MonoBehaviour
     private void OnEnable()
     {
         nbOfPicsPerPage = imagesUI.Count;
+    }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(gameObject);    // Suppression d'une instance précédente
+
+        instance = this;
     }
 
     private void Update()
