@@ -242,25 +242,23 @@ public class CameraManager : MonoBehaviour
     }
     #endregion
 
-    #region IMPORTANT_PHOTO_DETECTION
+    #region IMPORTANT_PHOTO_DETECTION_RAYCAST
     public void Raycast()
     {
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
+        RaycastHit hit; //Lancement du raycast
+
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, 50f))
         {
             
-            //Debug.Log("Did Hit");
-            if (hit.transform.tag == "_photoImportante" && _takingPhoto)
+            if (hit.transform.tag == "_photoImportante" && _takingPhoto) //Lancement d'une condition sur le raycast touche un item avec le tag "_photoImportante"
             {
                 _importantPhoto = true;
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 Debug.Log("Je détecte quelque chose d'important");
 
-                //MeshRenderer.GetComponent<MeshRenderer>().material = _blackMaterial;
                 _takingPhoto = false;
-                _objetImportant.SetActive(false);
-                _porte.SetActive(false);
+                _objetImportant.SetActive(false); //Désactivation du GameOject spécifié
+                _porte.SetActive(false); //Désactivation du GameOject spécifié
 
             }
 
@@ -272,10 +270,9 @@ public class CameraManager : MonoBehaviour
         else
         {
             Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 1000, Color.red);
-            Debug.Log("Did not Hit");
+
             if (_takingPhoto)
             {
-                //MeshRenderer.GetComponent<MeshRenderer>().material = _whiteMaterial;
                 _takingPhoto = false;
             }
         }
