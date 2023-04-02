@@ -9,55 +9,75 @@ using UnityEngine.UI;
 public class CameraManager : MonoBehaviour
 
 {
+    #region SINGLETON
     public static CameraManager instance { get; private set; }
+    #endregion
+
+    #region VARIABLES
     private int _screenNumber = 0;
+    int pageNumber = 0;
 
-
+    [Header("Flags")]
     public bool _isCameraUp = false;
 
     public bool _isUIup = false;
 
     public bool _takingPhoto = false;
 
+    public bool canPlay;
+
+    [Header("GameObjects")]
+
     public GameObject UI;
-
-    public MeshRenderer MeshRenderer;
-    public Material _whiteMaterial;
-    public Material _blackMaterial;
-    public Texture image;
-
-    public List<Texture2D> _takenPictures = new List<Texture2D>();
-    public List<Sprite> _spriteList = new List<Sprite>();
-
-    public List<MeshRenderer> _photoPlanes = new List<MeshRenderer>();
-    public Texture2D test;
-
-    public RenderTexture rt;
 
     public GameObject _porte;
 
     public GameObject _objetImportant;
 
-    public Animator _camera;
-
-    public Animator _cameraUI;
-
     public GameObject _lightCamera;
 
     [SerializeField] GameObject _cameraUIParent;
 
-    public bool canPlay;
+    public MeshRenderer MeshRenderer;
 
-    int pageNumber = 0;
+    [Header("Materials & Textures")]
+    public Material _whiteMaterial;
+    public Material _blackMaterial;
+    public Texture image;
+    public Texture2D test;
+
+    [Header("Lists")]
+    public List<Texture2D> _takenPictures = new List<Texture2D>();
+    public List<Sprite> _spriteList = new List<Sprite>();
+    //public List<MeshRenderer> _photoPlanes = new List<MeshRenderer>();
+
+
+    [Header("Render Textures")]
+    public RenderTexture rt;
+
+
+    [Header("Animators")]
+    public Animator _camera;
+
+    public Animator _cameraUI;
+
+
+
+
+
+    
 
 
     [Header("References")]
     [SerializeField] GalleryManager galleryManager;
 
+    #endregion
 
 
+    #region FUNCTIONS
 
 
+    #region AWAKE
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -65,6 +85,9 @@ public class CameraManager : MonoBehaviour
 
         instance = this;
     }
+    #endregion
+
+    #region START
     private void Start()
     {
         canPlay = true;
@@ -79,7 +102,9 @@ public class CameraManager : MonoBehaviour
 
         test = Resources.Load<Texture2D>("capture0");
     }
+    #endregion
 
+    #region UPDATE
     private void Update()
     {
         if (Input.GetMouseButtonUp(1) && !_isUIup) 
@@ -133,12 +158,16 @@ public class CameraManager : MonoBehaviour
             //ChangeMaterial();
             TakePhoto();
     }
+    #endregion
 
+    #region FIXED_UPDATE
     private void FixedUpdate()
     {
         
     }
+    #endregion
 
+    #region CAMERA_OBJECT
     private void CameraUp()
     {
         _isCameraUp = true;
@@ -151,7 +180,9 @@ public class CameraManager : MonoBehaviour
         _camera.SetTrigger("camera_desactivation");
         //UI.SetActive(false);
     }
+    #endregion
 
+    #region UI
     private void UIup()
     {
         //Chargement des images de gallerie
@@ -161,10 +192,6 @@ public class CameraManager : MonoBehaviour
         canPlay = false;
         _isUIup = true;
         _cameraUI.SetTrigger("UICameraUp");
-
-
-
-
     }
 
     private void UIdown()
@@ -175,7 +202,9 @@ public class CameraManager : MonoBehaviour
         _cameraUI.SetTrigger("UICameraDown");
 
     }
+    #endregion
 
+    #region TAKE_PHOTO
     private void TakePhoto()
     {
         //Possibilité de mettre une condition pour limiter le nombre de prise de photo avec _screenNumber
@@ -195,7 +224,9 @@ public class CameraManager : MonoBehaviour
         }
 
     }
+    #endregion
 
+    #region IMPORTANT_PHOTO_DETECTION
     public void Raycast()
     {
         RaycastHit hit;
@@ -231,6 +262,9 @@ public class CameraManager : MonoBehaviour
             }
         }
     }
-
+    #endregion
+    
+    
+    #endregion
 
 }
