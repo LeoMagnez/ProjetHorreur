@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Text.RegularExpressions;
+using System.IO;
 
 public class SaveRenderTextureToFile
 {
@@ -24,9 +25,22 @@ public class SaveRenderTextureToFile
         byte[] bytes;
         bytes = tex.EncodeToPNG();
 
+
+
         string path = "Assets\\Resources\\capture" + _screenNumber + ".png";
-        System.IO.File.WriteAllBytes(path, bytes);
+
+
+        //string path = Directory.GetCurrentDirectory() + "/Screenshots/";
+
+        /*if (!System.IO.Directory.Exists(path))
+        {
+            System.IO.Directory.CreateDirectory(path);
+        }*/
+
+        File.WriteAllBytes(path, bytes);
         //AssetDatabase.ImportAsset(path);
+
+
         Debug.Log("Saved to " + path);
     }
 

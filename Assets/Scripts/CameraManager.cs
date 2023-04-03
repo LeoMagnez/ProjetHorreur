@@ -243,6 +243,8 @@ public class CameraManager : MonoBehaviour
                 _imgImportanteIndex++;
             }
 
+            //StartCoroutine(LoadImage());
+
             _screenNumber++; //incrémente le nom de la photo pour pouvoir en prendre à l'infini
 
 
@@ -294,6 +296,16 @@ public class CameraManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         _cameraUIParent.SetActive(false);
     }
+
+    /*IEnumerator LoadImage()
+    {
+        WWW www = new WWW("file:///" + System.IO.Directory.GetCurrentDirectory() + "/Screenshots/" + _screenNumber + "png");
+
+        while (!www.isDone)
+        {
+            yield return null;
+        }
+    }*/
     #endregion
     
     
