@@ -198,6 +198,7 @@ public class CameraManager : MonoBehaviour
         galleryManager.OnGalleryUpdatePage();
 
         _isCameraUp = false;
+
         canPlay = false; //empêche le joueur de bouger lorsqu'il est dans la galerie
         _isUIup = true; //empêche le joueur de passer en mode photo lorsqu'il est dans la galerie
         _cameraUI.SetTrigger("UICameraUp"); //joue l'animation d'ouverture de la galerie

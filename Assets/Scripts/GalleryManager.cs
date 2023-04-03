@@ -33,7 +33,7 @@ public class GalleryManager : MonoBehaviour
 
 
     }
-
+    Vector2[] OriginalPos = new Vector2[4];
 
     private int pageIndex = 0;
 
@@ -74,14 +74,21 @@ public class GalleryManager : MonoBehaviour
             Destroy(gameObject);    // Suppression d'une instance précédente
 
         instance = this;
+
+        foreach (var image in imagesUI)
+        {
+            OriginalPos[image.index] = image.image.rectTransform.localPosition;
+        }
     }
 
     private void Update()
     {
-        Debug.Log(CameraManager.instance._imgImportanteIndex);
+        //Debug.Log(CameraManager.instance._imgImportanteIndex);
         if(Input.GetKeyDown(KeyCode.E) && curSelectedImage != null)
         {
-            curSelectedImage.animator.SetTrigger("ZoomIn");
+            //curSelectedImage.animator.SetTrigger("ZoomIn");
+            curSelectedImage.image.rectTransform.localPosition = Vector2.zero;
+            curSelectedImage.image.rectTransform.localScale = Vector2.one * 2f;
             zoomedOnPhoto = true;
 
             /*if (CameraManager.instance._objetImportantGallery == true) //Si un objet important a été pris en photo
@@ -110,7 +117,8 @@ public class GalleryManager : MonoBehaviour
         {
             curSelectedImage.animator.SetTrigger("ZoomOut");
             zoomedOnPhoto = false;
-
+            curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
+            curSelectedImage.image.rectTransform.localScale = Vector2.one;
             if (!zoomedOnPhoto)
             {
                 foreach (AnimatedImageCameraMenu image in imagesUI)
@@ -127,6 +135,8 @@ public class GalleryManager : MonoBehaviour
         {
             curSelectedImage.animator.SetTrigger("ZoomOut");
             zoomedOnPhoto = false;
+            curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
+            curSelectedImage.image.rectTransform.localScale = Vector2.one;
             StartCoroutine(CameraManager.instance.WaitBeforeDisablingCamera());
         }
 
@@ -180,13 +190,26 @@ public class GalleryManager : MonoBehaviour
 
         if (curSelectedImage != null)
         {
-            curSelectedImage.animator.SetTrigger(curSelectedImage._unfocus);
+            //curSelectedImage.animator.SetTrigger(curSelectedImage._unfocus);
+
+            RectTransform rectTransformOld = curSelectedImage.image.rectTransform;
+            rectTransformOld.localScale = Vector3.one;
+            //rectTransformOld.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1f);
+            /*rectTransformNew.anchorMax = new Vector2(0.75f, 0.75f);
+            rectTransformOld.anchorMin = new Vector2(0, 0);*/
         }
 
         curSelectedImage = _imagetoselect;
-        curSelectedImage.animator.SetTrigger(curSelectedImage._focus);
+        //curSelectedImage.animator.SetTrigger(curSelectedImage._focus);
         _indexGallery = curSelectedImage.index;
-    
+
+        RectTransform rectTransformNew = curSelectedImage.image.rectTransform;
+        rectTransformNew.localScale = Vector3.one * 1.1f;
+        Debug.Log(rectTransformNew.localScale);
+        //rectTransformNew.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 10f);
+        /*rectTransformNew.anchorMax = new Vector2(0.75f, 0.75f);
+        rectTransformNew.anchorMin = new Vector2(0.25f, 0.25f);*/
+
     }
 
 
@@ -254,6 +277,7 @@ public class GalleryManager : MonoBehaviour
         }
 
         loadingCoro = null;
+        SelectImage(imagesUI[_indexGallery]);
     }
 
 
