@@ -58,6 +58,7 @@ public class GalleryManager : MonoBehaviour
     [HideInInspector]
     public bool zoomedOnPhoto = false;
 
+    [HideInInspector]
     AnimatedImageCameraMenu curSelectedImage = null;
 
 
@@ -109,6 +110,13 @@ public class GalleryManager : MonoBehaviour
                     }
                 }
             }
+        }
+
+        if (!CameraManager.instance._isUIup && curSelectedImage != null)
+        {
+            curSelectedImage.animator.SetTrigger("ZoomOut");
+            zoomedOnPhoto = false;
+            StartCoroutine(CameraManager.instance.WaitBeforeDisablingCamera());
         }
 
     }

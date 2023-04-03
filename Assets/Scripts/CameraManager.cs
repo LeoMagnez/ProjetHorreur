@@ -201,10 +201,11 @@ public class CameraManager : MonoBehaviour
 
     private void UIdown()
     {
-
+        
         canPlay = true; //autorise le joueur à bouger lorsque la galerie est fermée
         _isUIup = false; //permet le joueur de passer en mode photo une fois la galerie fermée
         _cameraUI.SetTrigger("UICameraDown");//joue l'animation de fermeture de la galerie
+        
 
     }
     #endregion
@@ -276,6 +277,12 @@ public class CameraManager : MonoBehaviour
                 _takingPhoto = false;
             }
         }
+    }
+
+    public IEnumerator WaitBeforeDisablingCamera()
+    {
+        yield return new WaitForSeconds(1.5f);
+        _cameraUIParent.SetActive(false);
     }
     #endregion
     
