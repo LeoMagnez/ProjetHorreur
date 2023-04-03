@@ -78,10 +78,17 @@ public class GalleryManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(CameraManager.instance._imgImportanteIndex);
         if(Input.GetKeyDown(KeyCode.E) && curSelectedImage != null)
         {
             curSelectedImage.animator.SetTrigger("ZoomIn");
             zoomedOnPhoto = true;
+
+            /*if (CameraManager.instance._objetImportantGallery == true) //Si un objet important a été pris en photo
+            {
+                Debug.Log("photo importante");
+                CameraManager.instance._porte.SetActive(false); //On désactive la porte
+            }*/
 
             if (zoomedOnPhoto)
             {
@@ -91,6 +98,10 @@ public class GalleryManager : MonoBehaviour
                     {
                         image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
                     }
+                }
+                if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
+                {
+                    CameraManager.instance._porte.SetActive(false); //On désactive la porte
                 }
             }
         }
@@ -134,6 +145,12 @@ public class GalleryManager : MonoBehaviour
             {
 
                 imagesUI[i].image.sprite = CameraManager.instance._spriteList[i + nbOfPicsPerPage * pageIndex];
+
+                if(CameraManager.instance._imgImportanteIndex == i)
+                {
+
+                    //LOGIQUE CHANGEMENT VISUEL DE PHOTO IMPORTANTE
+                }
 
             }
             else

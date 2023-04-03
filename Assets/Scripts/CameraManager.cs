@@ -75,6 +75,10 @@ public class CameraManager : MonoBehaviour
 
     public Animator _cameraUI;
 
+    public bool _objetImportantGallery = false;
+
+    public int _imgImportanteIndex = 0;
+
 
 
 
@@ -223,15 +227,19 @@ public class CameraManager : MonoBehaviour
             SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber); //sauvegarde la photo dans une render texture et l'encode en PNG pour pouvoir aller la visionner
             Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber); //convertit la photo en Texture2D
             Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f)); //transforme la photo en sprite pour l'ajouter à la galerie
+
             //_takenPictures.Add(SaveRenderTextureToFile.tex);
 
             if (_importantPhoto)
             {
                 _spriteList.Insert(0, _temp); //si une photo est importante, l'ajoute en haut de la galerie
+                _imgImportanteIndex = 0;
+                _importantPhoto = false;
             }
             else
             {
-                _spriteList.Add(_temp); //ajoute la photo à la liste
+                _spriteList.Insert(0, _temp); //ajoute la photo à la liste
+                _imgImportanteIndex++;
             }
 
             _screenNumber++; //incrémente le nom de la photo pour pouvoir en prendre à l'infini
@@ -259,7 +267,8 @@ public class CameraManager : MonoBehaviour
 
                 _takingPhoto = false;
                 _objetImportant.SetActive(false); //Désactivation du GameOject spécifié
-                _porte.SetActive(false); //Désactivation du GameOject spécifié
+                //_objetImportantGallery = true; //Active une bool qui indique qu'une photo importante a été prise
+                //_porte.SetActive(false); //Désactivation du GameOject spécifié
 
             }
 
