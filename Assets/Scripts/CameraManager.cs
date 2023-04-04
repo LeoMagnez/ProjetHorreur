@@ -121,12 +121,10 @@ public class CameraManager : MonoBehaviour
             if (!_isCameraUp)
             {
                 CameraUp(); //lève l'appareil
-                _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on sort l'appareil
             }
             else
             {
                 CameraDown();//range l'appareil
-                _lightCamera.SetActive(false); //désactive la lumière du flash lorsque l'appareil est rangé
             }
         }
 
@@ -221,34 +219,14 @@ public class CameraManager : MonoBehaviour
         //Si on appuie sur clic gauche avec l'appareil photo levé, prend une photo
         if (Input.GetMouseButtonDown(0) && _isCameraUp)
         {
+            _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on prend une photo
             _takingPhoto = true;
 
             Raycast(); //vérifie si la photo prise est une "photo importante"
 
-            Sprite _temp = SaveRenderTextureToFile.ToTexture2D(rt, _screenNumber); //sauvegarde la photo dans une render texture et l'encode en PNG pour pouvoir aller la visionner
-            //Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber); //convertit la photo en Texture2D
-            //Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f)); //transforme la photo en sprite pour l'ajouter à la galerie
-
-            //_takenPictures.Add(SaveRenderTextureToFile.tex);
-
-            if (_importantPhoto)
-            {
-                _spriteList.Insert(0, _temp); //si une photo est importante, l'ajoute en haut de la galerie
-                _imgImportanteIndex = 0;
-                _importantPhoto = false;
-            }
-            else
-            {
-                _spriteList.Insert(0, _temp); //ajoute la photo à la liste
-                _imgImportanteIndex++;
-            }
-
-            //StartCoroutine(LoadImage());
+            StartCoroutine(waitForFlash());
 
             _screenNumber++; //incrémente le nom de la photo pour pouvoir en prendre à l'infini
-
-
-
         }
 
     }
@@ -296,6 +274,28 @@ public class CameraManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         _cameraUIParent.SetActive(false);
     }
+
+    private IEnumerator waitForFlash()
+    {
+        yield return new WaitForSeconds(0.01f);
+
+        Sprite _temp = SaveRenderTextureToFile.ToTexture2D(rt, _screenNumber); //sauvegarde la photo dans une render texture et l'encode en PNG pour pouvoir aller la visionner
+
+        if (_importantPhoto)
+        {
+            _spriteList.Insert(0, _temp); //si une photo est importante, l'ajoute en haut de la galerie
+            _imgImportanteIndex = 0;
+            _importantPhoto = false;
+        }
+        else
+        {
+            _spriteList.Insert(0, _temp); //ajoute la photo à la liste
+            _imgImportanteIndex++;
+        }
+
+        _lightCamera.SetActive(false);
+    }
+
 
     /*IEnumerator LoadImage()
     {
