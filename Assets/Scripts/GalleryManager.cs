@@ -10,6 +10,7 @@ possibilité de sélectionner n'importe quelle photo et de zoomer dessus.
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -61,6 +62,7 @@ public class GalleryManager : MonoBehaviour
     [HideInInspector]
     AnimatedImageCameraMenu curSelectedImage = null;
 
+    public TextMeshProUGUI debugText;
 
 
     private void OnEnable()
@@ -83,8 +85,9 @@ public class GalleryManager : MonoBehaviour
 
     private void Update()
     {
+        //debugText.text = "Img rect : \n" + CameraManager.instance._spriteList[0].rect.ToString() + "\n" + "\n" + "Is img packed ?\n" + CameraManager.instance._spriteList[0].packed + "\n" + "\n" + "Texture reference : \n" + CameraManager.instance._spriteList[0].texture + "\n" + "\n" + "Flags : \n" + CameraManager.instance._spriteList[0].hideFlags;
         //Debug.Log(CameraManager.instance._imgImportanteIndex);
-        if(Input.GetKeyDown(KeyCode.E) && curSelectedImage != null)
+        if (Input.GetKeyDown(KeyCode.E) && curSelectedImage != null)
         {
             //curSelectedImage.animator.SetTrigger("ZoomIn");
             curSelectedImage.image.rectTransform.localPosition = Vector2.zero;

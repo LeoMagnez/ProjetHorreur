@@ -225,9 +225,9 @@ public class CameraManager : MonoBehaviour
 
             Raycast(); //vérifie si la photo prise est une "photo importante"
 
-            SaveRenderTextureToFile.SaveRTToFile(rt, _screenNumber); //sauvegarde la photo dans une render texture et l'encode en PNG pour pouvoir aller la visionner
-            Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber); //convertit la photo en Texture2D
-            Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f)); //transforme la photo en sprite pour l'ajouter à la galerie
+            Sprite _temp = SaveRenderTextureToFile.ToTexture2D(rt, _screenNumber); //sauvegarde la photo dans une render texture et l'encode en PNG pour pouvoir aller la visionner
+            //Texture2D temp = Resources.Load<Texture2D>("capture" + _screenNumber); //convertit la photo en Texture2D
+            //Sprite _temp = Sprite.Create(SaveRenderTextureToFile.tex, new Rect(0, 0, SaveRenderTextureToFile.tex.width, SaveRenderTextureToFile.tex.height), new Vector2(0.5f, 0.5f)); //transforme la photo en sprite pour l'ajouter à la galerie
 
             //_takenPictures.Add(SaveRenderTextureToFile.tex);
 
@@ -307,8 +307,13 @@ public class CameraManager : MonoBehaviour
         }
     }*/
     #endregion
-    
-    
+
+
+    private void OnApplicationQuit()
+    {
+        SaveRenderTextureToFile.WritePhotoToFile(_spriteList.ToArray());
+    }
+
     #endregion
 
 }
