@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
     [SerializeField] float speed = 3f;
+    private float sprintSpeed = 7f;
     Vector2 horizontalInput;
 
     [SerializeField] float gravity = -30f;
@@ -28,9 +29,9 @@ public class Movement : MonoBehaviour
         verticalVelocity.y += gravity * Time.deltaTime;
         controller.Move(verticalVelocity * Time.deltaTime);
     }
-    public void RecieveInput(Vector2 _horiontalInput) 
+    public void RecieveInput(Vector2 _horizontalInput) 
     {
-        horizontalInput = _horiontalInput;
+        horizontalInput = _horizontalInput;
         Debug.Log(horizontalInput);
     }
 }
