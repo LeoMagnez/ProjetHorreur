@@ -27,10 +27,12 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CameraManager.instance.canPlay)
+        /*if (CameraManager.instance.canPlay)
         {
             move();
-        }
+        }*/
+
+        move();
         
 
     }
