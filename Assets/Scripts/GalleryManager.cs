@@ -33,6 +33,7 @@ public class GalleryManager : MonoBehaviour
         public string _unfocus;
 
 
+
     }
     Vector2[] OriginalPos = new Vector2[4];
 
@@ -64,6 +65,9 @@ public class GalleryManager : MonoBehaviour
 
     public TextMeshProUGUI debugText;
 
+    public GameObject renderTexture;
+    public GameObject photoCamera;
+
 
     private void OnEnable()
     {
@@ -90,9 +94,14 @@ public class GalleryManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && curSelectedImage != null)
         {
             //curSelectedImage.animator.SetTrigger("ZoomIn");
-            curSelectedImage.image.rectTransform.localPosition = Vector2.zero;
-            curSelectedImage.image.rectTransform.localScale = Vector2.one * 2f;
+            curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
+            curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
             zoomedOnPhoto = true;
+            
+            renderTexture.SetActive(true);
+            photoCamera.SetActive(true);
+
+
 
             /*if (CameraManager.instance._objetImportantGallery == true) //Si un objet important a été pris en photo
             {
@@ -122,6 +131,10 @@ public class GalleryManager : MonoBehaviour
             zoomedOnPhoto = false;
             curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
             curSelectedImage.image.rectTransform.localScale = Vector2.one;
+            ObjectToMoveAppears();
+            renderTexture.SetActive(false);
+            photoCamera.SetActive(false);
+
             if (!zoomedOnPhoto)
             {
                 foreach (AnimatedImageCameraMenu image in imagesUI)
@@ -150,6 +163,7 @@ public class GalleryManager : MonoBehaviour
     {
 
         int _spritecount = CameraManager.instance._spriteList.Count;
+        Debug.Log(_spritecount);
 
         for (int i = 0; i < ((_spritecount < imagesUI.Count) ? _spritecount : imagesUI.Count); i++)
         {
@@ -282,6 +296,21 @@ public class GalleryManager : MonoBehaviour
         loadingCoro = null;
         SelectImage(imagesUI[_indexGallery]);
     }
+
+    private void ObjectToMoveAppears()
+    {
+        RaycastHit hit;
+
+        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 50f))
+        {
+            CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
+            CameraManager.instance._spriteList.RemoveAt(curSelectedImage.index);
+            CameraManager.instance._objectToMoveList.RemoveAt(curSelectedImage.index);
+            imagesUI[curSelectedImage.index].image.sprite = null;
+            OnGalleryUpdatePage();
+        }
+    }
+
 
 
 }

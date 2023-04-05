@@ -61,8 +61,9 @@ public class CameraManager : MonoBehaviour
     public Texture2D test;
 
     [Header("Lists")]
-    public List<Texture2D> _takenPictures = new List<Texture2D>();
+    //public List<Texture2D> _takenPictures = new List<Texture2D>();
     public List<Sprite> _spriteList = new List<Sprite>();
+    public List<ObjectMover> _objectToMoveList = new List<ObjectMover>();
     //public List<MeshRenderer> _photoPlanes = new List<MeshRenderer>();
 
 
@@ -222,9 +223,9 @@ public class CameraManager : MonoBehaviour
             _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on prend une photo
             _takingPhoto = true;
 
-            Raycast(); //vérifie si la photo prise est une "photo importante"
+            
 
-            StartCoroutine(waitForFlash());
+            StartCoroutine(WaitForFlash());
 
             _screenNumber++; //incrémente le nom de la photo pour pouvoir en prendre à l'infini
         }
@@ -247,15 +248,22 @@ public class CameraManager : MonoBehaviour
                 Debug.Log("Je détecte quelque chose d'important");
 
                 _takingPhoto = false;
-                _objetImportant.SetActive(false); //Désactivation du GameOject spécifié
+                //_objetImportant.SetActive(false); //Désactivation du GameOject spécifié
+
                 //_objetImportantGallery = true; //Active une bool qui indique qu'une photo importante a été prise
                 //_porte.SetActive(false); //Désactivation du GameOject spécifié
 
             }
 
+            else if (hit.transform.tag == "_photoNormale" && _takingPhoto)
+            {
+                hit.transform.gameObject.GetComponent<ObjectMover>().HideObject();
+                _objectToMoveList.Insert(0, hit.transform.gameObject.GetComponent<ObjectMover>());
+                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            }
             else
             {
-                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                _objectToMoveList.Insert(0, null);
             }
         }
         else
@@ -275,9 +283,11 @@ public class CameraManager : MonoBehaviour
         _cameraUIParent.SetActive(false);
     }
 
-    private IEnumerator waitForFlash()
+    private IEnumerator WaitForFlash()
     {
         yield return new WaitForSeconds(0.01f);
+
+        Raycast(); //vérifie si la photo prise est une "photo importante"
 
         Sprite _temp = SaveRenderTextureToFile.ToTexture2D(rt, _screenNumber); //sauvegarde la photo dans une render texture et l'encode en PNG pour pouvoir aller la visionner
 
@@ -294,18 +304,8 @@ public class CameraManager : MonoBehaviour
         }
 
         _lightCamera.SetActive(false);
+        _objetImportant.SetActive(false); //Désactivation de l'objet important
     }
-
-
-    /*IEnumerator LoadImage()
-    {
-        WWW www = new WWW("file:///" + System.IO.Directory.GetCurrentDirectory() + "/Screenshots/" + _screenNumber + "png");
-
-        while (!www.isDone)
-        {
-            yield return null;
-        }
-    }*/
     #endregion
 
 
