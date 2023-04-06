@@ -113,17 +113,21 @@ public class GalleryManager : MonoBehaviour
                         {
                             if (image != curSelectedImage)
                             {
+                                
                                 image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
+                                
                             }
                         }
-                        if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
-                        {
-                            CameraManager.instance._porte.SetActive(false); //On désactive la porte
-                        }
+
                     }
                 }
 
-                
+
+                if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
+                {
+                    CameraManager.instance._porte.SetActive(false); //On désactive la porte
+                }
+
             }
 
             else if(curSelectedImage != null && zoomedOnPhoto )
@@ -146,8 +150,6 @@ public class GalleryManager : MonoBehaviour
                         }
                     }
                 }
-
-
 
             }
 
@@ -315,19 +317,27 @@ public class GalleryManager : MonoBehaviour
 
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10f))
         {
+
             CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
+
+            Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
+            Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);
+
+           
+
             CameraManager.instance._spriteList.RemoveAt(curSelectedImage.index);
             CameraManager.instance._objectToMoveList.RemoveAt(curSelectedImage.index);
+
+            
+
+
             //imagesUI[curSelectedImage.index].image.sprite = null;
             //OnGalleryUpdatePage();
             CameraManager.instance.UIdown();
         }
 
-        /*Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
 
-        Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);*/
     }
-
 
 
 }
