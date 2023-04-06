@@ -246,7 +246,7 @@ public class CameraManager : MonoBehaviour
                 _importantPhoto = true;
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
                 Debug.Log("Je détecte quelque chose d'important");
-
+                _objectToMoveList.Insert(0, null);
                 _takingPhoto = false;
                 //_objetImportant.SetActive(false); //Désactivation du GameOject spécifié
 

@@ -322,6 +322,10 @@ public class GalleryManager : MonoBehaviour
             //OnGalleryUpdatePage();
             CameraManager.instance.UIdown();
         }
+
+        /*Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
+
+        Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);*/
     }
 
 
