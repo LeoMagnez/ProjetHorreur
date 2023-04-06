@@ -203,7 +203,7 @@ public class CameraManager : MonoBehaviour
         _cameraUI.SetTrigger("UICameraUp"); //joue l'animation d'ouverture de la galerie
     }
 
-    private void UIdown()
+    public void UIdown()
     {
         
         canPlay = true; //autorise le joueur à bouger lorsque la galerie est fermée
@@ -238,7 +238,7 @@ public class CameraManager : MonoBehaviour
     {
         RaycastHit hit; //Lancement du raycast
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, 50f))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, 10f))
         {
             
             if (hit.transform.tag == "_photoImportante" && _takingPhoto) //Lancement d'une condition sur le raycast touche un item avec le tag "_photoImportante"
@@ -269,7 +269,7 @@ public class CameraManager : MonoBehaviour
         else
         {
             Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 1000, Color.red);
-
+            _objectToMoveList.Insert(0, null);
             if (_takingPhoto)
             {
                 _takingPhoto = false;
