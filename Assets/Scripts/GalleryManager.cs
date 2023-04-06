@@ -95,40 +95,40 @@ public class GalleryManager : MonoBehaviour
         {
             if(curSelectedImage != null && !zoomedOnPhoto)
             {
-                //curSelectedImage.animator.SetTrigger("ZoomIn");
-                curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
-                curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
-                zoomedOnPhoto = true;
 
-                renderTexture.SetActive(true);
-                photoCamera.SetActive(true);
-
-
-
-                /*if (CameraManager.instance._objetImportantGallery == true) //Si un objet important a été pris en photo
+                if (CameraManager.instance._objectToMoveList[curSelectedImage.index] != null)
                 {
-                    Debug.Log("photo importante");
-                    CameraManager.instance._porte.SetActive(false); //On désactive la porte
-                }*/
+                    //curSelectedImage.animator.SetTrigger("ZoomIn");
+                    curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
+                    curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
+                    zoomedOnPhoto = true;
 
-                if (zoomedOnPhoto)
-                {
-                    foreach (AnimatedImageCameraMenu image in imagesUI)
+                    renderTexture.SetActive(true);
+                    photoCamera.SetActive(true);
+
+
+                    if (zoomedOnPhoto)
                     {
-                        if (image != curSelectedImage)
+                        foreach (AnimatedImageCameraMenu image in imagesUI)
                         {
-                            image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
+                            if (image != curSelectedImage)
+                            {
+                                image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
+                            }
+                        }
+                        if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
+                        {
+                            CameraManager.instance._porte.SetActive(false); //On désactive la porte
                         }
                     }
-                    if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
-                    {
-                        CameraManager.instance._porte.SetActive(false); //On désactive la porte
-                    }
                 }
+
+                
             }
 
-            else if(curSelectedImage != null && zoomedOnPhoto)
+            else if(curSelectedImage != null && zoomedOnPhoto )
             {
+
                 curSelectedImage.animator.SetTrigger("ZoomOut");
                 zoomedOnPhoto = false;
                 curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
@@ -136,7 +136,6 @@ public class GalleryManager : MonoBehaviour
                 ObjectToMoveAppears();
                 renderTexture.SetActive(false);
                 photoCamera.SetActive(false);
-
                 if (!zoomedOnPhoto)
                 {
                     foreach (AnimatedImageCameraMenu image in imagesUI)
@@ -147,6 +146,9 @@ public class GalleryManager : MonoBehaviour
                         }
                     }
                 }
+
+
+
             }
 
         }
@@ -169,6 +171,11 @@ public class GalleryManager : MonoBehaviour
 
         int _spritecount = CameraManager.instance._spriteList.Count;
         Debug.Log(_spritecount);
+
+        for (int i = 0; i < nbOfPicsPerPage; i++)
+        {
+            imagesUI[i].image.sprite = null;
+        }
 
         for (int i = 0; i < ((_spritecount < imagesUI.Count) ? _spritecount : imagesUI.Count); i++)
         {
@@ -306,13 +313,14 @@ public class GalleryManager : MonoBehaviour
     {
         RaycastHit hit;
 
-        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 50f))
+        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10f))
         {
             CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
             CameraManager.instance._spriteList.RemoveAt(curSelectedImage.index);
             CameraManager.instance._objectToMoveList.RemoveAt(curSelectedImage.index);
-            imagesUI[curSelectedImage.index].image.sprite = null;
-            OnGalleryUpdatePage();
+            //imagesUI[curSelectedImage.index].image.sprite = null;
+            //OnGalleryUpdatePage();
+            CameraManager.instance.UIdown();
         }
     }
 
