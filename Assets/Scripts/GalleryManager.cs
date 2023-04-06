@@ -91,61 +91,66 @@ public class GalleryManager : MonoBehaviour
     {
         //debugText.text = "Img rect : \n" + CameraManager.instance._spriteList[0].rect.ToString() + "\n" + "\n" + "Is img packed ?\n" + CameraManager.instance._spriteList[0].packed + "\n" + "\n" + "Texture reference : \n" + CameraManager.instance._spriteList[0].texture + "\n" + "\n" + "Flags : \n" + CameraManager.instance._spriteList[0].hideFlags;
         //Debug.Log(CameraManager.instance._imgImportanteIndex);
-        if (Input.GetKeyDown(KeyCode.E) && curSelectedImage != null)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            //curSelectedImage.animator.SetTrigger("ZoomIn");
-            curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
-            curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
-            zoomedOnPhoto = true;
-            
-            renderTexture.SetActive(true);
-            photoCamera.SetActive(true);
-
-
-
-            /*if (CameraManager.instance._objetImportantGallery == true) //Si un objet important a été pris en photo
+            if(curSelectedImage != null && !zoomedOnPhoto)
             {
-                Debug.Log("photo importante");
-                CameraManager.instance._porte.SetActive(false); //On désactive la porte
-            }*/
+                //curSelectedImage.animator.SetTrigger("ZoomIn");
+                curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
+                curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
+                zoomedOnPhoto = true;
 
-            if (zoomedOnPhoto)
-            {
-                foreach(AnimatedImageCameraMenu image in imagesUI)
+                renderTexture.SetActive(true);
+                photoCamera.SetActive(true);
+
+
+
+                /*if (CameraManager.instance._objetImportantGallery == true) //Si un objet important a été pris en photo
                 {
-                    if(image != curSelectedImage)
-                    {
-                        image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
-                    }
-                }
-                if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
-                {
+                    Debug.Log("photo importante");
                     CameraManager.instance._porte.SetActive(false); //On désactive la porte
-                }
-            }
-        }
+                }*/
 
-        if (Input.GetKeyDown(KeyCode.Escape) && curSelectedImage != null && zoomedOnPhoto)
-        {
-            curSelectedImage.animator.SetTrigger("ZoomOut");
-            zoomedOnPhoto = false;
-            curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
-            curSelectedImage.image.rectTransform.localScale = Vector2.one;
-            ObjectToMoveAppears();
-            renderTexture.SetActive(false);
-            photoCamera.SetActive(false);
-
-            if (!zoomedOnPhoto)
-            {
-                foreach (AnimatedImageCameraMenu image in imagesUI)
+                if (zoomedOnPhoto)
                 {
-                    if (image != curSelectedImage)
+                    foreach (AnimatedImageCameraMenu image in imagesUI)
                     {
-                        image.image.gameObject.SetActive(true); //reactive les images quand on dezoome
+                        if (image != curSelectedImage)
+                        {
+                            image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
+                        }
+                    }
+                    if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
+                    {
+                        CameraManager.instance._porte.SetActive(false); //On désactive la porte
                     }
                 }
             }
+
+            else if(curSelectedImage != null && zoomedOnPhoto)
+            {
+                curSelectedImage.animator.SetTrigger("ZoomOut");
+                zoomedOnPhoto = false;
+                curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
+                curSelectedImage.image.rectTransform.localScale = Vector2.one;
+                ObjectToMoveAppears();
+                renderTexture.SetActive(false);
+                photoCamera.SetActive(false);
+
+                if (!zoomedOnPhoto)
+                {
+                    foreach (AnimatedImageCameraMenu image in imagesUI)
+                    {
+                        if (image != curSelectedImage)
+                        {
+                            image.image.gameObject.SetActive(true); //reactive les images quand on dezoome
+                        }
+                    }
+                }
+            }
+
         }
+
 
         if (!CameraManager.instance._isUIup && curSelectedImage != null)
         {
