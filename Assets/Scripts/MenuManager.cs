@@ -30,7 +30,7 @@ public class MenuManager : MonoBehaviour
 
     public void menuController()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && !CameraManager.instance._isUIup && !CameraManager.instance._isCameraUp)
         {
             if (!_isMenuUp)
             {
