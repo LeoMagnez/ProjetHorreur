@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DefaultMovement()
     {
-        if(CameraManager.instance.canPlay)
+        if(CameraManager.instance.canPlay && MenuManager.instance._menuIsUp == false)
         {
             if (_controller.isGrounded)
             {
