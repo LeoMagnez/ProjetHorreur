@@ -32,7 +32,10 @@ public class MouseLook : MonoBehaviour
             move();
         }*/
 
-        move();
+        if (MenuManager.instance._menuIsUp == false)
+        {
+            move();
+        }
         
 
     }
