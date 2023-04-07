@@ -23,6 +23,14 @@ public class TriggerManager : MonoBehaviour
             {
                 case 0:
                     GameOjectManager.instance._listeObj[0].SetActive(true);
+                    GameOjectManager.instance._listeObj[1].SetActive(true);
+                    GameOjectManager.instance._listeObj[2].SetActive(false);
+                    GameOjectManager.instance._listeObj[3].SetActive(true);
+                    GameOjectManager.instance._listeObj[4].SetActive(true);
+                    GameOjectManager.instance._listeObj[5].SetActive(false);
+                    GameOjectManager.instance._listeObj[6].SetActive(true);
+                    GameOjectManager.instance._listeObj[7].SetActive(true);
+                    GameOjectManager.instance._listeObj[8].SetActive(true);
                     Debug.Log("0");
                     break;
 
