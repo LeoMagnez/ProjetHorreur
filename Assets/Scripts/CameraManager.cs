@@ -117,7 +117,7 @@ public class CameraManager : MonoBehaviour
     private void Update()
     {
         //Si on appuie sur clic-droit, et que l'on est pas en train de naviguer la galerie, sors l'appareil photo
-        if (Input.GetMouseButtonUp(1) && !_isUIup) 
+        if (Input.GetMouseButtonUp(1) && !_isUIup && !MenuManager.instance._menuIsUp ) 
         {
             if (!_isCameraUp)
             {
@@ -131,7 +131,7 @@ public class CameraManager : MonoBehaviour
 
 
         //Si on appuie sur Tab et que l'appareil photo est rangé alors ouvre la galerie
-        if (Input.GetKeyDown(KeyCode.Tab) && !_isCameraUp)
+        if (Input.GetKeyDown(KeyCode.Tab) && !_isCameraUp && !MenuManager.instance._menuIsUp)
         {
             if (!_isUIup)
             {

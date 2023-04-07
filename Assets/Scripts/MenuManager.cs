@@ -50,6 +50,9 @@ public class MenuManager : MonoBehaviour
         menuAnimation.SetTrigger("MenuUiUp");
         _isMenuUp = true;
         _menuIsUp = true;
+
+        CameraManager.instance._isCameraUp = false;
+        CameraManager.instance.canPlay = false; //empêche le joueur de bouger lorsqu'il est dans la galerie
     }
 
     public void MenuDown()
@@ -57,5 +60,8 @@ public class MenuManager : MonoBehaviour
         menuAnimation.SetTrigger("MenuUiDown");
         _isMenuUp = false;
         _menuIsUp = false;
+
+
+        CameraManager.instance.canPlay = true; //permet au joueur de bouger a nouveau
     }
 }
