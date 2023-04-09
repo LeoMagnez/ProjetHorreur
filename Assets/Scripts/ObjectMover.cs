@@ -24,8 +24,7 @@ public class ObjectMover : MonoBehaviour
         transform.position = _targetPos;
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<Collider>().enabled = true;
-<<<<<<< Updated upstream
-=======
+
         
         
     }
@@ -46,7 +45,7 @@ public class ObjectMover : MonoBehaviour
         // Enable the MeshRenderer and Collider of the GameObject
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<Collider>().enabled = true;
->>>>>>> Stashed changes
+
     }
 
     public void HideObject()

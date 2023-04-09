@@ -318,15 +318,15 @@ public class GalleryManager : MonoBehaviour
 
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10f))
         {
+            FurnitureAnchor _furniture;
 
-<<<<<<< Updated upstream
             CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
 
             Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
             Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);
 
            
-=======
+
             //List<FurnitureAnchor> tempList = FindObjectsOfType<FurnitureAnchor>().ToList<FurnitureAnchor>();
 
             if (hit.collider.gameObject.TryGetComponent<FurnitureAnchor>(out _furniture) == null)
@@ -358,7 +358,7 @@ public class GalleryManager : MonoBehaviour
 
             Vector3 _targetPos = _targetAnchor.transform.position + _targetAnchor.anchorLocalPos;*/
 
->>>>>>> Stashed changes
+
 
             CameraManager.instance._spriteList.RemoveAt(curSelectedImage.index);
             CameraManager.instance._objectToMoveList.RemoveAt(curSelectedImage.index);

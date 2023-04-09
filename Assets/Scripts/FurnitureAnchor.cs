@@ -57,13 +57,13 @@ public class FurnitureAnchor : MonoBehaviour
 
     void OnEnable()
     {
-        FurnitureAnchorsManager.allTheAnchors.Add(this);
+        //FurnitureAnchorsManager.allTheAnchors.Add(this);
  
     }
 
     private void OnDisable()
     {
-        FurnitureAnchorsManager.allTheAnchors.Remove(this);
+        //FurnitureAnchorsManager.allTheAnchors.Remove(this);
     }
 
     private void Start()
