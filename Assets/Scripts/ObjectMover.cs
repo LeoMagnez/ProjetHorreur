@@ -24,6 +24,29 @@ public class ObjectMover : MonoBehaviour
         transform.position = _targetPos;
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<Collider>().enabled = true;
+<<<<<<< Updated upstream
+=======
+        
+        
+    }
+
+    public void MoveObjectToAnchor(Vector3 _anchor)
+    {
+        // Get the anchor's position and rotation in world space
+        Vector3 anchorWorldPos = _anchor;
+        //Quaternion anchorWorldRot = _anchor.transform.rotation;
+
+        // Calculate the target position in world space by adding the anchor's position and the local offset
+        //Vector3 targetWorldPos = anchorWorldPos + anchorWorldRot * anchor.vectorAnchorToOrigin;
+
+        // Set the position and rotation of the GameObject to the target world position and rotation
+        transform.position = anchorWorldPos;
+        //transform.rotation = anchorWorldRot;
+
+        // Enable the MeshRenderer and Collider of the GameObject
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<Collider>().enabled = true;
+>>>>>>> Stashed changes
     }
 
     public void HideObject()
