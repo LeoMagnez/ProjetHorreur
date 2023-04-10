@@ -42265,6 +42265,7 @@ GameObject:
   - component: {fileID: 2536836133553173486}
   - component: {fileID: 7608667881144067540}
   - component: {fileID: 1985706930381813234}
+  - component: {fileID: 8547389147219283379}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -43782,6 +43783,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &8547389147219283379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800049526169807302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 30
+  anchorNumberY: 30
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.48, y: 0.5, z: 0.31}
+  anchorOffset: {x: -2, y: -1.39, z: 0}
+  worldPos: {x: 40.952957, y: 4.569079, z: 61.47741}
+  vectorAnchorToOrigin: {x: -63.7, y: -0.13817883, z: -40.5}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 90
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 1, g: 0, b: 1, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &5813365788359838625
 GameObject:
   m_ObjectHideFlags: 0
