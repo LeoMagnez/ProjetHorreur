@@ -173,7 +173,7 @@ public class GalleryManager : MonoBehaviour
     {
 
         int _spritecount = CameraManager.instance._spriteList.Count;
-        Debug.Log(_spritecount);
+        //Debug.Log(_spritecount);
 
         for (int i = 0; i < nbOfPicsPerPage; i++)
         {
@@ -237,7 +237,7 @@ public class GalleryManager : MonoBehaviour
 
         RectTransform rectTransformNew = curSelectedImage.image.rectTransform;
         rectTransformNew.localScale = Vector3.one * 1.1f;
-        Debug.Log(rectTransformNew.localScale);
+        //Debug.Log(rectTransformNew.localScale);
         //rectTransformNew.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 10f);
         /*rectTransformNew.anchorMax = new Vector2(0.75f, 0.75f);
         rectTransformNew.anchorMin = new Vector2(0.25f, 0.25f);*/
