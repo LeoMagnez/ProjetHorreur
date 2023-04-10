@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TriggerManager : MonoBehaviour
 
     //public List<String> _mesTrigger = new List<String>();
     public int _TriggerToCall = 0;
+    public string _SceneToLoad;
 
 
     private void OnTriggerEnter(Collider other)
@@ -22,20 +24,39 @@ public class TriggerManager : MonoBehaviour
             switch (_TriggerToCall)
             {
                 case 0:
-                    GameOjectManager.instance._listeObj[0].SetActive(true);
                     GameOjectManager.instance._listeObj[1].SetActive(true);
                     GameOjectManager.instance._listeObj[2].SetActive(false);
                     GameOjectManager.instance._listeObj[3].SetActive(true);
                     GameOjectManager.instance._listeObj[4].SetActive(true);
                     GameOjectManager.instance._listeObj[5].SetActive(false);
-                    GameOjectManager.instance._listeObj[6].SetActive(true);
-                    GameOjectManager.instance._listeObj[7].SetActive(true);
-                    GameOjectManager.instance._listeObj[8].SetActive(true);
+                    //GameOjectManager.instance._listeObj[6].SetActive(true);
+                    //GameOjectManager.instance._listeObj[7].SetActive(true);
+                    //GameOjectManager.instance._listeObj[8].SetActive(true);
+                    GameOjectManager.instance._listeObj[9].SetActive(false);
+                    GameOjectManager.instance._listeObj[10].SetActive(true);
+                    GameOjectManager.instance._listeObj[11].SetActive(false);
+                    GameOjectManager.instance._listeObj[12].SetActive(true);
+                    GameOjectManager.instance._listeObj[14].SetActive(true);
                     Debug.Log("0");
                     break;
 
                 case 1:
+
+                    GameOjectManager.instance._listeObj[13].SetActive(true);
                     Debug.Log("1");
+                    break;
+
+                case 2:
+
+
+                    GameOjectManager.instance._listeObj[0].SetActive(true);
+                    Debug.Log("2");
+                    break;
+
+                case 3:
+
+                    SceneManager.LoadScene(_SceneToLoad);
+                    Debug.Log("3");
                     break;
 
 
