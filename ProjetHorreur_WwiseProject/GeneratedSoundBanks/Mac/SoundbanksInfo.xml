@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{9303FF4D-0596-6D04-B469-F268084EB78B}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{DFC977FB-0AC8-26A0-6BB3-CFB403FE7D00}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -28,6 +28,10 @@
 				<File Id="238845316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-001.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="258899210" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_CameraFlash.wav</ShortName>
+					<CachePath>SFX/SFX_OS_CameraFlash_10C4C929.wem</CachePath>
 				</File>
 				<File Id="261121108" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-005.wav</ShortName>
@@ -118,6 +122,11 @@
 						<MediaRef Id="553343565"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1309478403" Name="Play_CameraFlash" DurationType="OneShot" DurationMin="0.34748298" DurationMax="0.34748298">
+					<MediaRefs>
+						<MediaRef Id="258899210"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4264221306" Name="Play_HouseAmb" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24919415"/>
@@ -145,5 +154,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3324ED72-1D4F-BF16-CD93-BF6207790DA8}</FileHash>
+	<FileHash>{0147C458-4CA3-8290-73AD-D94A7B9C14E2}</FileHash>
 </SoundBanksInfo>

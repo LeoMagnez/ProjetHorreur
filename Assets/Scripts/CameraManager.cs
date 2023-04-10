@@ -80,15 +80,12 @@ public class CameraManager : MonoBehaviour
 
     public int _imgImportanteIndex = 0;
 
-
-
-
-
-    
-
-
     [Header("References")]
     [SerializeField] GalleryManager galleryManager;
+
+    [Header("Sound")]
+    [SerializeField] GameObject SFX;
+    [SerializeField] private AK.Wwise.Event cameraShutterSFX;
 
     #endregion
 
@@ -307,6 +304,7 @@ public class CameraManager : MonoBehaviour
         }
 
         _lightCamera.SetActive(false);
+        cameraShutterSFX.Post(SFX);
         _objetImportant.SetActive(false); //Désactivation de l'objet important
     }
     #endregion

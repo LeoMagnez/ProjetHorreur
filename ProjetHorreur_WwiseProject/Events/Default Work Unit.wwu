@@ -36,6 +36,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_CameraFlash" ID="{9441B7F7-17B9-43C4-8C66-F356F94DCD7B}">
+					<ChildrenList>
+						<Action Name="" ID="{F7326623-DF5E-489A-A84E-B94CF8FAB969}" ShortID="1028721754">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CameraFlash" ID="{054395E7-4905-40BE-A3D6-B534F766B452}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID FTPS = 2946881380U;
         static const AkUniqueID PLAY_AMBIENCES = 1117071689U;
+        static const AkUniqueID PLAY_CAMERAFLASH = 1309478403U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
     } // namespace EVENTS
 
