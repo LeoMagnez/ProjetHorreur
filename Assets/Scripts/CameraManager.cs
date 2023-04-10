@@ -248,6 +248,9 @@ public class CameraManager : MonoBehaviour
                 Debug.Log("Je détecte quelque chose d'important");
                 _objectToMoveList.Insert(0, null);
                 _takingPhoto = false;
+                GameOjectManager.instance._listeObj[4].SetActive(false); //Fait disparaitre la porte quand elle est prise en photo  
+                GameOjectManager.instance._listeObj[15].SetActive(true); //Fait apparaitre le trigger de changement de niveau quand la porte est prise en photo
+
                 //_objetImportant.SetActive(false); //Désactivation du GameOject spécifié
 
                 //_objetImportantGallery = true; //Active une bool qui indique qu'une photo importante a été prise
