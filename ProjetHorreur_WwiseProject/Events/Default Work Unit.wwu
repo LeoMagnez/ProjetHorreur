@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_HouseAmb" ID="{E71636FA-B40A-4EE1-8ECD-4B80A6920977}">
+					<ChildrenList>
+						<Action Name="" ID="{9C78BC84-C490-4FA2-A854-68C5DC95770E}" ShortID="560747056">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HouseAmbience" ID="{B80AD0C7-34C2-445B-92BD-9A67E9188D93}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FTPS" ID="{3968846D-A722-4C13-A6B9-721FFC5D2971}">
+					<ChildrenList>
+						<Action Name="" ID="{5D914631-3A83-4B18-9802-2F241581782C}" ShortID="902584792">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FTPS" ID="{1B639E9F-C997-4F41-9DE1-D627FD86BF52}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambiences" ID="{BFEE91AD-FC89-49A7-83CE-0F23C4941720}">
+					<ChildrenList>
+						<Action Name="" ID="{FE3BA352-78F7-4B7F-BD8C-6BE2DB4B25D7}" ShortID="39794459">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambiences" ID="{E7646A0B-08FB-45BA-8DE0-A6461C899CEC}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
