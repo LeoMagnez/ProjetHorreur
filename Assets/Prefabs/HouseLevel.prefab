@@ -1866,6 +1866,7 @@ GameObject:
   - component: {fileID: 6923762288863458750}
   - component: {fileID: 1639720399305488075}
   - component: {fileID: 3098268126299835606}
+  - component: {fileID: 163675093533725848}
   m_Layer: 0
   m_Name: Wall13
   m_TagString: Untagged
@@ -2196,6 +2197,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &163675093533725848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518277251253334855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 6
+  anchorNumberY: 6
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.43, y: -0.54, z: -0.5}
+  anchorOffset: {x: 1.13, y: 0.94, z: 0}
+  worldPos: {x: 9.7996, y: -0.01007843, z: 45.386017}
+  vectorAnchorToOrigin: {x: 0, y: 0, z: 0}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 0
+  anchorList: []
 --- !u!1 &557220093987749286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,6 +2529,7 @@ GameObject:
   - component: {fileID: 6972109941700257314}
   - component: {fileID: 2764183440726462664}
   - component: {fileID: 4711483829126287852}
+  - component: {fileID: 942906180090968604}
   m_Layer: 0
   m_Name: Wall9
   m_TagString: Untagged
@@ -2831,6 +2860,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &942906180090968604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641116761200908632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 6
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.5, y: -0.53, z: -0.5}
+  anchorOffset: {x: 1.02, y: 0.93, z: 0}
+  worldPos: {x: 12.899335, y: -0.14507818, z: 42.538002}
+  vectorAnchorToOrigin: {x: 0, y: 0.13499975, z: 0}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &698616136283203476
 GameObject:
   m_ObjectHideFlags: 0
@@ -5488,6 +5544,7 @@ GameObject:
   - component: {fileID: 754289681762900645}
   - component: {fileID: 1290749495182698950}
   - component: {fileID: 8543737462854640369}
+  - component: {fileID: 4002606578548385434}
   m_Layer: 0
   m_Name: Wall13 (1)
   m_TagString: Untagged
@@ -5818,6 +5875,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4002606578548385434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046136633257788030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 6
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.54, y: -0.66, z: -0.5}
+  anchorOffset: {x: -1.28, y: 1.41, z: 0}
+  worldPos: {x: 18.699343, y: -0.7300782, z: 50.262}
+  vectorAnchorToOrigin: {x: -0.000022888184, y: 0.7199998, z: 8.240002}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &1073688565391608707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6680,6 +6764,7 @@ GameObject:
   - component: {fileID: 7582515515981408338}
   - component: {fileID: 8852850428650537594}
   - component: {fileID: 4966199248068078608}
+  - component: {fileID: 9084345061675055571}
   m_Layer: 0
   m_Name: Wall6 (2)
   m_TagString: Untagged
@@ -7010,6 +7095,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &9084345061675055571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233666383619010262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 7
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.57, y: 0.47, z: 0.5}
+  anchorOffset: {x: 1.1, y: -1.13, z: 0}
+  worldPos: {x: -8.700274, y: 4.3549213, z: 44.574013}
+  vectorAnchorToOrigin: {x: -2.3999958, y: -4.365, z: -1.4200096}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 0.8993242, b: 1, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &1239390627189204231
 GameObject:
   m_ObjectHideFlags: 0
@@ -8290,6 +8402,7 @@ GameObject:
   - component: {fileID: 8432284935906371625}
   - component: {fileID: 319823782585576431}
   - component: {fileID: 8760750146460992044}
+  - component: {fileID: 9107245008296286887}
   m_Layer: 0
   m_Name: Wall14
   m_TagString: Untagged
@@ -8620,6 +8733,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &9107245008296286887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328642534194840371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.52, y: -0.5, z: 0.5}
+  anchorOffset: {x: -1.73, y: 1.17, z: 0}
+  worldPos: {x: 37.035336, y: -0.01007843, z: 48.734005}
+  vectorAnchorToOrigin: {x: -5.119999, y: 0, z: -0.40000153}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &1398673154154803561
 GameObject:
   m_ObjectHideFlags: 0
@@ -13010,6 +13150,7 @@ GameObject:
   - component: {fileID: 339373800939136195}
   - component: {fileID: 642558728512622651}
   - component: {fileID: 8168308508544643227}
+  - component: {fileID: 2953673918923910834}
   m_Layer: 0
   m_Name: Wall7
   m_TagString: Untagged
@@ -13340,6 +13481,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2953673918923910834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338320011304298116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 10
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.55, y: -0.44, z: -0.5}
+  anchorOffset: {x: 1, y: 1, z: 0}
+  worldPos: {x: 5.0993223, y: 0.25992155, z: 23.659382}
+  vectorAnchorToOrigin: {x: -0.0000014305115, y: -0.26999998, z: -0.12537956}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 0.8897755, b: 1, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &2359326620004642439
 GameObject:
   m_ObjectHideFlags: 0
@@ -17405,6 +17573,7 @@ GameObject:
   - component: {fileID: 5779891449312006738}
   - component: {fileID: 3693063385021238031}
   - component: {fileID: 2233921151191725827}
+  - component: {fileID: 4890669620034155865}
   m_Layer: 0
   m_Name: Wall2
   m_TagString: Untagged
@@ -17735,6 +17904,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4890669620034155865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418464655486600870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 11
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.5, y: 0.42, z: -0.5}
+  anchorOffset: {x: 1.32, y: -0.99, z: 0}
+  worldPos: {x: -3.3006787, y: 4.1299214, z: 55.45668}
+  vectorAnchorToOrigin: {x: 0.000013828278, y: -4.14, z: -4.937462}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &3433087777772636138
 GameObject:
   m_ObjectHideFlags: 0
@@ -18517,6 +18713,7 @@ GameObject:
   - component: {fileID: 5689362104852316542}
   - component: {fileID: 6033023729098802831}
   - component: {fileID: 7860324919733278323}
+  - component: {fileID: 1877366904226588590}
   m_Layer: 0
   m_Name: Wall3
   m_TagString: Untagged
@@ -18847,6 +19044,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1877366904226588590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557578116761207397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 10
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.58, y: -0.54, z: 0.5}
+  anchorOffset: {x: 0.95, y: 1.17, z: 0}
+  worldPos: {x: -3.7145314, y: -0.1900785, z: 48.830006}
+  vectorAnchorToOrigin: {x: 2.6138663, y: 0.18000007, z: -2.2000008}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &3572544320233199394
 GameObject:
   m_ObjectHideFlags: 0
@@ -28527,6 +28751,7 @@ GameObject:
   - component: {fileID: 3165553210385301074}
   - component: {fileID: 5392374897538239316}
   - component: {fileID: 7987477873532216617}
+  - component: {fileID: 3096228887953069759}
   m_Layer: 0
   m_Name: Wall6 (1)
   m_TagString: Untagged
@@ -28857,6 +29082,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &3096228887953069759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625519616803313920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 7
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.57, y: -0.59, z: 0.5}
+  anchorOffset: {x: 0.83, y: 0.9, z: 0}
+  worldPos: {x: -8.700266, y: -0.41507816, z: 26.974731}
+  vectorAnchorToOrigin: {x: -2.3999987, y: 0.40499973, z: -0.2345066}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 0.97178245, b: 1, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &4660768535127460094
 GameObject:
   m_ObjectHideFlags: 0
@@ -29683,6 +29935,7 @@ GameObject:
   - component: {fileID: 8582652281457259155}
   - component: {fileID: 9126142001319992386}
   - component: {fileID: 1469408018609421051}
+  - component: {fileID: 7072273897837662229}
   m_Layer: 0
   m_Name: Wall14
   m_TagString: Untagged
@@ -30013,6 +30266,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &7072273897837662229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4809131269752507925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 10
+  anchorNumberY: 10
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.48, y: 0.44, z: 0.5}
+  anchorOffset: {x: 1.62, y: -0.43, z: 0}
+  worldPos: {x: -9.186665, y: 4.2199216, z: 24.094002}
+  vectorAnchorToOrigin: {x: -8.32, y: -4.23, z: -0.79999924}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.9419038, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &4810284882977064756
 GameObject:
   m_ObjectHideFlags: 0
@@ -30759,6 +31039,7 @@ GameObject:
   - component: {fileID: 1317623358709944837}
   - component: {fileID: 2624188070598185683}
   - component: {fileID: 5826323437875862440}
+  - component: {fileID: 119677090334341845}
   m_Layer: 0
   m_Name: Wall9
   m_TagString: Untagged
@@ -31089,6 +31370,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &119677090334341845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945292700916958497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 4
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.14, y: -0.62, z: -0.5}
+  anchorOffset: {x: 1.12, y: 1.36, z: 0}
+  worldPos: {x: -9.592665, y: -0.5500784, z: 64.00601}
+  vectorAnchorToOrigin: {x: -3.12, y: 0.53999996, z: -1.0000038}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 0.9999995, b: 1, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &4960888769534252174
 GameObject:
   m_ObjectHideFlags: 0
@@ -31103,6 +31411,7 @@ GameObject:
   - component: {fileID: 6898356241502302821}
   - component: {fileID: 8658986007522027883}
   - component: {fileID: 415857081277670856}
+  - component: {fileID: 3371624776746545668}
   m_Layer: 0
   m_Name: Wall10
   m_TagString: Untagged
@@ -31433,6 +31742,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &3371624776746545668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960888769534252174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 10
+  anchorNumberY: 6
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.61, y: -0.59, z: 0.5}
+  anchorOffset: {x: 1.02, y: 1.01, z: 0}
+  worldPos: {x: 16.69932, y: -0.4150784, z: 39.654003}
+  vectorAnchorToOrigin: {x: 0.39999962, y: 0.40499997, z: -0.11999893}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &4971940490898339212
 GameObject:
   m_ObjectHideFlags: 0
@@ -31479,6 +31815,7 @@ GameObject:
   - component: {fileID: 4456242244170887899}
   - component: {fileID: 203779126834505438}
   - component: {fileID: 4669551597769659736}
+  - component: {fileID: 5976653480683031241}
   m_Layer: 0
   m_Name: Wall8
   m_TagString: Untagged
@@ -31809,6 +32146,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5976653480683031241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5021536575740794860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 6
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.53, y: 0.52, z: 0.5}
+  anchorOffset: {x: 1.06, y: -0.97, z: 0}
+  worldPos: {x: 16.69933, y: 4.5799217, z: 36.414005}
+  vectorAnchorToOrigin: {x: 0.39999962, y: -4.59, z: 0.11999893}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &5029569794904467864
 GameObject:
   m_ObjectHideFlags: 0
@@ -36594,6 +36958,7 @@ GameObject:
   - component: {fileID: 3776099038178288718}
   - component: {fileID: 4815898721030490960}
   - component: {fileID: 8259440120600517326}
+  - component: {fileID: 5622110273964684128}
   m_Layer: 0
   m_Name: Wall11
   m_TagString: Untagged
@@ -36924,6 +37289,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5622110273964684128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280524699569680271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 8
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.64, y: -0.48, z: 0}
+  anchorOffset: {x: 1.33, y: 1.15, z: 0}
+  worldPos: {x: 6.9996, y: -0.01007843, z: 26.268772}
+  vectorAnchorToOrigin: {x: 0, y: 0, z: 0}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 0
+  anchorList: []
 --- !u!1 &5312342133233131963
 GameObject:
   m_ObjectHideFlags: 0
@@ -38940,6 +39332,7 @@ GameObject:
   - component: {fileID: 4182866330926385170}
   - component: {fileID: 1608811832704002032}
   - component: {fileID: 6386362976910370772}
+  - component: {fileID: 774240752046815892}
   m_Layer: 0
   m_Name: Wall9 (1)
   m_TagString: Untagged
@@ -39270,6 +39663,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &774240752046815892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539501565441251718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.6, y: 0.47, z: -0.5}
+  anchorOffset: {x: 1.16, y: -0.63, z: 0}
+  worldPos: {x: 4.6353345, y: 4.3549213, z: 42.534004}
+  vectorAnchorToOrigin: {x: 0.4000001, y: -4.365, z: 0}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &5543525573229415264
 GameObject:
   m_ObjectHideFlags: 0
@@ -39750,6 +40170,7 @@ GameObject:
   - component: {fileID: 2699347215426289721}
   - component: {fileID: 687356268465914882}
   - component: {fileID: 9070277236199105498}
+  - component: {fileID: 4846957926259474080}
   m_Layer: 0
   m_Name: Wall6
   m_TagString: Untagged
@@ -41114,6 +41535,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4846957926259474080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766172476078353045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.54, y: 0.55, z: 0.5}
+  anchorOffset: {x: -0.92, y: -1.29, z: 0}
+  worldPos: {x: -8.452663, y: 4.7149224, z: 44.890003}
+  vectorAnchorToOrigin: {x: -5.2400007, y: -4.725001, z: -2.4000015}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.95960426, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &5777952293778207925
 GameObject:
   m_ObjectHideFlags: 0
@@ -44155,6 +44603,7 @@ GameObject:
   - component: {fileID: 2395020940662599505}
   - component: {fileID: 2919068801858987040}
   - component: {fileID: 5068595526788153658}
+  - component: {fileID: 5969972207012431357}
   m_Layer: 0
   m_Name: Wall5
   m_TagString: Untagged
@@ -46201,6 +46650,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5969972207012431357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6087344323595892640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 9
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.57, y: 0.52, z: -0.5}
+  anchorOffset: {x: 2.45, y: -1.12, z: 0}
+  worldPos: {x: -14.701178, y: 4.5799217, z: 42.666008}
+  vectorAnchorToOrigin: {x: 1.6000261, y: -4.59, z: 9.399994}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.86256146, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &6108156282364028635
 GameObject:
   m_ObjectHideFlags: 0
@@ -55660,6 +56136,7 @@ GameObject:
   - component: {fileID: 7346427889051950163}
   - component: {fileID: 3652395614653075013}
   - component: {fileID: 3284961976765305382}
+  - component: {fileID: 1979153880463167696}
   m_Layer: 0
   m_Name: Wall6
   m_TagString: Untagged
@@ -55990,6 +56467,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1979153880463167696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761897168878513343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 6
+  anchorNumberY: 6
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.57, y: 0.45, z: 0.5}
+  anchorOffset: {x: 1.43, y: -0.81, z: 0}
+  worldPos: {x: 16.699324, y: 4.264922, z: 23.629759}
+  vectorAnchorToOrigin: {x: 0.40000725, y: -4.2750006, z: 2.8802433}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &6804878545583906287
 GameObject:
   m_ObjectHideFlags: 0
@@ -56004,6 +56508,7 @@ GameObject:
   - component: {fileID: 5662258727297283956}
   - component: {fileID: 2952239588005880700}
   - component: {fileID: 1406468971176320576}
+  - component: {fileID: 5014685395913070336}
   m_Layer: 0
   m_Name: Wall10
   m_TagString: Untagged
@@ -56334,6 +56839,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5014685395913070336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804878545583906287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.37, y: -0.48, z: -0.5}
+  anchorOffset: {x: 2.04, y: 1.08, z: 0}
+  worldPos: {x: -16.060665, y: 0.07992172, z: 62.274006}
+  vectorAnchorToOrigin: {x: 0.96000004, y: -0.09000015, z: -1}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.892854, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &6805317847253987412
 GameObject:
   m_ObjectHideFlags: 0
@@ -64671,6 +65203,7 @@ GameObject:
   - component: {fileID: 7708079096321759245}
   - component: {fileID: 6029923799271893545}
   - component: {fileID: 8095221059787760031}
+  - component: {fileID: 716727032112731538}
   m_Layer: 0
   m_Name: Wall5
   m_TagString: Untagged
@@ -65001,6 +65534,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &716727032112731538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555119803355909092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 6
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.65, y: -0.34, z: 0.5}
+  anchorOffset: {x: 1.91, y: 0.83, z: 0}
+  worldPos: {x: -4.300665, y: 0.7099216, z: 38.830006}
+  vectorAnchorToOrigin: {x: 0.19999981, y: -0.72, z: -0.40000153}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &7556624112303265874
 GameObject:
   m_ObjectHideFlags: 0
@@ -69305,6 +69865,7 @@ GameObject:
   - component: {fileID: 5167563529039653002}
   - component: {fileID: 6046339017021210970}
   - component: {fileID: 7212769578865621958}
+  - component: {fileID: 5772107744143223315}
   m_Layer: 0
   m_Name: Wall12
   m_TagString: Untagged
@@ -69635,6 +70196,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5772107744143223315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7974045224638297132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 4
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.09, y: -0.69, z: 0.5}
+  anchorOffset: {x: 0, y: 1.46, z: 0}
+  worldPos: {x: 10.199594, y: -0.01007843, z: 25.456772}
+  vectorAnchorToOrigin: {x: 0, y: 0, z: 0}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 0
+  anchorList: []
 --- !u!1 &7986982949951026747
 GameObject:
   m_ObjectHideFlags: 0
@@ -70852,6 +71440,7 @@ GameObject:
   - component: {fileID: 3077925157440670956}
   - component: {fileID: 9068840781806001609}
   - component: {fileID: 8201062418804518443}
+  - component: {fileID: 6486242909202320160}
   m_Layer: 0
   m_Name: Wall1 (1)
   m_TagString: Untagged
@@ -71182,6 +71771,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6486242909202320160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349218407047649603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 5
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.49, y: -0.64, z: 0.5}
+  anchorOffset: {x: -1, y: 1.38, z: 0}
+  worldPos: {x: -3.3006597, y: -0.6400783, z: 63.91045}
+  vectorAnchorToOrigin: {x: 2.1999888, y: 0.6299999, z: -3.8598976}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &8468872724576402135
 GameObject:
   m_ObjectHideFlags: 0
@@ -71196,6 +71812,7 @@ GameObject:
   - component: {fileID: 8236665733915081239}
   - component: {fileID: 7050469917534608883}
   - component: {fileID: 8136967339517374439}
+  - component: {fileID: 3163769799362057006}
   m_Layer: 0
   m_Name: Wall1
   m_TagString: Untagged
@@ -71526,6 +72143,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &3163769799362057006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8468872724576402135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 4
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.62, y: -0.63, z: 0.5}
+  anchorOffset: {x: 1.19, y: 1.35, z: 0}
+  worldPos: {x: -3.3006723, y: -0.59507847, z: 63.37801}
+  vectorAnchorToOrigin: {x: 2.2000015, y: 0.58500004, z: 0.47999573}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &8470888880306085795
 GameObject:
   m_ObjectHideFlags: 0
@@ -72660,6 +73304,7 @@ GameObject:
   - component: {fileID: 3130311310725460576}
   - component: {fileID: 9155826340949114202}
   - component: {fileID: 464280929854187799}
+  - component: {fileID: 1619139639708112616}
   m_Layer: 0
   m_Name: Wall8
   m_TagString: Untagged
@@ -74706,6 +75351,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1619139639708112616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8639833087952883146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 16
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.36, y: -0.51, z: -0.5}
+  anchorOffset: {x: 1.81, y: 1.17, z: 0}
+  worldPos: {x: -7.8206663, y: -0.055078506, z: 65.994}
+  vectorAnchorToOrigin: {x: 16.720001, y: 0.045000076, z: -1.5999985}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.98080873, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &8678679287737903924
 GameObject:
   m_ObjectHideFlags: 0
@@ -74774,6 +75446,7 @@ GameObject:
   - component: {fileID: 4587693777985689977}
   - component: {fileID: 6228914700890658798}
   - component: {fileID: 8868112286182314921}
+  - component: {fileID: 5751348219948524679}
   m_Layer: 0
   m_Name: Wall3 (1)
   m_TagString: Untagged
@@ -75104,6 +75777,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5751348219948524679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8703131423963485263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 0
+  anchorNumberY: 0
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0, y: 0, z: 0}
+  anchorOffset: {x: 0, y: 0, z: 0}
+  worldPos: {x: -10.000401, y: -0.01007843, z: 20.172771}
+  vectorAnchorToOrigin: {x: 0, y: 0, z: 0}
+  radius: 0.3
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 0
+  anchorList: []
 --- !u!1 &8706981898138861764
 GameObject:
   m_ObjectHideFlags: 0
@@ -75409,6 +76109,7 @@ GameObject:
   - component: {fileID: 1719483925866251460}
   - component: {fileID: 3410762943892603263}
   - component: {fileID: 7118324584794652743}
+  - component: {fileID: 4254118793107222760}
   m_Layer: 0
   m_Name: Wall4
   m_TagString: Untagged
@@ -75739,6 +76440,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4254118793107222760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751994427760771819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 12
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -0.55, y: -0.44, z: 0.5}
+  anchorOffset: {x: 2.07, y: 1.03, z: 0}
+  worldPos: {x: 36.499866, y: 0.25992167, z: 43.06601}
+  vectorAnchorToOrigin: {x: 2.4000244, y: -0.2700001, z: 8.999992}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &8781252443815505058
 GameObject:
   m_ObjectHideFlags: 0
@@ -75753,6 +76481,7 @@ GameObject:
   - component: {fileID: 4232708707628391862}
   - component: {fileID: 6016965989590697860}
   - component: {fileID: 7283401965180419910}
+  - component: {fileID: 6892101033075023050}
   m_Layer: 0
   m_Name: Wall5
   m_TagString: Untagged
@@ -76083,6 +76812,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6892101033075023050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781252443815505058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 0
+  anchorNumberY: 0
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0, y: 0, z: 0}
+  anchorOffset: {x: 0, y: 0, z: 0}
+  worldPos: {x: -3.8004005, y: -0.01007843, z: 13.248772}
+  vectorAnchorToOrigin: {x: 0, y: 0, z: 0}
+  radius: 0.3
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 0
+  anchorList: []
 --- !u!1 &8831599577144039886
 GameObject:
   m_ObjectHideFlags: 0
@@ -78832,6 +79588,7 @@ GameObject:
   - component: {fileID: 1435013563309621421}
   - component: {fileID: 8690357030946888933}
   - component: {fileID: 6541994311207371702}
+  - component: {fileID: 6450193352134392869}
   m_Layer: 0
   m_Name: Wall4
   m_TagString: Untagged
@@ -79162,6 +79919,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6450193352134392869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981392054760749784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 6
+  anchorNumberY: 5
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 0.67, y: 0.52, z: -0.5}
+  anchorOffset: {x: -1.4, y: -1.15, z: 0}
+  worldPos: {x: 4.69934, y: 4.5799217, z: 37.86417}
+  vectorAnchorToOrigin: {x: -0.000020503998, y: -4.59, z: 10.961834}
+  radius: 0.1
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 0, g: 1, b: 0.94130874, a: 1}
+  LOCK_ANCHOR: 1
+  anchorList: []
 --- !u!1 &8983707758071767399
 GameObject:
   m_ObjectHideFlags: 0
