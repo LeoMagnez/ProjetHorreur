@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ObjectMover : MonoBehaviour
@@ -22,7 +23,23 @@ public class ObjectMover : MonoBehaviour
     public void MoveObject(Vector3 _targetPos)
     {
         transform.position = _targetPos;
-        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        MeshRenderer mesh;
+
+        if (gameObject.TryGetComponent<MeshRenderer>(out mesh))
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+
+        }
+        else
+        {
+            List<MeshRenderer> tempMR = new List<MeshRenderer>();
+            tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
+
+            foreach (MeshRenderer mr in tempMR)
+            {
+                mr.enabled = true;
+            }
+        }
         gameObject.GetComponent<Collider>().enabled = true;
 
         
@@ -43,14 +60,52 @@ public class ObjectMover : MonoBehaviour
         //transform.rotation = anchorWorldRot;
 
         // Enable the MeshRenderer and Collider of the GameObject
-        gameObject.GetComponent<MeshRenderer>().enabled = true;
+
+        MeshRenderer mesh;
+
+        if (gameObject.TryGetComponent<MeshRenderer>(out mesh))
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+            
+        }
+        else
+        {
+            List<MeshRenderer> tempMR = new List<MeshRenderer>();
+            tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
+
+            foreach (MeshRenderer mr in tempMR)
+            {
+                mr.enabled = true;
+            }
+        }
+
         gameObject.GetComponent<Collider>().enabled = true;
 
     }
 
     public void HideObject()
     {
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        MeshRenderer mesh;
+
+        if (gameObject.TryGetComponent<MeshRenderer>(out mesh))
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            
+        }
+        else
+        {
+            List<MeshRenderer> tempMR = new List<MeshRenderer> ();
+            tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
+            Debug.Log(tempMR.Count);
+            foreach(MeshRenderer mr in tempMR)
+            {
+                mr.enabled = false;
+            }
+        }
+
         gameObject.GetComponent<Collider>().enabled = false;
+
+
+
     }
 }

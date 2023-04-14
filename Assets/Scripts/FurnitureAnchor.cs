@@ -97,8 +97,18 @@ public class FurnitureAnchor : MonoBehaviour
         if (LOCK_ANCHOR)
             return;
 
-        Vector3 _gizmoPos = GetComponent<MeshRenderer>().bounds.center;
-        Vector3 _boundSize = GetComponent<MeshRenderer>().localBounds.size;
+        Vector3 _gizmoPos = Vector3.zero;
+        Vector3 _boundSize = Vector3.one;
+
+        MeshRenderer mesh;
+        if(TryGetComponent<MeshRenderer>(out mesh))
+        {
+            _gizmoPos = mesh.bounds.center;
+            _boundSize = mesh.localBounds.size;
+        }
+       
+
+
 
         // Get the rotated local position
         Vector3 _rotatedLocalPos = Vector3.Scale(anchorLocalPos, _boundSize);
