@@ -13,7 +13,7 @@ public class ShrinkWalls : MonoBehaviour
     Vector3 minDistance;
 
     [Header("Lerp Parameters")]
-    [SerializeField] bool direction;
+    [SerializeField] public bool direction;
 
     [SerializeField]
     [Range(0f,1f)]
@@ -45,6 +45,8 @@ public class ShrinkWalls : MonoBehaviour
 
 
     }
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -98,5 +100,15 @@ public class ShrinkWalls : MonoBehaviour
         murGauche.transform.localPosition = wallSOD_Gauche.GetUpdatedPos(fWall, zWall, rWall, leftWallLocalTargetPos);
         murDroit.transform.localPosition = wallSOD_Droit.GetUpdatedPos(fWall, zWall, rWall, rightWallLocalTargetPos);
 
+    }
+    public void directionTrue()
+    {
+        Debug.Log("oui");
+        direction = true;
+    }
+
+    public void directionFalse()
+    {
+        direction = false;
     }
 }

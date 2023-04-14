@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class TriggerManager : MonoBehaviour
@@ -12,11 +14,16 @@ public class TriggerManager : MonoBehaviour
     public int _TriggerToCall = 0;
     public string _SceneToLoad;
 
+    public UnityEvent CorridorEnter;
+    public UnityEvent CorridorExit;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
+
+            CorridorEnter.Invoke();
+
             //call monTrigger;
 
             //_mesTrigger[_TriggerToCall];
@@ -60,10 +67,22 @@ public class TriggerManager : MonoBehaviour
                     Debug.Log("3");
                     break;
 
+                case 4:
+
+                    //GameOjectManager.instance._listeObj[17];
+
+                    Debug.Log("4");
+                    break;
+
 
             }
 
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        CorridorExit.Invoke();
     }
 
 
