@@ -336,7 +336,7 @@ public class GalleryManager : MonoBehaviour
             float maxDistance = 999999999f;
             Vector3 vector3ToApply = Vector3.zero;
 
-            foreach (Vector3 anchor in _furniture.anchorList)
+            /*foreach (Vector3 anchor in _furniture.anchorList)
             {
                 float newDistance = Vector3.Distance(anchor, hit.point);
                 if(newDistance < maxDistance)
@@ -345,9 +345,9 @@ public class GalleryManager : MonoBehaviour
                     vector3ToApply = anchor;
                 }
                 
-            }
+            }*/
 
-            CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObjectToAnchor(vector3ToApply);
+            CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObjectToAnchor(_furniture.worldPos);
 
             
 

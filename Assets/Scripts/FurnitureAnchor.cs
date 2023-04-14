@@ -124,8 +124,10 @@ public class FurnitureAnchor : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = color;
+        // Draw the Gizmo
+        Gizmos.DrawSphere(worldPos, radius);
 
-        for (int i = 1; i < anchorNumberX - 1; i++)
+        /*for (int i = 1; i < anchorNumberX - 1; i++)
         {
             for (int j = 1; j < anchorNumberY - 1; j++)
             {
@@ -142,12 +144,11 @@ public class FurnitureAnchor : MonoBehaviour
                 // Calculate the world position of the Gizmo
                 Vector3 worldPosition = worldPos + rotatedLocalPosition;
 
-                // Draw the Gizmo
-                Gizmos.DrawSphere(worldPosition, radius);
+
 
 
             }
-        }
+        }*/
     }
 
 
