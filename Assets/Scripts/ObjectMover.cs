@@ -103,6 +103,7 @@ public class ObjectMover : MonoBehaviour
             }
         }
 
+
         gameObject.GetComponent<Collider>().enabled = false;
 
 

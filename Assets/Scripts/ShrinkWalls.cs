@@ -103,12 +103,21 @@ public class ShrinkWalls : MonoBehaviour
     }
     public void directionTrue()
     {
-        Debug.Log("oui");
         direction = true;
     }
 
     public void directionFalse()
     {
         direction = false;
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        Debug.Log("patate");
+        if (other.gameObject.CompareTag("_photoNormale"))
+        {
+            Debug.Log("babar");
+            direction = false;
+        }
     }
 }
