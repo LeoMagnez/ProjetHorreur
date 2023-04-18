@@ -31,6 +31,9 @@ public class ShrinkWalls : MonoBehaviour
     float fWall, zWall, rWall;
 
     float timer;
+
+    bool canShrink = true;
+
     private void Awake()
     {
 
@@ -103,13 +106,19 @@ public class ShrinkWalls : MonoBehaviour
     }
     public void directionTrue()
     {
-        direction = true;
+        if (canShrink == true)
+        {
+
+            direction = true;
+        }
     }
 
     public void directionFalse()
     {
+        
         direction = false;
     }
+
 
     public void OnTriggerEnter(Collider other)
     {
@@ -118,6 +127,7 @@ public class ShrinkWalls : MonoBehaviour
         {
             Debug.Log("babar");
             direction = false;
+            canShrink = false;
         }
     }
 }

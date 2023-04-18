@@ -19,10 +19,11 @@ public class TriggerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        CorridorEnter.Invoke();
+
+        if (other.tag == "Player")
         {
 
-            CorridorEnter.Invoke();
 
             //call monTrigger;
 
@@ -85,6 +86,10 @@ public class TriggerManager : MonoBehaviour
         CorridorExit.Invoke();
     }
 
+    public void destroyTrigger()
+    {
+        Destroy(gameObject);
+    }
 
 
 }
