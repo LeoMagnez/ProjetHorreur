@@ -111,7 +111,7 @@ public class ShrinkWalls : MonoBehaviour
         direction = false;
     }
 
-    public void OnTriggerStay(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         Debug.Log("patate");
         if (other.gameObject.CompareTag("_photoNormale"))
