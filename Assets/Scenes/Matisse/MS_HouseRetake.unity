@@ -379,10 +379,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
-  CorridorEnter:
+  TriggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 162598196}
+      - m_Target: {fileID: 1766484127}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -394,21 +394,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  CorridorExit:
+  TriggerExit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 115257619}
-        m_TargetAssemblyTypeName: TriggerManager, Assembly-CSharp
-        m_MethodName: destroyTrigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &115257620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -577,12 +565,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3822247309040838107, guid: e6e41a94b82ad6b48a82a60fbb00bf62, type: 3}
---- !u!1 &162598196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3187865230045258580, guid: 0dfd15e754abaee48bed932679d2bc49,
-    type: 3}
-  m_PrefabInstance: {fileID: 1113887199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168751218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3690688667830428247, guid: 0dfd15e754abaee48bed932679d2bc49,
@@ -603,12 +585,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5060444177187149915, guid: d72457826195b2c47b644275281251a5, type: 3}
---- !u!1 &171063000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5487476016635991275, guid: 0dfd15e754abaee48bed932679d2bc49,
-    type: 3}
-  m_PrefabInstance: {fileID: 1113887199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &178466444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8957932199563587400, guid: 0dfd15e754abaee48bed932679d2bc49,
@@ -1084,6 +1060,96 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5060444177187149915, guid: a6b164431383a2e46a72000a3b92ee04, type: 3}
+--- !u!1 &420470686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 420470688}
+  - component: {fileID: 420470687}
+  - component: {fileID: 420470689}
+  m_Layer: 0
+  m_Name: Trigger_escalier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &420470687
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420470686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &420470688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420470686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.33, y: 2.014, z: 15.74}
+  m_LocalScale: {x: 6.0637074, y: 3.5809, z: 6.9967203}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &420470689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420470686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be01523433d8f143a819094b48d232b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerToCall: 0
+  _SceneToLoad: 
+  TriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1177047614}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 420470689}
+        m_TargetAssemblyTypeName: TriggerManager, Assembly-CSharp
+        m_MethodName: destroyTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &434444512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,12 +1816,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &569686620 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1187163766005271486, guid: 0dfd15e754abaee48bed932679d2bc49,
-    type: 3}
-  m_PrefabInstance: {fileID: 1113887199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &574751207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,10 +1876,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
-  CorridorEnter:
+  TriggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 171063000}
+      - m_Target: {fileID: 1113887203}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1831,7 +1891,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2102004814}
+      - m_Target: {fileID: 1113887202}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1843,7 +1903,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 569686620}
+      - m_Target: {fileID: 1113887201}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1855,31 +1915,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1113872178}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2102004814}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 115257618}
+      - m_Target: {fileID: 1113887200}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1903,9 +1939,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  CorridorExit:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 574751210}
         m_TargetAssemblyTypeName: TriggerManager, Assembly-CSharp
         m_MethodName: destroyTrigger
@@ -1916,8 +1949,23 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 115257618}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  TriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!43 &579656110
 Mesh:
   m_ObjectHideFlags: 0
@@ -4228,12 +4276,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098776574}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1113872178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6572378330202726890, guid: 0dfd15e754abaee48bed932679d2bc49,
-    type: 3}
-  m_PrefabInstance: {fileID: 1113887199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1113887199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4476,6 +4518,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 8.87
       objectReference: {fileID: 0}
+    - target: {fileID: 8029436390133261657, guid: 0dfd15e754abaee48bed932679d2bc49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8382629604293666118, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_IsActive
@@ -4498,6 +4545,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dfd15e754abaee48bed932679d2bc49, type: 3}
+--- !u!1 &1113887200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6572378330202726890, guid: 0dfd15e754abaee48bed932679d2bc49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113887199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1113887201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1187163766005271486, guid: 0dfd15e754abaee48bed932679d2bc49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113887199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1113887202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8382629604293666118, guid: 0dfd15e754abaee48bed932679d2bc49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113887199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1113887203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5487476016635991275, guid: 0dfd15e754abaee48bed932679d2bc49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113887199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1128396935 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2498005447771579733, guid: 0dfd15e754abaee48bed932679d2bc49,
@@ -4676,6 +4747,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5060444177187149915, guid: a6b164431383a2e46a72000a3b92ee04, type: 3}
+--- !u!1 &1177047614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8029436390133261657, guid: 0dfd15e754abaee48bed932679d2bc49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113887199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1198361424
 GameObject:
   m_ObjectHideFlags: 0
@@ -10930,6 +11007,12 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 1.6
   m_ShadowAngle: 0
+--- !u!1 &1766484127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3187865230045258580, guid: 0dfd15e754abaee48bed932679d2bc49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113887199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1767312096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7697612779370151274, guid: 0dfd15e754abaee48bed932679d2bc49,
@@ -11630,12 +11713,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2201481598325938949, guid: d04ac04795657b04dad20744cb52fa26,
     type: 3}
   m_PrefabInstance: {fileID: 1284482356}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2102004814 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8382629604293666118, guid: 0dfd15e754abaee48bed932679d2bc49,
-    type: 3}
-  m_PrefabInstance: {fileID: 1113887199}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &2114602486
 Mesh:
