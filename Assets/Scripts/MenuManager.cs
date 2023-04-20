@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,7 +35,6 @@ public class MenuManager : MonoBehaviour
     private void Update()
     {
         menuController();
-        Debug.Log(MouseLook.mouseSensitivity);
     }
 
     public void menuController()
@@ -95,9 +95,11 @@ public class MenuManager : MonoBehaviour
         limit5 = 5,
         limit30 = 30,
         limit60 = 60,
-        limit120 = 120,
-        limit240 = 240,
+        limit80 = 80,
+        limit120 = 120
     }
+
+    
 
   
 
