@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
@@ -10,18 +11,21 @@ public class MouseLook : MonoBehaviour
     float xRotation;
 
     [Header("Values")]
-    public float mouseSensitivity = 100f;
+    public static float mouseSensitivity = 100f;
 
     [Header("References")]
     public Transform player;
 
-    
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-       /* Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;*/
+       mouseSensitivity = 100f;
+       Cursor.lockState = CursorLockMode.Locked;
+       Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -35,6 +39,17 @@ public class MouseLook : MonoBehaviour
         if (MenuManager.instance._menuIsUp == false)
         {
             move();
+        }
+
+        if(MenuManager.instance._menuIsUp == true)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         
 
@@ -51,4 +66,5 @@ public class MouseLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
         player.Rotate(Vector3.up * mouseY);
     }
+
 }

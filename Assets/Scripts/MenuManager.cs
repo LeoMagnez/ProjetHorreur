@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class MenuManager : MonoBehaviour
     public bool _isMenuUp = false;
 
 
+    public Slider _slider;
+
+    public limits limit;
+
     #region SINGLETON
     public static MenuManager instance { get; private set; }
     #endregion
@@ -17,6 +22,8 @@ public class MenuManager : MonoBehaviour
     #region AWAKE
     private void Awake()
     {
+        Application.targetFrameRate = (int)limit;
+
         if (instance != null && instance != this)
             Destroy(gameObject);    // Suppression d'une instance précédente
 
@@ -27,6 +34,7 @@ public class MenuManager : MonoBehaviour
     private void Update()
     {
         menuController();
+        Debug.Log(MouseLook.mouseSensitivity);
     }
 
     public void menuController()
@@ -66,5 +74,31 @@ public class MenuManager : MonoBehaviour
         CameraManager.instance.canPlay = true; //permet au joueur de bouger a nouveau
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void SetFullScreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+
+    public void SetSensivity()
+    {
+        MouseLook.mouseSensitivity = _slider.value;
+    }
+
+    public enum limits
+    {
+        noLimit = 0,
+        limit5 = 5,
+        limit30 = 30,
+        limit60 = 60,
+        limit120 = 120,
+        limit240 = 240,
+    }
+
+  
 
 }
