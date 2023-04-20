@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public bool _menuIsUp = false;
     public bool _isMenuUp = false;
 
+
     #region SINGLETON
     public static MenuManager instance { get; private set; }
     #endregion
@@ -64,4 +65,6 @@ public class MenuManager : MonoBehaviour
 
         CameraManager.instance.canPlay = true; //permet au joueur de bouger a nouveau
     }
+
+
 }

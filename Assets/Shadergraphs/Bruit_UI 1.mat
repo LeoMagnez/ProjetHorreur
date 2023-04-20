@@ -27,13 +27,12 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: bc2b1d12451573547a9a3cb63bb83271,
     type: 3}
   m_ValidKeywords:
-  - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2998
   stringTagMap:
     MotionVector: User
     RenderType: Transparent
@@ -75,7 +74,7 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 1
     - _EnableBlendModePreserveSpecularLighting: 0
-    - _EnableFogOnTransparent: 1
+    - _EnableFogOnTransparent: 0
     - _NoiseSpeed: 0.5
     - _OpaqueCullMode: 2
     - _RenderQueueType: 4
@@ -95,7 +94,7 @@ Material:
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
     - _TransparentDepthPrepassEnable: 0
-    - _TransparentSortPriority: 0
+    - _TransparentSortPriority: -2
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
