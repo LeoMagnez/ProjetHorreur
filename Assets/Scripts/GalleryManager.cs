@@ -92,68 +92,79 @@ public class GalleryManager : MonoBehaviour
     {
         //debugText.text = "Img rect : \n" + CameraManager.instance._spriteList[0].rect.ToString() + "\n" + "\n" + "Is img packed ?\n" + CameraManager.instance._spriteList[0].packed + "\n" + "\n" + "Texture reference : \n" + CameraManager.instance._spriteList[0].texture + "\n" + "\n" + "Flags : \n" + CameraManager.instance._spriteList[0].hideFlags;
         //Debug.Log(CameraManager.instance._imgImportanteIndex);
+        
+        {
+
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(curSelectedImage != null && !zoomedOnPhoto)
+            if (CameraManager.instance.objectToMove != null && curSelectedImage.index == 0)
             {
-
-                if (CameraManager.instance._objectToMoveList[curSelectedImage.index] != null)
+                if (curSelectedImage != null && !zoomedOnPhoto)
                 {
-                    //curSelectedImage.animator.SetTrigger("ZoomIn");
-                    curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
-                    curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
-                    zoomedOnPhoto = true;
 
-                    renderTexture.SetActive(true);
-                    photoCamera.SetActive(true);
+                    if (CameraManager.instance._spriteList[curSelectedImage.index] != null)
+                    {
+                        //curSelectedImage.animator.SetTrigger("ZoomIn");
+                        curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
+                        curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
+                        zoomedOnPhoto = true;
+
+                        renderTexture.SetActive(true);
+                        photoCamera.SetActive(true);
 
 
-                    if (zoomedOnPhoto)
+                        if (zoomedOnPhoto)
+                        {
+                            foreach (AnimatedImageCameraMenu image in imagesUI)
+                            {
+                                if (image != curSelectedImage)
+                                {
+
+                                    image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
+
+                                }
+                            }
+
+                        }
+                    }
+
+
+                    if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
+                    {
+                        CameraManager.instance._porte.SetActive(false); //On désactive la porte
+                    }
+
+                }
+
+                else if (curSelectedImage != null && zoomedOnPhoto)
+                {
+
+                    curSelectedImage.animator.SetTrigger("ZoomOut");
+                    zoomedOnPhoto = false;
+                    curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
+                    curSelectedImage.image.rectTransform.localScale = Vector2.one;
+
+                    ObjectToMoveAppears();
+                    renderTexture.SetActive(false);
+                    photoCamera.SetActive(false);
+                    if (!zoomedOnPhoto)
                     {
                         foreach (AnimatedImageCameraMenu image in imagesUI)
                         {
                             if (image != curSelectedImage)
                             {
-                                
-                                image.image.gameObject.SetActive(false); //desactive les autres images quand on en affiche une en grand
-                                
+                                image.image.gameObject.SetActive(true); //reactive les images quand on dezoome
                             }
                         }
-
                     }
+
                 }
-
-
-                if (curSelectedImage.index == CameraManager.instance._imgImportanteIndex)
-                {
-                    CameraManager.instance._porte.SetActive(false); //On désactive la porte
-                }
-
             }
-
-            else if(curSelectedImage != null && zoomedOnPhoto )
+            else
             {
-
-                curSelectedImage.animator.SetTrigger("ZoomOut");
-                zoomedOnPhoto = false;
-                curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
-                curSelectedImage.image.rectTransform.localScale = Vector2.one;
-                ObjectToMoveAppears();
-                renderTexture.SetActive(false);
-                photoCamera.SetActive(false);
-                if (!zoomedOnPhoto)
-                {
-                    foreach (AnimatedImageCameraMenu image in imagesUI)
-                    {
-                        if (image != curSelectedImage)
-                        {
-                            image.image.gameObject.SetActive(true); //reactive les images quand on dezoome
-                        }
-                    }
-                }
-
+                Debug.Log("Eh nique ta mere");
             }
-
         }
 
 
@@ -320,10 +331,10 @@ public class GalleryManager : MonoBehaviour
         {
             FurnitureAnchor _furniture;
 
-            CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
+            //CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
 
-            Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
-            Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);
+            //Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
+            //Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);
 
            
 
@@ -347,7 +358,9 @@ public class GalleryManager : MonoBehaviour
                 
             }*/
 
-            CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObjectToAnchor(_furniture.worldPos);
+            //CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObjectToAnchor(_furniture.worldPos);
+            CameraManager.instance.objectToMove.MoveObjectToAnchor(_furniture.worldPos);
+            CameraManager.instance.objectToMove = null;
 
             
 
@@ -361,7 +374,7 @@ public class GalleryManager : MonoBehaviour
 
 
             CameraManager.instance._spriteList.RemoveAt(curSelectedImage.index);
-            CameraManager.instance._objectToMoveList.RemoveAt(curSelectedImage.index);
+            //CameraManager.instance._objectToMoveList.RemoveAt(curSelectedImage.index);
 
             
 

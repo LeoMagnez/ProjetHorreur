@@ -64,6 +64,7 @@ public class CameraManager : MonoBehaviour
     //public List<Texture2D> _takenPictures = new List<Texture2D>();
     public List<Sprite> _spriteList = new List<Sprite>();
     public List<ObjectMover> _objectToMoveList = new List<ObjectMover>();
+    public ObjectMover objectToMove;
     //public List<MeshRenderer> _photoPlanes = new List<MeshRenderer>();
 
 
@@ -215,7 +216,7 @@ public class CameraManager : MonoBehaviour
     private void TakePhoto()
     {
         //Si on appuie sur clic gauche avec l'appareil photo levé, prend une photo
-        if (Input.GetMouseButtonDown(0) && _isCameraUp)
+        if (Input.GetMouseButtonDown(0) && _isCameraUp && objectToMove == null)
         {
             _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on prend une photo
             _takingPhoto = true;
@@ -258,18 +259,20 @@ public class CameraManager : MonoBehaviour
             else if (hit.transform.tag == "_photoNormale" && _takingPhoto)
             {
                 hit.transform.gameObject.GetComponent<ObjectMover>().HideObject();
-                _objectToMoveList.Insert(0, hit.transform.gameObject.GetComponent<ObjectMover>());
+                //_objectToMoveList.Insert(0, hit.transform.gameObject.GetComponent<ObjectMover>());
+                objectToMove = hit.transform.gameObject.GetComponent<ObjectMover>();
+
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             }
             else
             {
-                _objectToMoveList.Insert(0, null);
+               // _objectToMoveList.Insert(0, null);
             }
         }
         else
         {
             Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 1000, Color.red);
-            _objectToMoveList.Insert(0, null);
+            //_objectToMoveList.Insert(0, null);
             if (_takingPhoto)
             {
                 _takingPhoto = false;
