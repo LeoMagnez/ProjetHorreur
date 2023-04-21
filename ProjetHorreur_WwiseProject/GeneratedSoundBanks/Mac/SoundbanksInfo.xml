@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{203A499E-2633-47DD-0D76-38F9829C65D1}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{C2BFF402-3129-0E52-D1FD-A762A5A57E74}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -121,7 +121,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1117071689" Name="Play_Ambiences" DurationType="Infinite">
+				<Event Id="1117071689" Name="Play_Ambiences" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24919415"/>
 						<MediaRef Id="553343565"/>
@@ -132,7 +132,7 @@
 						<MediaRef Id="258899210"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4264221306" Name="Play_HouseAmb" DurationType="Infinite">
+				<Event Id="4264221306" Name="Play_HouseAmb" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24919415"/>
 					</MediaRefs>
@@ -177,5 +177,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4AC1360B-43B8-9A62-BDFD-FBA85693258B}</FileHash>
+	<FileHash>{E076ED43-7F2B-C929-1410-6B3FE6D09EA3}</FileHash>
 </SoundBanksInfo>

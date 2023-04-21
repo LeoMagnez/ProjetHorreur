@@ -31,11 +31,6 @@ public class SetAmbience : MonoBehaviour
             value = Mathf.Lerp(0.61f, 0f, t*2);
             t += 0.1f * Time.deltaTime;
             positionRTPC.SetGlobalValue(value);
-            /*for (float value = 1.0f; value > 0f; value -= 0.1f) 
-            {
-                Debug.Log(value);
-                positionRTPC.SetGlobalValue(value);
-            }*/
         }
     }
 }
