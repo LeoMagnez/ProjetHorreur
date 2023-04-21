@@ -656,7 +656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1e356ba1121244da23cd454abbe7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 300
   player: {fileID: 757124186}
 --- !u!95 &125505618
 Animator:
@@ -2487,6 +2486,8 @@ MonoBehaviour:
   menuAnimation: {fileID: 125505618}
   _menuIsUp: 0
   _isMenuUp: 0
+  _slider: {fileID: 0}
+  limit: 0
 --- !u!4 &595179716
 Transform:
   m_ObjectHideFlags: 0
@@ -8526,6 +8527,7 @@ MonoBehaviour:
   test: {fileID: 2800000, guid: 6e5fa740bdab28c4d81d3d9506105c85, type: 3}
   _spriteList: []
   _objectToMoveList: []
+  objectToMove: {fileID: 0}
   rt: {fileID: 8400000, guid: 2ab967018f4821f4fa82d62955dd0ec8, type: 2}
   _camera: {fileID: 1823688471}
   _cameraUI: {fileID: 125505618}
@@ -9082,7 +9084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900349705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -78.102036, y: 16.419806, z: -31.74062}
+  m_LocalPosition: {x: -78.102036, y: 16.419806, z: -30.47562}
   m_LocalScale: {x: 2.2819772, y: 3.5610926, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9790,8 +9792,8 @@ Transform:
   m_Children:
   - {fileID: 782561664}
   - {fileID: 1122449780}
-  - {fileID: 526158252}
   - {fileID: 911430580}
+  - {fileID: 526158252}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
