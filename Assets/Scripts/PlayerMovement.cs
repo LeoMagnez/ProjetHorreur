@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     private float _staminaTimer = 5;
     private bool canRun = true;
 
+    public static bool falling = false;
+
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
@@ -86,7 +88,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _controller.Move(_moveDirection * Time.deltaTime);
+        if (!falling)
+        {
+            _controller.Move(_moveDirection * Time.deltaTime);
+        }
+
     }
 
     private void DefaultMovement()
@@ -116,6 +122,8 @@ public class PlayerMovement : MonoBehaviour
                 _moveDirection.y = -_settings[0].speed;
 
                 _moveDirection = transform.TransformDirection(_moveDirection);
+                
+
 
             }
             else
