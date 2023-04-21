@@ -208,8 +208,6 @@ public class PlayerMovement : MonoBehaviour
             _moveDirection.y = -_settings[3].speed;
 
             _moveDirection = transform.TransformDirection(_moveDirection);
-
-
         }
         else
         {
@@ -226,10 +224,9 @@ public class PlayerMovement : MonoBehaviour
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = walkingCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = walkingCamNoiseFrequency;
         }
+
         else if (isRunning && !isIdle && !CameraManager.instance._isCameraUp)
         {
-
-
             //adjust frequency and amplitude when the player is running
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = runningCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = runningCamNoiseFrequency;
@@ -237,7 +234,6 @@ public class PlayerMovement : MonoBehaviour
 
         else if (CameraManager.instance._isCameraUp)
         {
-
             //adjust frequency and amplitude when the player is holding the camera
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = holdingCamNoiseAmplitude;
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = holdingCamNoiseFrequency;
