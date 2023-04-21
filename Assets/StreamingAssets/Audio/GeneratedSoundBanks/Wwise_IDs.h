@@ -19,6 +19,22 @@ namespace AK
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
     } // namespace EVENTS
 
+    namespace SWITCHES
+    {
+        namespace GROUNDMATERIAL
+        {
+            static const AkUniqueID GROUP = 3072116243U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID WOOD = 2058049674U;
+            } // namespace SWITCH
+        } // namespace GROUNDMATERIAL
+
+    } // namespace SWITCHES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ISINHOUSE = 4101628508U;

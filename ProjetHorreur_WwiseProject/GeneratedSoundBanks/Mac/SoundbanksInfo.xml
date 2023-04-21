@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{DFC977FB-0AC8-26A0-6BB3-CFB403FE7D00}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{203A499E-2633-47DD-0D76-38F9829C65D1}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -95,26 +95,31 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2946881380" Name="FTPS" DurationType="OneShot" DurationMin="0.3468254" DurationMax="0.5593651">
-					<MediaRefs>
-						<MediaRef Id="43655015"/>
-						<MediaRef Id="67665767"/>
-						<MediaRef Id="238845316"/>
-						<MediaRef Id="261121108"/>
-						<MediaRef Id="263419886"/>
-						<MediaRef Id="345146632"/>
-						<MediaRef Id="426996222"/>
-						<MediaRef Id="457393815"/>
-						<MediaRef Id="501288413"/>
-						<MediaRef Id="535211386"/>
-						<MediaRef Id="558974957"/>
-						<MediaRef Id="582240897"/>
-						<MediaRef Id="617300176"/>
-						<MediaRef Id="894621419"/>
-						<MediaRef Id="907083510"/>
-						<MediaRef Id="986526279"/>
-						<MediaRef Id="1054501562"/>
-					</MediaRefs>
+				<Event Id="2946881380" Name="FTPS" DurationType="OneShot" DurationMin="0" DurationMax="0.5593651">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3072116243" Id="2058049674"/>
+							<MediaRefs>
+								<MediaRef Id="43655015"/>
+								<MediaRef Id="67665767"/>
+								<MediaRef Id="238845316"/>
+								<MediaRef Id="261121108"/>
+								<MediaRef Id="263419886"/>
+								<MediaRef Id="345146632"/>
+								<MediaRef Id="426996222"/>
+								<MediaRef Id="457393815"/>
+								<MediaRef Id="501288413"/>
+								<MediaRef Id="535211386"/>
+								<MediaRef Id="558974957"/>
+								<MediaRef Id="582240897"/>
+								<MediaRef Id="617300176"/>
+								<MediaRef Id="894621419"/>
+								<MediaRef Id="907083510"/>
+								<MediaRef Id="986526279"/>
+								<MediaRef Id="1054501562"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="1117071689" Name="Play_Ambiences" DurationType="Infinite">
 					<MediaRefs>
@@ -136,6 +141,15 @@
 			<GameParameters>
 				<GameParameter Id="4101628508" Name="IsInHouse"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="3072116243" Name="GroundMaterial">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E999AD4D-2271-2E5C-A3AB-989FE8F2AFD0}">
 			<ShortName>Init</ShortName>
@@ -152,7 +166,16 @@
 			<GameParameters>
 				<GameParameter Id="4101628508" Name="IsInHouse"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="3072116243" Name="GroundMaterial">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0147C458-4CA3-8290-73AD-D94A7B9C14E2}</FileHash>
+	<FileHash>{4AC1360B-43B8-9A62-BDFD-FBA85693258B}</FileHash>
 </SoundBanksInfo>

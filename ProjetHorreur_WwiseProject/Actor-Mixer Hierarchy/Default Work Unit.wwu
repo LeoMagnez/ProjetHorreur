@@ -124,395 +124,6 @@
 				</Folder>
 				<Folder Name="SFX" ID="{8BE68D0B-9450-4736-BB87-A2BDC5B58887}" ShortID="1026241522">
 					<ChildrenList>
-						<RandomSequenceContainer Name="FTPS" ID="{1B639E9F-C997-4F41-9DE1-D627FD86BF52}" ShortID="1041936617">
-							<PropertyList>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="SFX_OS_FT_Wood-001" ID="{8E035B89-97C5-4D02-88F7-6627742B0170}" ShortID="1044396278">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-001" ID="{55615547-B41C-45D1-B836-45EA718F60C5}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="238845316"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-001" ID="{55615547-B41C-45D1-B836-45EA718F60C5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-002" ID="{478BE64F-C211-4824-9BFA-B68BA04AAEF8}" ShortID="963807092">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-002" ID="{6426B78E-999F-4ADA-B4A3-2A63519F31F8}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="558974957"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-002" ID="{6426B78E-999F-4ADA-B4A3-2A63519F31F8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-003" ID="{0DB01F06-74B7-41B0-B75B-BD08EAEE3BF2}" ShortID="711667315">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-003" ID="{BDC4D74D-8CDD-4C23-9F54-7DC1425ACA9E}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="263419886"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-003" ID="{BDC4D74D-8CDD-4C23-9F54-7DC1425ACA9E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-004" ID="{D64AB0CD-D9FA-41DC-870B-7BA60336C9CA}" ShortID="512043539">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-004" ID="{7EA82FEC-D0D9-43FF-8AEC-9F1A51B33AEA}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="617300176"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-004" ID="{7EA82FEC-D0D9-43FF-8AEC-9F1A51B33AEA}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-005" ID="{A5C06C91-B993-4F09-ACAB-2E5F3D967205}" ShortID="593979623">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-005" ID="{680FEF05-A212-417D-88F4-E16945B9886D}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-005.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="261121108"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-005" ID="{680FEF05-A212-417D-88F4-E16945B9886D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-006" ID="{145433A0-B8F5-496D-94C5-7A707B27908B}" ShortID="486242973">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-006" ID="{A3475722-0FA5-484F-A68B-8842BEB70C07}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-006.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1054501562"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-006" ID="{A3475722-0FA5-484F-A68B-8842BEB70C07}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-007" ID="{FBACB020-5F09-41EF-AA90-F790AE8D2CA1}" ShortID="371553077">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-007" ID="{A50CD9D8-3215-48C4-9FAB-971B29C65623}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-007.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="457393815"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-007" ID="{A50CD9D8-3215-48C4-9FAB-971B29C65623}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-008" ID="{D085324B-BA1D-4AB7-8F5C-032819E1F131}" ShortID="409335916">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-008" ID="{83EC8088-D82F-43B1-B0B2-F65E9761C0A3}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-008.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="426996222"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-008" ID="{83EC8088-D82F-43B1-B0B2-F65E9761C0A3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-009" ID="{EC4A9B8C-E6F8-4B23-A7A6-991D7B46E9FD}" ShortID="411133851">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-009" ID="{8916B3E1-4819-4613-ACD0-4072B0F37CED}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-009.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="535211386"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-009" ID="{8916B3E1-4819-4613-ACD0-4072B0F37CED}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-010" ID="{C3762134-14FE-42AE-90D5-77D8C8141390}" ShortID="386533634">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-010" ID="{09A728D9-0642-4908-AD8E-C26A8EDFCF5A}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-010.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="345146632"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-010" ID="{09A728D9-0642-4908-AD8E-C26A8EDFCF5A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-011" ID="{663518F3-3B54-47F6-88D0-FC567E73BE89}" ShortID="581996674">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-011" ID="{437FB9BF-7FE4-488D-BC9A-E7C68063DA4B}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-011.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="43655015"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-011" ID="{437FB9BF-7FE4-488D-BC9A-E7C68063DA4B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-012" ID="{812B19B0-61D8-41AD-A92E-71335DFEFF25}" ShortID="302197365">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-012" ID="{349D4734-4CE3-46BA-B7DE-EEBC61F036A7}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-012.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="501288413"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-012" ID="{349D4734-4CE3-46BA-B7DE-EEBC61F036A7}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-013" ID="{3E67FCDA-700B-4562-BD7D-00E395D7C5C6}" ShortID="486727502">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-013" ID="{3BA65BAA-7CC8-409A-9639-E5D577518828}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-013.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="907083510"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-013" ID="{3BA65BAA-7CC8-409A-9639-E5D577518828}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-014" ID="{671A91E1-C43D-4736-818A-8CE59BF4F7A1}" ShortID="957367707">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-014" ID="{F519D093-F310-4064-808E-4BB0F946D8D8}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-014.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="986526279"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-014" ID="{F519D093-F310-4064-808E-4BB0F946D8D8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-015" ID="{D3E890C8-E09B-4E9D-B4C5-FE9E05E0778E}" ShortID="66460846">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-015" ID="{4795D5F6-A803-405D-8DE9-B279FC7F17D1}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-015.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="582240897"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-015" ID="{4795D5F6-A803-405D-8DE9-B279FC7F17D1}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-016" ID="{F0384A20-4AB6-4B31-B65B-03AB82139E10}" ShortID="726010794">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-016" ID="{215C95B8-C61C-447C-B84D-89328F126464}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-016.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="67665767"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-016" ID="{215C95B8-C61C-447C-B84D-89328F126464}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_OS_FT_Wood-017" ID="{AEF141C4-5469-46B7-933F-271E9A27355F}" ShortID="387704038">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_OS_FT_Wood-017" ID="{11721381-8D43-420E-82B6-A70A1B4CACAB}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_OS_FT_Wood-017.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="894621419"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_OS_FT_Wood-017" ID="{11721381-8D43-420E-82B6-A70A1B4CACAB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<Sound Name="CameraFlash" ID="{054395E7-4905-40BE-A3D6-B534F766B452}" ShortID="782712243">
 							<PropertyList>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
@@ -548,6 +159,463 @@
 								<ActiveSource Name="SFX_OS_CameraFlash" ID="{E1F6EBCC-E4A2-4756-AD0D-A9722D8FAF4B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<SwitchContainer Name="FTPS" ID="{93EA6137-4685-4E22-AAA9-C3CFA2997E57}" ShortID="66998154">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundMaterial" ID="{786552AC-01AD-4CDE-9E35-EDAF2BF5E296}" WorkUnitID="{4AF94229-8D97-402C-B1AC-2AE5B1BB8722}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Wood" ID="{1B639E9F-C997-4F41-9DE1-D627FD86BF52}" ShortID="1041936617">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_OS_FT_Wood-001" ID="{8E035B89-97C5-4D02-88F7-6627742B0170}" ShortID="1044396278">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-001" ID="{55615547-B41C-45D1-B836-45EA718F60C5}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="238845316"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-001" ID="{55615547-B41C-45D1-B836-45EA718F60C5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-002" ID="{478BE64F-C211-4824-9BFA-B68BA04AAEF8}" ShortID="963807092">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-002" ID="{6426B78E-999F-4ADA-B4A3-2A63519F31F8}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="558974957"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-002" ID="{6426B78E-999F-4ADA-B4A3-2A63519F31F8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-003" ID="{0DB01F06-74B7-41B0-B75B-BD08EAEE3BF2}" ShortID="711667315">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-003" ID="{BDC4D74D-8CDD-4C23-9F54-7DC1425ACA9E}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="263419886"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-003" ID="{BDC4D74D-8CDD-4C23-9F54-7DC1425ACA9E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-004" ID="{D64AB0CD-D9FA-41DC-870B-7BA60336C9CA}" ShortID="512043539">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-004" ID="{7EA82FEC-D0D9-43FF-8AEC-9F1A51B33AEA}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="617300176"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-004" ID="{7EA82FEC-D0D9-43FF-8AEC-9F1A51B33AEA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-005" ID="{A5C06C91-B993-4F09-ACAB-2E5F3D967205}" ShortID="593979623">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-005" ID="{680FEF05-A212-417D-88F4-E16945B9886D}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="261121108"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-005" ID="{680FEF05-A212-417D-88F4-E16945B9886D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-006" ID="{145433A0-B8F5-496D-94C5-7A707B27908B}" ShortID="486242973">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-006" ID="{A3475722-0FA5-484F-A68B-8842BEB70C07}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1054501562"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-006" ID="{A3475722-0FA5-484F-A68B-8842BEB70C07}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-007" ID="{FBACB020-5F09-41EF-AA90-F790AE8D2CA1}" ShortID="371553077">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-007" ID="{A50CD9D8-3215-48C4-9FAB-971B29C65623}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-007.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="457393815"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-007" ID="{A50CD9D8-3215-48C4-9FAB-971B29C65623}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-008" ID="{D085324B-BA1D-4AB7-8F5C-032819E1F131}" ShortID="409335916">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-008" ID="{83EC8088-D82F-43B1-B0B2-F65E9761C0A3}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-008.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="426996222"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-008" ID="{83EC8088-D82F-43B1-B0B2-F65E9761C0A3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-009" ID="{EC4A9B8C-E6F8-4B23-A7A6-991D7B46E9FD}" ShortID="411133851">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-009" ID="{8916B3E1-4819-4613-ACD0-4072B0F37CED}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-009.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="535211386"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-009" ID="{8916B3E1-4819-4613-ACD0-4072B0F37CED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-010" ID="{C3762134-14FE-42AE-90D5-77D8C8141390}" ShortID="386533634">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-010" ID="{09A728D9-0642-4908-AD8E-C26A8EDFCF5A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-010.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="345146632"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-010" ID="{09A728D9-0642-4908-AD8E-C26A8EDFCF5A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-011" ID="{663518F3-3B54-47F6-88D0-FC567E73BE89}" ShortID="581996674">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-011" ID="{437FB9BF-7FE4-488D-BC9A-E7C68063DA4B}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-011.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="43655015"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-011" ID="{437FB9BF-7FE4-488D-BC9A-E7C68063DA4B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-012" ID="{812B19B0-61D8-41AD-A92E-71335DFEFF25}" ShortID="302197365">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-012" ID="{349D4734-4CE3-46BA-B7DE-EEBC61F036A7}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-012.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="501288413"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-012" ID="{349D4734-4CE3-46BA-B7DE-EEBC61F036A7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-013" ID="{3E67FCDA-700B-4562-BD7D-00E395D7C5C6}" ShortID="486727502">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-013" ID="{3BA65BAA-7CC8-409A-9639-E5D577518828}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-013.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="907083510"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-013" ID="{3BA65BAA-7CC8-409A-9639-E5D577518828}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-014" ID="{671A91E1-C43D-4736-818A-8CE59BF4F7A1}" ShortID="957367707">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-014" ID="{F519D093-F310-4064-808E-4BB0F946D8D8}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-014.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="986526279"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-014" ID="{F519D093-F310-4064-808E-4BB0F946D8D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-015" ID="{D3E890C8-E09B-4E9D-B4C5-FE9E05E0778E}" ShortID="66460846">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-015" ID="{4795D5F6-A803-405D-8DE9-B279FC7F17D1}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-015.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="582240897"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-015" ID="{4795D5F6-A803-405D-8DE9-B279FC7F17D1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-016" ID="{F0384A20-4AB6-4B31-B65B-03AB82139E10}" ShortID="726010794">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-016" ID="{215C95B8-C61C-447C-B84D-89328F126464}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-016.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="67665767"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-016" ID="{215C95B8-C61C-447C-B84D-89328F126464}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Wood-017" ID="{AEF141C4-5469-46B7-933F-271E9A27355F}" ShortID="387704038">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Wood-017" ID="{11721381-8D43-420E-82B6-A70A1B4CACAB}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Wood-017.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="894621419"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Wood-017" ID="{11721381-8D43-420E-82B6-A70A1B4CACAB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Concrete" ID="{C601F8E5-796D-411A-937E-1B55E61378B3}" ShortID="1019286056">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Grass" ID="{101F34DB-89C3-4EF9-9D97-F265D9A18F51}" ShortID="176614603">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Wood" ID="{1B639E9F-C997-4F41-9DE1-D627FD86BF52}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Grass" ID="{101F34DB-89C3-4EF9-9D97-F265D9A18F51}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Concrete" ID="{C601F8E5-796D-411A-937E-1B55E61378B3}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Wood" ID="{C19CD373-FEAF-4745-8C10-CE939193D04F}"/>
+										<ItemList>
+											<ItemRef Name="Wood" ID="{1B639E9F-C997-4F41-9DE1-D627FD86BF52}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Grass" ID="{937ED794-838E-4EAD-8449-E00AAB70FBF0}"/>
+										<ItemList>
+											<ItemRef Name="Grass" ID="{101F34DB-89C3-4EF9-9D97-F265D9A18F51}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Concrete" ID="{EF0414EF-AE6D-4F8E-8A95-1434B1846AC8}"/>
+										<ItemList>
+											<ItemRef Name="Concrete" ID="{C601F8E5-796D-411A-937E-1B55E61378B3}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
