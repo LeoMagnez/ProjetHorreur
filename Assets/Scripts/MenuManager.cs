@@ -99,8 +99,27 @@ public class MenuManager : MonoBehaviour
         limit120 = 120
     }
 
-    
+    /*public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 
-  
+    public void LowQ()
+    {
+        QualitySettings.SetQualityLevel(5, true);
+    }
+
+    public void MediumQ()
+    {
+        QualitySettings.SetQualityLevel(4, true);
+    }
+
+    public void highQ()
+    {
+        QualitySettings.SetQualityLevel(3, true);
+    }*/
+
+
+
 
 }
