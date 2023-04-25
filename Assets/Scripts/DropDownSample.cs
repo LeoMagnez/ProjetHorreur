@@ -8,7 +8,6 @@ public class DropDownSample : MonoBehaviour
     {
         switch (index)
         {
-
             case 0: Application.targetFrameRate = 0; break;
             case 1: Application.targetFrameRate = 80; break;
             case 2: Application.targetFrameRate = 60; break;
