@@ -36,6 +36,12 @@ public class CameraManager : MonoBehaviour
 
     public bool canPlay;
 
+    public bool unstableTable;
+
+    public bool unstableChair;
+
+    public bool unstableLamp;
+
     [SerializeField] bool _importantPhoto = false;
 
     [Header("GameObjects")]
@@ -261,6 +267,21 @@ public class CameraManager : MonoBehaviour
                 hit.transform.gameObject.GetComponent<ObjectMover>().HideObject();
                 //_objectToMoveList.Insert(0, hit.transform.gameObject.GetComponent<ObjectMover>());
                 objectToMove = hit.transform.gameObject.GetComponent<ObjectMover>();
+
+                if(hit.transform.gameObject.name == "UnstableTable")
+                {
+                    unstableTable = true;
+                }
+
+                if(hit.transform.gameObject.name == "UnstableChair")
+                {
+                    unstableChair = true;
+                }
+
+                if(hit.transform.gameObject.name == "UnstableLamp")
+                {
+                    unstableLamp = true;
+                }
 
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             }

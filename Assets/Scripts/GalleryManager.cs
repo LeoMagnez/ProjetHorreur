@@ -163,7 +163,7 @@ public class GalleryManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Eh nique ta mere");
+                //Debug.Log("patate");
             }
         }
 
