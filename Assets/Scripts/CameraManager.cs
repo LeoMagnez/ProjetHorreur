@@ -271,16 +271,22 @@ public class CameraManager : MonoBehaviour
                 if(hit.transform.gameObject.name == "UnstableTable")
                 {
                     unstableTable = true;
+                    unstableChair = false;
+                    unstableLamp = false;
                 }
 
                 if(hit.transform.gameObject.name == "UnstableChair")
                 {
                     unstableChair = true;
+                    unstableLamp = false;
+                    unstableTable = false;
                 }
 
                 if(hit.transform.gameObject.name == "UnstableLamp")
                 {
                     unstableLamp = true;
+                    unstableChair = false;
+                    unstableTable = false;
                 }
 
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);

@@ -51,6 +51,12 @@ public class FurnitureAnchor : MonoBehaviour
     [Header ("Toujours activer après une modification (désac avant)")]
     bool LOCK_ANCHOR = false;
 
+    [SerializeField]
+    public InstableRoom instableRoom;
+
+    [HideInInspector]
+    public bool isActive = true;
+
     
 
     public List<Vector3> anchorList = new List<Vector3>();
