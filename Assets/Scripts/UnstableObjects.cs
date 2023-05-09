@@ -18,18 +18,21 @@ public class UnstableObjects : MonoBehaviour
     {
         if (CameraManager.instance.unstableTable)
         {
+            Debug.Log("Table");
             unstableTableAnchor.SetActive(true);
             unstableChairAnchor.SetActive(false);
             unstableLampAnchor.SetActive(false);
         }
         if (CameraManager.instance.unstableChair)
         {
+            Debug.Log("Chair");
             unstableTableAnchor.SetActive(false);
             unstableChairAnchor.SetActive(true);
             unstableLampAnchor.SetActive(false);
         }
         if (CameraManager.instance.unstableLamp)
         {
+            Debug.Log("Lamp");
             unstableTableAnchor.SetActive(false);
             unstableLampAnchor.SetActive(true);
             unstableChairAnchor.SetActive(false);

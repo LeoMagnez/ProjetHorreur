@@ -331,61 +331,32 @@ public class GalleryManager : MonoBehaviour
         {
             FurnitureAnchor _furniture;
 
-            //CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
+            if (!hit.collider.gameObject.TryGetComponent<FurnitureAnchor>(out _furniture))
 
-            //Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
-            //Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);
-
-           
-
-            //List<FurnitureAnchor> tempList = FindObjectsOfType<FurnitureAnchor>().ToList<FurnitureAnchor>();
-
-            if (hit.collider.gameObject.TryGetComponent<FurnitureAnchor>(out _furniture) == null)
-                //CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObject(hit.point);
                 return;
+
+            if (_furniture.instableRoom != null)
+            {
+                _furniture.instableRoom.DecreaseCounter();
+                _furniture.isActive = false;
+
+            }
 
             float maxDistance = 999999999f;
             Vector3 vector3ToApply = Vector3.zero;
 
-            /*foreach (Vector3 anchor in _furniture.anchorList)
-            {
-                float newDistance = Vector3.Distance(anchor, hit.point);
-                if(newDistance < maxDistance)
-                {
-                    maxDistance = newDistance;
-                    vector3ToApply = anchor;
-                }
-                
-            }*/
 
-            //CameraManager.instance._objectToMoveList[curSelectedImage.index].MoveObjectToAnchor(_furniture.worldPos);
             CameraManager.instance.objectToMove.MoveObjectToAnchor(_furniture.worldPos);
             CameraManager.instance.objectToMove = null;
 
-            
-
-            /*Vector3 incomingVector = hit.point - CameraManager.instance._objectToMoveList[curSelectedImage.index].gameObject.transform.position;
-            Vector3 reflectVector = Vector3.Reflect(incomingVector, hit.normal);*/
-
-            /*FurnitureAnchor _targetAnchor = hit.transform.GetComponent<FurnitureAnchor>();
-
-            Vector3 _targetPos = _targetAnchor.transform.position + _targetAnchor.anchorLocalPos;*/
-
-
-
             CameraManager.instance._spriteList.RemoveAt(curSelectedImage.index);
-            //CameraManager.instance._objectToMoveList.RemoveAt(curSelectedImage.index);
 
-            
-
-
-            //imagesUI[curSelectedImage.index].image.sprite = null;
-            //OnGalleryUpdatePage();
             CameraManager.instance.UIdown();
+
+
+                            
+
         }
 
-
     }
-
-
 }
