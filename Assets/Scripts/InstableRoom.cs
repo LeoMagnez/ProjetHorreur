@@ -5,6 +5,8 @@ using UnityEngine;
 public class InstableRoom : MonoBehaviour
 {
     [SerializeField] int instableCounter;
+
+    public GameObject trigger_scene;
     
 
     public void DecreaseCounter()
@@ -13,7 +15,7 @@ public class InstableRoom : MonoBehaviour
 
         if(instableCounter == 0)
         {
-            //Event porte
+            trigger_scene.SetActive(true);
         }
     }
    
