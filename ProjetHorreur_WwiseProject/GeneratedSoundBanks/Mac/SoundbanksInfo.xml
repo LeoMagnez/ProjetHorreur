@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{2C5EBD19-DC26-BB57-6A26-E1B064EE16B3}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{794BAC03-E461-A90A-32B8-AD43814286F1}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -40,6 +40,10 @@
 				<File Id="263419886" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-003.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-003_10C4C929.wem</CachePath>
+				</File>
+				<File Id="323215771" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_PhoneRing.wav</ShortName>
+					<CachePath>SFX/SFX_OS_PhoneRing_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="345146632" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-010.wav</ShortName>
@@ -137,6 +141,11 @@
 						<MediaRef Id="24919415"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3447864244" Name="Play_PhoneRing" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323215771"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="4101628508" Name="IsInHouse"/>
@@ -177,5 +186,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FA49B8BA-0A43-68B3-3EB6-7D3AF0B2CA40}</FileHash>
+	<FileHash>{94BA64E7-9235-4C94-0536-8027BDF427E1}</FileHash>
 </SoundBanksInfo>
