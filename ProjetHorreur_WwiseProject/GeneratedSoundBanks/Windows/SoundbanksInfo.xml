@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{794BAC03-E461-A90A-32B8-AD43814286F1}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{A76830F3-F048-0044-B2D1-BC211719C920}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -141,7 +141,7 @@
 						<MediaRef Id="24919415"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3447864244" Name="Play_PhoneRing" DurationType="Infinite">
+				<Event Id="3447864244" Name="Play_PhoneRing" MaxAttenuation="24" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="323215771"/>
 					</MediaRefs>
@@ -186,5 +186,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D8D03169-B9A9-AD20-9F5F-5BACB3B60376}</FileHash>
+	<FileHash>{9123A721-4F5D-4F69-95DE-8B939598D49E}</FileHash>
 </SoundBanksInfo>

@@ -17,6 +17,9 @@ public class TriggerManager : MonoBehaviour
     public UnityEvent TriggerEnter;
     public UnityEvent TriggerExit;
 
+    [SerializeField] private GameObject phone;
+    [SerializeField] private AK.Wwise.Event ringSFX;
+
     private void OnTriggerEnter(Collider other)
     {
         TriggerEnter.Invoke();
@@ -96,5 +99,13 @@ public class TriggerManager : MonoBehaviour
         SceneManager.LoadScene(_SceneToLoad);
     }
 
+    public void playRingingSFX() 
+    {
+        ringSFX.Post(phone);
+    }
 
+    public void stopRingingSFX()
+    {
+        ringSFX.Stop(phone);
+    }
 }
