@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCES = 1117071689U;
         static const AkUniqueID PLAY_CAMERAFLASH = 1309478403U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
+        static const AkUniqueID PLAY_PHONERING = 3447864244U;
     } // namespace EVENTS
 
     namespace SWITCHES

@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585204587785718976
+    m_lastTime: -8585175315039262559
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585192855669038075
+    m_lastTime: -8585175315113977817
     List:
     - name: FTPS
       guid: 6d84683922a7134ca6b9721ffc5d2971
@@ -161,6 +161,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: fa3616e70ab4e14e8ecd4b80a6920977
       Path: Events\Default Work Unit\Play_HouseAmb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_PhoneRing
+      guid: 85663b199b604a4c8dc497c3177ffd56
+      id: 3447864244
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Play_PhoneRing
+        ObjectType: 3
+        guid: 85663b199b604a4c8dc497c3177ffd56
+      Path: Events\Default Work Unit\Play_PhoneRing
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

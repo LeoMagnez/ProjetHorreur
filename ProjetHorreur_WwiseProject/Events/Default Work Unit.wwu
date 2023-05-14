@@ -47,6 +47,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_PhoneRing" ID="{193B6685-609B-4C4A-8DC4-97C3177FFD56}">
+					<ChildrenList>
+						<Action Name="" ID="{948D3EEA-2065-4E68-A61C-01A3852164B7}" ShortID="523176621">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_LP_PhoneRing" ID="{7AE0B040-A95F-4B17-B113-D90C37A5CA30}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
