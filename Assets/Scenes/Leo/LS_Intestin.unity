@@ -2652,6 +2652,10 @@ MonoBehaviour:
   unstableTable: 0
   unstableChair: 0
   unstableLamp: 0
+  plank1: 0
+  plank2: 0
+  plank3: 0
+  plank4: 0
   _importantPhoto: 0
   UI: {fileID: 1460675220}
   _porte: {fileID: 0}
@@ -6934,7 +6938,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
       propertyPath: m_Name
-      value: Obj_planche_bois_placeholder (3)
+      value: Plank2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
@@ -10205,6 +10209,7 @@ Transform:
   m_Children:
   - {fileID: 1709903694}
   - {fileID: 969489495}
+  - {fileID: 1581711543}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17625,7 +17630,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
       propertyPath: m_Name
-      value: Obj_planche_bois_placeholder (4)
+      value: Plank3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
@@ -31996,7 +32001,7 @@ GameObject:
   - component: {fileID: 1464447131}
   - component: {fileID: 1464447130}
   m_Layer: 0
-  m_Name: AncreCouloir1 (4)
+  m_Name: Plank3Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34392,6 +34397,54 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1625903907993050498, guid: 22fccf1755736474e80c17fb94b7299c, type: 3}
+--- !u!1 &1581711542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581711543}
+  - component: {fileID: 1581711544}
+  m_Layer: 0
+  m_Name: Level3Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1581711543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581711542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 573635254}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1581711544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581711542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9d2a4952d33864a8c4ddfb734bfa59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plank1Anchor: {fileID: 1620108909}
+  plank2Anchor: {fileID: 1904619452}
+  plank3Anchor: {fileID: 1464447129}
+  plank4Anchor: {fileID: 1620299817}
 --- !u!1 &1581969239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 22fccf1755736474e80c17fb94b7299c,
@@ -34811,7 +34864,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
       propertyPath: m_Name
-      value: Obj_planche_bois_placeholder (2)
+      value: Plank1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
@@ -35180,7 +35233,7 @@ GameObject:
   - component: {fileID: 1620108911}
   - component: {fileID: 1620108910}
   m_Layer: 0
-  m_Name: AncreCouloir1 (2)
+  m_Name: Plank1Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35255,7 +35308,7 @@ GameObject:
   - component: {fileID: 1620299819}
   - component: {fileID: 1620299818}
   m_Layer: 0
-  m_Name: AncreCouloir1 (5)
+  m_Name: Plank4Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38979,7 +39032,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
       propertyPath: m_Name
-      value: Obj_planche_bois_placeholder (5)
+      value: Plank4
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f21922e5817b68499e370fc0f19624c,
         type: 3}
@@ -40611,7 +40664,7 @@ GameObject:
   - component: {fileID: 1904619454}
   - component: {fileID: 1904619453}
   m_Layer: 0
-  m_Name: AncreCouloir1 (3)
+  m_Name: Plank2Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
