@@ -1,5 +1,100 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1506599111052156546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751053559007582033}
+  - component: {fileID: 7490512646641204514}
+  - component: {fileID: 3405426497098311165}
+  m_Layer: 0
+  m_Name: TriggerCouloir
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1751053559007582033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506599111052156546}
+  m_LocalRotation: {x: -0, y: -0.000000059604645, z: -0, w: 1}
+  m_LocalPosition: {x: 0.43333372, y: -1.6558778, z: -12.65278}
+  m_LocalScale: {x: 5.649299, y: 1.6815671, z: 2.8697696}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2173330856855692457}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &7490512646641204514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506599111052156546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4065659, y: 1, z: 1.1472783}
+  m_Center: {x: 0.022214642, y: 0, z: 0.07363918}
+--- !u!114 &3405426497098311165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506599111052156546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be01523433d8f143a819094b48d232b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerToCall: 0
+  _SceneToLoad: 
+  TriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2173330856855692454}
+        m_TargetAssemblyTypeName: ShrinkWalls, Assembly-CSharp
+        m_MethodName: directionTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TriggerExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2173330856855692454}
+        m_TargetAssemblyTypeName: ShrinkWalls, Assembly-CSharp
+        m_MethodName: directionFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  phone: {fileID: 0}
+  ringSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &2173330856855692455
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,6 +105,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2173330856855692457}
   - component: {fileID: 2173330856855692454}
+  - component: {fileID: 2007706760139544927}
+  - component: {fileID: 5272410760434895373}
   m_Layer: 0
   m_Name: ShrinkableWalls
   m_TagString: Untagged
@@ -31,6 +128,7 @@ Transform:
   m_Children:
   - {fileID: 2173330857727888434}
   - {fileID: 2173330857438782107}
+  - {fileID: 1751053559007582033}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52,6 +150,48 @@ MonoBehaviour:
   fWall: 10
   zWall: 0.1
   rWall: -1
+--- !u!65 &2007706760139544927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173330856855692455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.586224, y: 4.3527784, z: 20.586164}
+  m_Center: {x: 0.30397892, y: -0.32069474, z: -0.10196407}
+--- !u!114 &5272410760434895373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173330856855692455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 3
+  anchorNumberY: 3
+  offsetMultiplier: 0
+  anchorLocalPos: {x: -60.38, y: 0.5, z: 19.2}
+  anchorOffset: {x: 0, y: 0, z: 0}
+  worldPos: {x: -60.38, y: 0.5, z: 19.2}
+  vectorAnchorToOrigin: {x: 60.82849, y: 1.1272635, z: -3.8456793}
+  radius: 0.3
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 1, g: 0, b: 1, a: 1}
+  LOCK_ANCHOR: 0
+  instableRoom: {fileID: 0}
+  isActive: 1
+  anchorList: []
 --- !u!1 &2173330857438782103
 GameObject:
   m_ObjectHideFlags: 0

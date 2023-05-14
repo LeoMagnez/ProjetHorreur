@@ -4830,6 +4830,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7230815457444882908}
+  - component: {fileID: 6696939854854997822}
+  - component: {fileID: 5670547570081383054}
+  - component: {fileID: 160720382295845440}
+  - component: {fileID: 7522439286685715877}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -4854,6 +4858,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6696939854854997822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230815457444882909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c248b2337944c4eb62a12faf3bebdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorNumberX: 3
+  anchorNumberY: 3
+  offsetMultiplier: 0
+  anchorLocalPos: {x: 2.61, y: 0, z: 18}
+  anchorOffset: {x: 0, y: 0, z: 0}
+  worldPos: {x: 2.61, y: 0, z: 18}
+  vectorAnchorToOrigin: {x: 0, y: 0.137, z: 0.062999725}
+  radius: 0.3
+  desiredRotationAngle: 45
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  color: {r: 1, g: 0, b: 1, a: 1}
+  LOCK_ANCHOR: 1
+  instableRoom: {fileID: 0}
+  isActive: 1
+  anchorList: []
+--- !u!65 &5670547570081383054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230815457444882909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.70923233, y: 2.5553555, z: 1.5397797}
+  m_Center: {x: 0.14538383, y: 1.24121, z: -0.03080368}
+--- !u!114 &160720382295845440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230815457444882909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0cd5e8bda02cfe4480b338df1027c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &7522439286685715877
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230815457444882909}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &7230815457813370536
 GameObject:
   m_ObjectHideFlags: 0
