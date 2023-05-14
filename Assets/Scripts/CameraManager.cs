@@ -42,6 +42,8 @@ public class CameraManager : MonoBehaviour
 
     public bool unstableLamp;
 
+    public bool plank1, plank2, plank3, plank4;
+
     [SerializeField] bool _importantPhoto = false;
 
     [Header("GameObjects")]
@@ -287,6 +289,38 @@ public class CameraManager : MonoBehaviour
                     unstableLamp = true;
                     unstableChair = false;
                     unstableTable = false;
+                }
+
+                if (hit.transform.gameObject.name == "Plank1")
+                {
+                    plank1 = true;
+                    plank2 = false;
+                    plank3 = false;
+                    plank4 = false;
+                }
+
+                if (hit.transform.gameObject.name == "Plank2")
+                {
+                    plank1 = false;
+                    plank2 = true;
+                    plank3 = false;
+                    plank4 = false;
+                }
+
+                if (hit.transform.gameObject.name == "Plank3")
+                {
+                    plank1 = false;
+                    plank2 = false;
+                    plank3 = true;
+                    plank4 = false;
+                }
+
+                if (hit.transform.gameObject.name == "Plank4")
+                {
+                    plank1 = false;
+                    plank2 = false;
+                    plank3 = false;
+                    plank4 = true;
                 }
 
                 Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
