@@ -5,6 +5,7 @@ using UnityEngine;
 public class UnstableObjects : MonoBehaviour
 {
     [SerializeField] GameObject unstableTableAnchor, unstableChairAnchor, unstableLampAnchor;
+    [SerializeField] GameObject unstableTableGhost, unstableChairGhost, unstableLampGhost;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,8 @@ public class UnstableObjects : MonoBehaviour
             unstableTableAnchor.SetActive(true);
             unstableChairAnchor.SetActive(false);
             unstableLampAnchor.SetActive(false);
+
+
         }
         if (CameraManager.instance.unstableChair)
         {
@@ -29,6 +32,9 @@ public class UnstableObjects : MonoBehaviour
             unstableTableAnchor.SetActive(false);
             unstableChairAnchor.SetActive(true);
             unstableLampAnchor.SetActive(false);
+
+
+
         }
         if (CameraManager.instance.unstableLamp)
         {
@@ -36,6 +42,7 @@ public class UnstableObjects : MonoBehaviour
             unstableTableAnchor.SetActive(false);
             unstableLampAnchor.SetActive(true);
             unstableChairAnchor.SetActive(false);
+
         }
     }
 }

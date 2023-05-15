@@ -70,6 +70,8 @@ public class GalleryManager : MonoBehaviour
     public GameObject photoCamera;
 
 
+
+
     private void OnEnable()
     {
         nbOfPicsPerPage = imagesUI.Count;
@@ -337,6 +339,7 @@ public class GalleryManager : MonoBehaviour
 
             if (_furniture.instableRoom != null)
             {
+                
                 _furniture.instableRoom.DecreaseCounter();
                 _furniture.isActive = false;
 

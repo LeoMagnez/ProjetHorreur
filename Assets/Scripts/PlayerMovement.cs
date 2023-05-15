@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -36,6 +37,18 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool falling = false;
 
+    //VAR SOUND
+
+    private enum CURRENT_TERRAIN { WOOD, CONCRETE, GRASS}
+    private float walkFtpTimer = 1f;
+    private float runFtpTimer = 0.67f;
+    private float ftpTimer = 0.0f;
+
+    [Header("Sound")]
+    [SerializeField] private CURRENT_TERRAIN currentTerrain;
+    [SerializeField] private AK.Wwise.Event ftpsEvent;
+    [SerializeField] private AK.Wwise.Switch[] terrainSwitch;
+
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
@@ -57,18 +70,36 @@ public class PlayerMovement : MonoBehaviour
                         isRunning = true;
                         RunningMovement();
                         _staminaTimer -= Time.deltaTime;
-                    }
+
+                        if (ftpTimer > runFtpTimer)
+                        {
+                            SelectAndPlayFootstep();
+                            ftpTimer = 0.0f;
+                        }
+                }
                     else
                     {
                         canRun = false;
                         isRunning = false;
                         DefaultMovement();
+
+                        if (ftpTimer > walkFtpTimer) 
+                        {
+                            SelectAndPlayFootstep();
+                            ftpTimer = 0.0f;
+                        }
                     }              
             }
             else
             {
                 isRunning = false;
                 DefaultMovement();
+
+                if (ftpTimer > walkFtpTimer)
+                {
+                    SelectAndPlayFootstep();
+                    ftpTimer = 0.0f;
+                }
             }
 
             if (CameraManager.instance._isCameraUp)
@@ -84,6 +115,9 @@ public class PlayerMovement : MonoBehaviour
             isIdle = true;
             MovementForbidden();
         }
+
+        checkTerrain();
+        ftpTimer += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -122,9 +156,6 @@ public class PlayerMovement : MonoBehaviour
                 _moveDirection.y = -_settings[0].speed;
 
                 _moveDirection = transform.TransformDirection(_moveDirection);
-                
-
-
             }
             else
             {
@@ -223,7 +254,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     public void CamMouvement() //Change the cinemachine virtual camera's noise according to the player's sate (idle, walking, running)
     {
         if(!isIdle && !isRunning &&!CameraManager.instance._isCameraUp)
@@ -255,5 +285,46 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void checkTerrain() 
+    {
+        RaycastHit[] hit;
 
+        hit = Physics.RaycastAll(transform.position, Vector3.down, 10.0f);
+
+        foreach (RaycastHit rayhit in hit) 
+        {
+            if (rayhit.transform.gameObject.layer == LayerMask.NameToLayer("Wood"))
+            {
+                currentTerrain = CURRENT_TERRAIN.WOOD;
+            }
+            else if (rayhit.transform.gameObject.layer == LayerMask.NameToLayer("Concrete"))
+            {
+                currentTerrain = CURRENT_TERRAIN.CONCRETE;
+            }
+            else if (rayhit.transform.gameObject.layer == LayerMask.NameToLayer("Grass"))
+            {
+                currentTerrain = CURRENT_TERRAIN.GRASS;
+            }
+        }
+    }
+
+    private void playFootstep(int terrain) 
+    {
+        terrainSwitch[terrain].SetValue(this.gameObject);
+        AkSoundEngine.PostEvent(ftpsEvent.Id, this.gameObject);
+    }
+
+    public void SelectAndPlayFootstep() 
+    {
+        switch (currentTerrain) 
+        {
+            case CURRENT_TERRAIN.WOOD:
+                playFootstep(0);
+                break;
+            case CURRENT_TERRAIN.CONCRETE:
+                break;
+            case CURRENT_TERRAIN.GRASS:
+                break;
+        }
+    }
 }
