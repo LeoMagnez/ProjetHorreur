@@ -19,6 +19,7 @@ public class TriggerManager : MonoBehaviour
 
     [SerializeField] private GameObject phone;
     [SerializeField] private AK.Wwise.Event ringSFX;
+    [SerializeField] private AK.Wwise.Event slamSFX;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -107,5 +108,6 @@ public class TriggerManager : MonoBehaviour
     public void stopRingingSFX()
     {
         ringSFX.Stop(phone);
+        slamSFX.Post(phone);
     }
 }
