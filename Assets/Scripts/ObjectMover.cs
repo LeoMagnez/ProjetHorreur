@@ -6,7 +6,7 @@ using UnityEngine;
 public class ObjectMover : MonoBehaviour
 {
 
-
+    public GameObject ghost;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +66,7 @@ public class ObjectMover : MonoBehaviour
         if (gameObject.TryGetComponent<MeshRenderer>(out mesh))
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
+            ghost.SetActive(false);
             
         }
         else
