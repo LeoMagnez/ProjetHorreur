@@ -319,8 +319,10 @@ public class PlayerMovement : MonoBehaviour
                 playFootstep(0);
                 break;
             case CURRENT_TERRAIN.CONCRETE:
+                playFootstep(1);
                 break;
             case CURRENT_TERRAIN.GRASS:
+                playFootstep(2);
                 break;
             case CURRENT_TERRAIN.CARPET:
                 break;
