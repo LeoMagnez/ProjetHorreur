@@ -39,9 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
     //VAR SOUND
 
-    private enum CURRENT_TERRAIN { WOOD, CONCRETE, GRASS}
-    private float walkFtpTimer = 1f;
-    private float runFtpTimer = 0.67f;
+    private enum CURRENT_TERRAIN { WOOD, CONCRETE, GRASS, CARPET}
+    private float walkFtpTimer = 0.67f;
+    private float runFtpTimer = 0.34f;
     private float ftpTimer = 0.0f;
 
     [Header("Sound")]
@@ -61,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        checkTerrain();
+
         if (CameraManager.instance.canPlay)
         {
             if (Input.GetKey(KeyCode.LeftShift))
@@ -70,36 +72,18 @@ public class PlayerMovement : MonoBehaviour
                         isRunning = true;
                         RunningMovement();
                         _staminaTimer -= Time.deltaTime;
-
-                        if (ftpTimer > runFtpTimer)
-                        {
-                            SelectAndPlayFootstep();
-                            ftpTimer = 0.0f;
-                        }
-                }
+                    }
                     else
                     {
                         canRun = false;
                         isRunning = false;
                         DefaultMovement();
-
-                        if (ftpTimer > walkFtpTimer) 
-                        {
-                            SelectAndPlayFootstep();
-                            ftpTimer = 0.0f;
-                        }
                     }              
             }
             else
             {
                 isRunning = false;
                 DefaultMovement();
-
-                if (ftpTimer > walkFtpTimer)
-                {
-                    SelectAndPlayFootstep();
-                    ftpTimer = 0.0f;
-                }
             }
 
             if (CameraManager.instance._isCameraUp)
@@ -116,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
             MovementForbidden();
         }
 
-        checkTerrain();
         ftpTimer += Time.deltaTime;
     }
 
@@ -145,6 +128,12 @@ public class PlayerMovement : MonoBehaviour
                 if (input.x != 0 || input.y != 0)
                 {
                     isIdle = false;
+
+                    if (ftpTimer > walkFtpTimer)
+                    {
+                        SelectAndPlayFootstep();
+                        ftpTimer = 0.0f;
+                    }
                 }
                 else
                 {
@@ -195,7 +184,11 @@ public class PlayerMovement : MonoBehaviour
 
             _moveDirection = transform.TransformDirection(_moveDirection);
 
-
+            if (ftpTimer > runFtpTimer)
+            {
+                SelectAndPlayFootstep();
+                ftpTimer = 0.0f;
+            }
         }
         else
         {
@@ -289,7 +282,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit[] hit;
 
-        hit = Physics.RaycastAll(transform.position, Vector3.down, 10.0f);
+        hit = Physics.RaycastAll(transform.position, Vector3.down, 2.5f);
 
         foreach (RaycastHit rayhit in hit) 
         {
@@ -304,6 +297,10 @@ public class PlayerMovement : MonoBehaviour
             else if (rayhit.transform.gameObject.layer == LayerMask.NameToLayer("Grass"))
             {
                 currentTerrain = CURRENT_TERRAIN.GRASS;
+            }
+            else if (rayhit.transform.gameObject.layer == LayerMask.NameToLayer("Carpet"))
+            {
+                currentTerrain = CURRENT_TERRAIN.CARPET;
             }
         }
     }
@@ -324,6 +321,8 @@ public class PlayerMovement : MonoBehaviour
             case CURRENT_TERRAIN.CONCRETE:
                 break;
             case CURRENT_TERRAIN.GRASS:
+                break;
+            case CURRENT_TERRAIN.CARPET:
                 break;
         }
     }
