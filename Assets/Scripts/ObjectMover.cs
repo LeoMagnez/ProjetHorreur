@@ -66,7 +66,12 @@ public class ObjectMover : MonoBehaviour
         if (gameObject.TryGetComponent<MeshRenderer>(out mesh))
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
-            ghost.SetActive(false);
+
+            if(ghost != null)
+            {
+                ghost.SetActive(false);
+            }
+
             
         }
         else
