@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     //VAR SOUND
 
-    private enum CURRENT_TERRAIN { WOOD, CONCRETE, GRASS, CARPET}
+    private enum CURRENT_TERRAIN { WOOD, CONCRETE, GRASS, TILES}
     private float walkFtpTimer = 0.67f;
     private float runFtpTimer = 0.34f;
     private float ftpTimer = 0.0f;
@@ -301,9 +301,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentTerrain = CURRENT_TERRAIN.GRASS;
             }
-            else if (rayhit.transform.gameObject.layer == LayerMask.NameToLayer("Carpet"))
+            else if (rayhit.transform.gameObject.layer == LayerMask.NameToLayer("Tiles"))
             {
-                currentTerrain = CURRENT_TERRAIN.CARPET;
+                currentTerrain = CURRENT_TERRAIN.TILES;
             }
         }
     }
@@ -327,7 +327,7 @@ public class PlayerMovement : MonoBehaviour
             case CURRENT_TERRAIN.GRASS:
                 playFootstep(2);
                 break;
-            case CURRENT_TERRAIN.CARPET:
+            case CURRENT_TERRAIN.TILES:
                 break;
         }
     }
