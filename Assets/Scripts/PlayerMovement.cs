@@ -173,21 +173,24 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //inputs
 
-            if (input.x != 0 && input.y != 0)
+            if (input != Vector2.zero)
             {
-                input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
-            }
+                if (input.x != 0 && input.y != 0)
+                {
+                    input *= 0.777f; //Normalizes Vector2 "input". Prevent the player from being faster if walking diagonally
+                }
 
-            _moveDirection.x = input.x * _settings[1].speed;
-            _moveDirection.z = input.y * _settings[1].speed;
-            _moveDirection.y = -_settings[1].speed;
+                _moveDirection.x = input.x * _settings[1].speed;
+                _moveDirection.z = input.y * _settings[1].speed;
+                _moveDirection.y = -_settings[1].speed;
 
-            _moveDirection = transform.TransformDirection(_moveDirection);
+                _moveDirection = transform.TransformDirection(_moveDirection);
 
-            if (ftpTimer > runFtpTimer)
-            {
-                SelectAndPlayFootstep();
-                ftpTimer = 0.0f;
+                if (ftpTimer > runFtpTimer)
+                {
+                    SelectAndPlayFootstep();
+                    ftpTimer = 0.0f;
+                }
             }
         }
         else
