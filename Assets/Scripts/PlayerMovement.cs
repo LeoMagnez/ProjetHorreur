@@ -328,6 +328,7 @@ public class PlayerMovement : MonoBehaviour
                 playFootstep(2);
                 break;
             case CURRENT_TERRAIN.TILES:
+                playFootstep(3);
                 break;
         }
     }
