@@ -34,7 +34,10 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        menuController();
+        if (CameraManager.instance.cameraTuto)
+        {
+            menuController();
+        }
     }
 
     public void menuController()
