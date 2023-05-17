@@ -23,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_WoodenFloorV
+  m_Name: M_WoodFloor 3
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
@@ -55,9 +55,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 65ae4542fd76f26419da6f77a442b4f9, type: 3}
-        m_Scale: {x: 6, y: 6}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 11305cee3aa35bb40a6e1be01bd32f7d, type: 3}
+        m_Scale: {x: 12, y: 12}
+        m_Offset: {x: 0.81, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -79,7 +79,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: 245b9b0d51df63748a3dc5ee0a801c64, type: 3}
+        m_Texture: {fileID: 2800000, guid: ed9478620a7328140b6a0d16c22f119f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IridescenceMaskMap:
@@ -91,15 +91,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 65ae4542fd76f26419da6f77a442b4f9, type: 3}
-        m_Scale: {x: 6, y: 6}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 11305cee3aa35bb40a6e1be01bd32f7d, type: 3}
+        m_Scale: {x: 12, y: 12}
+        m_Offset: {x: 0.81, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 64a600b8bd2efc245a7b3dc7cc4397d7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 31c222f39b4fffc4db7d09c5ba072b52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 811f07f8a4eb17d4e90daff3974e2635, type: 3}
+        m_Texture: {fileID: 2800000, guid: aed0a968bcb785a499c03e037be67997, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -194,7 +194,7 @@ Material:
     - _HeightPoMAmplitude: 0.3
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
-    - _InvTilingScale: 0.16666667
+    - _InvTilingScale: 0.083333336
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
@@ -204,7 +204,7 @@ Material:
     - _MetallicRemapMax: 1
     - _MetallicRemapMin: 0
     - _NormalMapSpace: 0
-    - _NormalScale: 0.2
+    - _NormalScale: 0
     - _OpaqueCullMode: 2
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
