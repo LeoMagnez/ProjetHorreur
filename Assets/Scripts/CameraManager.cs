@@ -96,6 +96,8 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject SFX;
     [SerializeField] private AK.Wwise.Event cameraShutterSFX;
 
+    public bool cameraTuto = false;
+
     #endregion
 
 
@@ -122,55 +124,63 @@ public class CameraManager : MonoBehaviour
     #region UPDATE
     private void Update()
     {
-        //Si on appuie sur clic-droit, et que l'on est pas en train de naviguer la galerie, sors l'appareil photo
-        if (Input.GetMouseButtonUp(1) && !_isUIup && !MenuManager.instance._menuIsUp ) 
+        if (cameraTuto)
         {
-            if (!_isCameraUp)
+
+            //Si on appuie sur clic-droit, et que l'on est pas en train de naviguer la galerie, sors l'appareil photo
+            if (Input.GetMouseButtonUp(1) && !_isUIup && !MenuManager.instance._menuIsUp)
             {
-                CameraUp(); //lève l'appareil
+                if (!_isCameraUp)
+                {
+                    CameraUp(); //lève l'appareil
+                }
+                else
+                {
+                    CameraDown();//range l'appareil
+                }
             }
-            else
+
+            //Si on appuie sur Tab et que l'appareil photo est rangé alors ouvre la galerie
+            if (Input.GetKeyDown(KeyCode.Tab) && !_isCameraUp && !MenuManager.instance._menuIsUp)
             {
-                CameraDown();//range l'appareil
+                if (!_isUIup)
+                {
+
+                    _lightCamera.SetActive(false); //désactive la lumière du flash lorsqu'on est dans la galerie
+                    UIup();//entre dans la galerie
+
+                }
+                else
+                {
+
+                    UIdown();//sort de la galerie
+                }
             }
+
+            //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
+            if (Input.GetKeyDown(KeyCode.D) && !canPlay)
+            {
+
+                galleryManager.selectNextOrPrevious(1); //navigue vers la droite
+
+
+            }
+
+            //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
+            if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
+            {
+
+                galleryManager.selectNextOrPrevious(-1); //navigue vers la gauche
+
+            }
+
+            TakePhoto(); //Vérifie si on peut prendre une photo
         }
 
 
-        //Si on appuie sur Tab et que l'appareil photo est rangé alors ouvre la galerie
-        if (Input.GetKeyDown(KeyCode.Tab) && !_isCameraUp && !MenuManager.instance._menuIsUp)
-        {
-            if (!_isUIup)
-            {
+       
 
-                _lightCamera.SetActive(false); //désactive la lumière du flash lorsqu'on est dans la galerie
-                UIup();//entre dans la galerie
-
-            }
-            else
-            {
-
-                UIdown();//sort de la galerie
-            }
-        }
-
-        //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
-        if (Input.GetKeyDown(KeyCode.D) && !canPlay)
-        {
-
-            galleryManager.selectNextOrPrevious(1); //navigue vers la droite
-
-
-        }
-
-        //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
-        if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
-        {
-
-            galleryManager.selectNextOrPrevious(-1); //navigue vers la gauche
-
-        }
-
-        TakePhoto(); //Vérifie si on peut prendre une photo
+       
     }
     #endregion
 
