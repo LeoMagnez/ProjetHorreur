@@ -110,4 +110,9 @@ public class TriggerManager : MonoBehaviour
         ringSFX.Stop(phone);
         slamSFX.Post(phone);
     }
+
+    public void triggerTuto()
+    {
+        CameraManager.instance.cameraTuto = true;
+    }
 }
