@@ -3447,6 +3447,11 @@ PrefabInstance:
       objectReference: {fileID: 2061631148}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
+      propertyPath: ambObj
+      value: 
+      objectReference: {fileID: 2047807573}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
       propertyPath: ringSFX.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: a8e0e0f0066d0f14aac94c3f8d08b3ce,
@@ -3456,6 +3461,18 @@ PrefabInstance:
       propertyPath: slamSFX.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 991b10745fad5a2429b2a3e3112d7826,
+        type: 2}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: districtAmb.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fe1807281b379240ba92ea8937c3cb7,
+        type: 2}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: stopDistrictAmb.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b127b078341a1584fa3240625323ab89,
         type: 2}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
@@ -17164,11 +17181,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   phone: {fileID: 0}
+  ambObj: {fileID: 0}
   ringSFX:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   slamSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  stopDistrictAmb:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -18404,6 +18426,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: de85bfe7375afb14f81c24539d87b871, type: 2}
+    - target: {fileID: 4532779738780146572, guid: 0dfd15e754abaee48bed932679d2bc49,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4665943873150896558, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -24757,6 +24784,7 @@ GameObject:
   - component: {fileID: 2047807577}
   - component: {fileID: 2047807578}
   - component: {fileID: 2047807579}
+  - component: {fileID: 2047807580}
   m_Layer: 0
   m_Name: Ambience
   m_TagString: Untagged
@@ -24873,6 +24901,41 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4cc067628dca6384abe84bffdf08c78d,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &2047807580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047807573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef75641fb9b0ab439545c269b5a3609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b127b078341a1584fa3240625323ab89,
       type: 2}
   useCallbacks: 0
   Callbacks: []

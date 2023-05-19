@@ -18,8 +18,10 @@ public class TriggerManager : MonoBehaviour
     public UnityEvent TriggerExit;
 
     [SerializeField] private GameObject phone;
+    [SerializeField] private GameObject ambObj;
     [SerializeField] private AK.Wwise.Event ringSFX;
     [SerializeField] private AK.Wwise.Event slamSFX;
+    [SerializeField] private AK.Wwise.Event districtAmb;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -100,7 +102,7 @@ public class TriggerManager : MonoBehaviour
         SceneManager.LoadScene(_SceneToLoad);
     }
 
-    public void playRingingSFX() 
+    public void playRingingSFX()
     {
         ringSFX.Post(phone);
     }
@@ -108,6 +110,7 @@ public class TriggerManager : MonoBehaviour
     public void stopRingingSFX()
     {
         ringSFX.Stop(phone);
+        districtAmb.Stop(ambObj);
         slamSFX.Post(phone);
     }
 

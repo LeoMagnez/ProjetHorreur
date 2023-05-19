@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585174635171865038
+    m_lastTime: -8585171058877155890
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585171088404197110
+    m_lastTime: -8585171050109599104
     List:
     - name: FTPS
       guid: 6d84683922a7134ca6b9721ffc5d2971
@@ -147,6 +147,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_DistrictAmbience
+      guid: 8a2e3c7c3a1d204099f2d0abcb1deef1
+      id: 388756148
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Play_DistrictAmbience
+        ObjectType: 3
+        guid: 8a2e3c7c3a1d204099f2d0abcb1deef1
+      Path: Events\Default Work Unit\Play_DistrictAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_DoorSlam
       guid: 2ad41f2844654f4a909b1395a1a4e6a2
       id: 884363281
@@ -195,6 +212,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 85663b199b604a4c8dc497c3177ffd56
       Path: Events\Default Work Unit\Play_PhoneRing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_DistrictAmbience
+      guid: 56a9a1050b03084db527466fbcb76034
+      id: 2077601938
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Stop_DistrictAmbience
+        ObjectType: 3
+        guid: 56a9a1050b03084db527466fbcb76034
+      Path: Events\Default Work Unit\Stop_DistrictAmbience
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -350,9 +384,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585174710580753516
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 02000000030000000500000006000000
   ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
