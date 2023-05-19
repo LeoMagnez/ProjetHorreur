@@ -38,7 +38,16 @@ public class MouseLook : MonoBehaviour
 
         if (MenuManager.instance._menuIsUp == false)
         {
-            move();
+            if (MenuManager.instance.InvertAxes == true)
+            {
+                Debug.Log("Axes inversé");
+                invertMove();
+            }
+            else
+            {
+                Debug.Log("Axes normaux");
+                move();
+            }
         }
 
         if(MenuManager.instance._menuIsUp == true)
@@ -61,6 +70,18 @@ public class MouseLook : MonoBehaviour
         mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
         xRotation -= mouseX;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
+        player.Rotate(Vector3.up * mouseY);
+    }
+
+    void invertMove()
+    {
+        mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+
+        xRotation += mouseX;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
