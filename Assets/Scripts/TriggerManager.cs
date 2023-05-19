@@ -110,12 +110,19 @@ public class TriggerManager : MonoBehaviour
     public void stopRingingSFX()
     {
         ringSFX.Stop(phone);
-        districtAmb.Stop(ambObj);
+        StartCoroutine(waitAndStopAmb());
         slamSFX.Post(phone);
     }
 
     public void triggerTuto()
     {
         CameraManager.instance.cameraTuto = true;
+    }
+
+    private IEnumerator waitAndStopAmb() 
+    {
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("Test");
+        districtAmb.Stop(ambObj);
     }
 }
