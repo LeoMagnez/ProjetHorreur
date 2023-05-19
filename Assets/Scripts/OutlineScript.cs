@@ -5,21 +5,33 @@ using UnityEngine;
 
 public class OutlineScript : MonoBehaviour
 {
+    public static OutlineScript instance;
     [SerializeField] private Material outlineMaterial;
     [SerializeField] private Vector3 outlineScaleFactor;
     [SerializeField] private Color outlineColor;
 
     private Renderer outlineRenderer;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         outlineRenderer = CreateOutline(outlineMaterial, outlineScaleFactor, outlineColor);
     }
 
-    /*private void Update()
+    private void Update()
     {
-        outlineRenderer = CreateOutline(outlineMaterial, outlineScaleFactor, outlineColor);
-    }*/
+        if (!gameObject.GetComponent<Renderer>().enabled)
+        {
+            foreach (Renderer r in GetComponentsInChildren<Renderer>())
+            {
+                r.enabled = false;
+            }
+                
+        }
+    }
 
     Renderer CreateOutline(Material outlineMat, Vector3 scaleFactor, Color color)
     {

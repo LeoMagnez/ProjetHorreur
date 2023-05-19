@@ -276,6 +276,7 @@ public class CameraManager : MonoBehaviour
 
             else if (hit.transform.tag == "_photoNormale" && _takingPhoto)
             {
+                
                 hit.transform.gameObject.GetComponent<ObjectMover>().HideObject();
                 //_objectToMoveList.Insert(0, hit.transform.gameObject.GetComponent<ObjectMover>());
                 objectToMove = hit.transform.gameObject.GetComponent<ObjectMover>();

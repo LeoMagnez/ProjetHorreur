@@ -100,7 +100,7 @@ public class TriggerManager : MonoBehaviour
         SceneManager.LoadScene(_SceneToLoad);
     }
 
-    public void playRingingSFX() 
+    public void playRingingSFX()
     {
         ringSFX.Post(phone);
     }
