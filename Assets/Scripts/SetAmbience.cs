@@ -36,13 +36,25 @@ public class SetAmbience : MonoBehaviour
     }*/
 
     [SerializeField] private AK.Wwise.Event houseAmbEvent;
-    [SerializeField] private GameObject ambObject;
+    [SerializeField] private AK.Wwise.Event districtAmbEvent;
+    [SerializeField] private GameObject ambObj;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            houseAmbEvent.Post(ambObject);
+            houseAmbEvent.Post(ambObj);
         }
+    }
+
+    public void stopDistrictAmbience() 
+    {
+        StartCoroutine(waitAndStopAmb());
+    }
+
+    private IEnumerator waitAndStopAmb()
+    {
+        yield return new WaitForSeconds(0.3f);
+        districtAmbEvent.Stop(ambObj);
     }
 }

@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_DOORSLAM = 884363281U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
         static const AkUniqueID PLAY_PHONERING = 3447864244U;
+        static const AkUniqueID STOP_DISTRICTAMBIENCE = 2077601938U;
     } // namespace EVENTS
 
     namespace SWITCHES

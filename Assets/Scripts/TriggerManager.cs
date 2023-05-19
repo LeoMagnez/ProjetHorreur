@@ -18,10 +18,8 @@ public class TriggerManager : MonoBehaviour
     public UnityEvent TriggerExit;
 
     [SerializeField] private GameObject phone;
-    [SerializeField] private GameObject ambObj;
     [SerializeField] private AK.Wwise.Event ringSFX;
     [SerializeField] private AK.Wwise.Event slamSFX;
-    [SerializeField] private AK.Wwise.Event districtAmb;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -110,19 +108,11 @@ public class TriggerManager : MonoBehaviour
     public void stopRingingSFX()
     {
         ringSFX.Stop(phone);
-        StartCoroutine(waitAndStopAmb());
         slamSFX.Post(phone);
     }
 
     public void triggerTuto()
     {
         CameraManager.instance.cameraTuto = true;
-    }
-
-    private IEnumerator waitAndStopAmb() 
-    {
-        yield return new WaitForSeconds(0.5f);
-        Debug.Log("Test");
-        districtAmb.Stop(ambObj);
     }
 }
