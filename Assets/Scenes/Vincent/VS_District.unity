@@ -2613,7 +2613,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-8964
+  m_Name: pb_Mesh68154
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2936,7 +2936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
-  outlineScaleFactor: 0.7
+  outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0.120666504, g: 1, b: 0, a: 1}
 --- !u!1001 &287797906
 PrefabInstance:
@@ -12235,7 +12235,7 @@ PrefabInstance:
     - target: {fileID: 4386571159016228337, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4386571159016228339, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
@@ -14585,11 +14585,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f54aac5ecdfb7842b0de7697457e202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionRTPC:
+  houseAmbEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f9111bbb8657f1748be7e66d6146693f,
+    WwiseObjectReference: {fileID: 11400000, guid: 4cc067628dca6384abe84bffdf08c78d,
       type: 2}
+  ambObject: {fileID: 2047807573}
 --- !u!1001 &900586909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15042,7 +15043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
-  outlineScaleFactor: 0.7
+  outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0.120666504, g: 1, b: 0, a: 1}
 --- !u!1 &951131007
 GameObject:
@@ -15607,7 +15608,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32354
+  m_Name: pb_Mesh68522
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18846,7 +18847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
-  outlineScaleFactor: 0.7
+  outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0.120666504, g: 1, b: 0, a: 1}
 --- !u!1001 &1362767987
 PrefabInstance:
@@ -24755,6 +24756,7 @@ GameObject:
   - component: {fileID: 2047807576}
   - component: {fileID: 2047807577}
   - component: {fileID: 2047807578}
+  - component: {fileID: 2047807579}
   m_Layer: 0
   m_Name: Ambience
   m_TagString: Untagged
@@ -24835,7 +24837,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 81dc1a3096c81324d8d5cef71d36ee9a,
+    WwiseObjectReference: {fileID: 11400000, guid: 7fe1807281b379240ba92ea8937c3cb7,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -24848,6 +24850,41 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &2047807579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047807573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef75641fb9b0ab439545c269b5a3609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4cc067628dca6384abe84bffdf08c78d,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
   LargeModePositions: []
   multiPositionArray: []
 --- !u!1001 &2060098775

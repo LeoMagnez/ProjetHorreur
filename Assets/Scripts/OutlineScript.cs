@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OutlineScript : MonoBehaviour
 {
     [SerializeField] private Material outlineMaterial;
-    [SerializeField] private float outlineScaleFactor;
+    [SerializeField] private Vector3 outlineScaleFactor;
     [SerializeField] private Color outlineColor;
 
     private Renderer outlineRenderer;
@@ -15,10 +16,15 @@ public class OutlineScript : MonoBehaviour
         outlineRenderer = CreateOutline(outlineMaterial, outlineScaleFactor, outlineColor);
     }
 
-    Renderer CreateOutline(Material outlineMat, float scaleFactor, Color color)
+    /*private void Update()
+    {
+        outlineRenderer = CreateOutline(outlineMaterial, outlineScaleFactor, outlineColor);
+    }*/
+
+    Renderer CreateOutline(Material outlineMat, Vector3 scaleFactor, Color color)
     {
         GameObject outlinedObject = Instantiate(this.gameObject, transform.position, transform.rotation, transform);
-        outlinedObject.transform.localScale = transform.localScale * scaleFactor;
+        outlinedObject.transform.localScale = new Vector3(outlineScaleFactor.x, outlineScaleFactor.y, outlineScaleFactor.z);
 
         outlinedObject.layer = 3;
         outlinedObject.tag = "Untagged";
@@ -27,7 +33,7 @@ public class OutlineScript : MonoBehaviour
         rend.material = outlineMat;
 
         rend.material.SetColor("_OutlineColor", color);
-        rend.material.SetFloat("_ScaleFactor", scaleFactor);
+        //rend.material.SetFloat("_ScaleFactor", scaleFactor);
         rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         outlinedObject.GetComponent<OutlineScript>().enabled = false;
