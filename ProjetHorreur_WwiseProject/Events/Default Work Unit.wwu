@@ -69,6 +69,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_DistrictAmbience" ID="{7C3C2E8A-1D3A-4020-99F2-D0ABCB1DEEF1}">
+					<ChildrenList>
+						<Action Name="" ID="{26B039C3-02CB-43A5-8D0A-3DA9B59F3CCF}" ShortID="903889959">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_LP_Suburb" ID="{8E7658D1-EF18-45BD-B844-3F3D5D9CD4B3}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_DistrictAmbience" ID="{05A1A956-030B-4D08-B527-466FBCB76034}">
+					<ChildrenList>
+						<Action Name="" ID="{7EADD595-F361-4163-A51C-F69F67CC4403}" ShortID="617427504">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_LP_Suburb" ID="{8E7658D1-EF18-45BD-B844-3F3D5D9CD4B3}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

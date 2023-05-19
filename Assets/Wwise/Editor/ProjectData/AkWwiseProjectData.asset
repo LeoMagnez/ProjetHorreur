@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: ed3ee1a166d4504b89c1d24bcfefb413
     GuidInternal: 
-    m_lastTime: -8585197186071659230
+    m_lastTime: -8585174710580753516
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f980e3cb095dd243a2fe093981ed2322
     GuidInternal: 
-    m_lastTime: -8585197186081456247
+    m_lastTime: -8585174710587310454
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585174548478120353
+    m_lastTime: -8585171035984856260
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585174548486105774
+    m_lastTime: -8585171050109599104
     List:
     - name: FTPS
       guid: 6d84683922a7134ca6b9721ffc5d2971
@@ -144,6 +144,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: f7b74194b917c4438c66f356f94dcd7b
       Path: Events\Default Work Unit\Play_CameraFlash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DistrictAmbience
+      guid: 8a2e3c7c3a1d204099f2d0abcb1deef1
+      id: 388756148
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Play_DistrictAmbience
+        ObjectType: 3
+        guid: 8a2e3c7c3a1d204099f2d0abcb1deef1
+      Path: Events\Default Work Unit\Play_DistrictAmbience
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -198,6 +215,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_DistrictAmbience
+      guid: 56a9a1050b03084db527466fbcb76034
+      id: 2077601938
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Stop_DistrictAmbience
+        ObjectType: 3
+        guid: 56a9a1050b03084db527466fbcb76034
+      Path: Events\Default Work Unit\Stop_DistrictAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -210,7 +244,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e9dad88cc5b0ad40a1e330745c66260e
     GuidInternal: 
-    m_lastTime: -8585197186090502111
+    m_lastTime: -8585174710595184271
     List:
     - name: IsInHouse
       guid: 71a7bfaff65d7c459df7e7a80e92dabf
@@ -238,7 +272,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d3dccd0df49da440975fc8da7e85be2a
     GuidInternal: 
-    m_lastTime: -8585197186071669204
+    m_lastTime: -8585174710580763533
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -252,7 +286,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2942f94a978d2c40b1ac2ae5b1bb8722
     GuidInternal: 
-    m_lastTime: -8585172818340319079
+    m_lastTime: -8585171089416867716
     List:
     - name: GroundMaterial
       guid: ac526578ad01de4c9e35edaf2bf5e296
@@ -348,11 +382,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 5ebfacbc126b5c4bb7bf3e15e6a7ce51
     GuidInternal: 
-    m_lastTime: -8585197186071659230
+    m_lastTime: -8585174710580753516
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 02000000030000000500000006000000
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

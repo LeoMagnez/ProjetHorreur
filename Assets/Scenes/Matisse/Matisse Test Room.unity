@@ -490,6 +490,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  cameraTuto: 0
 --- !u!33 &4918469
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1660,7 +1661,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &185269613
 PrefabInstance:
@@ -6206,7 +6207,7 @@ GameObject:
   - component: {fileID: 753454887}
   - component: {fileID: 753454886}
   - component: {fileID: 753454885}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7577,6 +7578,7 @@ MonoBehaviour:
   _isMenuUp: 0
   _slider: {fileID: 119941588}
   limit: 80
+  InvertAxes: 0
 --- !u!4 &911828054
 Transform:
   m_ObjectHideFlags: 0

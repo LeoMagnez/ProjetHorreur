@@ -5,11 +5,12 @@
 			<ChildrenList>
 				<SoundBank Name="Level_01" ID="{5F2C147C-7D5C-4C2A-8B7A-FCEDB5EE18BF}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_DistrictAmbience" ID="{7C3C2E8A-1D3A-4020-99F2-D0ABCB1DEEF1}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CameraFlash" ID="{9441B7F7-17B9-43C4-8C66-F356F94DCD7B}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Ambiences" ID="{BFEE91AD-FC89-49A7-83CE-0F23C4941720}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DoorSlam" ID="{281FD42A-6544-4A4F-909B-1395A1A4E6A2}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="FTPS" ID="{3968846D-A722-4C13-A6B9-721FFC5D2971}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PhoneRing" ID="{193B6685-609B-4C4A-8DC4-97C3177FFD56}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_DistrictAmbience" ID="{05A1A956-030B-4D08-B527-466FBCB76034}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_HouseAmb" ID="{E71636FA-B40A-4EE1-8ECD-4B80A6920977}" WorkUnitID="{002D97B7-35E6-4692-9596-70CC1FAF7713}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

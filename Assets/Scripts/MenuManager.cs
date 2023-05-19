@@ -16,6 +16,8 @@ public class MenuManager : MonoBehaviour
 
     public limits limit;
 
+    public bool InvertAxes = false;
+
     #region SINGLETON
     public static MenuManager instance { get; private set; }
     #endregion
