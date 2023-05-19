@@ -2613,7 +2613,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68154
+  m_Name: pb_Mesh32002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12283,7 +12283,7 @@ PrefabInstance:
     - target: {fileID: 4386571159016228337, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4386571159016228339, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
@@ -15661,7 +15661,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68522
+  m_Name: pb_Mesh32370
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22009,6 +22009,34 @@ MonoBehaviour:
   instableRoom: {fileID: 0}
   isActive: 1
   anchorList: []
+--- !u!114 &1712155042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712155031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753275d2efc32b848ba150307bf45690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
+  outlineScaleFactor: {x: 1, y: 1, z: 1}
+  outlineColor: {r: 0, g: 0.6792453, b: 0.6460115, a: 1}
+--- !u!65 &1712155043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712155031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6050003, y: 4.4492507, z: 3.0597486}
+  m_Center: {x: -0.7774999, y: 1.424621, z: 1.5298743}
 --- !u!1001 &1713666491
 PrefabInstance:
   m_ObjectHideFlags: 0
