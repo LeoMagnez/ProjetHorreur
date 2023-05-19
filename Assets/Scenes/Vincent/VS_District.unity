@@ -2613,7 +2613,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh177978
+  m_Name: pb_Mesh68154
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3477,7 +3477,7 @@ PrefabInstance:
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
@@ -3503,6 +3503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[10].m_Mode
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[11].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
@@ -3546,6 +3551,11 @@ PrefabInstance:
       objectReference: {fileID: 310294672}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
+      propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[11].m_Target
+      value: 
+      objectReference: {fileID: 900349709}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[7].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -3567,6 +3577,11 @@ PrefabInstance:
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[10].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[11].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
@@ -3606,6 +3621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
+      propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[11].m_MethodName
+      value: stopDistrictAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: TriggerManager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -3628,6 +3648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[10].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[11].m_TargetAssemblyTypeName
+      value: SetAmbience, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
@@ -3672,6 +3697,11 @@ PrefabInstance:
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[10].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[11].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7168673949317241040, guid: 46307232afdc0634db374953db491b8c,
@@ -12253,7 +12283,7 @@ PrefabInstance:
     - target: {fileID: 4386571159016228337, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4386571159016228339, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
@@ -14608,7 +14638,12 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4cc067628dca6384abe84bffdf08c78d,
       type: 2}
-  ambObject: {fileID: 2047807573}
+  districtAmbEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7fe1807281b379240ba92ea8937c3cb7,
+      type: 2}
+  ambObj: {fileID: 2047807573}
 --- !u!1001 &900586909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15626,7 +15661,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh178346
+  m_Name: pb_Mesh68522
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17182,16 +17217,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   phone: {fileID: 0}
-  ambObj: {fileID: 0}
   ringSFX:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   slamSFX:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  districtAmb:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -21826,21 +21856,6 @@ MonoBehaviour:
   instableRoom: {fileID: 0}
   isActive: 1
   anchorList: []
---- !u!114 &1712155039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712155031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 753275d2efc32b848ba150307bf45690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
-  outlineScaleFactor: {x: 1, y: 1, z: 1}
-  outlineColor: {r: 0.22068405, g: 1, b: 0, a: 1}
 --- !u!1001 &1713666491
 PrefabInstance:
   m_ObjectHideFlags: 0

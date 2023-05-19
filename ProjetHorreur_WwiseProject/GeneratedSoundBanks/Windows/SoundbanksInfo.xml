@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{2E6C0B5E-6412-AE50-8F7D-400A8F1D8338}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{3757B929-FBAA-6FBE-CA53-CDB20D1116BA}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -314,6 +314,7 @@
 						<MediaRef Id="323215771"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2077601938" Name="Stop_DistrictAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<SwitchGroups>
 				<SwitchGroup Id="3072116243" Name="GroundMaterial">
@@ -353,5 +354,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2485231C-6E15-A669-E79D-09FE172C4B71}</FileHash>
+	<FileHash>{8C42B568-00A7-5932-371B-F234A7F02426}</FileHash>
 </SoundBanksInfo>
