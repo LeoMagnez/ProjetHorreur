@@ -79,6 +79,11 @@ public class MenuManager : MonoBehaviour
         CameraManager.instance.canPlay = true; //permet au joueur de bouger a nouveau
     }
 
+    public void setInvertAxes()
+    {
+        InvertAxes = !InvertAxes;   
+    }
+
     public void QuitGame()
     {
         Application.Quit();
