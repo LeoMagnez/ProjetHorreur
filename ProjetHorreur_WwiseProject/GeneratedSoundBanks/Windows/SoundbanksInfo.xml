@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{47996961-1B4E-112F-89A7-870448E93E21}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{2E6C0B5E-6412-AE50-8F7D-400A8F1D8338}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -289,15 +289,14 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1117071689" Name="Play_Ambiences" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="24919415"/>
-						<MediaRef Id="553343565"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="1309478403" Name="Play_CameraFlash" DurationType="OneShot" DurationMin="0.34748298" DurationMax="0.34748298">
 					<MediaRefs>
 						<MediaRef Id="258899210"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="388756148" Name="Play_DistrictAmbience" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="553343565"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="884363281" Name="Play_DoorSlam" DurationType="OneShot" DurationMin="0.99911565" DurationMax="0.99911565">
@@ -316,9 +315,6 @@
 					</MediaRefs>
 				</Event>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="4101628508" Name="IsInHouse"/>
-			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="3072116243" Name="GroundMaterial">
 					<Switches>
@@ -357,5 +353,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E173EAA7-7A6A-14E4-5901-331621D23ABE}</FileHash>
+	<FileHash>{2485231C-6E15-A669-E79D-09FE172C4B71}</FileHash>
 </SoundBanksInfo>
