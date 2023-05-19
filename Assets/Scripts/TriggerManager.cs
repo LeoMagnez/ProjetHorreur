@@ -109,7 +109,7 @@ public class TriggerManager : MonoBehaviour
 
     public void stopRingingSFX()
     {
-        ringSFX.Stop(phone);
+        //ringSFX.Stop(phone);
         StartCoroutine(waitAndStopAmb());
         slamSFX.Post(phone);
     }
@@ -121,8 +121,10 @@ public class TriggerManager : MonoBehaviour
 
     private IEnumerator waitAndStopAmb() 
     {
+        ringSFX.Stop(phone);
+        Debug.Log("Ambient");
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("Test");
+
         districtAmb.Stop(ambObj);
     }
 }
