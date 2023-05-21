@@ -74,16 +74,25 @@ public class ObjectMover : MonoBehaviour
 
             
         }
-        else
-        {
-            List<MeshRenderer> tempMR = new List<MeshRenderer>();
-            tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
 
-            foreach (MeshRenderer mr in tempMR)
-            {
-                mr.enabled = true;
-            }
+
+        List<MeshRenderer> tempMR = new List<MeshRenderer>();
+        tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
+        Debug.Log(tempMR.Count);
+        foreach (MeshRenderer mr in tempMR)
+        {
+            mr.enabled = true;
         }
+
+        List<Collider> tempCol = new List<Collider>();
+        tempCol = gameObject.GetComponentsInChildren<Collider>().ToList<Collider>();
+        Debug.Log(tempMR.Count);
+        foreach (Collider col in tempCol)
+        {
+            col.enabled = true;
+        }
+
+
 
         gameObject.GetComponent<Collider>().enabled = true;
 
@@ -95,19 +104,28 @@ public class ObjectMover : MonoBehaviour
 
         if (gameObject.TryGetComponent<MeshRenderer>(out mesh))
         {
+
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             
         }
-        else
+        
+        
+        List<MeshRenderer> tempMR = new List<MeshRenderer> ();
+        tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
+        Debug.Log(tempMR.Count);
+        foreach(MeshRenderer mr in tempMR)
         {
-            List<MeshRenderer> tempMR = new List<MeshRenderer> ();
-            tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
-            Debug.Log(tempMR.Count);
-            foreach(MeshRenderer mr in tempMR)
-            {
                 mr.enabled = false;
-            }
         }
+
+        List<Collider> tempCol = new List<Collider>();
+        tempCol = gameObject.GetComponentsInChildren<Collider>().ToList<Collider>();
+        Debug.Log(tempMR.Count);
+        foreach (Collider col in tempCol)
+        {
+            col.enabled = false;
+        }
+
 
 
         gameObject.GetComponent<Collider>().enabled = false;
