@@ -253,10 +253,11 @@ public class CameraManager : MonoBehaviour
     public void Raycast()
     {
         RaycastHit hit; //Lancement du raycast
-
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * 20, Color.red, 1f);
+        
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, 20f))
         {
-            
+            Debug.Log(hit.transform.gameObject.name); 
             if (hit.transform.tag == "_photoImportante" && _takingPhoto) //Lancement d'une condition sur le raycast touche un item avec le tag "_photoImportante"
             {
                 _importantPhoto = true;
