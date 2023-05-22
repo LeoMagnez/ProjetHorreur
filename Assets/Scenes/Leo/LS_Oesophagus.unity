@@ -12683,7 +12683,6 @@ MonoBehaviour:
   _importantPhoto: 0
   UI: {fileID: 1058012995}
   _porte: {fileID: 0}
-  _objetImportant: {fileID: 0}
   _lightCamera: {fileID: 526934970}
   _cameraUIParent: {fileID: 1058012995}
   MeshRenderer: {fileID: 0}
@@ -13613,6 +13612,7 @@ GameObject:
   - component: {fileID: 394990290}
   - component: {fileID: 394990289}
   - component: {fileID: 394990292}
+  - component: {fileID: 394990293}
   m_Layer: 0
   m_Name: Plane (8)
   m_TagString: Untagged
@@ -13714,6 +13714,19 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.8818593, b: 1, a: 1}
+--- !u!65 &394990293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394990287}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0.0000038146973}
 --- !u!1 &395144314
 GameObject:
   m_ObjectHideFlags: 0
@@ -41397,6 +41410,7 @@ GameObject:
   - component: {fileID: 1083200346}
   - component: {fileID: 1083200345}
   - component: {fileID: 1083200348}
+  - component: {fileID: 1083200349}
   m_Layer: 0
   m_Name: Plane (9)
   m_TagString: Untagged
@@ -41498,6 +41512,19 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.8818593, b: 1, a: 1}
+--- !u!65 &1083200349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083200343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0.00000014901161, y: 0, z: 0.0000038146973}
 --- !u!1 &1084916873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a73b82c76f1485146856ebaaea479e1d,
@@ -43325,6 +43352,7 @@ GameObject:
   - component: {fileID: 1117039705}
   - component: {fileID: 1117039704}
   - component: {fileID: 1117039707}
+  - component: {fileID: 1117039708}
   m_Layer: 0
   m_Name: Plane (11)
   m_TagString: Untagged
@@ -43426,6 +43454,19 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.8818593, b: 1, a: 1}
+--- !u!65 &1117039708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117039702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0.00000014901161, y: 0, z: 0}
 --- !u!1001 &1117202775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44764,6 +44805,7 @@ GameObject:
   - component: {fileID: 1176560992}
   - component: {fileID: 1176560991}
   - component: {fileID: 1176560994}
+  - component: {fileID: 1176560995}
   m_Layer: 0
   m_Name: Portrait (1)
   m_TagString: Untagged
@@ -44795,7 +44837,7 @@ BoxCollider:
   m_GameObject: {fileID: 1176560989}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -44864,6 +44906,20 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.85069823, b: 1, a: 1}
+--- !u!64 &1176560995
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176560989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1177575932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 22fccf1755736474e80c17fb94b7299c,
@@ -67359,8 +67415,9 @@ GameObject:
   - component: {fileID: 1834964952}
   - component: {fileID: 1834964955}
   - component: {fileID: 1834964954}
-  - component: {fileID: 1834964953}
   - component: {fileID: 1834964956}
+  - component: {fileID: 1834964958}
+  - component: {fileID: 1834964957}
   m_Layer: 0
   m_Name: Portrait
   m_TagString: Untagged
@@ -67383,19 +67440,6 @@ Transform:
   m_Father: {fileID: 413927584}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1834964953
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834964951}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1834964954
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67461,6 +67505,33 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.8818593, b: 1, a: 1}
+--- !u!64 &1834964957
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834964951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1834964958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834964951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1}
+  m_Center: {x: 0.000015258789, y: 0.0000019073486, z: 0}
 --- !u!1001 &1835267176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69322,6 +69393,7 @@ GameObject:
   - component: {fileID: 1889200759}
   - component: {fileID: 1889200758}
   - component: {fileID: 1889200761}
+  - component: {fileID: 1889200762}
   m_Layer: 0
   m_Name: Plane (7)
   m_TagString: Untagged
@@ -69423,6 +69495,19 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.8818593, b: 1, a: 1}
+--- !u!65 &1889200762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889200756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1890450609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72309,6 +72394,7 @@ GameObject:
   - component: {fileID: 1994170174}
   - component: {fileID: 1994170173}
   - component: {fileID: 1994170176}
+  - component: {fileID: 1994170177}
   m_Layer: 0
   m_Name: Plane (6)
   m_TagString: Untagged
@@ -72410,6 +72496,19 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.8818593, b: 1, a: 1}
+--- !u!65 &1994170177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994170171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0.0000038146973}
 --- !u!1001 &1996849643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74606,6 +74705,7 @@ GameObject:
   - component: {fileID: 2061468650}
   - component: {fileID: 2061468649}
   - component: {fileID: 2061468652}
+  - component: {fileID: 2061468653}
   m_Layer: 0
   m_Name: Plane (10)
   m_TagString: Untagged
@@ -74707,6 +74807,19 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
   outlineScaleFactor: {x: 1, y: 1, z: 1}
   outlineColor: {r: 0, g: 0.8818593, b: 1, a: 1}
+--- !u!65 &2061468653
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061468647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0.00000014901161, y: 0, z: 0}
 --- !u!1001 &2062177732
 PrefabInstance:
   m_ObjectHideFlags: 0
