@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{76F26CD4-412D-D103-9F3E-384C28C36A79}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{FAEBAC3F-DB17-C101-5C05-198176B8A7CA}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -161,6 +161,10 @@
 					<ShortName>SFX_OS_FT_Concrete-003.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-003_10C4C929.wem</CachePath>
 				</File>
+				<File Id="595712994" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_Breath-002.wav</ShortName>
+					<CachePath>SFX/SFX_OS_Breath-002_10C4C929.wem</CachePath>
+				</File>
 				<File Id="615265874" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Grass-005.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Grass-005_10C4C929.wem</CachePath>
@@ -192,6 +196,10 @@
 				<File Id="729070746" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-005.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-005_10C4C929.wem</CachePath>
+				</File>
+				<File Id="748893096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_Breath-001.wav</ShortName>
+					<CachePath>SFX/SFX_OS_Breath-001_10C4C929.wem</CachePath>
 				</File>
 				<File Id="749290379" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-008.wav</ShortName>
@@ -297,6 +305,12 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="3698047240" Name="Play_Breath" DurationType="OneShot" DurationMin="4.2564397" DurationMax="4.3494782">
+					<MediaRefs>
+						<MediaRef Id="595712994"/>
+						<MediaRef Id="748893096"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1309478403" Name="Play_CameraFlash" DurationType="OneShot" DurationMin="0.34748298" DurationMax="0.34748298">
 					<MediaRefs>
 						<MediaRef Id="258899210"/>
@@ -373,5 +387,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1EAD7190-3D1E-7260-6140-FD1943FFDF13}</FileHash>
+	<FileHash>{BF966A78-75B6-2491-225C-235D7784E7D7}</FileHash>
 </SoundBanksInfo>
