@@ -26848,7 +26848,7 @@ PrefabInstance:
     - target: {fileID: 4206499385287878599, guid: 7e39aee91317bb449b2e14393f690396,
         type: 3}
       propertyPath: m_Name
-      value: --- MAISON
+      value: on sait pas mais il fait peur
       objectReference: {fileID: 0}
     - target: {fileID: 4206499385287878599, guid: 7e39aee91317bb449b2e14393f690396,
         type: 3}
@@ -53913,6 +53913,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 614112639445942830, guid: 0dfd15e754abaee48bed932679d2bc49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c268ffcfc460c0f4d9f7ce4c55d77721, type: 2}
     - target: {fileID: 614112639600198896, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_Mesh
@@ -54061,12 +54066,12 @@ PrefabInstance:
     - target: {fileID: 614112640318538969, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_Name
-      value: HouseBlockoutEva_2
+      value: --- MAISON
       objectReference: {fileID: 0}
     - target: {fileID: 614112640318538969, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 614112640354801998, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
@@ -54153,6 +54158,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: de85bfe7375afb14f81c24539d87b871, type: 2}
+    - target: {fileID: 2731247735192402521, guid: 0dfd15e754abaee48bed932679d2bc49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 114e519002d1f834caa522ebe2521f65, type: 2}
+    - target: {fileID: 3460009776338192204, guid: 0dfd15e754abaee48bed932679d2bc49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 88f2c819860cc6644be557704164b7b6, type: 2}
     - target: {fileID: 4532779738780146572, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_Layer
@@ -56986,6 +57001,12 @@ MonoBehaviour:
   firstOpening: {fileID: 1287138459}
   slidingLeft: {fileID: 691895223}
   slidingRight: {fileID: 835954845}
+  wallSlide1:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b1f218ca43fb94544a82a12be777e2d6,
+      type: 2}
+  sfxObj: {fileID: 384759110}
 --- !u!4 &1613952102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 614112639281674938, guid: 0dfd15e754abaee48bed932679d2bc49,

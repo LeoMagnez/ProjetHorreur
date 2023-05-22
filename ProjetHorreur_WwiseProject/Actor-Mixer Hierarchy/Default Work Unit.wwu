@@ -1390,6 +1390,28 @@
 										<ActiveSource Name="SFX_OS_WallSlide_1" ID="{5A877BDC-BA0F-48CE-96F5-56280FCFFFEC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="WallSlide2" ID="{F7A390A1-C36E-45F9-BEAF-F46057A04F11}" ShortID="707642812">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_OS_WallSlide_2" ID="{B55BF5ED-1244-4B5E-9F92-6437660BA50A}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_OS_WallSlide_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="830821462"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_OS_WallSlide_2" ID="{B55BF5ED-1244-4B5E-9F92-6437660BA50A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

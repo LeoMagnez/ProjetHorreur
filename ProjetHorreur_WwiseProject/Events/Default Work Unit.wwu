@@ -106,6 +106,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_WallSlide2" ID="{0FA54D36-4E13-413A-B337-AFD642E90046}">
+					<ChildrenList>
+						<Action Name="" ID="{A1B8795D-8992-4A6E-9593-8B0BF861A582}" ShortID="734929814">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WallSlide2" ID="{F7A390A1-C36E-45F9-BEAF-F46057A04F11}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
