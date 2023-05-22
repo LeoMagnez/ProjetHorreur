@@ -92,11 +92,17 @@ public class CameraManager : MonoBehaviour
     [Header("References")]
     [SerializeField] GalleryManager galleryManager;
 
+    [SerializeField] GameObject startOfGameCanvas;
+    [SerializeField] Animator startOfGameAnimator;
+
     [Header("Sound")]
     [SerializeField] GameObject SFX;
     [SerializeField] private AK.Wwise.Event cameraShutterSFX;
 
     public bool cameraTuto = false;
+
+    public GameObject CameraJoueur;
+
 
     #endregion
 
@@ -117,7 +123,7 @@ public class CameraManager : MonoBehaviour
     #region START
     private void Start()
     {
-        canPlay = true; //Permet de jouer au start
+        canPlay = false; //Permet de jouer au start
     }
     #endregion
 
@@ -393,4 +399,25 @@ public class CameraManager : MonoBehaviour
 
     #endregion
 
+
+    public void StartGame()
+    {
+        StartCoroutine(WaitForStartOfGame());
+    }
+    public IEnumerator WaitForStartOfGame()
+    {
+        startOfGameCanvas.SetActive(false);  
+        yield return new WaitForSeconds(2f);
+        startOfGameAnimator.SetTrigger("StartOfGame");
+        StartCoroutine(ResetCamera());
+       
+    }
+
+    public IEnumerator ResetCamera()
+    {
+        yield return new WaitForSeconds(0.1f);
+        CameraJoueur.transform.position = new Vector3(0, 0, 0);
+        CameraJoueur.transform.rotation = new Quaternion(0, 0, 0, 0);
+        canPlay = true;
+    }
 }

@@ -60,32 +60,46 @@ public class MouseLook : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
+        if (!CameraManager.instance.canPlay)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
         
 
     }
 
     void move()
     {
-        mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-        mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        if (CameraManager.instance.canPlay)
+        {
+            mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseX;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            xRotation -= mouseX;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
-        player.Rotate(Vector3.up * mouseY);
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
+            player.Rotate(Vector3.up * mouseY);
+        }
+
     }
 
     public void invertMove()
     {
-        mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-        mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        if (CameraManager.instance.canPlay)
+        {
+            mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
-        xRotation += mouseX;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            xRotation += mouseX;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
-        player.Rotate(Vector3.up * mouseY);
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
+            player.Rotate(Vector3.up * mouseY);
+        }
+
     }
 
    
