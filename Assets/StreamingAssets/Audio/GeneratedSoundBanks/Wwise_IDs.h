@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
         static const AkUniqueID PLAY_PHONERING = 3447864244U;
         static const AkUniqueID PLAY_WALLSLIDE1 = 2047298186U;
+        static const AkUniqueID PLAY_WALLSLIDE2 = 2047298185U;
         static const AkUniqueID STOP_DISTRICTAMBIENCE = 2077601938U;
     } // namespace EVENTS
 

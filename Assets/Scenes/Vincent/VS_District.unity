@@ -1320,6 +1320,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 38687840}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &41063621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8209912156981785923, guid: f01a626440699bf47bb8390442a75a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014379307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &41063623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014379307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41063621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &41063624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41063621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a49fd63710bc2408ea66863cab32d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 41063623}
+  masterVolume: 0
 --- !u!1 &48700012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a908fb471d2c2b6448332685173d0b58,
@@ -26811,7 +26843,7 @@ PrefabInstance:
     - target: {fileID: 4206499385287878599, guid: 7e39aee91317bb449b2e14393f690396,
         type: 3}
       propertyPath: m_Name
-      value: --- MAISON
+      value: on sait pas mais il fait peur
       objectReference: {fileID: 0}
     - target: {fileID: 4206499385287878599, guid: 7e39aee91317bb449b2e14393f690396,
         type: 3}
@@ -45239,6 +45271,31 @@ PrefabInstance:
       propertyPath: m_MinValue
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 41063624}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSpecificVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Volume_menu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Master
+      objectReference: {fileID: 0}
     - target: {fileID: 8450950560985243239, guid: f01a626440699bf47bb8390442a75a4c,
         type: 3}
       propertyPath: m_IsActive
@@ -53994,7 +54051,7 @@ PrefabInstance:
     - target: {fileID: 614112640318538969, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_Name
-      value: HouseBlockoutEva_2
+      value: --- MAISON
       objectReference: {fileID: 0}
     - target: {fileID: 614112640318538969, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
@@ -56929,6 +56986,12 @@ MonoBehaviour:
   firstOpening: {fileID: 1287138459}
   slidingLeft: {fileID: 691895223}
   slidingRight: {fileID: 835954845}
+  wallSlide1:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b1f218ca43fb94544a82a12be777e2d6,
+      type: 2}
+  sfxObj: {fileID: 384759110}
 --- !u!4 &1613952102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 614112639281674938, guid: 0dfd15e754abaee48bed932679d2bc49,
