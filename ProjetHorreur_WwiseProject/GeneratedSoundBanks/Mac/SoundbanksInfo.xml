@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{661C19A0-3B67-3D2D-C837-64DE89CF23C9}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{76F26CD4-412D-D103-9F3E-384C28C36A79}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -197,6 +197,10 @@
 					<ShortName>SFX_OS_FT_Concrete-008.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-008_10C4C929.wem</CachePath>
 				</File>
+				<File Id="830821462" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_WallSlide_2.wav</ShortName>
+					<CachePath>SFX/SFX_OS_WallSlide_2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="894621419" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-017.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-017_10C4C929.wem</CachePath>
@@ -318,9 +322,14 @@
 						<MediaRef Id="323215771"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2047298186" Name="Play_WallSlide1" DurationType="OneShot" DurationMin="4.92" DurationMax="4.92">
+				<Event Id="2047298186" Name="Play_WallSlide1" DurationType="OneShot" DurationMin="4.9788437" DurationMax="4.9788437">
 					<MediaRefs>
 						<MediaRef Id="481176968"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2047298185" Name="Play_WallSlide2" DurationType="OneShot" DurationMin="4.000068" DurationMax="4.000068">
+					<MediaRefs>
+						<MediaRef Id="830821462"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2077601938" Name="Stop_DistrictAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -364,5 +373,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{854AA1B1-1F81-00F8-0C10-E8A5E14B79EE}</FileHash>
+	<FileHash>{1EAD7190-3D1E-7260-6140-FD1943FFDF13}</FileHash>
 </SoundBanksInfo>
