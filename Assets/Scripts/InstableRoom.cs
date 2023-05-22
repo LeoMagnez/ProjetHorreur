@@ -13,6 +13,7 @@ public class InstableRoom : MonoBehaviour
 
     [Header("Sound")]
     [SerializeField] private AK.Wwise.Event wallSlide1;
+    [SerializeField] private AK.Wwise.Event wallSlide2;
     [SerializeField] private GameObject sfxObj;
 
     public void DecreaseCounter()
@@ -30,6 +31,7 @@ public class InstableRoom : MonoBehaviour
         {
             StartCoroutine(Opening(false));
             slidingWall.SetTrigger("SecondObjectPlaced");
+            wallSlide2.Post(sfxObj);
         }
 
         if(instableCounter == 0)
