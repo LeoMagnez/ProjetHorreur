@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID FTPS = 2946881380U;
+        static const AkUniqueID PLAY_BREATH = 3698047240U;
         static const AkUniqueID PLAY_CAMERAFLASH = 1309478403U;
         static const AkUniqueID PLAY_DISTRICTAMBIENCE = 388756148U;
         static const AkUniqueID PLAY_DOORSLAM = 884363281U;

@@ -49,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AK.Wwise.Event ftpsEvent;
     [SerializeField] private AK.Wwise.Switch[] terrainSwitch;
 
+    [SerializeField] private GameObject sfxObj;
+    [SerializeField] private AK.Wwise.Event breathlessEvent;
+
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
@@ -76,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
                     else
                     {
                         canRun = false;
+                        breathlessEvent.Post(sfxObj);
                         isRunning = false;
                         DefaultMovement();
                     }              
