@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585168491330829314
+    m_lastTime: -8585168450541601544
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585168491344783014
+    m_lastTime: -8585168450541651577
     List:
     - name: FTPS
       guid: 6d84683922a7134ca6b9721ffc5d2971
@@ -229,6 +229,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1bcd2c141ba040499ee0cab888d29db1
       Path: Events\Default Work Unit\Play_WallSlide1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_WallSlide2
+      guid: 364da50f134e3a41b337afd642e90046
+      id: 2047298185
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Play_WallSlide2
+        ObjectType: 3
+        guid: 364da50f134e3a41b337afd642e90046
+      Path: Events\Default Work Unit\Play_WallSlide2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -416,7 +433,7 @@ MonoBehaviour:
     m_lastTime: -8585168491330824551
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000
+  ExpandedWaapiItemIds: 050000000600000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

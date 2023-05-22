@@ -39,7 +39,7 @@ public class InstableRoom : MonoBehaviour
             StartCoroutine(Opening(false));
             slidingWall.SetTrigger("ThirdObjectPlaced");
             trigger_scene.SetActive(true);
-
+            wallSlide2.Post(sfxObj);
         }
     }
 
