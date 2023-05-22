@@ -23,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_CarpetFloor 2
+  m_Name: M_PaintedWall 7
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
@@ -55,9 +55,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: cccc90ca3adc7fb42a71037c9eef25f2, type: 3}
-        m_Scale: {x: 6, y: 6}
-        m_Offset: {x: 0.31, y: -0.16}
+        m_Texture: {fileID: 2800000, guid: b56e31e89bfea0d49b6f65af702c415c, type: 3}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -79,7 +79,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: 62db1c263415d584282a067269143a37, type: 3}
+        m_Texture: {fileID: 2800000, guid: bd76030279d53dc4aa1d730323d43574, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IridescenceMaskMap:
@@ -91,15 +91,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cccc90ca3adc7fb42a71037c9eef25f2, type: 3}
-        m_Scale: {x: 6, y: 6}
-        m_Offset: {x: 0.31, y: -0.16}
+        m_Texture: {fileID: 2800000, guid: b56e31e89bfea0d49b6f65af702c415c, type: 3}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 3beb3f158fa4998438093ff949710da5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09bc21c1090414c469930b53151653dd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: f6be2a5dbb9666b43921fa04dd598885, type: 3}
+        m_Texture: {fileID: 2800000, guid: ca261875cc6b1df49bd60b61f26861cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -185,16 +185,16 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
-    - _HeightAmplitude: 0.003
+    - _HeightAmplitude: 0.01
     - _HeightCenter: 1
     - _HeightMapParametrization: 0
     - _HeightMax: 1
     - _HeightMin: -1
     - _HeightOffset: 0
-    - _HeightPoMAmplitude: 0.3
+    - _HeightPoMAmplitude: 1
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
-    - _InvTilingScale: 0.16666667
+    - _InvTilingScale: 0.25
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
