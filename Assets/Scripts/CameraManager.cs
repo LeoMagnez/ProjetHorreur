@@ -53,7 +53,7 @@ public class CameraManager : MonoBehaviour
     public GameObject _porte;
 
 
-    public GameObject _objetImportant;
+    
 
 
     public GameObject _lightCamera;
@@ -381,7 +381,7 @@ public class CameraManager : MonoBehaviour
 
         _lightCamera.SetActive(false);
         cameraShutterSFX.Post(SFX);
-        _objetImportant.SetActive(false); //Désactivation de l'objet important
+
     }
     #endregion
 
