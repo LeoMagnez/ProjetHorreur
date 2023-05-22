@@ -73,7 +73,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -138,6 +138,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<SwitchContainer Name="FTPS" ID="{93EA6137-4685-4E22-AAA9-C3CFA2997E57}" ShortID="66998154">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
@@ -1359,6 +1366,32 @@
 								<ActiveSource Name="SFX_OS_DoorSlam" ID="{28A3D01A-36AA-4AC9-AACA-ED6E02C98370}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Folder Name="WallSliding" ID="{BF15E38C-8263-4497-B04E-8EE4745CF365}" ShortID="276669701">
+							<ChildrenList>
+								<Sound Name="WallSlide1" ID="{30C2AE94-C121-47B3-9B18-1E8586A246C1}" ShortID="896241767">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_OS_WallSlide_1" ID="{5A877BDC-BA0F-48CE-96F5-56280FCFFFEC}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_OS_WallSlide_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="481176968"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_OS_WallSlide_1" ID="{5A877BDC-BA0F-48CE-96F5-56280FCFFFEC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f980e3cb095dd243a2fe093981ed2322
     GuidInternal: 
-    m_lastTime: -8585204873544652366
+    m_lastTime: -8585168554565216393
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585168588787413644
+    m_lastTime: -8585168550845127408
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585168588796932192
+    m_lastTime: -8585168550844997290
     List:
     - name: FTPS
       guid: 6d84683922a7134ca6b9721ffc5d2971
@@ -215,6 +215,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_WallSlide1
+      guid: 1bcd2c141ba040499ee0cab888d29db1
+      id: 2047298186
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Play_WallSlide1
+        ObjectType: 3
+        guid: 1bcd2c141ba040499ee0cab888d29db1
+      Path: Events\Default Work Unit\Play_WallSlide1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_DistrictAmbience
       guid: 56a9a1050b03084db527466fbcb76034
       id: 2077601938
@@ -244,7 +261,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e9dad88cc5b0ad40a1e330745c66260e
     GuidInternal: 
-    m_lastTime: -8585204794143098697
+    m_lastTime: -8585168556370071702
     List:
     - name: IsInHouse
       guid: 71a7bfaff65d7c459df7e7a80e92dabf
@@ -260,6 +277,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 71a7bfaff65d7c459df7e7a80e92dabf
       Path: Game Parameters\Default Work Unit\IsInHouse
+    - name: MasterVolume
+      guid: 9a7e5d4684d4d4419a372b5edb6b8d44
+      id: 2918011349
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e9dad88cc5b0ad40a1e330745c66260e
+      - ElementName: MasterVolume
+        ObjectType: 13
+        guid: 9a7e5d4684d4d4419a372b5edb6b8d44
+      Path: Game Parameters\Default Work Unit\MasterVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
