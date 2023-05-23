@@ -4888,6 +4888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866501255526529726, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
+      propertyPath: SceneFadeOut
+      value: 
+      objectReference: {fileID: 1389284609}
+    - target: {fileID: 5866501255526529726, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
       propertyPath: _SceneToLoad
       value: LS_Oesophagus
       objectReference: {fileID: 0}
@@ -48016,6 +48021,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  SceneFadeOut: {fileID: 0}
 --- !u!65 &1167691432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48357,6 +48363,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  SceneFadeOut: {fileID: 0}
 --- !u!65 &1199781843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48615,6 +48622,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  SceneFadeOut: {fileID: 0}
 --- !u!1 &1201163847
 GameObject:
   m_ObjectHideFlags: 0
