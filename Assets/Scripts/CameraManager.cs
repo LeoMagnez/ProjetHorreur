@@ -117,19 +117,24 @@ public class CameraManager : MonoBehaviour
             Destroy(gameObject);    // Suppression d'une instance précédente
 
         instance = this;
+
     }
     #endregion
 
     #region START
     private void Start()
     {
-        canPlay = false; //Permet de jouer au start
+        canPlay = true; //Permet de jouer au start
+
+        
+
     }
     #endregion
 
     #region UPDATE
     private void Update()
     {
+
         if (cameraTuto)
         {
 
@@ -400,24 +405,5 @@ public class CameraManager : MonoBehaviour
     #endregion
 
 
-    public void StartGame()
-    {
-        StartCoroutine(WaitForStartOfGame());
-    }
-    public IEnumerator WaitForStartOfGame()
-    {
-        startOfGameCanvas.SetActive(false);  
-        yield return new WaitForSeconds(2f);
-        startOfGameAnimator.SetTrigger("StartOfGame");
-        StartCoroutine(ResetCamera());
-       
-    }
 
-    public IEnumerator ResetCamera()
-    {
-        yield return new WaitForSeconds(0.1f);
-        CameraJoueur.transform.position = new Vector3(0, 0, 0);
-        CameraJoueur.transform.rotation = new Quaternion(0, 0, 0, 0);
-        canPlay = true;
-    }
 }
