@@ -61,19 +61,18 @@ public class MouseLook : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if (!CameraManager.instance.canPlay)
+        if (CameraManager.instance.canPlay)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
-        
+
 
     }
 
     void move()
     {
-        if (CameraManager.instance.canPlay)
-        {
+
             mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
             mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
@@ -82,14 +81,13 @@ public class MouseLook : MonoBehaviour
 
             transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
             player.Rotate(Vector3.up * mouseY);
-        }
+
 
     }
 
     public void invertMove()
     {
-        if (CameraManager.instance.canPlay)
-        {
+
             mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
             mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
@@ -98,7 +96,7 @@ public class MouseLook : MonoBehaviour
 
             transform.localRotation = Quaternion.Euler(xRotation, 0f, -0f);
             player.Rotate(Vector3.up * mouseY);
-        }
+
 
     }
 
