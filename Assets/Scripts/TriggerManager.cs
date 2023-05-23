@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,6 +12,8 @@ public class TriggerManager : MonoBehaviour
 
     public int _TriggerToCall = 0;
     public string _SceneToLoad;
+    public TMP_Text text;
+    public string TextTuto;
 
     public UnityEvent TriggerEnter;
     public UnityEvent TriggerExit;
@@ -18,6 +21,8 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private GameObject phone;
     [SerializeField] private AK.Wwise.Event ringSFX;
     [SerializeField] private AK.Wwise.Event slamSFX;
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -66,6 +71,29 @@ public class TriggerManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         TriggerExit.Invoke();
         Debug.Log("La coroutine marche");
+    }
+
+    public void SetText()
+    {
+        StartCoroutine(TextTime());
+    }
+
+    public void WaitForSuicide()
+    {
+        StartCoroutine(TimeBeforeSuicide());
+    }
+
+    public IEnumerator TextTime()
+    {
+        text.SetText("" + TextTuto);
+        yield return new WaitForSeconds(3f);
+        text.SetText("");
+    }
+
+    public IEnumerator TimeBeforeSuicide()
+    {
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
     }
 
 }
