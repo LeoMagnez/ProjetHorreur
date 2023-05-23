@@ -22,6 +22,8 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event ringSFX;
     [SerializeField] private AK.Wwise.Event slamSFX;
 
+    public Animator SceneFadeOut;
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -43,7 +45,9 @@ public class TriggerManager : MonoBehaviour
     public void changeLevel()
     {
         SceneManager.LoadScene(_SceneToLoad);
+        //StartCoroutine(ChangeSceneCoroutine());
     }
+
 
     public void playRingingSFX()
     {
@@ -94,6 +98,13 @@ public class TriggerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
+    }
+
+    public IEnumerator ChangeSceneCoroutine()
+    {
+        SceneFadeOut.SetTrigger("StartOfGame");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(_SceneToLoad);
     }
 
 }
