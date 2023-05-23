@@ -27,11 +27,9 @@ public class MainMenu : MonoBehaviour
     }
     public IEnumerator WaitForStartOfGame()
     {
-        startOfGameCanvas.SetActive(false);
-        yield return new WaitForSeconds(1f);
         startOfGameAnimator.SetTrigger("StartOfGame");
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene("VS_District");
 
     }
