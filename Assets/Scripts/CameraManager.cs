@@ -52,10 +52,6 @@ public class CameraManager : MonoBehaviour
 
     public GameObject _porte;
 
-
-    
-
-
     public GameObject _lightCamera;
 
     [SerializeField] GameObject _cameraUIParent;
@@ -99,6 +95,7 @@ public class CameraManager : MonoBehaviour
     [Header("Sound")]
     [SerializeField] GameObject SFX;
     [SerializeField] private AK.Wwise.Event cameraShutterSFX;
+    [SerializeField] private AK.Wwise.Event forbiddenCameraSFX;
 
     public bool cameraTuto = false;
 
@@ -255,13 +252,14 @@ public class CameraManager : MonoBehaviour
             _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on prend une photo
             _takingPhoto = true;
 
-            
-
             StartCoroutine(WaitForFlash());
 
             _screenNumber++; //incrémente le nom de la photo pour pouvoir en prendre à l'infini
         }
-
+        else if (Input.GetMouseButtonDown(0) && _isCameraUp && objectToMove != null)
+        {
+            forbiddenCameraSFX.Post(SFX);
+        }
     }
     #endregion
 
