@@ -7918,7 +7918,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a5dd1a3be6a771345b93e901cd7e02ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5dd1a3be6a771345b93e901cd7e02ae,
         type: 3}
@@ -18142,7 +18142,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508150040}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.888771, y: 13.10837, z: 0.9859369}
@@ -18166,13 +18166,13 @@ MonoBehaviour:
   anchorOffset: {x: 0, y: 0, z: 0}
   worldPos: {x: 40.000004, y: 0, z: 10.999996}
   vectorAnchorToOrigin: {x: -13.8200035, y: 0.07000017, z: 6.9900036}
-  radius: 0.3
+  radius: 0.1
   desiredRotationAngle: 45
   rotationX: 0
   rotationY: 0
   rotationZ: 0
   color: {r: 1, g: 0, b: 1, a: 1}
-  LOCK_ANCHOR: 0
+  LOCK_ANCHOR: 1
   instableRoom: {fileID: 0}
   isActive: 1
   anchorList: []
@@ -37559,21 +37559,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.851202, y: 16.718588, z: 8.75396}
   m_Center: {x: -5.1072655, y: 7.859294, z: 3.8769798}
---- !u!114 &1246882551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246882547}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 753275d2efc32b848ba150307bf45690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMaterial: {fileID: 2100000, guid: 2a69cb9d2098bfb4e83ca50b12ba9e61, type: 2}
-  outlineScaleFactor: {x: 1, y: 1, z: 1}
-  outlineColor: {r: 0, g: 0.9723275, b: 1, a: 1}
 --- !u!114 &1246882552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51964,7 +51949,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0cca8922031856f47987480733671deb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0cca8922031856f47987480733671deb,
         type: 3}
@@ -53849,7 +53834,7 @@ PrefabInstance:
     - target: {fileID: 2313638463668762682, guid: c724797c5aa6cd74d8c06e3aa5094a01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2313638463668762682, guid: c724797c5aa6cd74d8c06e3aa5094a01,
         type: 3}
