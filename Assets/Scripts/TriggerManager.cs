@@ -49,6 +49,11 @@ public class TriggerManager : MonoBehaviour
         StartCoroutine(ChangeSceneCoroutine());
     }
 
+    public void CoroutineFinal()
+    {
+        SceneFadeOut.SetTrigger("FadeOutFinal");
+    }
+
 
     public void playRingingSFX()
     {
