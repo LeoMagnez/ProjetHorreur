@@ -90,6 +90,7 @@ public class CameraManager : MonoBehaviour
     public int _imgImportanteIndex = 0;
 
     [Header("References")]
+
     [SerializeField] GalleryManager galleryManager;
 
     [SerializeField] GameObject startOfGameCanvas;
@@ -167,6 +168,10 @@ public class CameraManager : MonoBehaviour
                     UIdown();//sort de la galerie
                 }
             }
+
+
+
+
 
             //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
             if (Input.GetKeyDown(KeyCode.D) && !canPlay)
