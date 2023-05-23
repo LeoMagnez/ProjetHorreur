@@ -44,8 +44,9 @@ public class TriggerManager : MonoBehaviour
 
     public void changeLevel()
     {
-        SceneManager.LoadScene(_SceneToLoad);
-        //StartCoroutine(ChangeSceneCoroutine());
+        //SceneManager.LoadScene(_SceneToLoad);
+        SceneFadeOut.SetTrigger("FadeOut");
+        StartCoroutine(ChangeSceneCoroutine());
     }
 
 
@@ -102,7 +103,6 @@ public class TriggerManager : MonoBehaviour
 
     public IEnumerator ChangeSceneCoroutine()
     {
-        SceneFadeOut.SetTrigger("StartOfGame");
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(_SceneToLoad);
     }
