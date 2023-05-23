@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{FAEBAC3F-DB17-C101-5C05-198176B8A7CA}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{2E60C021-8BAC-FA1A-5AED-21CB92B53D42}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -116,6 +116,10 @@
 				<File Id="365448444" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-001.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="380265262" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_NegFeedback.wav</ShortName>
+					<CachePath>SFX/SFX_OS_NegFeedback_10C4C929.wem</CachePath>
 				</File>
 				<File Id="426996222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-008.wav</ShortName>
@@ -331,6 +335,11 @@
 						<MediaRef Id="24919415"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3799346131" Name="Play_NoPicture" DurationType="OneShot" DurationMin="0.5019048" DurationMax="0.5019048">
+					<MediaRefs>
+						<MediaRef Id="380265262"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3447864244" Name="Play_PhoneRing" MaxAttenuation="24" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="323215771"/>
@@ -387,5 +396,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BF966A78-75B6-2491-225C-235D7784E7D7}</FileHash>
+	<FileHash>{4C1E1EC1-7B1B-F1B2-3173-83D17B0244D7}</FileHash>
 </SoundBanksInfo>

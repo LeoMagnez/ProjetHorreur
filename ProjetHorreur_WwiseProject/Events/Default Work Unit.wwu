@@ -128,6 +128,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_NoPicture" ID="{26AA415E-82EE-4060-ADE7-03916F1F81FA}">
+					<ChildrenList>
+						<Action Name="" ID="{01E6E02E-384F-48D7-8725-097D35C4AAA8}" ShortID="268679255">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_OS_NoPicture" ID="{045E13AB-4F7D-4BB6-8A0C-E069C63A2CE4}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

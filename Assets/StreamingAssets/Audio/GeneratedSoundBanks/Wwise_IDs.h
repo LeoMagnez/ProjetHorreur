@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_DISTRICTAMBIENCE = 388756148U;
         static const AkUniqueID PLAY_DOORSLAM = 884363281U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
+        static const AkUniqueID PLAY_NOPICTURE = 3799346131U;
         static const AkUniqueID PLAY_PHONERING = 3447864244U;
         static const AkUniqueID PLAY_WALLSLIDE1 = 2047298186U;
         static const AkUniqueID PLAY_WALLSLIDE2 = 2047298185U;
