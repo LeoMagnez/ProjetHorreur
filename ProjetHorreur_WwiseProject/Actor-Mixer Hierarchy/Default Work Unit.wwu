@@ -129,6 +129,120 @@
 										<ActiveSource Name="AMB_LP_House_V1" ID="{8BE15072-B87B-48F5-9122-E177BCA69DCE}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="Wood Squeaks" ID="{65B47B09-B7B7-411D-964B-A781AF601D6A}" ShortID="802754757">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{56326345-5739-4B80-950F-E8DC1022FE88}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="60"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_OS_Woodsqueak-001" ID="{6004DAF5-2FB4-4435-8246-168E59F1AB85}" ShortID="806607509">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_Woodsqueak-001" ID="{EF1E42A9-D3E0-480C-8279-21A9CFD51D1F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_Woodsqueak-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="965573518"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_Woodsqueak-001" ID="{EF1E42A9-D3E0-480C-8279-21A9CFD51D1F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_Woodsqueak-002" ID="{EE03788B-2595-4A60-8507-8CB3667B6D4D}" ShortID="713261506">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_Woodsqueak-002" ID="{1847759C-37A9-4699-A818-FE3FF1F67977}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_Woodsqueak-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="796389985"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_Woodsqueak-002" ID="{1847759C-37A9-4699-A818-FE3FF1F67977}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_Woodsqueak-003" ID="{B061E3A3-1F51-43D7-96D6-78E3F8E1DC82}" ShortID="466483620">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_Woodsqueak-003" ID="{E7795EB7-6D99-4FFB-BD51-1A12534F44D5}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_Woodsqueak-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="18701963"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_Woodsqueak-003" ID="{E7795EB7-6D99-4FFB-BD51-1A12534F44D5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_Woodsqueak-004" ID="{BD9A3283-C152-4CA6-9940-A8CB6C1F7D2F}" ShortID="37391322">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_Woodsqueak-004" ID="{DDE417E2-FEFC-4F42-A0B1-1FDAD11D9A22}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_Woodsqueak-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="212134804"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_Woodsqueak-004" ID="{DDE417E2-FEFC-4F42-A0B1-1FDAD11D9A22}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
