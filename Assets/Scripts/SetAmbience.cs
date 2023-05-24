@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static UnityEngine.Rendering.DebugUI;
 
 public class SetAmbience : MonoBehaviour
 {
     /*[SerializeField] private AK.Wwise.RTPC positionRTPC;
-    private bool hasCollided = false;
-    private float value = 1f;
-    private float t = 0f;
+    
+    
 
     private void Awake()
     {
@@ -22,28 +22,46 @@ public class SetAmbience : MonoBehaviour
         {
             hasCollided = true;
         }
-    }
-
-    private void Update()
-    {
-        if (hasCollided == true) 
-        {
-            Debug.Log(value);
-            value = Mathf.Lerp(0.61f, 0f, t*2);
-            t += 0.1f * Time.deltaTime;
-            positionRTPC.SetGlobalValue(value);
-        }
     }*/
 
     [SerializeField] private AK.Wwise.Event houseAmbEvent;
     [SerializeField] private AK.Wwise.Event districtAmbEvent;
+    [SerializeField] private AK.Wwise.RTPC distAmbRTPC;
     [SerializeField] private GameObject ambObj;
+
+    private bool hasCollided = false;
+    private bool isInHouse = false;
+    private float value = 0.49f;
+    private float t = 0f;
+
+    private void Update()
+    {
+        if (hasCollided == true)
+        {
+            if (!isInHouse)
+            {
+                value = 1f;
+                hasCollided = false;
+                isInHouse = true;
+            }
+            else if (isInHouse) 
+            {
+                value = 0.49f;
+                hasCollided = false;
+                isInHouse = false;
+            }
+        }
+
+        Debug.Log(value);
+        distAmbRTPC.SetGlobalValue(value);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             houseAmbEvent.Post(ambObj);
+            hasCollided = true;
         }
     }
 

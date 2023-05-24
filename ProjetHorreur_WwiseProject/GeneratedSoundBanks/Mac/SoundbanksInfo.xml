@@ -9,14 +9,10 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{2E60C021-8BAC-FA1A-5AED-21CB92B53D42}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{4D25B5EF-0E99-BAF8-54B0-05CAF98AF6D1}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
-				<File Id="24919415" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AMB_LP_House_Final.wav</ShortName>
-					<CachePath>SFX/AMB_LP_House_Final_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="35785480" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-004.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-004_10C4C929.wem</CachePath>
@@ -64,6 +60,10 @@
 				<File Id="231558954" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_DoorSlam.wav</ShortName>
 					<CachePath>SFX/SFX_OS_DoorSlam_10C4C929.wem</CachePath>
+				</File>
+				<File Id="238355549" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_LP_House_V1.wav</ShortName>
+					<CachePath>SFX/AMB_LP_House_V1_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="238845316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-001.wav</ShortName>
@@ -332,7 +332,7 @@
 				</Event>
 				<Event Id="4264221306" Name="Play_HouseAmb" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="24919415"/>
+						<MediaRef Id="238355549"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3799346131" Name="Play_NoPicture" DurationType="OneShot" DurationMin="0.5019048" DurationMax="0.5019048">
@@ -357,6 +357,9 @@
 				</Event>
 				<Event Id="2077601938" Name="Stop_DistrictAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="4101628508" Name="IsInHouse"/>
+			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="3072116243" Name="GroundMaterial">
 					<Switches>
@@ -396,5 +399,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4C1E1EC1-7B1B-F1B2-3173-83D17B0244D7}</FileHash>
+	<FileHash>{DA654B8D-65A9-BE64-FA86-D0C4D5DB04C1}</FileHash>
 </SoundBanksInfo>
