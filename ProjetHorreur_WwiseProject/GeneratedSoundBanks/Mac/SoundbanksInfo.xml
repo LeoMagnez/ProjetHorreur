@@ -9,10 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{4D25B5EF-0E99-BAF8-54B0-05CAF98AF6D1}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{92CDF22B-E632-4487-43EC-1BF85275C5A2}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
+				<File Id="18701963" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_Woodsqueak-003.wav</ShortName>
+					<CachePath>SFX/SFX_OS_Woodsqueak-003_10C4C929.wem</CachePath>
+				</File>
 				<File Id="35785480" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-004.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-004_10C4C929.wem</CachePath>
@@ -52,6 +56,10 @@
 				<File Id="205185689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Grass-009.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Grass-009_10C4C929.wem</CachePath>
+				</File>
+				<File Id="212134804" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_Woodsqueak-004.wav</ShortName>
+					<CachePath>SFX/SFX_OS_Woodsqueak-004_10C4C929.wem</CachePath>
 				</File>
 				<File Id="230110389" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Grass-011.wav</ShortName>
@@ -209,6 +217,10 @@
 					<ShortName>SFX_OS_FT_Concrete-008.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-008_10C4C929.wem</CachePath>
 				</File>
+				<File Id="796389985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_Woodsqueak-002.wav</ShortName>
+					<CachePath>SFX/SFX_OS_Woodsqueak-002_10C4C929.wem</CachePath>
+				</File>
 				<File Id="830821462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_WallSlide_2.wav</ShortName>
 					<CachePath>SFX/SFX_OS_WallSlide_2_10C4C929.wem</CachePath>
@@ -220,6 +232,10 @@
 				<File Id="907083510" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-013.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-013_10C4C929.wem</CachePath>
+				</File>
+				<File Id="965573518" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_Woodsqueak-001.wav</ShortName>
+					<CachePath>SFX/SFX_OS_Woodsqueak-001_10C4C929.wem</CachePath>
 				</File>
 				<File Id="986526279" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-014.wav</ShortName>
@@ -332,7 +348,11 @@
 				</Event>
 				<Event Id="4264221306" Name="Play_HouseAmb" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="18701963"/>
+						<MediaRef Id="212134804"/>
 						<MediaRef Id="238355549"/>
+						<MediaRef Id="796389985"/>
+						<MediaRef Id="965573518"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3799346131" Name="Play_NoPicture" DurationType="OneShot" DurationMin="0.5019048" DurationMax="0.5019048">
@@ -399,5 +419,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DA654B8D-65A9-BE64-FA86-D0C4D5DB04C1}</FileHash>
+	<FileHash>{3DA6E82F-FBE8-F7CB-57DB-3B5E38DF32EA}</FileHash>
 </SoundBanksInfo>

@@ -12,6 +12,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{B537D02E-9E45-4340-8E88-E0AD1F7805E7}" ShortID="937261620">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="30"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wood Squeaks" ID="{65B47B09-B7B7-411D-964B-A781AF601D6A}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="FTPS" ID="{3968846D-A722-4C13-A6B9-721FFC5D2971}">
