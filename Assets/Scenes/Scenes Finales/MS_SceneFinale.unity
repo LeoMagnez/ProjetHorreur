@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1400.2734, g: 1373.9414, b: 1513.0859, a: 1}
+  m_IndirectSpecularColor: {r: 1400.2578, g: 1373.9375, b: 1513.082, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -434,6 +434,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4215986082818393320, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b355df4145840048830557fc7b1f332, type: 2}
     - target: {fileID: 4215986082818393321, guid: f01a626440699bf47bb8390442a75a4c,
         type: 3}
       propertyPath: m_Name
@@ -5405,6 +5410,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: e319b53b3a49a794fb42e349853b35fc,
       type: 2}
+  forbiddenCameraSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   cameraTuto: 1
   CameraJoueur: {fileID: 0}
 --- !u!33 &358503122
@@ -20521,7 +20530,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b977c599062b0cb4da85f5717e42b8c4, type: 2}
+  - {fileID: 2100000, guid: 0b355df4145840048830557fc7b1f332, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24579,7 +24588,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b977c599062b0cb4da85f5717e42b8c4, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b355df4145840048830557fc7b1f332, type: 2}
     - target: {fileID: 8506634260389544786, guid: 0d3a5ed485499d649a556f7791af6374,
         type: 3}
       propertyPath: m_RootOrder
