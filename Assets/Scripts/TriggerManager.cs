@@ -80,7 +80,6 @@ public class TriggerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         TriggerExit.Invoke();
-        Debug.Log("La coroutine marche");
     }
 
     public void SetText()

@@ -14,7 +14,7 @@
 						</Action>
 						<Action Name="" ID="{B537D02E-9E45-4340-8E88-E0AD1F7805E7}" ShortID="937261620">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="30"/>
+								<Property Name="Delay" Type="Real64" Value="15"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -30,17 +30,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="FTPS" ID="{93EA6137-4685-4E22-AAA9-C3CFA2997E57}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Ambiences" ID="{BFEE91AD-FC89-49A7-83CE-0F23C4941720}">
-					<ChildrenList>
-						<Action Name="" ID="{FE3BA352-78F7-4B7F-BD8C-6BE2DB4B25D7}" ShortID="39794459">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Ambiences" ID="{E7646A0B-08FB-45BA-8DE0-A6461C899CEC}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

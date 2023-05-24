@@ -40,12 +40,10 @@ public class MouseLook : MonoBehaviour
         {
             if (MenuManager.instance.InvertAxes == true)
             {
-                Debug.Log("Axes inversé");
                 invertMove();
             }
             else
             {
-                Debug.Log("Axes normaux");
                 move();
             }
         }
