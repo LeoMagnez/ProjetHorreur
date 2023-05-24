@@ -51,8 +51,6 @@ public class SetAmbience : MonoBehaviour
                 isInHouse = false;
             }
         }
-
-        Debug.Log(value);
         distAmbRTPC.SetGlobalValue(value);
     }
 
