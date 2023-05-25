@@ -126,4 +126,5 @@ public class TriggerManager : MonoBehaviour
         blackSquareDoorEffect.SetActive(false);
     }
 
+
 }
