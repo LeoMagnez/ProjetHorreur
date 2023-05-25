@@ -122,7 +122,7 @@ public class TriggerManager : MonoBehaviour
     public IEnumerator FinalScene()
     {
         blackSquareDoorEffect.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         blackSquareDoorEffect.SetActive(false);
     }
 
