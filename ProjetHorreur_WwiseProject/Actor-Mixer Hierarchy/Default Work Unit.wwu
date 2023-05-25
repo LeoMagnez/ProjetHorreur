@@ -250,6 +250,147 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
+						<Sound Name="AMB_LP_Drone" ID="{20932A7D-3105-45AF-9944-9EBAA73A8AD6}" ShortID="412814063">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Guitar Distortion (Custom)" ID="{0B36A28A-A7FD-4167-B742-65797645FD52}" ShortID="967912837" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+											<PropertyList>
+												<Property Name="DistortionType" Type="int32" Value="1"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{3701441D-F069-41B0-8330-AADA8B387F97}" ShortID="799253557">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="DistortionDrive"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="distAmount" ID="{3489D745-1D6D-465D-BB7E-DA07D4F7F735}" WorkUnitID="{8CD8DAE9-B0C5-40AD-A1E3-30745C66260E}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{C4A82DA0-5363-4B01-A002-BD8981C58A48}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-100</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>100</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{4ABB592D-779D-42F6-82D6-882AA2BD452D}" ShortID="559265013">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Rectification"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="distAmount" ID="{3489D745-1D6D-465D-BB7E-DA07D4F7F735}" WorkUnitID="{8CD8DAE9-B0C5-40AD-A1E3-30745C66260E}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{93B6C860-D6E3-45AC-B0A7-CBFD1D8F4CEE}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-100</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>100</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB_LP_Drone" ID="{7B3AD818-0CEF-4C6E-94F9-3F9DAD1B3D89}">
+									<Language>SFX</Language>
+									<AudioFile>AMB_LP_Drone.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="904037518"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AMB_LP_Drone" ID="{7B3AD818-0CEF-4C6E-94F9-3F9DAD1B3D89}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AMB_LP_Level2" ID="{1CCBE9F3-3AED-4113-A3B7-B19FA2493672}" ShortID="902104630">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB_LP_Level2" ID="{A3ECC3DC-3FC3-4FD0-BC31-7C5DA48CBCE5}">
+									<Language>SFX</Language>
+									<AudioFile>AMB_LP_Level2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1026856507"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AMB_LP_Level2" ID="{A3ECC3DC-3FC3-4FD0-BC31-7C5DA48CBCE5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{8BE68D0B-9450-4736-BB87-A2BDC5B58887}" ShortID="1026241522">
