@@ -29,17 +29,22 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private GameObject sfxObj;
     [SerializeField] private AK.Wwise.Event flipNLSFX;
     [SerializeField] private AK.Wwise.Event flipLSFX;
-    [SerializeField] private AK.Wwise.RTPC distAmount;
+    //[SerializeField] private AK.Wwise.RTPC distAmount;
     private float count = 0.0f;
 
     public Animator SceneFadeOut;
+
+    private void Start()
+    {
+        AkSoundEngine.SetRTPCValue("distAmount", 0.0f);
+    }
 
     private void Update()
     {
         if (endfoHasStarted) 
         {
-            count += 2.38f * Time.deltaTime;
-            distAmount.SetGlobalValue(count);
+            count += 2.0f * Time.deltaTime;
+            AkSoundEngine.SetRTPCValue("distAmount", count);
         }
     }
 
@@ -90,7 +95,7 @@ public class TriggerManager : MonoBehaviour
 
     public void CoroutineTest()
     {
-            StartCoroutine(bookSelect());
+        StartCoroutine(bookSelect());
     }
 
     public IEnumerator bookSelect()
