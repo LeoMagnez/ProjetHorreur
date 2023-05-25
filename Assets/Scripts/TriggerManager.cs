@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class TriggerManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class TriggerManager : MonoBehaviour
 
     public UnityEvent TriggerEnter;
     public UnityEvent TriggerExit;
-    public bool endfoHasStarted = false;
+    private bool endfoHasStarted = false;
 
     [SerializeField] private GameObject phone;
     [SerializeField] private AK.Wwise.Event ringSFX;
@@ -28,8 +29,19 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private GameObject sfxObj;
     [SerializeField] private AK.Wwise.Event flipNLSFX;
     [SerializeField] private AK.Wwise.Event flipLSFX;
+    [SerializeField] private AK.Wwise.RTPC distAmount;
+    private float count = 0.0f;
 
     public Animator SceneFadeOut;
+
+    private void Update()
+    {
+        if (endfoHasStarted) 
+        {
+            count += 2.38f * Time.deltaTime;
+            distAmount.SetGlobalValue(count);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -59,7 +71,6 @@ public class TriggerManager : MonoBehaviour
         SceneFadeOut.SetTrigger("FadeOutFinal");
         endfoHasStarted = true;
     }
-
 
     public void playRingingSFX()
     {
