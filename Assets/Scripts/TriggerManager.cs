@@ -26,10 +26,11 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event slamSFX;
     [SerializeField] private GameObject blackSquareDoorEffect;
 
-    [SerializeField] private GameObject sfxObj;
+    [SerializeField] private GameObject sfxObj3;
+    [SerializeField] private GameObject ambObj3;
+    [SerializeField] private AK.Wwise.Event lv3Amb;
     [SerializeField] private AK.Wwise.Event flipNLSFX;
     [SerializeField] private AK.Wwise.Event flipLSFX;
-    //[SerializeField] private AK.Wwise.RTPC distAmount;
     private float count = 0.0f;
 
     public Animator SceneFadeOut;
@@ -43,8 +44,16 @@ public class TriggerManager : MonoBehaviour
     {
         if (endfoHasStarted) 
         {
-            count += 2.0f * Time.deltaTime;
+            count += 2.1f * Time.deltaTime;
             AkSoundEngine.SetRTPCValue("distAmount", count);
+        }
+
+        if (count > 100f && endfoHasStarted)
+        {
+            blackSquareDoorEffect.SetActive(true);
+            lv3Amb.Stop(ambObj3);
+            flipNLSFX.Post(sfxObj3);
+            endfoHasStarted = false;
         }
     }
 
@@ -141,9 +150,9 @@ public class TriggerManager : MonoBehaviour
     public IEnumerator FinalScene()
     {
         blackSquareDoorEffect.SetActive(true);
-        flipNLSFX.Post(sfxObj);
+        flipNLSFX.Post(sfxObj3);
         yield return new WaitForSeconds(0.5f);
         blackSquareDoorEffect.SetActive(false);
-        flipLSFX.Post(sfxObj);
+        flipLSFX.Post(sfxObj3);
     }
 }
