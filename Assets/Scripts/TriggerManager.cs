@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TriggerManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private GameObject phone;
     [SerializeField] private AK.Wwise.Event ringSFX;
     [SerializeField] private AK.Wwise.Event slamSFX;
+    [SerializeField] private GameObject blackSquareDoorEffect;
 
     public Animator SceneFadeOut;
 
@@ -34,7 +36,8 @@ public class TriggerManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        TriggerEnter.Invoke();
+        //TriggerEnter.Invoke();
+        TriggerExit.Invoke();
     }
 
     public void destroyTrigger()
@@ -92,6 +95,11 @@ public class TriggerManager : MonoBehaviour
         StartCoroutine(TimeBeforeSuicide());
     }
 
+    public void FinalSceneDoorEffect()
+    {
+        StartCoroutine(FinalScene());
+    }
+
     public IEnumerator TextTime()
     {
         text.SetText("" + TextTuto);
@@ -109,6 +117,13 @@ public class TriggerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(_SceneToLoad);
+    }
+
+    public IEnumerator FinalScene()
+    {
+        blackSquareDoorEffect.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        blackSquareDoorEffect.SetActive(false);
     }
 
 }
