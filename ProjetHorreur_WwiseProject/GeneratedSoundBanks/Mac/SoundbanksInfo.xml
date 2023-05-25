@@ -704,7 +704,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{ED1E3DA5-FA87-45C2-6E69-56E0C8AA24E3}">
+		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{C87CF0EF-AED8-0C57-67EB-731906E49786}">
 			<ShortName>Level_03</ShortName>
 			<Path>Level_03.bnk</Path>
 			<Media>
@@ -732,6 +732,10 @@
 					<ShortName>SFX_OS_FT_Concrete-006.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-006_10C4C929.wem</CachePath>
 				</File>
+				<File Id="132953430" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_SwitchFlip-002.wav</ShortName>
+					<CachePath>SFX/SFX_OS_SwitchFlip-002_10C4C929.wem</CachePath>
+				</File>
 				<File Id="135388325" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Tiles-003.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Tiles-003_10C4C929.wem</CachePath>
@@ -743,6 +747,10 @@
 				<File Id="161298080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Grass-008.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Grass-008_10C4C929.wem</CachePath>
+				</File>
+				<File Id="193863466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_SwitchFlip-001.wav</ShortName>
+					<CachePath>SFX/SFX_OS_SwitchFlip-001_10C4C929.wem</CachePath>
 				</File>
 				<File Id="205185689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Grass-009.wav</ShortName>
@@ -996,6 +1004,16 @@
 						<MediaRef Id="258899210"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1725616313" Name="Play_flipL" DurationType="OneShot" DurationMin="0.060748298" DurationMax="0.060748298">
+					<MediaRefs>
+						<MediaRef Id="132953430"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2776012301" Name="Play_flipNL" DurationType="OneShot" DurationMin="0.10802721" DurationMax="0.10802721">
+					<MediaRefs>
+						<MediaRef Id="193863466"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3765338293" Name="Play_Lv3Amb" DurationType="OneShot" DurationMin="292" DurationMax="292">
 					<MediaRefs>
 						<MediaRef Id="904037518"/>
@@ -1050,5 +1068,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F0B34949-619A-A2E0-980E-6D9992323661}</FileHash>
+	<FileHash>{37478262-FA82-0F7D-9828-7C1E9B451755}</FileHash>
 </SoundBanksInfo>

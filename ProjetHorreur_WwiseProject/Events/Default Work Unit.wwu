@@ -172,6 +172,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Level 3" ID="{BFAE12A7-A997-4010-978A-26374DD987F6}" ShortID="995660228">
+					<ChildrenList>
+						<Event Name="Play_flipNL" ID="{B29EDBEC-71E6-4A38-9728-C915C6C662D8}">
+							<ChildrenList>
+								<Action Name="" ID="{3228940B-66C5-4683-9FB5-7EAAC56FBBD5}" ShortID="532369160">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_SwitchFlip-001" ID="{07832F0F-D8C9-4002-8249-4491A6789F47}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_flipL" ID="{3444E94D-FBDD-41B7-981A-741BDA3AACF3}">
+							<ChildrenList>
+								<Action Name="" ID="{5452A570-49C7-4B71-86B3-8BBC28F13B90}" ShortID="768222816">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_SwitchFlip-002" ID="{B0575D81-5F94-4888-9903-8735AC79E886}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

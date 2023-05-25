@@ -25,6 +25,10 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event slamSFX;
     [SerializeField] private GameObject blackSquareDoorEffect;
 
+    [SerializeField] private GameObject sfxObj;
+    [SerializeField] private AK.Wwise.Event flipNLSFX;
+    [SerializeField] private AK.Wwise.Event flipLSFX;
+
     public Animator SceneFadeOut;
 
     private void OnTriggerEnter(Collider other)
@@ -121,7 +125,9 @@ public class TriggerManager : MonoBehaviour
     public IEnumerator FinalScene()
     {
         blackSquareDoorEffect.SetActive(true);
+        flipNLSFX.Post(sfxObj);
         yield return new WaitForSeconds(0.5f);
         blackSquareDoorEffect.SetActive(false);
+        flipLSFX.Post(sfxObj);
     }
 }

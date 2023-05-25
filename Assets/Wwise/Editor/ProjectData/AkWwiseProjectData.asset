@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585165811330580483
+    m_lastTime: -8585165752467359263
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -122,7 +122,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585165811379594377
+    m_lastTime: -8585165752467249250
     List:
     - name: Ambiences
       guid: 9be11a14d4b9a046bdda744f536e55f4
@@ -192,6 +192,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 176a1cefbf62cb40bf2abddc9665cb5e
       Path: Events\Default Work Unit\Level 1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level 3
+      guid: a712aebf97a91040978a26374dd987f6
+      id: 3420765918
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 3
+        ObjectType: 4
+        guid: a712aebf97a91040978a26374dd987f6
+      Path: Events\Default Work Unit\Level 3
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -272,6 +289,46 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2ad41f2844654f4a909b1395a1a4e6a2
       Path: Events\Default Work Unit\Level 1\Play_DoorSlam
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_flipL
+      guid: 4de94434ddfbb741981a741bda3aacf3
+      id: 1725616313
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 3
+        ObjectType: 4
+        guid: a712aebf97a91040978a26374dd987f6
+      - ElementName: Play_flipL
+        ObjectType: 3
+        guid: 4de94434ddfbb741981a741bda3aacf3
+      Path: Events\Default Work Unit\Level 3\Play_flipL
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_flipNL
+      guid: ecdb9eb2e671384a9728c915c6c662d8
+      id: 2776012301
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 3
+        ObjectType: 4
+        guid: a712aebf97a91040978a26374dd987f6
+      - ElementName: Play_flipNL
+        ObjectType: 3
+        guid: ecdb9eb2e671384a9728c915c6c662d8
+      Path: Events\Default Work Unit\Level 3\Play_flipNL
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -615,7 +672,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585204873541772147
     List: []
-  ExpandedFileSystemItemIds: 02000000030000000400000005000000060000000d000000
+  ExpandedFileSystemItemIds: 0200000003000000040000000500000006000000080000000d000000
   ExpandedWaapiItemIds: 010000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
