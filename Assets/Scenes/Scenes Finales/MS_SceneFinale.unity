@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1400.2578, g: 1373.9375, b: 1513.082, a: 1}
+  m_IndirectSpecularColor: {r: 1400.2734, g: 1373.9414, b: 1513.0859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -422,6 +422,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 730053405}
     m_Modifications:
+    - target: {fileID: 40155059118796127, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1312069616}
+    - target: {fileID: 40155059118796127, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSensivity
+      objectReference: {fileID: 0}
     - target: {fileID: 212591730932376423, guid: f01a626440699bf47bb8390442a75a4c,
         type: 3}
       propertyPath: m_text
@@ -438,6 +448,16 @@ PrefabInstance:
       value: 'GRAPHICS
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 212591732668951176, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1312069616}
+    - target: {fileID: 212591732668951176, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 677004502535608129, guid: f01a626440699bf47bb8390442a75a4c,
         type: 3}
@@ -465,6 +485,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568277108891144935, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1312069616}
+    - target: {fileID: 3568277108891144935, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setInvertAxes
       objectReference: {fileID: 0}
     - target: {fileID: 3793240117211072166, guid: f01a626440699bf47bb8390442a75a4c,
         type: 3}
@@ -551,6 +581,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6873872769525125321, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1312069616}
+    - target: {fileID: 6873872769525125321, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFullScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 13960602}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSpecificVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Volume_menu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Master
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01a626440699bf47bb8390442a75a4c, type: 3}
 --- !u!4 &13960598 stripped
@@ -559,6 +624,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 13960597}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &13960599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 40155059118796127, guid: f01a626440699bf47bb8390442a75a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 13960597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &13960600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8209912156981785923, guid: f01a626440699bf47bb8390442a75a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 13960597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &13960601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8078924284230206251, guid: f01a626440699bf47bb8390442a75a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 13960597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13960600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &13960602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13960600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a49fd63710bc2408ea66863cab32d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 13960601}
+  masterVolume: 0
 --- !u!1 &14810013
 GameObject:
   m_ObjectHideFlags: 0
@@ -24987,7 +25096,7 @@ MonoBehaviour:
   menuAnimation: {fileID: 730053406}
   _menuIsUp: 0
   _isMenuUp: 0
-  _slider: {fileID: 0}
+  _slider: {fileID: 13960599}
   limit: 0
   InvertAxes: 0
 --- !u!4 &1312069617
