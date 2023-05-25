@@ -50,6 +50,7 @@ public class TriggerManager : MonoBehaviour
 
         if (count > 100f && endfoHasStarted)
         {
+            //FIN DU JEU LOCK DES MOUVEMENTS <- IMPORTANT
             blackSquareDoorEffect.SetActive(true);
             lv3Amb.Stop(ambObj3);
             flipNLSFX.Post(sfxObj3);
