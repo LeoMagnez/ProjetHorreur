@@ -33,4 +33,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("VS_District");
 
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
