@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class TriggerManager : MonoBehaviour
 {
@@ -18,18 +19,44 @@ public class TriggerManager : MonoBehaviour
 
     public UnityEvent TriggerEnter;
     public UnityEvent TriggerExit;
-    public bool endfoHasStarted = false;
+    private bool endfoHasStarted = false;
 
     [SerializeField] private GameObject phone;
     [SerializeField] private AK.Wwise.Event ringSFX;
     [SerializeField] private AK.Wwise.Event slamSFX;
     [SerializeField] private GameObject blackSquareDoorEffect;
 
-    [SerializeField] private GameObject sfxObj;
+    [SerializeField] private GameObject sfxObj3;
+    [SerializeField] private GameObject ambObj3;
+    [SerializeField] private AK.Wwise.Event lv3Amb;
     [SerializeField] private AK.Wwise.Event flipNLSFX;
     [SerializeField] private AK.Wwise.Event flipLSFX;
+    private float count = 0.0f;
 
     public Animator SceneFadeOut;
+
+    private void Start()
+    {
+        AkSoundEngine.SetRTPCValue("distAmount", 0.0f);
+    }
+
+    private void Update()
+    {
+        if (endfoHasStarted) 
+        {
+            count += 2.1f * Time.deltaTime;
+            AkSoundEngine.SetRTPCValue("distAmount", count);
+        }
+
+        if (count > 100f && endfoHasStarted)
+        {
+            //FIN DU JEU LOCK DES MOUVEMENTS <- IMPORTANT
+            blackSquareDoorEffect.SetActive(true);
+            lv3Amb.Stop(ambObj3);
+            flipNLSFX.Post(sfxObj3);
+            endfoHasStarted = false;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -60,7 +87,6 @@ public class TriggerManager : MonoBehaviour
         endfoHasStarted = true;
     }
 
-
     public void playRingingSFX()
     {
         ringSFX.Post(phone);
@@ -79,7 +105,7 @@ public class TriggerManager : MonoBehaviour
 
     public void CoroutineTest()
     {
-            StartCoroutine(bookSelect());
+        StartCoroutine(bookSelect());
     }
 
     public IEnumerator bookSelect()
@@ -125,9 +151,9 @@ public class TriggerManager : MonoBehaviour
     public IEnumerator FinalScene()
     {
         blackSquareDoorEffect.SetActive(true);
-        flipNLSFX.Post(sfxObj);
+        flipNLSFX.Post(sfxObj3);
         yield return new WaitForSeconds(0.5f);
         blackSquareDoorEffect.SetActive(false);
-        flipLSFX.Post(sfxObj);
+        flipLSFX.Post(sfxObj3);
     }
 }
