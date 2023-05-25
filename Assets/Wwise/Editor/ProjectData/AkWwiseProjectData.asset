@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585166780372353203
+    m_lastTime: -8585165824862463653
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -82,6 +82,34 @@ MonoBehaviour:
         ObjectType: 7
         guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
       Path: SoundBanks\Default Work Unit\Level_01
+    - name: Level_02
+      guid: a6f4f677ce0cf04a8da10307ebf47f02
+      id: 987635874
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3f7857a83744f47b6e474e1ada48d92
+      - ElementName: Level_02
+        ObjectType: 7
+        guid: a6f4f677ce0cf04a8da10307ebf47f02
+      Path: SoundBanks\Default Work Unit\Level_02
+    - name: Level_03
+      guid: 8e9662e94c0ce54a803f20d687d7c71e
+      id: 987635875
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e3f7857a83744f47b6e474e1ada48d92
+      - ElementName: Level_03
+        ObjectType: 7
+        guid: 8e9662e94c0ce54a803f20d687d7c71e
+      Path: SoundBanks\Default Work Unit\Level_03
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +122,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585165922686874198
+    m_lastTime: -8585165824895342738
     List:
+    - name: Ambiences
+      guid: 9be11a14d4b9a046bdda744f536e55f4
+      id: 1017660616
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 9be11a14d4b9a046bdda744f536e55f4
+      Path: Events\Default Work Unit\Ambiences
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: FTPS
       guid: 6d84683922a7134ca6b9721ffc5d2971
       id: 2946881380
@@ -106,10 +151,47 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: gpFeedbacks
+        ObjectType: 4
+        guid: abe4113cb22b8d44bcf7c648b911ea0c
       - ElementName: FTPS
         ObjectType: 3
         guid: 6d84683922a7134ca6b9721ffc5d2971
-      Path: Events\Default Work Unit\FTPS
+      Path: Events\Default Work Unit\gpFeedbacks\FTPS
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: gpFeedbacks
+      guid: abe4113cb22b8d44bcf7c648b911ea0c
+      id: 1895265340
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: gpFeedbacks
+        ObjectType: 4
+        guid: abe4113cb22b8d44bcf7c648b911ea0c
+      Path: Events\Default Work Unit\gpFeedbacks
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level 1
+      guid: 176a1cefbf62cb40bf2abddc9665cb5e
+      id: 3420765916
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 1
+        ObjectType: 4
+        guid: 176a1cefbf62cb40bf2abddc9665cb5e
+      Path: Events\Default Work Unit\Level 1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -123,10 +205,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: gpFeedbacks
+        ObjectType: 4
+        guid: abe4113cb22b8d44bcf7c648b911ea0c
       - ElementName: Play_Breath
         ObjectType: 3
         guid: be1e877831211642b7d41ecd0a2ae1b2
-      Path: Events\Default Work Unit\Play_Breath
+      Path: Events\Default Work Unit\gpFeedbacks\Play_Breath
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -140,10 +225,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: gpFeedbacks
+        ObjectType: 4
+        guid: abe4113cb22b8d44bcf7c648b911ea0c
       - ElementName: Play_CameraFlash
         ObjectType: 3
         guid: f7b74194b917c4438c66f356f94dcd7b
-      Path: Events\Default Work Unit\Play_CameraFlash
+      Path: Events\Default Work Unit\gpFeedbacks\Play_CameraFlash
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -157,10 +245,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 9be11a14d4b9a046bdda744f536e55f4
       - ElementName: Play_DistrictAmbience
         ObjectType: 3
         guid: 8a2e3c7c3a1d204099f2d0abcb1deef1
-      Path: Events\Default Work Unit\Play_DistrictAmbience
+      Path: Events\Default Work Unit\Ambiences\Play_DistrictAmbience
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -174,10 +265,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 1
+        ObjectType: 4
+        guid: 176a1cefbf62cb40bf2abddc9665cb5e
       - ElementName: Play_DoorSlam
         ObjectType: 3
         guid: 2ad41f2844654f4a909b1395a1a4e6a2
-      Path: Events\Default Work Unit\Play_DoorSlam
+      Path: Events\Default Work Unit\Level 1\Play_DoorSlam
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -191,10 +285,53 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 9be11a14d4b9a046bdda744f536e55f4
       - ElementName: Play_HouseAmb
         ObjectType: 3
         guid: fa3616e70ab4e14e8ecd4b80a6920977
-      Path: Events\Default Work Unit\Play_HouseAmb
+      Path: Events\Default Work Unit\Ambiences\Play_HouseAmb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Lv2Amb
+      guid: c3a756d137126c44bb121b431f1e07a9
+      id: 2485884946
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 9be11a14d4b9a046bdda744f536e55f4
+      - ElementName: Play_Lv2Amb
+        ObjectType: 3
+        guid: c3a756d137126c44bb121b431f1e07a9
+      Path: Events\Default Work Unit\Ambiences\Play_Lv2Amb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Lv3Amb
+      guid: 04b6f8fa04805b4f929cfd2976a6ad10
+      id: 3765338293
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 9be11a14d4b9a046bdda744f536e55f4
+      - ElementName: Play_Lv3Amb
+        ObjectType: 3
+        guid: 04b6f8fa04805b4f929cfd2976a6ad10
+      Path: Events\Default Work Unit\Ambiences\Play_Lv3Amb
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -208,10 +345,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: gpFeedbacks
+        ObjectType: 4
+        guid: abe4113cb22b8d44bcf7c648b911ea0c
       - ElementName: Play_NoPicture
         ObjectType: 3
         guid: 5e41aa26ee826040ade703916f1f81fa
-      Path: Events\Default Work Unit\Play_NoPicture
+      Path: Events\Default Work Unit\gpFeedbacks\Play_NoPicture
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -225,10 +365,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 1
+        ObjectType: 4
+        guid: 176a1cefbf62cb40bf2abddc9665cb5e
       - ElementName: Play_PhoneRing
         ObjectType: 3
         guid: 85663b199b604a4c8dc497c3177ffd56
-      Path: Events\Default Work Unit\Play_PhoneRing
+      Path: Events\Default Work Unit\Level 1\Play_PhoneRing
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -242,10 +385,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 1
+        ObjectType: 4
+        guid: 176a1cefbf62cb40bf2abddc9665cb5e
       - ElementName: Play_WallSlide1
         ObjectType: 3
         guid: 1bcd2c141ba040499ee0cab888d29db1
-      Path: Events\Default Work Unit\Play_WallSlide1
+      Path: Events\Default Work Unit\Level 1\Play_WallSlide1
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -259,10 +405,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 1
+        ObjectType: 4
+        guid: 176a1cefbf62cb40bf2abddc9665cb5e
       - ElementName: Play_WallSlide2
         ObjectType: 3
         guid: 364da50f134e3a41b337afd642e90046
-      Path: Events\Default Work Unit\Play_WallSlide2
+      Path: Events\Default Work Unit\Level 1\Play_WallSlide2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -276,10 +425,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Ambiences
+        ObjectType: 4
+        guid: 9be11a14d4b9a046bdda744f536e55f4
       - ElementName: Stop_DistrictAmbience
         ObjectType: 3
         guid: 56a9a1050b03084db527466fbcb76034
-      Path: Events\Default Work Unit\Stop_DistrictAmbience
+      Path: Events\Default Work Unit\Ambiences\Stop_DistrictAmbience
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -295,8 +447,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e9dad88cc5b0ad40a1e330745c66260e
     GuidInternal: 
-    m_lastTime: -8585167627439161872
+    m_lastTime: -8585165824895332715
     List:
+    - name: distAmount
+      guid: 45d789346d1d5d46bb7eda07d4f7f735
+      id: 1679206057
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e9dad88cc5b0ad40a1e330745c66260e
+      - ElementName: distAmount
+        ObjectType: 13
+        guid: 45d789346d1d5d46bb7eda07d4f7f735
+      Path: Game Parameters\Default Work Unit\distAmount
     - name: IsInHouse
       guid: 71a7bfaff65d7c459df7e7a80e92dabf
       id: 4101628508
