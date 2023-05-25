@@ -18,6 +18,7 @@ public class TriggerManager : MonoBehaviour
 
     public UnityEvent TriggerEnter;
     public UnityEvent TriggerExit;
+    public bool endfoHasStarted = false;
 
     [SerializeField] private GameObject phone;
     [SerializeField] private AK.Wwise.Event ringSFX;
@@ -26,12 +27,9 @@ public class TriggerManager : MonoBehaviour
 
     public Animator SceneFadeOut;
 
-
-
     private void OnTriggerEnter(Collider other)
     {
         TriggerEnter.Invoke();
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -55,6 +53,7 @@ public class TriggerManager : MonoBehaviour
     public void CoroutineFinal()
     {
         SceneFadeOut.SetTrigger("FadeOutFinal");
+        endfoHasStarted = true;
     }
 
 
@@ -125,6 +124,4 @@ public class TriggerManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         blackSquareDoorEffect.SetActive(false);
     }
-
-
 }
