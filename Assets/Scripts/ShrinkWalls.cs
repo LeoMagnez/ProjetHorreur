@@ -34,6 +34,11 @@ public class ShrinkWalls : MonoBehaviour
 
     bool canShrink = true;
 
+    public GameObject fireWall1;
+    public GameObject fireWall2;
+    public GameObject fire;
+
+
     private void Awake()
     {
 
@@ -128,6 +133,10 @@ public class ShrinkWalls : MonoBehaviour
             Debug.Log("babar");
             direction = false;
             canShrink = false;
+
+            fireWall1.SetActive(true); 
+            fireWall2.SetActive(true);
+            fire.SetActive(false);
         }
     }
 }
