@@ -32,7 +32,6 @@ public class SetAmbience : MonoBehaviour
     private bool hasCollided = false;
     private bool isInHouse = false;
     private float value = 0.49f;
-    private float t = 0f;
 
     private void Update()
     {
