@@ -68,6 +68,7 @@ public class GalleryManager : MonoBehaviour
 
     public GameObject renderTexture;
     public GameObject photoCamera;
+    public GameObject viseurCamera;
 
 
 
@@ -113,7 +114,8 @@ public class GalleryManager : MonoBehaviour
                         zoomedOnPhoto = true;
 
                         renderTexture.SetActive(true);
-                        photoCamera.SetActive(true);
+                        photoCamera.SetActive(true); //ici
+                        viseurCamera.SetActive(true);
 
 
                         if (zoomedOnPhoto)
