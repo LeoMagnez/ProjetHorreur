@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: ed3ee1a166d4504b89c1d24bcfefb413
     GuidInternal: 
-    m_lastTime: -8585175359654825134
+    m_lastTime: -8585204873542615634
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f980e3cb095dd243a2fe093981ed2322
     GuidInternal: 
-    m_lastTime: -8585168362709057639
+    m_lastTime: -8585168554565216393
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585165683780612855
+    m_lastTime: -8585165209658818439
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -122,7 +122,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585165683815255625
+    m_lastTime: -8585165209713216747
     List:
     - name: Ambiences
       guid: 9be11a14d4b9a046bdda744f536e55f4
@@ -192,6 +192,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 176a1cefbf62cb40bf2abddc9665cb5e
       Path: Events\Default Work Unit\Level 1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level 2
+      guid: cce2819a28e6164ea01d333a4048a809
+      id: 3420765919
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 2
+        ObjectType: 4
+        guid: cce2819a28e6164ea01d333a4048a809
+      Path: Events\Default Work Unit\Level 2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -289,6 +306,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2ad41f2844654f4a909b1395a1a4e6a2
       Path: Events\Default Work Unit\Level 1\Play_DoorSlam
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Fire
+      guid: 0a7903885ddb4f40bc94490d55a0caca
+      id: 3015324718
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 2
+        ObjectType: 4
+        guid: cce2819a28e6164ea01d333a4048a809
+      - ElementName: Play_Fire
+        ObjectType: 3
+        guid: 0a7903885ddb4f40bc94490d55a0caca
+      Path: Events\Default Work Unit\Level 2\Play_Fire
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -504,7 +541,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: e9dad88cc5b0ad40a1e330745c66260e
     GuidInternal: 
-    m_lastTime: -8585165683815205994
+    m_lastTime: -8585165811379584367
     List:
     - name: distAmount
       guid: 45d789346d1d5d46bb7eda07d4f7f735
@@ -560,7 +597,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d3dccd0df49da440975fc8da7e85be2a
     GuidInternal: 
-    m_lastTime: -8585175359654845142
+    m_lastTime: -8585204873543242400
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -574,7 +611,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2942f94a978d2c40b1ac2ae5b1bb8722
     GuidInternal: 
-    m_lastTime: -8585171715930906071
+    m_lastTime: -8585173534283402561
     List:
     - name: GroundMaterial
       guid: ac526578ad01de4c9e35edaf2bf5e296
@@ -670,10 +707,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 5ebfacbc126b5c4bb7bf3e15e6a7ce51
     GuidInternal: 
-    m_lastTime: -8585175359654825134
+    m_lastTime: -8585204873541772147
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

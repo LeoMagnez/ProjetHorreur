@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID PLAY_CAMERAFLASH = 1309478403U;
         static const AkUniqueID PLAY_DISTRICTAMBIENCE = 388756148U;
         static const AkUniqueID PLAY_DOORSLAM = 884363281U;
+        static const AkUniqueID PLAY_FIRE = 3015324718U;
         static const AkUniqueID PLAY_FLIPL = 1725616313U;
         static const AkUniqueID PLAY_FLIPNL = 2776012301U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;

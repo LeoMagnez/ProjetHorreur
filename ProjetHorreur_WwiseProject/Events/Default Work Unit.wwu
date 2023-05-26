@@ -198,6 +198,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Level 2" ID="{9A81E2CC-E628-4E16-A01D-333A4048A809}" ShortID="760765468">
+					<ChildrenList>
+						<Event Name="Play_Fire" ID="{8803790A-DB5D-404F-BC94-490D55A0CACA}">
+							<ChildrenList>
+								<Action Name="" ID="{E48DFC64-AE11-4424-8BDD-75F4D0EC3682}" ShortID="213202127">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_LP_Fire" ID="{02B105AB-E80E-4531-A72C-D9029E31C4AC}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

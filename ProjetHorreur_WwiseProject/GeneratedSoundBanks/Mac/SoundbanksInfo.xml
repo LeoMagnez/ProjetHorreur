@@ -391,7 +391,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{B923ABAC-6E0A-94FF-2196-D99DDA370B76}">
+		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{7E58681D-4158-6E48-7F09-EEE37FD34F59}">
 			<ShortName>Level_02</ShortName>
 			<Path>Level_02.bnk</Path>
 			<Media>
@@ -518,6 +518,10 @@
 				<File Id="558974957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-002.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="570970268" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_LP_Fire.wav</ShortName>
+					<CachePath>SFX/SFX_LP_Fire_10C4C929.wem</CachePath>
 				</File>
 				<File Id="582240897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-015.wav</ShortName>
@@ -682,6 +686,11 @@
 						<MediaRef Id="258899210"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3015324718" Name="Play_Fire" MaxAttenuation="10" DurationType="OneShot" DurationMin="31.845125" DurationMax="31.845125">
+					<MediaRefs>
+						<MediaRef Id="570970268"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2485884946" Name="Play_Lv2Amb" DurationType="OneShot" DurationMin="292" DurationMax="292">
 					<MediaRefs>
 						<MediaRef Id="1026856507"/>
@@ -704,7 +713,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{C87CF0EF-AED8-0C57-67EB-731906E49786}">
+		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{5FCBAA69-6C85-3466-438E-454F18CFAE5F}">
 			<ShortName>Level_03</ShortName>
 			<Path>Level_03.bnk</Path>
 			<Media>
@@ -1068,5 +1077,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{37478262-FA82-0F7D-9828-7C1E9B451755}</FileHash>
+	<FileHash>{D0514502-0196-5C76-F2CB-6C40DC0B84E9}</FileHash>
 </SoundBanksInfo>
