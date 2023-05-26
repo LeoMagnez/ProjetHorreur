@@ -5307,7 +5307,7 @@ PrefabInstance:
     - target: {fileID: 135706702740300608, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 135706702740300623, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
@@ -6157,6 +6157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3568141988521816175, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568141988521816175, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
       propertyPath: phone
       value: 
       objectReference: {fileID: 2061631148}
@@ -6333,6 +6338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866501255526529726, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1661769677}
+    - target: {fileID: 5866501255526529726, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
       propertyPath: SceneFadeOut
       value: 
       objectReference: {fileID: 1389284609}
@@ -6380,6 +6390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: door
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
@@ -6944,6 +6959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -15.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541619798836467801, guid: 46307232afdc0634db374953db491b8c,
+        type: 3}
+      propertyPath: door
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8541619798836467801, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
@@ -11597,6 +11617,147 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 597935768}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &616186928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616186929}
+  - component: {fileID: 616186931}
+  - component: {fileID: 616186930}
+  - component: {fileID: 616186932}
+  m_Layer: 2
+  m_Name: TriggerPoubelles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &616186929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616186928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.856, y: -1.24, z: -35.56}
+  m_LocalScale: {x: 2.5908616, y: 1.7419899, z: 1.7419899}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 28644708}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616186930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616186928}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be01523433d8f143a819094b48d232b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TriggerToCall: 0
+  _SceneToLoad: 
+  imageTuto: {fileID: 0}
+  TextTuto: E dans la gallerie pour restituer
+  TriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 616186930}
+        m_TargetAssemblyTypeName: TriggerManager, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 616186930}
+        m_TargetAssemblyTypeName: TriggerManager, Assembly-CSharp
+        m_MethodName: WaitForSuicide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  TriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  TriggerStay:
+    m_PersistentCalls:
+      m_Calls: []
+  phone: {fileID: 0}
+  ringSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  slamSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  door: {fileID: 1661769677}
+  SceneFadeOut: {fileID: 0}
+  indexCanvas: 3
+  CanvasList:
+  - {fileID: 1146520179}
+  - {fileID: 1698088547}
+  - {fileID: 1599988683}
+  - {fileID: 873025004}
+--- !u!65 &616186931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616186928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9318527, y: 1.537454, z: 1}
+  m_Center: {x: 0.23175105, y: -0.26872766, z: 0}
+--- !u!114 &616186932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616186928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7055edb830efb7d47964c2c7d90ec8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 1661769677}
 --- !u!1 &627362543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8403159802769002061, guid: 0dfd15e754abaee48bed932679d2bc49,
@@ -31734,7 +31895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &849973731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31937,7 +32098,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &860125891
@@ -34639,7 +34800,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &1011246454
@@ -36014,13 +36175,14 @@ GameObject:
   - component: {fileID: 1067009334}
   - component: {fileID: 1067009336}
   - component: {fileID: 1067009337}
+  - component: {fileID: 1067009338}
   m_Layer: 0
   m_Name: Poubelles
   m_TagString: _photoNormale
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1067009334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36102,6 +36264,22 @@ MonoBehaviour:
   instableRoom: {fileID: 0}
   isActive: 1
   anchorList: []
+--- !u!54 &1067009338
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067009333}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1068003895
 GameObject:
   m_ObjectHideFlags: 0
@@ -36481,7 +36659,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &1093298589 stripped
@@ -38130,6 +38308,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  door: {fileID: 0}
   SceneFadeOut: {fileID: 0}
   indexCanvas: 3
   CanvasList:
@@ -38148,8 +38327,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9318527, y: 1, z: 1}
-  m_Center: {x: 0.23175105, y: 0, z: 0}
+  m_Size: {x: 1.9318527, y: 1.537454, z: 1}
+  m_Center: {x: 0.23175105, y: -0.26872766, z: 0}
 --- !u!1 &1167704456
 GameObject:
   m_ObjectHideFlags: 0
@@ -38809,6 +38988,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  door: {fileID: 0}
   SceneFadeOut: {fileID: 0}
   indexCanvas: 2
   CanvasList:
@@ -39104,6 +39284,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  door: {fileID: 0}
   SceneFadeOut: {fileID: 0}
   indexCanvas: 1
   CanvasList:
@@ -46276,7 +46457,7 @@ PrefabInstance:
     - target: {fileID: 614112640318538969, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 614112640354801998, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
@@ -47113,7 +47294,7 @@ PrefabInstance:
     - target: {fileID: 3722016054085087935, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3785011929043223314, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
@@ -48987,7 +49168,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &1380743727 stripped
@@ -49035,7 +49216,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &1389284607
@@ -49293,7 +49474,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &1396301854
@@ -50844,7 +51025,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1001 &1526178522
@@ -52863,6 +53044,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1305479507}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1661769681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661769677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11423067, y: 0.9734154, z: 2.180136}
+  m_Center: {x: -0.057113793, y: -0.007045294, z: 1.090068}
 --- !u!1 &1667832861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4386571158085814271, guid: cb23df1459dab5c4c9a8cca9f640423d,
@@ -54893,7 +55087,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1001 &1776965499
@@ -55602,7 +55796,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &1816707509 stripped
@@ -56743,7 +56937,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1001 &1875557864
@@ -60878,7 +61072,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 587366007896238738, guid: cd6bc4886eaf3694a8d1bf865e45bf54, type: 3}
 --- !u!1 &2108371162 stripped

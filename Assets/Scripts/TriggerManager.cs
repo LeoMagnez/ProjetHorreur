@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
+
 
 public class TriggerManager : MonoBehaviour
 {
@@ -32,6 +32,8 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event lv3Amb;
     [SerializeField] private AK.Wwise.Event flipNLSFX;
     [SerializeField] private AK.Wwise.Event flipLSFX;
+
+    [SerializeField] private GameObject door;
 
     private float count = 0.0f;
 
@@ -65,7 +67,10 @@ public class TriggerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         TriggerEnter.Invoke();
+
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -199,4 +204,6 @@ public class TriggerManager : MonoBehaviour
         blackSquareDoorEffect.SetActive(false);
         flipLSFX.Post(sfxObj3);
     }
+
+
 }
