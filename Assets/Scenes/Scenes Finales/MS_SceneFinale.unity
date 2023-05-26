@@ -603,6 +603,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6804347608216836131, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1312069616}
+    - target: {fileID: 6804347608216836131, guid: f01a626440699bf47bb8390442a75a4c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuDown
+      objectReference: {fileID: 0}
     - target: {fileID: 6873872769525125321, guid: f01a626440699bf47bb8390442a75a4c,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -19064,6 +19074,7 @@ MonoBehaviour:
   debugText: {fileID: 0}
   renderTexture: {fileID: 799145156}
   photoCamera: {fileID: 1433659703}
+  viseurCamera: {fileID: 0}
 --- !u!114 &730053408
 MonoBehaviour:
   m_ObjectHideFlags: 0
