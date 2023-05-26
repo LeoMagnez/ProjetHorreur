@@ -15,6 +15,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 
 public class CameraManager : MonoBehaviour
 
@@ -91,6 +92,8 @@ public class CameraManager : MonoBehaviour
 
     [SerializeField] GameObject startOfGameCanvas;
     [SerializeField] Animator startOfGameAnimator;
+    [SerializeField] GameObject sparks;
+    [SerializeField] CamShake shake;
 
     [Header("Sound")]
     [SerializeField] GameObject SFX;
@@ -258,6 +261,8 @@ public class CameraManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0) && _isCameraUp && objectToMove != null)
         {
+            StartCoroutine(shake.Shake(0.1f, 0.2f));
+            StartCoroutine(ForbiddenPhoto());
             forbiddenCameraSFX.Post(SFX);
         }
     }
@@ -405,6 +410,12 @@ public class CameraManager : MonoBehaviour
         SaveRenderTextureToFile.WritePhotoToFile(_spriteList.ToArray());
     }
 
+    public IEnumerator ForbiddenPhoto()
+    {
+        sparks.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        sparks.SetActive(false);
+    }
     #endregion
 
 

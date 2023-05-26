@@ -60,6 +60,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
+  text: {fileID: 0}
+  TextTuto: 
   TriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -150,6 +152,31 @@ MonoBehaviour:
   TriggerExit:
     m_PersistentCalls:
       m_Calls: []
+  phone: {fileID: 0}
+  ringSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  slamSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SceneFadeOut: {fileID: 0}
 --- !u!1 &3491743361737386517
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +206,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.8098588, y: 3.6651146, z: 1.7553955}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5338101115014013620}
   m_Father: {fileID: 4728522691605911115}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -210,6 +238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: LS_Oesophagus
+  text: {fileID: 0}
+  TextTuto: 
   TriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -228,6 +258,31 @@ MonoBehaviour:
   TriggerExit:
     m_PersistentCalls:
       m_Calls: []
+  phone: {fileID: 0}
+  ringSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  slamSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SceneFadeOut: {fileID: 0}
 --- !u!1 &4584820017933694511
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
+  text: {fileID: 0}
+  TextTuto: 
   TriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -318,6 +375,31 @@ MonoBehaviour:
   TriggerExit:
     m_PersistentCalls:
       m_Calls: []
+  phone: {fileID: 0}
+  ringSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  slamSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SceneFadeOut: {fileID: 0}
 --- !u!1 &5071559698673003508
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
+  text: {fileID: 0}
+  TextTuto: 
   TriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -431,3 +515,139 @@ MonoBehaviour:
   TriggerExit:
     m_PersistentCalls:
       m_Calls: []
+  phone: {fileID: 0}
+  ringSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  slamSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SceneFadeOut: {fileID: 0}
+--- !u!1001 &5592916390080906591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8543078929196103539}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.41706693
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.39959386
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13333838
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49930227
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.056
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5000007
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5000007
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4999993
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4999993
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7021a6872b489242b708cfc4f085745, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5406952825390185263, guid: 6865ccb43b2c7e74fb437bd54475d842,
+        type: 3}
+    - target: {fileID: 919132149155446097, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_Name
+      value: door_final
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46f093b141c30434685589cfd13c0f08,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 46f093b141c30434685589cfd13c0f08, type: 3}
+--- !u!4 &5338101115014013620 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 46f093b141c30434685589cfd13c0f08,
+    type: 3}
+  m_PrefabInstance: {fileID: 5592916390080906591}
+  m_PrefabAsset: {fileID: 0}
