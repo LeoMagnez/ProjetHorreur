@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1400.2578, g: 1373.9375, b: 1513.082, a: 1}
+  m_IndirectSpecularColor: {r: 1400.2734, g: 1373.9414, b: 1513.0859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6801,6 +6801,8 @@ MonoBehaviour:
   galleryManager: {fileID: 730053407}
   startOfGameCanvas: {fileID: 0}
   startOfGameAnimator: {fileID: 0}
+  sparks: {fileID: 0}
+  shake: {fileID: 0}
   SFX: {fileID: 1106542988}
   cameraShutterSFX:
     idInternal: 0
@@ -22680,7 +22682,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: aad10b5d2ea73d94abaa915a84fae589, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 3db13ee4602278646b90b1e7423a9a6e, type: 2}
 --- !u!4 &928186260
 Transform:
   m_ObjectHideFlags: 0
