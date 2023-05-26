@@ -19,6 +19,7 @@ public class TriggerManager : MonoBehaviour
 
     public UnityEvent TriggerEnter;
     public UnityEvent TriggerExit;
+    public UnityEvent TriggerStay;
     private bool endfoHasStarted = false;
 
     [SerializeField] private GameObject phone;
@@ -71,6 +72,13 @@ public class TriggerManager : MonoBehaviour
     {
         //TriggerEnter.Invoke();
         TriggerExit.Invoke();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+
+        TriggerStay.Invoke();
+
     }
 
     public void destroyTrigger()
@@ -138,16 +146,27 @@ public class TriggerManager : MonoBehaviour
         //text.SetText("" + TextTuto);
         switch (indexCanvas)
         {
-            case 1:
-                CanvasList[0].SetActive(true);
+            case 0:
+                CanvasList[indexCanvas].SetActive(true);
                 yield return new WaitForSeconds(3f);
-                CanvasList[0].SetActive(false);
+                CanvasList[indexCanvas].SetActive(false);
+                break;
+            case 1:
+                CanvasList[indexCanvas].SetActive(true);
+                yield return new WaitForSeconds(3f);
+                CanvasList[indexCanvas].SetActive(false);
                 break;
 
             case 2:
-                CanvasList[1].SetActive(true);
+                CanvasList[indexCanvas].SetActive(true);
                 yield return new WaitForSeconds(3f);
-                CanvasList[1].SetActive(false);
+                CanvasList[indexCanvas].SetActive(false);
+                break;
+
+            case 3:
+                CanvasList[indexCanvas].SetActive(true);
+                yield return new WaitForSeconds(3f);
+                CanvasList[indexCanvas].SetActive(false);
                 break;
         }
 
