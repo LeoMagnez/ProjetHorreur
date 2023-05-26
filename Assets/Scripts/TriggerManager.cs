@@ -31,6 +31,7 @@ public class TriggerManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event lv3Amb;
     [SerializeField] private AK.Wwise.Event flipNLSFX;
     [SerializeField] private AK.Wwise.Event flipLSFX;
+
     private float count = 0.0f;
 
     public Animator SceneFadeOut;
