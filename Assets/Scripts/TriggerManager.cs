@@ -14,7 +14,7 @@ public class TriggerManager : MonoBehaviour
 
     public int _TriggerToCall = 0;
     public string _SceneToLoad;
-    public TMP_Text text;
+    public Image imageTuto;
     public string TextTuto;
 
     public UnityEvent TriggerEnter;
@@ -35,6 +35,9 @@ public class TriggerManager : MonoBehaviour
     private float count = 0.0f;
 
     public Animator SceneFadeOut;
+
+    public int indexCanvas;
+    public List<GameObject> CanvasList = new List<GameObject>();
 
     private void Start()
     {
@@ -132,9 +135,29 @@ public class TriggerManager : MonoBehaviour
 
     public IEnumerator TextTime()
     {
-        text.SetText("" + TextTuto);
+        //text.SetText("" + TextTuto);
+        switch (indexCanvas)
+        {
+            case 1:
+                CanvasList[0].SetActive(true);
+                yield return new WaitForSeconds(3f);
+                CanvasList[0].SetActive(false);
+                break;
+
+            case 2:
+                CanvasList[1].SetActive(true);
+                yield return new WaitForSeconds(3f);
+                CanvasList[1].SetActive(false);
+                break;
+        }
+
+        //text.SetText("");
+    }
+
+    public IEnumerator setTutoImages()
+    {
+
         yield return new WaitForSeconds(3f);
-        text.SetText("");
     }
 
     public IEnumerator TimeBeforeSuicide()
