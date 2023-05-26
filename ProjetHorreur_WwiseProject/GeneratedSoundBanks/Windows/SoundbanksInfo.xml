@@ -391,7 +391,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{E335CEC8-D3AB-099C-C07C-D4C3F2700104}">
+		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{03624109-F155-5C9D-E441-8ED1A70FE8C1}">
 			<ShortName>Level_02</ShortName>
 			<Path>Level_02.bnk</Path>
 			<Media>
@@ -521,7 +521,7 @@
 				</File>
 				<File Id="570970268" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_LP_Fire.wav</ShortName>
-					<CachePath>SFX/SFX_LP_Fire_10C4C929.wem</CachePath>
+					<CachePath>SFX/SFX_LP_Fire_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="582240897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-015.wav</ShortName>
@@ -686,7 +686,7 @@
 						<MediaRef Id="258899210"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3015324718" Name="Play_Fire" MaxAttenuation="10" DurationType="OneShot" DurationMin="31.845125" DurationMax="31.845125">
+				<Event Id="3015324718" Name="Play_Fire" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="570970268"/>
 					</MediaRefs>
@@ -1077,5 +1077,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DED4BCF5-EB93-FBBC-BB26-F753DC8E971E}</FileHash>
+	<FileHash>{7FFE539D-CAFC-D0F4-6F04-34D55C155CA3}</FileHash>
 </SoundBanksInfo>

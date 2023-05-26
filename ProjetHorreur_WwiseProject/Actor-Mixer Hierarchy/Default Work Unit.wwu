@@ -1882,6 +1882,7 @@
 						</Folder>
 						<Sound Name="SFX_LP_Fire" ID="{02B105AB-E80E-4531-A72C-D9029E31C4AC}" ShortID="368012499">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>

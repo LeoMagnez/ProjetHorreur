@@ -35,9 +35,6 @@ public class ShrinkWalls : MonoBehaviour
     public GameObject fireWall2;
     public GameObject fire;
 
-    [SerializeField] private GameObject chaudiere;
-    [SerializeField] private AK.Wwise.Event fireSFX;
-
     private void Awake()
     {
 
