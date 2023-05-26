@@ -2640,6 +2640,7 @@ MonoBehaviour:
   debugText: {fileID: 0}
   renderTexture: {fileID: 2474239654977532174}
   photoCamera: {fileID: 191514262}
+  viseurCamera: {fileID: 0}
 --- !u!1001 &140417224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5665,7 +5666,7 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[9].m_Target
       value: 
-      objectReference: {fileID: 1279559390}
+      objectReference: {fileID: 0}
     - target: {fileID: 6045189914961364192, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[10].m_Target
@@ -6075,7 +6076,7 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1279559390}
+      objectReference: {fileID: 0}
     - target: {fileID: 8541619798836467801, guid: 46307232afdc0634db374953db491b8c,
         type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -23955,6 +23956,8 @@ MonoBehaviour:
   galleryManager: {fileID: 125505619}
   startOfGameCanvas: {fileID: 0}
   startOfGameAnimator: {fileID: 125505618}
+  sparks: {fileID: 0}
+  shake: {fileID: 0}
   SFX: {fileID: 384759110}
   cameraShutterSFX:
     idInternal: 0
@@ -35747,7 +35750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
-  text: {fileID: 350620192}
+  imageTuto: {fileID: 0}
   TextTuto: E dans la gallerie pour restituer
   TriggerEnter:
     m_PersistentCalls:
@@ -35789,7 +35792,23 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   SceneFadeOut: {fileID: 0}
+  indexCanvas: 0
+  CanvasList: []
 --- !u!65 &1167691432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36297,7 +36316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
-  text: {fileID: 350620192}
+  imageTuto: {fileID: 0}
   TextTuto: Clique droit pour ouvrir l'appareil photo
   TriggerEnter:
     m_PersistentCalls:
@@ -36339,7 +36358,23 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   SceneFadeOut: {fileID: 0}
+  indexCanvas: 0
+  CanvasList: []
 --- !u!65 &1199781843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36413,7 +36448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TriggerToCall: 0
   _SceneToLoad: 
-  text: {fileID: 350620192}
+  imageTuto: {fileID: 0}
   TextTuto: TAB pour ouvrir la galerie
   TriggerEnter:
     m_PersistentCalls:
@@ -36611,7 +36646,23 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   blackSquareDoorEffect: {fileID: 0}
+  sfxObj3: {fileID: 0}
+  ambObj3: {fileID: 0}
+  lv3Amb:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipNLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  flipLSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   SceneFadeOut: {fileID: 0}
+  indexCanvas: 0
+  CanvasList: []
 --- !u!1 &1201163847
 GameObject:
   m_ObjectHideFlags: 0
@@ -37638,25 +37689,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.30598027, y: 0.50000024, z: 0.40000013}
   m_Center: {x: 0.002989581, y: -0.000000017991686, z: 0.19999622}
---- !u!1 &1279559390 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6671396980078733322, guid: 0dfd15e754abaee48bed932679d2bc49,
-    type: 3}
-  m_PrefabInstance: {fileID: 1305479507}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1279559391
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279559390}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 39.370075, y: 3.7273874, z: 77.952774}
-  m_Center: {x: 0, y: -0.28538567, z: 38.976387}
 --- !u!1001 &1281786693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43631,7 +43663,7 @@ PrefabInstance:
     - target: {fileID: 614112640318538969, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 614112640318538969, guid: 0dfd15e754abaee48bed932679d2bc49,
         type: 3}
