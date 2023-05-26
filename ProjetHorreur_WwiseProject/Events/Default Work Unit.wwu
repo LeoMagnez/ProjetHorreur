@@ -211,6 +211,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_BigFire" ID="{43A72D72-485B-4465-88EF-86FBCB4153A4}">
+							<ChildrenList>
+								<Action Name="" ID="{777C47ED-22CE-4409-A4DB-A92D8A16CF22}" ShortID="292847345">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_LP_Fire_Big" ID="{43D4B055-03C2-4A56-AF8C-B1CB5E7BBFE2}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
