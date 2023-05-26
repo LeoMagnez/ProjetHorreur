@@ -68,6 +68,7 @@ public class GalleryManager : MonoBehaviour
 
     public GameObject renderTexture;
     public GameObject photoCamera;
+    public GameObject viseurCamera;
 
 
 
@@ -113,7 +114,8 @@ public class GalleryManager : MonoBehaviour
                         zoomedOnPhoto = true;
 
                         renderTexture.SetActive(true);
-                        photoCamera.SetActive(true);
+                        photoCamera.SetActive(true); //ici
+                        viseurCamera.SetActive(true);
 
 
                         if (zoomedOnPhoto)
@@ -139,36 +141,43 @@ public class GalleryManager : MonoBehaviour
 
                 }
 
-                else if (curSelectedImage != null && zoomedOnPhoto)
+                /*else if (curSelectedImage != null && zoomedOnPhoto)
                 {
+                    
 
-                    curSelectedImage.animator.SetTrigger("ZoomOut");
-                    zoomedOnPhoto = false;
-                    curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
-                    curSelectedImage.image.rectTransform.localScale = Vector2.one;
 
-                    ObjectToMoveAppears();
-                    renderTexture.SetActive(false);
-                    photoCamera.SetActive(false);
-                    if (!zoomedOnPhoto)
-                    {
-                        foreach (AnimatedImageCameraMenu image in imagesUI)
-                        {
-                            if (image != curSelectedImage)
-                            {
-                                image.image.gameObject.SetActive(true); //reactive les images quand on dezoome
-                            }
-                        }
-                    }
-
-                }
+                }*/
             }
             else
             {
                 //Debug.Log("patate");
             }
+
+
+
         }
 
+        if (Input.GetMouseButtonDown(0) && curSelectedImage != null && zoomedOnPhoto)
+        {
+            curSelectedImage.animator.SetTrigger("ZoomOut");
+            zoomedOnPhoto = false;
+            curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
+            curSelectedImage.image.rectTransform.localScale = Vector2.one;
+
+            ObjectToMoveAppears();
+            renderTexture.SetActive(false);
+            photoCamera.SetActive(false);
+            if (!zoomedOnPhoto)
+            {
+                foreach (AnimatedImageCameraMenu image in imagesUI)
+                {
+                    if (image != curSelectedImage)
+                    {
+                        image.image.gameObject.SetActive(true); //reactive les images quand on dezoome
+                    }
+                }
+            }
+        }
 
         if (!CameraManager.instance._isUIup && curSelectedImage != null)
         {
