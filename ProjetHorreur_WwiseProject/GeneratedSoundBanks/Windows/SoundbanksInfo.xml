@@ -391,7 +391,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{03624109-F155-5C9D-E441-8ED1A70FE8C1}">
+		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{745FDBE9-8C57-7818-A739-1E7934A5C07D}">
 			<ShortName>Level_02</ShortName>
 			<Path>Level_02.bnk</Path>
 			<Media>
@@ -518,6 +518,10 @@
 				<File Id="558974957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-002.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="566606071" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_LP_Fire_Big.wav</ShortName>
+					<CachePath>SFX/SFX_LP_Fire_Big_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="570970268" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_LP_Fire.wav</ShortName>
@@ -674,6 +678,11 @@
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="1642388836" Name="Play_BigFire" MaxAttenuation="18" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="566606071"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="3698047240" Name="Play_Breath" DurationType="OneShot" DurationMin="4.2564397" DurationMax="4.3494782">
 					<MediaRefs>
@@ -1077,5 +1086,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7FFE539D-CAFC-D0F4-6F04-34D55C155CA3}</FileHash>
+	<FileHash>{9A45B082-8F6E-DE23-7783-E83BB2518F0D}</FileHash>
 </SoundBanksInfo>
