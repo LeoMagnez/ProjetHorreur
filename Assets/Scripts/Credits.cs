@@ -18,7 +18,7 @@ public class Credits : MonoBehaviour
 
     public IEnumerator WaitBeforeCredits()
     {
-        yield return new WaitForSeconds(62f);
+        yield return new WaitForSeconds(50f);
         credits.SetTrigger("Credits");
     }
 }
