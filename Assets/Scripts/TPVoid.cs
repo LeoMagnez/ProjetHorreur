@@ -10,7 +10,8 @@ public class TPVoid : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerMovement.falling = true;
-            other.gameObject.transform.position = new Vector3(10f, 2f, 3f);
+            other.gameObject.transform.position = new Vector3(10f, 10f, 3f);
+            Debug.Log(PlayerMovement.falling);
             StartCoroutine(FallingCoroutine());
         }
         
@@ -18,7 +19,7 @@ public class TPVoid : MonoBehaviour
 
     IEnumerator FallingCoroutine()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         PlayerMovement.falling = false; 
     }
 
