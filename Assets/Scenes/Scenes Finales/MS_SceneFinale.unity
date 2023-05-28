@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1400.2578, g: 1373.9375, b: 1513.082, a: 1}
+  m_IndirectSpecularColor: {r: 1400.2734, g: 1373.9414, b: 1513.0859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6808,6 +6808,18 @@ MonoBehaviour:
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 9086bb38d7e9cbd4ca14f6d88eeeae13,
       type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 71d9db1028a40f940b7f4cae79b9412f,
+      type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a5ecd4a8374e1b84eb86658f31841c26,
+      type: 2}
   sfxObj: {fileID: 1106542988}
   breathlessEvent:
     idInternal: 0
@@ -6922,6 +6934,13 @@ MonoBehaviour:
   sparks: {fileID: 1794708078}
   shake: {fileID: 3210414}
   cinemachineCam: {fileID: 0}
+  maison: {fileID: 0}
+  maison_exterieur: {fileID: 0}
+  telephone: {fileID: 0}
+  poubelles: {fileID: 0}
+  poubelles_ghost: {fileID: 0}
+  slidingWall: {fileID: 0}
+  concrete_disp: {fileID: 0}
   SFX: {fileID: 1106542988}
   cameraShutterSFX:
     idInternal: 0
@@ -19554,7 +19573,7 @@ GameObject:
   - component: {fileID: 745417520}
   - component: {fileID: 745417519}
   - component: {fileID: 745417518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
