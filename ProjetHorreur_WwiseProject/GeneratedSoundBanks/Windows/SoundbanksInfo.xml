@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{0FE77F99-4E15-11DF-68FC-7F2824FAEF73}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{51CD9556-0152-E496-E5CB-E42C9A0E2D24}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -153,10 +153,6 @@
 					<ShortName>SFX_OS_FT_Carpet-005.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Carpet-005_10C4C929.wem</CachePath>
 				</File>
-				<File Id="411812323" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_OS_HouseAppearance.wav</ShortName>
-					<CachePath>SFX/SFX_OS_HouseAppearance_10C4C929.wem</CachePath>
-				</File>
 				<File Id="426996222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-008.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-008_10C4C929.wem</CachePath>
@@ -296,6 +292,10 @@
 				<File Id="907083510" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-013.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-013_10C4C929.wem</CachePath>
+				</File>
+				<File Id="934963896" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_HouseAppearance-001.wav</ShortName>
+					<CachePath>SFX/SFX_OS_HouseAppearance-001_10C4C929.wem</CachePath>
 				</File>
 				<File Id="965573518" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_Woodsqueak-001.wav</ShortName>
@@ -443,9 +443,9 @@
 						<MediaRef Id="965573518"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2001310284" Name="Play_HouseAppearance" DurationType="OneShot" DurationMin="7.8391385" DurationMax="7.8391385">
+				<Event Id="2001310284" Name="Play_HouseAppearance" DurationType="OneShot" DurationMin="3.6232653" DurationMax="3.6232653">
 					<MediaRefs>
-						<MediaRef Id="411812323"/>
+						<MediaRef Id="934963896"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3799346131" Name="Play_NoPicture" DurationType="OneShot" DurationMin="0.5019048" DurationMax="0.5019048">
@@ -1405,5 +1405,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{811520CF-A3D4-3BAE-076B-6437D04C29B1}</FileHash>
+	<FileHash>{816DBFBC-FFAB-04C0-66E3-227A8C5DBD9E}</FileHash>
 </SoundBanksInfo>
