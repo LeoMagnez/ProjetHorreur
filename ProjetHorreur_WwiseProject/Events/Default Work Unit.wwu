@@ -122,6 +122,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_PlacingFeedback" ID="{738B42A1-BB3C-4F4A-B26B-850703592D8A}">
+							<ChildrenList>
+								<Action Name="" ID="{61631B5B-CC85-4AA2-9A6B-C7B10E8F59FD}" ShortID="1004253784">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_ObjectPlacingFeedback" ID="{B5221D95-71B5-4B7B-97EC-7576CCF0837F}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Level 1" ID="{EF1C6A17-62BF-40CB-BF2A-BDDC9665CB5E}" ShortID="43936607">

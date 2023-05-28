@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_NOPICTURE = 3799346131U;
         static const AkUniqueID PLAY_PHONERING = 3447864244U;
+        static const AkUniqueID PLAY_PLACINGFEEDBACK = 4216061707U;
         static const AkUniqueID PLAY_WALLSLIDE1 = 2047298186U;
         static const AkUniqueID PLAY_WALLSLIDE2 = 2047298185U;
         static const AkUniqueID PLAY_WOODLAND = 228410470U;

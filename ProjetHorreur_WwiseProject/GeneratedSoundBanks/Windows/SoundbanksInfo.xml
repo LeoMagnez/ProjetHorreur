@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{A81639E0-E07C-97DC-2C3B-0205598672D1}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{86DD14BE-6666-B1C4-03B2-CD22B0067514}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -192,6 +192,10 @@
 				<File Id="558974957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-002.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="560004439" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_ObjectPlacingFeedback.wav</ShortName>
+					<CachePath>SFX/SFX_OS_ObjectPlacingFeedback_10C4C929.wem</CachePath>
 				</File>
 				<File Id="582240897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-015.wav</ShortName>
@@ -445,6 +449,11 @@
 						<MediaRef Id="323215771"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4216061707" Name="Play_PlacingFeedback" DurationType="OneShot" DurationMin="0.3065621" DurationMax="0.38624403">
+					<MediaRefs>
+						<MediaRef Id="560004439"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2047298186" Name="Play_WallSlide1" DurationType="OneShot" DurationMin="4.9788437" DurationMax="4.9788437">
 					<MediaRefs>
 						<MediaRef Id="481176968"/>
@@ -473,7 +482,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{158CF12A-1B24-2AD4-9979-3162E4A2EFE1}">
+		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{90BF85AC-F58D-E1B0-9D61-486B4A04FC3E}">
 			<ShortName>Level_02</ShortName>
 			<Path>Level_02.bnk</Path>
 			<Media>
@@ -632,6 +641,10 @@
 				<File Id="558974957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-002.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="560004439" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_ObjectPlacingFeedback.wav</ShortName>
+					<CachePath>SFX/SFX_OS_ObjectPlacingFeedback_10C4C929.wem</CachePath>
 				</File>
 				<File Id="566606071" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_LP_Fire_Big.wav</ShortName>
@@ -885,6 +898,11 @@
 						<MediaRef Id="380265262"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4216061707" Name="Play_PlacingFeedback" DurationType="OneShot" DurationMin="0.3065621" DurationMax="0.38624403">
+					<MediaRefs>
+						<MediaRef Id="560004439"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="228410470" Name="Play_WoodLand" DurationType="OneShot" DurationMin="0.4902041" DurationMax="0.4902041">
 					<MediaRefs>
 						<MediaRef Id="512535598"/>
@@ -904,7 +922,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{90C81281-1A7B-33B3-8BBF-F298ED860F6F}">
+		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{EA4643C9-C55E-CAF9-93F0-A1FCE2976E2C}">
 			<ShortName>Level_03</ShortName>
 			<Path>Level_03.bnk</Path>
 			<Media>
@@ -1063,6 +1081,10 @@
 				<File Id="558974957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-002.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="560004439" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_ObjectPlacingFeedback.wav</ShortName>
+					<CachePath>SFX/SFX_OS_ObjectPlacingFeedback_10C4C929.wem</CachePath>
 				</File>
 				<File Id="582240897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-015.wav</ShortName>
@@ -1304,6 +1326,11 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="4216061707" Name="Play_PlacingFeedback" DurationType="OneShot" DurationMin="0.3065621" DurationMax="0.38624403">
+					<MediaRefs>
+						<MediaRef Id="560004439"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1679206057" Name="distAmount"/>
@@ -1369,5 +1396,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{86BFB5EE-262E-9ABF-EFD5-65C07A1377A5}</FileHash>
+	<FileHash>{8051B08E-7816-DFAD-965B-EFEF45FCC400}</FileHash>
 </SoundBanksInfo>
