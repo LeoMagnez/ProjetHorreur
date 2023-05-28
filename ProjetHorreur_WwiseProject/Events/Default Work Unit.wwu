@@ -233,6 +233,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_WoodLand" ID="{195DBA96-E7EA-467C-8F6A-C3D6277EAB04}">
+							<ChildrenList>
+								<Action Name="" ID="{D1889EDC-8F9B-427C-B126-43E29D68D8C2}" ShortID="509452288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_WoodLanding" ID="{BE84F406-9432-465C-A1BF-86BA8335D9DC}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Menu" ID="{AA0BAED4-E5ED-43F2-85AF-62A4C6B27EFD}" ShortID="261242332">

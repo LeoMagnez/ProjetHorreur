@@ -473,7 +473,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{093457B2-6B55-2E30-3C7E-4578A58A45B6}">
+		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{A248BDB2-0350-06A5-C9C3-27C43DE8A435}">
 			<ShortName>Level_02</ShortName>
 			<Path>Level_02.bnk</Path>
 			<Media>
@@ -616,6 +616,10 @@
 				<File Id="511375396" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OF_FT_Ethereal-006.wav</ShortName>
 					<CachePath>SFX/SFX_OF_FT_Ethereal-006_10C4C929.wem</CachePath>
+				</File>
+				<File Id="512535598" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_WoodLanding.wav</ShortName>
+					<CachePath>SFX/SFX_OS_WoodLanding_10C4C929.wem</CachePath>
 				</File>
 				<File Id="535211386" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-009.wav</ShortName>
@@ -879,6 +883,11 @@
 				<Event Id="3799346131" Name="Play_NoPicture" DurationType="OneShot" DurationMin="0.5019048" DurationMax="0.5019048">
 					<MediaRefs>
 						<MediaRef Id="380265262"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="228410470" Name="Play_WoodLand" DurationType="OneShot" DurationMin="0.4902041" DurationMax="0.4902041">
+					<MediaRefs>
+						<MediaRef Id="512535598"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -1360,5 +1369,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{81DCE928-2FAC-7B5F-1A42-E2A8BF8DB094}</FileHash>
+	<FileHash>{BFBF2762-CECB-49D3-863E-D50476C4C2EE}</FileHash>
 </SoundBanksInfo>
