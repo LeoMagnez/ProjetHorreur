@@ -58,8 +58,7 @@ public class TriggerManager : MonoBehaviour
         }
         else if (!endfoHasStarted && sdBandaid) 
         {
-            flipLSFX.Stop(sfxObj3);
-            flipNLSFX.Stop(sfxObj3);
+            StartCoroutine(waitForStopSd());
         }
 
         if (count > 100f && endfoHasStarted)
@@ -181,9 +180,15 @@ public class TriggerManager : MonoBehaviour
 
     }
 
+    private IEnumerator waitForStopSd() 
+    {
+        yield return new WaitForSeconds(1f);
+        flipLSFX.Stop(sfxObj3);
+        flipNLSFX.Stop(sfxObj3);
+    }
+
     public IEnumerator setTutoImages()
     {
-
         yield return new WaitForSeconds(3f);
     }
 
