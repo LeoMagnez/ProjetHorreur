@@ -40,6 +40,7 @@ public class ShrinkWalls : MonoBehaviour
     [Header("Sound")]
     [SerializeField] private AK.Wwise.Event bigFire;
     [SerializeField] private AK.Wwise.Event houseCry;
+    [SerializeField] private AK.Wwise.Event shrinkWall;
 
     private void Awake()
     {
@@ -115,7 +116,10 @@ public class ShrinkWalls : MonoBehaviour
     {
         if (canShrink == true)
         {
-
+            if (!direction) 
+            {
+                shrinkWall.Post(gameObject);
+            }
             direction = true;
         }
     }
