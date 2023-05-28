@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2183.5781, g: 1327.0859, b: 1516.9199, a: 1}
+  m_IndirectSpecularColor: {r: 2183.582, g: 1327.0859, b: 1516.9199, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5353,7 +5353,7 @@ PrefabInstance:
     - target: {fileID: 135706702740300608, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 135706702740300623, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
@@ -5513,6 +5513,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8a1a98a0a06c2394aa9da4b99ee334ae, type: 2}
+    - target: {fileID: 7130756287236588495, guid: fe15bd045d2027a4d8f879c928702caf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7163219666817491495, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
       propertyPath: m_Mesh
@@ -19041,6 +19046,17 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2663
       objectReference: {fileID: 0}
+    - target: {fileID: 2008233394073002474, guid: cb23df1459dab5c4c9a8cca9f640423d,
+        type: 3}
+      propertyPath: sfxObj
+      value: 
+      objectReference: {fileID: 384759110}
+    - target: {fileID: 2008233394073002474, guid: cb23df1459dab5c4c9a8cca9f640423d,
+        type: 3}
+      propertyPath: objPlaceFeedback.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d2445f3f927e9ba468fb513b343e5598,
+        type: 2}
     - target: {fileID: 2010343898467208194, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
       propertyPath: m_Mesh
@@ -19651,6 +19667,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnstableTable_Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 4858253923042778264, guid: cb23df1459dab5c4c9a8cca9f640423d,
+        type: 3}
+      propertyPath: sfxObj
+      value: 
+      objectReference: {fileID: 384759110}
+    - target: {fileID: 4858253923042778264, guid: cb23df1459dab5c4c9a8cca9f640423d,
+        type: 3}
+      propertyPath: objPlaceFeedback.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d2445f3f927e9ba468fb513b343e5598,
+        type: 2}
     - target: {fileID: 5341569775696815743, guid: cb23df1459dab5c4c9a8cca9f640423d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35383,6 +35410,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 690666978}
+  objPlaceFeedback:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d2445f3f927e9ba468fb513b343e5598,
+      type: 2}
+  sfxObj: {fileID: 384759110}
 --- !u!114 &1016680173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36327,6 +36360,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 849973730}
+  objPlaceFeedback:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d2445f3f927e9ba468fb513b343e5598,
+      type: 2}
+  sfxObj: {fileID: 384759110}
 --- !u!114 &1067009337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54683,6 +54722,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 1676553736}
+  objPlaceFeedback:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d2445f3f927e9ba468fb513b343e5598,
+      type: 2}
+  sfxObj: {fileID: 384759110}
 --- !u!114 &1712155037
 MonoBehaviour:
   m_ObjectHideFlags: 0
