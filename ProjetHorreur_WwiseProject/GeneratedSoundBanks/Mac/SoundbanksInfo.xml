@@ -1209,6 +1209,23 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
+		<SoundBank Id="2607556080" Type="User" Language="SFX" Hash="{D2F03B76-4AA1-45E8-46F2-5542F366DAE2}">
+			<ShortName>Menu</ShortName>
+			<Path>Menu.bnk</Path>
+			<Media>
+				<File Id="651959342" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Eva - free fall.wav</ShortName>
+					<CachePath>SFX/Eva - free fall_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2932040671" Name="Play_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="651959342"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9988C040-BFEA-EA72-ADFD-A19D5655C3FC}</FileHash>
+	<FileHash>{F2934C2B-844F-621C-E051-6E32285668C4}</FileHash>
 </SoundBanksInfo>

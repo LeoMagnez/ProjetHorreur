@@ -224,6 +224,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Menu" ID="{AA0BAED4-E5ED-43F2-85AF-62A4C6B27EFD}" ShortID="261242332">
+					<ChildrenList>
+						<Event Name="Play_Music" ID="{02D7E0C2-2A6E-414A-86ED-F80A5131CFA6}">
+							<ChildrenList>
+								<Action Name="" ID="{D1C6EA2D-273D-48BD-BDC9-35508693CC77}" ShortID="382711850">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MU_LP_MainMenuMusic" ID="{517F27E2-FCF0-4604-A813-AF096556FCDF}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
