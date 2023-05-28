@@ -96,7 +96,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject sparks;
     [SerializeField] CamShake shake;
     [SerializeField] GameObject cinemachineCam;
-    [SerializeField] GameObject maison, maison_exterieur, telephone, poubelles, poubelles_ghost, slidingWall, concrete_disp;
+    [SerializeField] GameObject maison, maison_exterieur, telephone, poubelles, poubelles_ghost, slidingWall, concrete_disp, triggerReplacement;
+
+    
 
     [Header("Sound")]
     [SerializeField] GameObject SFX;
@@ -105,6 +107,7 @@ public class CameraManager : MonoBehaviour
 
     public bool cameraTuto = false;
     public bool firstTimeOpeningGallery;
+    public bool firstTimePhoto;
 
     public GameObject CameraJoueur;
 
@@ -235,7 +238,7 @@ public class CameraManager : MonoBehaviour
     }
     #endregion
 
-    #region UI
+        #region UI
     private void UIup()
     {
         //Chargement des images de gallerie
@@ -290,6 +293,8 @@ public class CameraManager : MonoBehaviour
         //Si on appuie sur clic gauche avec l'appareil photo levé, prend une photo
         if (Input.GetMouseButtonDown(0) && _isCameraUp && objectToMove == null)
         {
+            
+
             _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on prend une photo
             _takingPhoto = true;
 
@@ -339,7 +344,13 @@ public class CameraManager : MonoBehaviour
                 //_objectToMoveList.Insert(0, hit.transform.gameObject.GetComponent<ObjectMover>());
                 objectToMove = hit.transform.gameObject.GetComponent<ObjectMover>();
 
-                if(hit.transform.gameObject.name == "UnstableTable")
+                if (!firstTimePhoto && hit.transform.gameObject.name == "Poubelles")
+                {
+                    triggerReplacement.SetActive(true);
+                    firstTimePhoto = true;
+                }
+
+                if (hit.transform.gameObject.name == "UnstableTable")
                 {
                     unstableTable = true;
                     unstableChair = false;
