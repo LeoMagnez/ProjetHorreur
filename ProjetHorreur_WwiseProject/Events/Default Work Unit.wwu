@@ -122,6 +122,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_PlacingFeedback" ID="{738B42A1-BB3C-4F4A-B26B-850703592D8A}">
+							<ChildrenList>
+								<Action Name="" ID="{61631B5B-CC85-4AA2-9A6B-C7B10E8F59FD}" ShortID="1004253784">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_ObjectPlacingFeedback" ID="{B5221D95-71B5-4B7B-97EC-7576CCF0837F}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Level 1" ID="{EF1C6A17-62BF-40CB-BF2A-BDDC9665CB5E}" ShortID="43936607">
@@ -217,6 +228,43 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="SFX_LP_Fire_Big" ID="{43D4B055-03C2-4A56-AF8C-B1CB5E7BBFE2}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_HouseCry" ID="{2C1FCAC4-C269-4FBD-BCB6-0F8FF146F978}">
+							<ChildrenList>
+								<Action Name="" ID="{97225707-F1E4-4319-872B-48905F4865C1}" ShortID="407101495">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_HouseCry" ID="{AEF01F15-686F-4359-9EFC-6BA8FB5D91AD}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WoodLand" ID="{195DBA96-E7EA-467C-8F6A-C3D6277EAB04}">
+							<ChildrenList>
+								<Action Name="" ID="{D1889EDC-8F9B-427C-B126-43E29D68D8C2}" ShortID="509452288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_WoodLanding" ID="{BE84F406-9432-465C-A1BF-86BA8335D9DC}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Menu" ID="{AA0BAED4-E5ED-43F2-85AF-62A4C6B27EFD}" ShortID="261242332">
+					<ChildrenList>
+						<Event Name="Play_Music" ID="{02D7E0C2-2A6E-414A-86ED-F80A5131CFA6}">
+							<ChildrenList>
+								<Action Name="" ID="{D1C6EA2D-273D-48BD-BDC9-35508693CC77}" ShortID="382711850">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MU_LP_MainMenuMusic" ID="{517F27E2-FCF0-4604-A813-AF096556FCDF}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

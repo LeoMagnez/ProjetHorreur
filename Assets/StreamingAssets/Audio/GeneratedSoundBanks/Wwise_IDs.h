@@ -23,12 +23,16 @@ namespace AK
         static const AkUniqueID PLAY_FLIPL = 1725616313U;
         static const AkUniqueID PLAY_FLIPNL = 2776012301U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
+        static const AkUniqueID PLAY_HOUSECRY = 489065934U;
         static const AkUniqueID PLAY_LV2AMB = 2485884946U;
         static const AkUniqueID PLAY_LV3AMB = 3765338293U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_NOPICTURE = 3799346131U;
         static const AkUniqueID PLAY_PHONERING = 3447864244U;
+        static const AkUniqueID PLAY_PLACINGFEEDBACK = 4216061707U;
         static const AkUniqueID PLAY_WALLSLIDE1 = 2047298186U;
         static const AkUniqueID PLAY_WALLSLIDE2 = 2047298185U;
+        static const AkUniqueID PLAY_WOODLAND = 228410470U;
         static const AkUniqueID STOP_DISTRICTAMBIENCE = 2077601938U;
     } // namespace EVENTS
 
@@ -40,7 +44,9 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID CARPET = 2412606308U;
                 static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID ETHEREAL = 2852503135U;
                 static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID TILES = 3316001432U;
                 static const AkUniqueID WOOD = 2058049674U;
@@ -62,6 +68,7 @@ namespace AK
         static const AkUniqueID LEVEL_01 = 987635873U;
         static const AkUniqueID LEVEL_02 = 987635874U;
         static const AkUniqueID LEVEL_03 = 987635875U;
+        static const AkUniqueID MENU = 2607556080U;
     } // namespace BANKS
 
     namespace BUSSES

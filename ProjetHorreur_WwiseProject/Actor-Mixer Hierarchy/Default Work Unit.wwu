@@ -1535,11 +1535,365 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Ethereal" ID="{8B73CC75-0B17-402C-8F5D-80531FDF471E}" ShortID="187431990">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_OF_FT_Ethereal-001" ID="{3908BC06-05EA-4176-9CDE-B6F75303FB3C}" ShortID="328142511">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-001" ID="{7E858E1C-4191-42A3-B7F8-2EECAE8E2911}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="242616488"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-001" ID="{7E858E1C-4191-42A3-B7F8-2EECAE8E2911}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-002" ID="{A8C3C01F-98D6-47FA-841A-23F00B6E46C5}" ShortID="818555389">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-002" ID="{C1C1AF2F-8BAC-4C43-9953-FFA339087B28}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="774972953"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-002" ID="{C1C1AF2F-8BAC-4C43-9953-FFA339087B28}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-003" ID="{CBFAE7F5-A14F-4695-B220-8361236E3807}" ShortID="1040220359">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-003" ID="{BC23C23D-47EC-47B3-97DD-54F0BC42E160}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="36181278"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-003" ID="{BC23C23D-47EC-47B3-97DD-54F0BC42E160}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-004" ID="{E063EF3B-22BD-42B8-A96D-970864922FEF}" ShortID="58198402">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-004" ID="{7FCF037C-F89E-4E6E-8ADB-E28234C4453C}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="164639573"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-004" ID="{7FCF037C-F89E-4E6E-8ADB-E28234C4453C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-005" ID="{0260E8CD-AF5D-4811-A102-4ABFA7492F59}" ShortID="795776284">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-005" ID="{BAF7AB99-3419-45C8-81AF-BA35BCD3DD0A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="646868394"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-005" ID="{BAF7AB99-3419-45C8-81AF-BA35BCD3DD0A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-006" ID="{F7363515-3418-4F71-B64E-F4C25A4B853E}" ShortID="281974782">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-006" ID="{17A95592-ED0D-4A61-B479-BBA4535853EC}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511375396"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-006" ID="{17A95592-ED0D-4A61-B479-BBA4535853EC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-007" ID="{5EE4D346-BAA8-484D-8565-071215CA700C}" ShortID="849371596">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-007" ID="{0DF77745-0FAE-4901-B964-AE1A9B8BCF4F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-007.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="731350228"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-007" ID="{0DF77745-0FAE-4901-B964-AE1A9B8BCF4F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Carpet" ID="{162DE59B-78FF-4D3D-B8D8-90C6ABE0FE22}" ShortID="956090627">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_OS_FT_Carpet-001" ID="{316C81C9-1861-4E3F-8D9B-2C99191128FB}" ShortID="781167268">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Carpet-001" ID="{4E1E0724-C5C5-465E-8DF0-40DCAB87863A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Carpet-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="862585494"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Carpet-001" ID="{4E1E0724-C5C5-465E-8DF0-40DCAB87863A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Carpet-002" ID="{A165DAB0-3B9B-4EDB-B5E3-E71B2549EC85}" ShortID="568378185">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Carpet-002" ID="{2BA22C44-5AB0-48B6-82C3-3E2B227C3A8F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Carpet-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="263796204"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Carpet-002" ID="{2BA22C44-5AB0-48B6-82C3-3E2B227C3A8F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Carpet-003" ID="{60FFE246-ACDE-4644-AB28-F8889E8B8ABC}" ShortID="991289847">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Carpet-003" ID="{2A7E4F01-B5A4-4483-9823-A2632BA4289A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Carpet-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="118468209"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Carpet-003" ID="{2A7E4F01-B5A4-4483-9823-A2632BA4289A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Carpet-004" ID="{97146457-D88B-4FAB-8515-B76A88BE8D0F}" ShortID="76414262">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Carpet-004" ID="{904B1F87-101E-40A4-AC9E-FF59F88BF3F5}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Carpet-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="824398809"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Carpet-004" ID="{904B1F87-101E-40A4-AC9E-FF59F88BF3F5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Carpet-005" ID="{E80C8A66-D5D8-4F65-A037-897836E56C2D}" ShortID="238281984">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Carpet-005" ID="{C2DB3A3D-4069-4E09-9DB1-10CB8BEAF418}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Carpet-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="387387092"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Carpet-005" ID="{C2DB3A3D-4069-4E09-9DB1-10CB8BEAF418}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Carpet-006" ID="{1D5A42A0-61C2-4112-B5D7-804C4CD13A93}" ShortID="1032259060">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Carpet-006" ID="{315B1562-11E2-4F02-8444-001338BB5606}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Carpet-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="705294608"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Carpet-006" ID="{315B1562-11E2-4F02-8444-001338BB5606}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OS_FT_Carpet-007" ID="{44E3330D-1E81-4851-AA15-594C7C1FCF6E}" ShortID="127511522">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OS_FT_Carpet-007" ID="{5C38EBF6-EBB3-47C7-8134-1E6C5D6D0756}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OS_FT_Carpet-007.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="831825527"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OS_FT_Carpet-007" ID="{5C38EBF6-EBB3-47C7-8134-1E6C5D6D0756}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
 										<ItemRef Name="Tiles" ID="{E986AE23-9F01-48EF-979D-90F69918846F}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Ethereal" ID="{8B73CC75-0B17-402C-8F5D-80531FDF471E}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Carpet" ID="{162DE59B-78FF-4D3D-B8D8-90C6ABE0FE22}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Wood" ID="{1B639E9F-C997-4F41-9DE1-D627FD86BF52}"/>
@@ -1552,6 +1906,18 @@
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Carpet" ID="{93AC440A-7AAF-4FCB-81F2-215DC26F63A0}"/>
+										<ItemList>
+											<ItemRef Name="Carpet" ID="{162DE59B-78FF-4D3D-B8D8-90C6ABE0FE22}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Ethereal" ID="{5CA97C2B-94CC-4A84-8FA0-5F6CE859803D}"/>
+										<ItemList>
+											<ItemRef Name="Ethereal" ID="{8B73CC75-0B17-402C-8F5D-80531FDF471E}"/>
+										</ItemList>
+									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Wood" ID="{C19CD373-FEAF-4745-8C10-CE939193D04F}"/>
 										<ItemList>
@@ -1722,7 +2088,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-16</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1945,7 +2311,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1973,8 +2339,154 @@
 								<ActiveSource Name="SFX_LP_Fire_Big" ID="{F6B9F90B-5FC6-4B87-8C12-72A1BA5FEBA1}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="SFX_OS_HouseCry" ID="{AEF01F15-686F-4359-9EFC-6BA8FB5D91AD}" ShortID="280965747">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_OS_HouseCry" ID="{807F8EBA-BE5A-4883-BE0B-07659692ACBC}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_OS_HouseCry.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="809181512"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_OS_HouseCry" ID="{807F8EBA-BE5A-4883-BE0B-07659692ACBC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_OS_WoodLanding" ID="{BE84F406-9432-465C-A1BF-86BA8335D9DC}" ShortID="405626976">
+							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_OS_WoodLanding" ID="{45A90B48-1D47-450A-B716-AC560B543418}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_OS_WoodLanding.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="512535598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_OS_WoodLanding" ID="{45A90B48-1D47-450A-B716-AC560B543418}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_OS_ObjectPlacingFeedback" ID="{B5221D95-71B5-4B7B-97EC-7576CCF0837F}" ShortID="118806208">
+							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{10544938-4B4B-4DE1-900D-9BEFF5B84A77}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_OS_ObjectPlacingFeedback" ID="{87AFFF5A-9E37-4EF9-B89F-7783CCE0032B}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_OS_ObjectPlacingFeedback.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="560004439"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_OS_ObjectPlacingFeedback" ID="{87AFFF5A-9E37-4EF9-B89F-7783CCE0032B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Sound Name="MU_LP_MainMenuMusic" ID="{517F27E2-FCF0-4604-A813-AF096556FCDF}" ShortID="837859928">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Eva - free fall" ID="{C244B19E-9D2B-45B8-888D-8754C020A35C}">
+							<Language>SFX</Language>
+							<AudioFile>Eva - free fall.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="651959342"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Eva - free fall" ID="{C244B19E-9D2B-45B8-888D-8754C020A35C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

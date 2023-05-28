@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TPVoid : MonoBehaviour
 {
+    [SerializeField] private AK.Wwise.Event landSfx;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -13,14 +15,19 @@ public class TPVoid : MonoBehaviour
             other.gameObject.transform.position = new Vector3(10f, 10f, 3f);
             Debug.Log(PlayerMovement.falling);
             StartCoroutine(FallingCoroutine());
+            StartCoroutine(PlaySFX());
         }
-        
     }
 
     IEnumerator FallingCoroutine()
     {
         yield return new WaitForSeconds(0.2f);
-        PlayerMovement.falling = false; 
+        PlayerMovement.falling = false;
     }
 
+    IEnumerator PlaySFX() 
+    {
+        yield return new WaitForSeconds(0.6f);
+        landSfx.Post(gameObject);
+    }
 }

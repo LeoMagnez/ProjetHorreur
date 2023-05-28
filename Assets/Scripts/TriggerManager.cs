@@ -21,6 +21,7 @@ public class TriggerManager : MonoBehaviour
     public UnityEvent TriggerExit;
     public UnityEvent TriggerStay;
     private bool endfoHasStarted = false;
+    private bool sdBandaid = false;
 
     [SerializeField] private GameObject phone;
     [SerializeField] private AK.Wwise.Event ringSFX;
@@ -49,10 +50,16 @@ public class TriggerManager : MonoBehaviour
 
     private void Update()
     {
-        if (endfoHasStarted) 
+        if (endfoHasStarted)
         {
             count += 2.1f * Time.deltaTime;
             AkSoundEngine.SetRTPCValue("distAmount", count);
+            sdBandaid = true;
+        }
+        else if (!endfoHasStarted && sdBandaid) 
+        {
+            flipLSFX.Stop(sfxObj3);
+            flipNLSFX.Stop(sfxObj3);
         }
 
         if (count > 100f && endfoHasStarted)
@@ -67,7 +74,6 @@ public class TriggerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         TriggerEnter.Invoke();
 
         
@@ -81,9 +87,7 @@ public class TriggerManager : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-
         TriggerStay.Invoke();
-
     }
 
     public void destroyTrigger()
@@ -175,7 +179,6 @@ public class TriggerManager : MonoBehaviour
                 break;
         }
 
-        //text.SetText("");
     }
 
     public IEnumerator setTutoImages()
@@ -204,6 +207,4 @@ public class TriggerManager : MonoBehaviour
         blackSquareDoorEffect.SetActive(false);
         flipLSFX.Post(sfxObj3);
     }
-
-
 }
