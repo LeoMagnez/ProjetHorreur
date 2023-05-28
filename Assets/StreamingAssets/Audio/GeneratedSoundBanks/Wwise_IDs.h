@@ -41,6 +41,7 @@ namespace AK
             namespace SWITCH
             {
                 static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID ETHEREAL = 2852503135U;
                 static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID TILES = 3316001432U;
                 static const AkUniqueID WOOD = 2058049674U;

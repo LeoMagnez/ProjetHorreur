@@ -1535,11 +1535,188 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Ethereal" ID="{8B73CC75-0B17-402C-8F5D-80531FDF471E}" ShortID="187431990">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_OF_FT_Ethereal-001" ID="{3908BC06-05EA-4176-9CDE-B6F75303FB3C}" ShortID="328142511">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-001" ID="{7E858E1C-4191-42A3-B7F8-2EECAE8E2911}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="242616488"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-001" ID="{7E858E1C-4191-42A3-B7F8-2EECAE8E2911}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-002" ID="{14BFE96A-D213-417A-95AA-76C576126B5E}" ShortID="1043450658">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-002" ID="{D5557995-EC9C-41C7-90A7-E30EEE1E48FC}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="774972953"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-002" ID="{D5557995-EC9C-41C7-90A7-E30EEE1E48FC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-003" ID="{A2C2B42E-1C29-4C2B-994B-CE91D0316B39}" ShortID="23067290">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-003" ID="{CC982E2A-6F79-45FD-99EB-6F2BF2505077}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="36181278"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-003" ID="{CC982E2A-6F79-45FD-99EB-6F2BF2505077}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-004" ID="{5ABA4E97-42C2-43D3-9710-D310D185977B}" ShortID="558601987">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-004" ID="{FEE6EBE1-2618-44CD-826D-66C1D1654945}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="164639573"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-004" ID="{FEE6EBE1-2618-44CD-826D-66C1D1654945}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-005" ID="{2951766D-6F60-4E5E-94E8-E43BBDF9DB61}" ShortID="356789214">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-005" ID="{F0738694-834B-4FCA-AA78-FA031D89AC69}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="646868394"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-005" ID="{F0738694-834B-4FCA-AA78-FA031D89AC69}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-006" ID="{16283A8A-9F26-47DC-85A2-499DAAB1F20C}" ShortID="560752572">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-006" ID="{ACB5A607-D88A-447B-A8BB-743610912F74}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511375396"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-006" ID="{ACB5A607-D88A-447B-A8BB-743610912F74}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_OF_FT_Ethereal-007" ID="{D0959505-A221-4639-A55A-8A4120BB26E7}" ShortID="669398066">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05A53477-035A-46B7-B4FD-7DDC6E1063C6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CBE380F9-5D09-43D2-A2FE-093981ED2322}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_OF_FT_Ethereal-007" ID="{BC3EEBE4-46BE-498A-B0BB-E2A757032CF3}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_OF_FT_Ethereal-007.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="731350228"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_OF_FT_Ethereal-007" ID="{BC3EEBE4-46BE-498A-B0BB-E2A757032CF3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
 										<ItemRef Name="Tiles" ID="{E986AE23-9F01-48EF-979D-90F69918846F}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Ethereal" ID="{8B73CC75-0B17-402C-8F5D-80531FDF471E}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Wood" ID="{1B639E9F-C997-4F41-9DE1-D627FD86BF52}"/>
@@ -1552,6 +1729,12 @@
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Ethereal" ID="{5CA97C2B-94CC-4A84-8FA0-5F6CE859803D}"/>
+										<ItemList>
+											<ItemRef Name="Ethereal" ID="{8B73CC75-0B17-402C-8F5D-80531FDF471E}"/>
+										</ItemList>
+									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Wood" ID="{C19CD373-FEAF-4745-8C10-CE939193D04F}"/>
 										<ItemList>
