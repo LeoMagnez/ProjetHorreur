@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID PLAY_FLIPL = 1725616313U;
         static const AkUniqueID PLAY_FLIPNL = 2776012301U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
+        static const AkUniqueID PLAY_HOUSEAPPEARANCE = 2001310284U;
         static const AkUniqueID PLAY_HOUSECRY = 489065934U;
         static const AkUniqueID PLAY_LV2AMB = 2485884946U;
         static const AkUniqueID PLAY_LV3AMB = 3765338293U;

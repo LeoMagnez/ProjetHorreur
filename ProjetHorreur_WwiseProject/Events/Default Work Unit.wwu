@@ -181,6 +181,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_HouseAppearance" ID="{4A4768ED-3B70-4C4A-A470-8E2B033B9E6B}">
+							<ChildrenList>
+								<Action Name="" ID="{7DE64EF0-642A-40D1-9B44-A09AE3DD7ECF}" ShortID="811789839">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_HouseAppearance" ID="{2BEBE9C4-BC07-4D52-9A12-361B50524F87}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Level 3" ID="{BFAE12A7-A997-4010-978A-26374DD987F6}" ShortID="995660228">
