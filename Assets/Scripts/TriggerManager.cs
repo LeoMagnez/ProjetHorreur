@@ -179,7 +179,6 @@ public class TriggerManager : MonoBehaviour
                 break;
         }
 
-        //text.SetText("");
     }
 
     public IEnumerator setTutoImages()
