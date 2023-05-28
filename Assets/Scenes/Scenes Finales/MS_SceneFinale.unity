@@ -6902,6 +6902,7 @@ MonoBehaviour:
   _porte: {fileID: 0}
   _lightCamera: {fileID: 526934970}
   _cameraUIParent: {fileID: 1058012995}
+  photoTuto: {fileID: 0}
   MeshRenderer: {fileID: 0}
   _whiteMaterial: {fileID: 2100000, guid: 96e2c6058ec27804fb333ec902b8afb0, type: 2}
   _blackMaterial: {fileID: 2100000, guid: e41bd72596d3ac04790eabb1ea47553f, type: 2}
@@ -6920,6 +6921,7 @@ MonoBehaviour:
   startOfGameAnimator: {fileID: 0}
   sparks: {fileID: 1794708078}
   shake: {fileID: 3210414}
+  cinemachineCam: {fileID: 0}
   SFX: {fileID: 1106542988}
   cameraShutterSFX:
     idInternal: 0
@@ -6931,6 +6933,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   cameraTuto: 1
+  firstTimeOpeningGallery: 1
   CameraJoueur: {fileID: 3210411}
 --- !u!33 &358503122
 MeshFilter:
