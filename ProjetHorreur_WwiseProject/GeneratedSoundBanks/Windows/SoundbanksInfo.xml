@@ -491,7 +491,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{34F5E196-7D9A-DD5C-E8F9-DA0CBA05E010}">
+		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{7388C491-7B52-7988-CE40-4ADAED0AC42B}">
 			<ShortName>Level_02</ShortName>
 			<Path>Level_02.bnk</Path>
 			<Media>
@@ -707,6 +707,10 @@
 					<ShortName>SFX_OS_FT_Concrete-009.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-009_10C4C929.wem</CachePath>
 				</File>
+				<File Id="720573347" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_ShrinkableWall.wav</ShortName>
+					<CachePath>SFX/SFX_OS_ShrinkableWall_10C4C929.wem</CachePath>
+				</File>
 				<File Id="722962580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Tiles-002.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Tiles-002_10C4C929.wem</CachePath>
@@ -910,6 +914,11 @@
 				<Event Id="4216061707" Name="Play_PlacingFeedback" DurationType="OneShot" DurationMin="0.3065621" DurationMax="0.38624403">
 					<MediaRefs>
 						<MediaRef Id="560004439"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3523891125" Name="Play_ShinkableWall" DurationType="OneShot" DurationMin="2.3310204" DurationMax="2.3310204">
+					<MediaRefs>
+						<MediaRef Id="720573347"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="228410470" Name="Play_WoodLand" DurationType="OneShot" DurationMin="0.4902041" DurationMax="0.4902041">
@@ -1405,5 +1414,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{816DBFBC-FFAB-04C0-66E3-227A8C5DBD9E}</FileHash>
+	<FileHash>{76D0F7AF-0FEF-46A7-416C-BD8496DB28E3}</FileHash>
 </SoundBanksInfo>

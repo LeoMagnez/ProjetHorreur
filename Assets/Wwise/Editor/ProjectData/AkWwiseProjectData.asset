@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585163153330428113
+    m_lastTime: -8585163128384153737
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -136,7 +136,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585163153330328018
+    m_lastTime: -8585163128384043634
     List:
     - name: Ambiences
       guid: 9be11a14d4b9a046bdda744f536e55f4
@@ -600,6 +600,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_ShinkableWall
+      guid: 16942a8bcb69df42ba4f8266f32bed80
+      id: 3523891125
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 2
+        ObjectType: 4
+        guid: cce2819a28e6164ea01d333a4048a809
+      - ElementName: Play_ShinkableWall
+        ObjectType: 3
+        guid: 16942a8bcb69df42ba4f8266f32bed80
+      Path: Events\Default Work Unit\Level 2\Play_ShinkableWall
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_WallSlide1
       guid: 1bcd2c141ba040499ee0cab888d29db1
       id: 2047298186
@@ -893,7 +913,7 @@ MonoBehaviour:
     m_lastTime: -8585204873541772147
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000009000000
+  ExpandedWaapiItemIds: 05000000060000000a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
