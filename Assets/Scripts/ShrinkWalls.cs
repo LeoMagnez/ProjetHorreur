@@ -35,6 +35,8 @@ public class ShrinkWalls : MonoBehaviour
     public GameObject fireWall2;
     public GameObject fire;
 
+    public GameObject murQuiDisparaisent;
+
     [Header("Sound")]
     [SerializeField] private AK.Wwise.Event bigFire;
     [SerializeField] private AK.Wwise.Event houseCry;
@@ -137,6 +139,7 @@ public class ShrinkWalls : MonoBehaviour
             fireWall1.SetActive(true); 
             fireWall2.SetActive(true);
             fire.SetActive(false);
+            murQuiDisparaisent.SetActive(false);
             bigFire.Post(fireWall1);
             houseCry.Post(fireWall1);
         }
