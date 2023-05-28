@@ -6,20 +6,10 @@ using UnityEngine;
 
 public class ObjectMover : MonoBehaviour
 {
-
     public GameObject ghost;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private AK.Wwise.Event objPlaceFeedback;
+    [SerializeField] private GameObject sfxObj;
 
     public void MoveObject(Vector3 _targetPos)
     {
@@ -42,9 +32,6 @@ public class ObjectMover : MonoBehaviour
             }
         }
         gameObject.GetComponent<Collider>().enabled = true;
-
-        
-        
     }
 
     public void MoveObjectToAnchor(Vector3 _anchor)
@@ -72,10 +59,7 @@ public class ObjectMover : MonoBehaviour
             {
                 ghost.SetActive(false);
             }
-
-            
         }
-
 
         List<MeshRenderer> tempMR = new List<MeshRenderer>();
         tempMR = gameObject.GetComponentsInChildren<MeshRenderer>().ToList<MeshRenderer>();
@@ -101,10 +85,8 @@ public class ObjectMover : MonoBehaviour
             mc.enabled = true;
         }
 
-
-
         gameObject.GetComponent<Collider>().enabled = true;
-
+        objPlaceFeedback.Post(sfxObj);
     }
 
     public void HideObject()

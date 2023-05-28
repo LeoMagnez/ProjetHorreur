@@ -2403,6 +2403,12 @@
 						</Sound>
 						<Sound Name="SFX_OS_ObjectPlacingFeedback" ID="{B5221D95-71B5-4B7B-97EC-7576CCF0837F}" ShortID="118806208">
 							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
