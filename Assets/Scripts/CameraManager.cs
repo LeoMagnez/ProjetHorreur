@@ -191,7 +191,7 @@ public class CameraManager : MonoBehaviour
             //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
             if (Input.GetKeyDown(KeyCode.D) && !canPlay)
             {
-                galleryAnimator.SetTrigger("GalleryButton");
+                GalleryManager.instance.StartCoroutine(GalleryManager.instance.GalleryAnimation());
                 galleryManager.selectNextOrPrevious(1); //navigue vers la droite
 
 
@@ -200,7 +200,7 @@ public class CameraManager : MonoBehaviour
             //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
             if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
             {
-                galleryAnimator.SetTrigger("GalleryButton");
+                GalleryManager.instance.StartCoroutine(GalleryManager.instance.GalleryAnimation());
                 galleryManager.selectNextOrPrevious(-1); //navigue vers la gauche
 
             }
