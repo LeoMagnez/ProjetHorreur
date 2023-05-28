@@ -56,6 +56,7 @@ public class CameraManager : MonoBehaviour
     public GameObject _lightCamera;
 
     [SerializeField] GameObject _cameraUIParent;
+    [SerializeField] GameObject photoTuto;
 
     public MeshRenderer MeshRenderer;
 
@@ -94,6 +95,8 @@ public class CameraManager : MonoBehaviour
     [SerializeField] Animator startOfGameAnimator;
     [SerializeField] GameObject sparks;
     [SerializeField] CamShake shake;
+    [SerializeField] GameObject cinemachineCam;
+    [SerializeField] GameObject maison, maison_exterieur, telephone, poubelles, poubelles_ghost, slidingWall, concrete_disp;
 
     [Header("Sound")]
     [SerializeField] GameObject SFX;
@@ -101,6 +104,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event forbiddenCameraSFX;
 
     public bool cameraTuto = false;
+    public bool firstTimeOpeningGallery;
 
     public GameObject CameraJoueur;
 
@@ -127,6 +131,11 @@ public class CameraManager : MonoBehaviour
     {
         canPlay = true; //Permet de jouer au start
 
+        if(photoTuto != null)
+        {
+            photoTuto.SetActive(true);
+        }
+ 
         
 
     }
@@ -191,6 +200,8 @@ public class CameraManager : MonoBehaviour
             }
 
             TakePhoto(); //Vérifie si on peut prendre une photo
+
+
         }
 
 
@@ -210,12 +221,14 @@ public class CameraManager : MonoBehaviour
     #region CAMERA_OBJECT
     private void CameraUp()
     {
+
         _isCameraUp = true; //passe ce flag en true (empêche d'aller dans la galerie si on s'apprête à prendre une photo)
         _camera.SetTrigger("camera_activation"); //joue l'animation où le joueur lève l'appareil photo
         //UI.SetActive(true);
     }
     private void CameraDown()
     {
+
         _isCameraUp = false;//passe ce flag en false (autorise l'ouverture de la galerie)
         _camera.SetTrigger("camera_desactivation");//joue l'animation où le joueur baisse l'appareil photo
         //UI.SetActive(false);
@@ -228,21 +241,46 @@ public class CameraManager : MonoBehaviour
         //Chargement des images de gallerie
         galleryManager.OnGalleryUpdatePage();
 
+        if(!firstTimeOpeningGallery && photoTuto != null)
+        {
+            StartCoroutine(WaitForHouse());
+        }
+
         _isCameraUp = false;
 
-        canPlay = false; //empêche le joueur de bouger lorsqu'il est dans la galerie
+       
         _isUIup = true; //empêche le joueur de passer en mode photo lorsqu'il est dans la galerie
         _cameraUI.SetTrigger("UICameraUp"); //joue l'animation d'ouverture de la galerie
+        canPlay = false; //empêche le joueur de bouger lorsqu'il est dans la galerie
     }
 
     public void UIdown()
     {
-        
-        canPlay = true; //autorise le joueur à bouger lorsque la galerie est fermée
+        if (!firstTimeOpeningGallery && photoTuto != null)
+        {
+
+            photoTuto.SetActive(false);
+            firstTimeOpeningGallery = true;
+            
+        }
+
         _isUIup = false; //permet le joueur de passer en mode photo une fois la galerie fermée
         _cameraUI.SetTrigger("UICameraDown");//joue l'animation de fermeture de la galerie
-        
+        canPlay = true; //autorise le joueur à bouger lorsque la galerie est fermée
 
+
+    }
+
+    public IEnumerator WaitForHouse()
+    {
+        yield return new WaitForSeconds(0.5f);
+        maison.SetActive(true);
+        maison_exterieur.SetActive(true);
+        poubelles.SetActive(true);
+        slidingWall.SetActive(true);
+        poubelles_ghost.SetActive(true);
+        telephone.SetActive(true);
+        concrete_disp.SetActive(false);
     }
     #endregion
 
