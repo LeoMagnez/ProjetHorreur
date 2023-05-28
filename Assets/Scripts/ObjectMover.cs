@@ -67,6 +67,10 @@ public class ObjectMover : MonoBehaviour
         foreach (MeshRenderer mr in tempMR)
         {
             mr.enabled = true;
+            if (ghost != null)
+            {
+                ghost.SetActive(false);
+            }
         }
 
         List<BoxCollider> tempCol = new List<BoxCollider>();
@@ -75,6 +79,10 @@ public class ObjectMover : MonoBehaviour
         foreach (BoxCollider col in tempCol)
         {
             col.enabled = false;
+            if (ghost != null)
+            {
+                ghost.SetActive(false);
+            }
         }
 
         List<MeshCollider> tempMC = new List<MeshCollider>();
@@ -83,6 +91,10 @@ public class ObjectMover : MonoBehaviour
         foreach (MeshCollider mc in tempMC)
         {
             mc.enabled = true;
+            if (ghost != null)
+            {
+                ghost.SetActive(false);
+            }
         }
 
         gameObject.GetComponent<Collider>().enabled = true;
