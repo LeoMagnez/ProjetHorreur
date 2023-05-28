@@ -191,7 +191,11 @@ public class CameraManager : MonoBehaviour
             //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
             if (Input.GetKeyDown(KeyCode.D) && !canPlay)
             {
-                GalleryManager.instance.StartCoroutine(GalleryManager.instance.GalleryAnimation());
+                if(galleryAnimator != null)
+                {
+                    GalleryManager.instance.StartCoroutine(GalleryManager.instance.GalleryAnimation());
+                }
+
                 galleryManager.selectNextOrPrevious(1); //navigue vers la droite
 
 
@@ -200,7 +204,10 @@ public class CameraManager : MonoBehaviour
             //Si on appuie sur D et qu'on ne peut pas jouer (a.k.a, lorsqu'on est dans la galerie), permet de naviguer à l'interieur
             if (Input.GetKeyDown(KeyCode.Q) && !canPlay)
             {
-                GalleryManager.instance.StartCoroutine(GalleryManager.instance.GalleryAnimation());
+                if (galleryAnimator != null)
+                {
+                    GalleryManager.instance.StartCoroutine(GalleryManager.instance.GalleryAnimation());
+                }
                 galleryManager.selectNextOrPrevious(-1); //navigue vers la gauche
 
             }
@@ -227,14 +234,21 @@ public class CameraManager : MonoBehaviour
     #region CAMERA_OBJECT
     private void CameraUp()
     {
-        handsAnimator.SetTrigger("IdlePhoto");
+        if(handsAnimator != null)
+        {
+            handsAnimator.SetTrigger("IdlePhoto");
+        }
+
         _isCameraUp = true; //passe ce flag en true (empêche d'aller dans la galerie si on s'apprête à prendre une photo)
         _camera.SetTrigger("camera_activation"); //joue l'animation où le joueur lève l'appareil photo
         //UI.SetActive(true);
     }
     private void CameraDown()
     {
-        handsAnimator.SetTrigger("IdlePhoto");
+        if (handsAnimator != null)
+        {
+            handsAnimator.SetTrigger("IdlePhoto");
+        }
         _isCameraUp = false;//passe ce flag en false (autorise l'ouverture de la galerie)
         _camera.SetTrigger("camera_desactivation");//joue l'animation où le joueur baisse l'appareil photo
         //UI.SetActive(false);
@@ -244,7 +258,11 @@ public class CameraManager : MonoBehaviour
         #region UI
     private void UIup()
     {
-        galleryAnimator.SetTrigger("IdleGallery");
+        if(galleryAnimator != null)
+        {
+            galleryAnimator.SetTrigger("IdleGallery");
+        }
+
         //Chargement des images de gallerie
         galleryManager.OnGalleryUpdatePage();
 
@@ -263,7 +281,11 @@ public class CameraManager : MonoBehaviour
 
     public void UIdown()
     {
-        galleryAnimator.SetTrigger("IdleGallery");
+        if (galleryAnimator != null)
+        {
+            galleryAnimator.SetTrigger("IdleGallery");
+        }
+
         if (!firstTimeOpeningGallery && photoTuto != null)
         {
 
@@ -300,7 +322,10 @@ public class CameraManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && _isCameraUp && objectToMove == null)
         {
 
-            StartCoroutine(PhotoAnimation());
+            if (handsAnimator != null)
+            {
+                StartCoroutine(PhotoAnimation());
+            }
             _lightCamera.SetActive(true); //allume la lumière du flash lorsqu'on prend une photo
             _takingPhoto = true;
 
@@ -310,7 +335,11 @@ public class CameraManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0) && _isCameraUp && objectToMove != null)
         {
-            StartCoroutine(PhotoAnimation());
+            if (handsAnimator != null)
+            {
+                StartCoroutine(PhotoAnimation());
+            }
+
             StartCoroutine(shake.Shake(0.1f, 0.2f));
             StartCoroutine(ForbiddenPhoto());
             forbiddenCameraSFX.Post(SFX);
@@ -319,9 +348,15 @@ public class CameraManager : MonoBehaviour
 
     public IEnumerator PhotoAnimation()
     {
-        handsAnimator.SetTrigger("PhotoButton");
+        if (handsAnimator != null)
+        {
+            handsAnimator.SetTrigger("IdlePhoto");
+        }
         yield return new WaitForSeconds(0.5f);
-        handsAnimator.SetTrigger("IdlePhoto");
+        if (handsAnimator != null)
+        {
+            handsAnimator.SetTrigger("IdlePhoto");
+        }
     }
     #endregion
 

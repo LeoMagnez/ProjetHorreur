@@ -110,7 +110,10 @@ public class GalleryManager : MonoBehaviour
 
                     if (CameraManager.instance._spriteList[curSelectedImage.index] != null)
                     {
-                        StartCoroutine(GalleryAnimation());
+                        if (galleryAnimator != null)
+                        {
+                            StartCoroutine(GalleryAnimation());
+                        }
                         //curSelectedImage.animator.SetTrigger("ZoomIn");
                         curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
                         curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
@@ -162,7 +165,10 @@ public class GalleryManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && curSelectedImage != null && zoomedOnPhoto)
         {
-            StartCoroutine(GalleryAnimation());
+            if (galleryAnimator != null)
+            {
+                StartCoroutine(GalleryAnimation());
+            }
             curSelectedImage.animator.SetTrigger("ZoomOut");
             zoomedOnPhoto = false;
             curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
@@ -185,7 +191,12 @@ public class GalleryManager : MonoBehaviour
 
         if (!CameraManager.instance._isUIup && curSelectedImage != null)
         {
-            StartCoroutine(GalleryAnimation());
+            if (galleryAnimator != null)
+            {
+                StartCoroutine(GalleryAnimation());
+            }
+
+
             curSelectedImage.animator.SetTrigger("ZoomOut");
             zoomedOnPhoto = false;
             curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
