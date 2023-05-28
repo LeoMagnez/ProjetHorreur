@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e3f7857a83744f47b6e474e1ada48d92
     GuidInternal: 
-    m_lastTime: -8585163461692436584
+    m_lastTime: -8585163352561970264
     List:
     - name: Level_01
       guid: 7c142c5f5c7d2a4c8b7afcedb5ee18bf
@@ -136,7 +136,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b7972d00e6359246959670cc1faf7713
     GuidInternal: 
-    m_lastTime: -8585163461785901610
+    m_lastTime: -8585163352561859919
     List:
     - name: Ambiences
       guid: 9be11a14d4b9a046bdda744f536e55f4
@@ -440,6 +440,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_HouseCry
+      guid: c4ca1f2c69c2bd4fbcb60f8ff146f978
+      id: 489065934
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b7972d00e6359246959670cc1faf7713
+      - ElementName: Level 2
+        ObjectType: 4
+        guid: cce2819a28e6164ea01d333a4048a809
+      - ElementName: Play_HouseCry
+        ObjectType: 3
+        guid: c4ca1f2c69c2bd4fbcb60f8ff146f978
+      Path: Events\Default Work Unit\Level 2\Play_HouseCry
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Lv2Amb
       guid: c3a756d137126c44bb121b431f1e07a9
       id: 2485884946
@@ -682,7 +702,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2942f94a978d2c40b1ac2ae5b1bb8722
     GuidInternal: 
-    m_lastTime: -8585163496987798372
+    m_lastTime: -8585163323098973372
     List:
     - name: GroundMaterial
       guid: ac526578ad01de4c9e35edaf2bf5e296
@@ -699,6 +719,22 @@ MonoBehaviour:
         guid: ac526578ad01de4c9e35edaf2bf5e296
       Path: Switches\Default Work Unit\GroundMaterial
       values:
+      - name: Carpet
+        guid: 0a44ac93af7acb4f81f2215dc26f63a0
+        id: 2412606308
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 2942f94a978d2c40b1ac2ae5b1bb8722
+        - ElementName: GroundMaterial
+          ObjectType: 11
+          guid: ac526578ad01de4c9e35edaf2bf5e296
+        - ElementName: Carpet
+          ObjectType: 10
+          guid: 0a44ac93af7acb4f81f2215dc26f63a0
       - name: Concrete
         guid: ef1404ef6dae8e4f8a951434b1846ac8
         id: 841620460
@@ -797,7 +833,7 @@ MonoBehaviour:
     m_lastTime: -8585204873541772147
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000e0000000f0000001d000000
+  ExpandedWaapiItemIds: 0500000006000000070000000b0000000e0000000f0000001d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

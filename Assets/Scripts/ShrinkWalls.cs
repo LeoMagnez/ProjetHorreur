@@ -37,6 +37,7 @@ public class ShrinkWalls : MonoBehaviour
 
     [Header("Sound")]
     [SerializeField] private AK.Wwise.Event bigFire;
+    [SerializeField] private AK.Wwise.Event houseCry;
 
     private void Awake()
     {
@@ -137,6 +138,7 @@ public class ShrinkWalls : MonoBehaviour
             fireWall2.SetActive(true);
             fire.SetActive(false);
             bigFire.Post(fireWall1);
+            houseCry.Post(fireWall1);
         }
     }
 }

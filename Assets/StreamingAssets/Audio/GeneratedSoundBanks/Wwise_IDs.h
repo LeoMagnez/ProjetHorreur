@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID PLAY_FLIPL = 1725616313U;
         static const AkUniqueID PLAY_FLIPNL = 2776012301U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
+        static const AkUniqueID PLAY_HOUSECRY = 489065934U;
         static const AkUniqueID PLAY_LV2AMB = 2485884946U;
         static const AkUniqueID PLAY_LV3AMB = 3765338293U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
@@ -41,6 +42,7 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID CARPET = 2412606308U;
                 static const AkUniqueID CONCRETE = 841620460U;
                 static const AkUniqueID ETHEREAL = 2852503135U;
                 static const AkUniqueID GRASS = 4248645337U;

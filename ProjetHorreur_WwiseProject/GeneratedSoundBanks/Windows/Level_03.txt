@@ -12,6 +12,7 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 Switch	ID	Name	Switch Group			Notes
 	841620460	Concrete	GroundMaterial			
 	2058049674	Wood	GroundMaterial			
+	2412606308	Carpet	GroundMaterial			
 	2852503135	Ethereal	GroundMaterial			
 	3316001432	Tiles	GroundMaterial			
 	4248645337	Grass	GroundMaterial			
@@ -30,6 +31,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	67665767	SFX_OS_FT_Wood-016	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-016_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-016		65196
 	70605075	SFX_OS_FT_Grass-003	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Grass-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Grass\SFX_OS_FT_Grass-003		88000
 	80746490	SFX_OS_FT_Concrete-006	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-006		79132
+	118468209	SFX_OS_FT_Carpet-003	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Carpet-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Carpet\SFX_OS_FT_Carpet-003		102968
 	132953430	SFX_OS_SwitchFlip-002	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_SwitchFlip-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SwitchFlips\SFX_OS_SwitchFlip-002		10812
 	135388325	SFX_OS_FT_Tiles-003	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Tiles-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Tiles\SFX_OS_FT_Tiles-003		59708
 	135656164	SFX_OS_FT_Grass-006	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Grass-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Grass\SFX_OS_FT_Grass-006		119048
@@ -45,12 +47,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	258899210	SFX_OS_CameraFlash	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_CameraFlash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_OS_CameraFlash		61392
 	261121108	SFX_OS_FT_Wood-005	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-005		92808
 	263419886	SFX_OS_FT_Wood-003	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-003		73844
+	263796204	SFX_OS_FT_Carpet-002	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Carpet-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Carpet\SFX_OS_FT_Carpet-002		82036
 	279840458	SFX_OS_FT_Tiles-005	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Tiles-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Tiles\SFX_OS_FT_Tiles-005		35384
 	284364741	SFX_OS_FT_Concrete-007	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-007		92956
 	336562769	SFX_OS_FT_Concrete-010	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-010		103084
 	345146632	SFX_OS_FT_Wood-010	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-010		62868
 	353929603	SFX_OS_FT_Grass-010	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Grass-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Grass\SFX_OS_FT_Grass-010		106800
 	365448444	SFX_OS_FT_Concrete-001	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-001		91288
+	387387092	SFX_OS_FT_Carpet-005	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Carpet-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Carpet\SFX_OS_FT_Carpet-005		82448
 	426996222	SFX_OS_FT_Wood-008	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-008		94252
 	457393815	SFX_OS_FT_Wood-007	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-007		83804
 	481491505	SFX_OS_FT_Concrete-012	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-012_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-012		126592
@@ -68,6 +72,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	646868394	SFX_OF_FT_Ethereal-005	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OF_FT_Ethereal-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Ethereal\SFX_OF_FT_Ethereal-005		220968
 	663191277	SFX_OS_FT_Tiles-006	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Tiles-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Tiles\SFX_OS_FT_Tiles-006		27232
 	693719929	SFX_OS_FT_Concrete-011	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-011_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-011		83216
+	705294608	SFX_OS_FT_Carpet-006	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Carpet-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Carpet\SFX_OS_FT_Carpet-006		79088
 	711129373	SFX_OS_FT_Concrete-009	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-009		136888
 	722962580	SFX_OS_FT_Tiles-002	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Tiles-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Tiles\SFX_OS_FT_Tiles-002		40320
 	729070746	SFX_OS_FT_Concrete-005	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-005		117452
@@ -75,6 +80,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	748893096	SFX_OS_Breath-001	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_Breath-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Breath\SFX_OS_Breath-001		750932
 	749290379	SFX_OS_FT_Concrete-008	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Concrete-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Concrete\SFX_OS_FT_Concrete-008		125712
 	774972953	SFX_OF_FT_Ethereal-002	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OF_FT_Ethereal-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Ethereal\SFX_OF_FT_Ethereal-002		266024
+	824398809	SFX_OS_FT_Carpet-004	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Carpet-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Carpet\SFX_OS_FT_Carpet-004		83196
+	831825527	SFX_OS_FT_Carpet-007	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Carpet-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Carpet\SFX_OS_FT_Carpet-007		98468
+	862585494	SFX_OS_FT_Carpet-001	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Carpet-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Carpet\SFX_OS_FT_Carpet-001		69704
 	894621419	SFX_OS_FT_Wood-017	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-017_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-017		71324
 	904037518	AMB_LP_Drone	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\AMB_LP_Drone_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\AMB_LP_Drone		51508896
 	907083510	SFX_OS_FT_Wood-013	C:\Users\evalb\Documents\GitHub\ProjetHorreur\ProjetHorreur_WwiseProject\.cache\Windows\SFX\SFX_OS_FT_Wood-013_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\FTPS\Wood\SFX_OS_FT_Wood-013		82212

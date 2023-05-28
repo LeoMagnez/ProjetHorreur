@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{8C5242BB-63F7-7FE2-6A44-9C469BC8E93A}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{A81639E0-E07C-97DC-2C3B-0205598672D1}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -44,6 +44,10 @@
 				<File Id="80746490" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-006.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-006_10C4C929.wem</CachePath>
+				</File>
+				<File Id="118468209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-003.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-003_10C4C929.wem</CachePath>
 				</File>
 				<File Id="135388325" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Tiles-003.wav</ShortName>
@@ -109,6 +113,10 @@
 					<ShortName>SFX_OS_FT_Wood-003.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-003_10C4C929.wem</CachePath>
 				</File>
+				<File Id="263796204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-002.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-002_10C4C929.wem</CachePath>
+				</File>
 				<File Id="279840458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Tiles-005.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Tiles-005_10C4C929.wem</CachePath>
@@ -140,6 +148,10 @@
 				<File Id="380265262" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_NegFeedback.wav</ShortName>
 					<CachePath>SFX/SFX_OS_NegFeedback_10C4C929.wem</CachePath>
+				</File>
+				<File Id="387387092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-005.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-005_10C4C929.wem</CachePath>
 				</File>
 				<File Id="426996222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-008.wav</ShortName>
@@ -217,6 +229,10 @@
 					<ShortName>SFX_OS_FT_Concrete-011.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-011_10C4C929.wem</CachePath>
 				</File>
+				<File Id="705294608" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-006.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-006_10C4C929.wem</CachePath>
+				</File>
 				<File Id="711129373" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-009.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-009_10C4C929.wem</CachePath>
@@ -249,9 +265,21 @@
 					<ShortName>SFX_OS_Woodsqueak-002.wav</ShortName>
 					<CachePath>SFX/SFX_OS_Woodsqueak-002_10C4C929.wem</CachePath>
 				</File>
+				<File Id="824398809" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-004.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-004_10C4C929.wem</CachePath>
+				</File>
 				<File Id="830821462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_WallSlide_2.wav</ShortName>
 					<CachePath>SFX/SFX_OS_WallSlide_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="831825527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-007.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-007_10C4C929.wem</CachePath>
+				</File>
+				<File Id="862585494" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-001.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-001_10C4C929.wem</CachePath>
 				</File>
 				<File Id="894621419" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-017.wav</ShortName>
@@ -285,6 +313,18 @@
 			<Events>
 				<Event Id="2946881380" Name="FTPS" DurationType="OneShot" DurationMin="0.14519824" DurationMax="1.7164853">
 					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3072116243" Id="2412606308"/>
+							<MediaRefs>
+								<MediaRef Id="118468209"/>
+								<MediaRef Id="263796204"/>
+								<MediaRef Id="387387092"/>
+								<MediaRef Id="705294608"/>
+								<MediaRef Id="824398809"/>
+								<MediaRef Id="831825527"/>
+								<MediaRef Id="862585494"/>
+							</MediaRefs>
+						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3072116243" Id="2852503135"/>
 							<MediaRefs>
@@ -425,6 +465,7 @@
 					<Switches>
 						<Switch Id="841620460" Name="Concrete"/>
 						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2412606308" Name="Carpet"/>
 						<Switch Id="2852503135" Name="Ethereal"/>
 						<Switch Id="3316001432" Name="Tiles"/>
 						<Switch Id="4248645337" Name="Grass"/>
@@ -432,7 +473,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{2E527B6B-A630-5272-0935-E218B016903A}">
+		<SoundBank Id="987635874" Type="User" Language="SFX" Hash="{093457B2-6B55-2E30-3C7E-4578A58A45B6}">
 			<ShortName>Level_02</ShortName>
 			<Path>Level_02.bnk</Path>
 			<Media>
@@ -463,6 +504,10 @@
 				<File Id="80746490" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-006.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-006_10C4C929.wem</CachePath>
+				</File>
+				<File Id="118468209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-003.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-003_10C4C929.wem</CachePath>
 				</File>
 				<File Id="135388325" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Tiles-003.wav</ShortName>
@@ -516,6 +561,10 @@
 					<ShortName>SFX_OS_FT_Wood-003.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-003_10C4C929.wem</CachePath>
 				</File>
+				<File Id="263796204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-002.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-002_10C4C929.wem</CachePath>
+				</File>
 				<File Id="279840458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Tiles-005.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Tiles-005_10C4C929.wem</CachePath>
@@ -543,6 +592,10 @@
 				<File Id="380265262" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_NegFeedback.wav</ShortName>
 					<CachePath>SFX/SFX_OS_NegFeedback_10C4C929.wem</CachePath>
+				</File>
+				<File Id="387387092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-005.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-005_10C4C929.wem</CachePath>
 				</File>
 				<File Id="426996222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-008.wav</ShortName>
@@ -620,6 +673,10 @@
 					<ShortName>SFX_OS_FT_Concrete-011.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-011_10C4C929.wem</CachePath>
 				</File>
+				<File Id="705294608" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-006.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-006_10C4C929.wem</CachePath>
+				</File>
 				<File Id="711129373" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-009.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-009_10C4C929.wem</CachePath>
@@ -647,6 +704,22 @@
 				<File Id="774972953" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OF_FT_Ethereal-002.wav</ShortName>
 					<CachePath>SFX/SFX_OF_FT_Ethereal-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="809181512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_HouseCry.wav</ShortName>
+					<CachePath>SFX/SFX_OS_HouseCry_10C4C929.wem</CachePath>
+				</File>
+				<File Id="824398809" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-004.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-004_10C4C929.wem</CachePath>
+				</File>
+				<File Id="831825527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-007.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-007_10C4C929.wem</CachePath>
+				</File>
+				<File Id="862585494" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-001.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-001_10C4C929.wem</CachePath>
 				</File>
 				<File Id="894621419" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-017.wav</ShortName>
@@ -680,6 +753,18 @@
 			<Events>
 				<Event Id="2946881380" Name="FTPS" DurationType="OneShot" DurationMin="0.14519824" DurationMax="1.7164853">
 					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3072116243" Id="2412606308"/>
+							<MediaRefs>
+								<MediaRef Id="118468209"/>
+								<MediaRef Id="263796204"/>
+								<MediaRef Id="387387092"/>
+								<MediaRef Id="705294608"/>
+								<MediaRef Id="824398809"/>
+								<MediaRef Id="831825527"/>
+								<MediaRef Id="862585494"/>
+							</MediaRefs>
+						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3072116243" Id="2852503135"/>
 							<MediaRefs>
@@ -781,6 +866,11 @@
 						<MediaRef Id="570970268"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="489065934" Name="Play_HouseCry" DurationType="OneShot" DurationMin="5.9469614" DurationMax="5.9469614">
+					<MediaRefs>
+						<MediaRef Id="809181512"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2485884946" Name="Play_Lv2Amb" DurationType="OneShot" DurationMin="335.08142" DurationMax="335.08142">
 					<MediaRefs>
 						<MediaRef Id="1026856507"/>
@@ -797,6 +887,7 @@
 					<Switches>
 						<Switch Id="841620460" Name="Concrete"/>
 						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2412606308" Name="Carpet"/>
 						<Switch Id="2852503135" Name="Ethereal"/>
 						<Switch Id="3316001432" Name="Tiles"/>
 						<Switch Id="4248645337" Name="Grass"/>
@@ -804,7 +895,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{C017C31C-7E69-CAF1-177D-5CDEDDE922FA}">
+		<SoundBank Id="987635875" Type="User" Language="SFX" Hash="{90C81281-1A7B-33B3-8BBF-F298ED860F6F}">
 			<ShortName>Level_03</ShortName>
 			<Path>Level_03.bnk</Path>
 			<Media>
@@ -835,6 +926,10 @@
 				<File Id="80746490" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-006.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-006_10C4C929.wem</CachePath>
+				</File>
+				<File Id="118468209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-003.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-003_10C4C929.wem</CachePath>
 				</File>
 				<File Id="132953430" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_SwitchFlip-002.wav</ShortName>
@@ -896,6 +991,10 @@
 					<ShortName>SFX_OS_FT_Wood-003.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Wood-003_10C4C929.wem</CachePath>
 				</File>
+				<File Id="263796204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-002.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-002_10C4C929.wem</CachePath>
+				</File>
 				<File Id="279840458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Tiles-005.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Tiles-005_10C4C929.wem</CachePath>
@@ -919,6 +1018,10 @@
 				<File Id="365448444" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-001.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="387387092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-005.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-005_10C4C929.wem</CachePath>
 				</File>
 				<File Id="426996222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-008.wav</ShortName>
@@ -988,6 +1091,10 @@
 					<ShortName>SFX_OS_FT_Concrete-011.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-011_10C4C929.wem</CachePath>
 				</File>
+				<File Id="705294608" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-006.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-006_10C4C929.wem</CachePath>
+				</File>
 				<File Id="711129373" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Concrete-009.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Concrete-009_10C4C929.wem</CachePath>
@@ -1015,6 +1122,18 @@
 				<File Id="774972953" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OF_FT_Ethereal-002.wav</ShortName>
 					<CachePath>SFX/SFX_OF_FT_Ethereal-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="824398809" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-004.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-004_10C4C929.wem</CachePath>
+				</File>
+				<File Id="831825527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-007.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-007_10C4C929.wem</CachePath>
+				</File>
+				<File Id="862585494" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_FT_Carpet-001.wav</ShortName>
+					<CachePath>SFX/SFX_OS_FT_Carpet-001_10C4C929.wem</CachePath>
 				</File>
 				<File Id="894621419" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-017.wav</ShortName>
@@ -1053,6 +1172,18 @@
 			<Events>
 				<Event Id="2946881380" Name="FTPS" DurationType="OneShot" DurationMin="0.14519824" DurationMax="1.7164853">
 					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3072116243" Id="2412606308"/>
+							<MediaRefs>
+								<MediaRef Id="118468209"/>
+								<MediaRef Id="263796204"/>
+								<MediaRef Id="387387092"/>
+								<MediaRef Id="705294608"/>
+								<MediaRef Id="824398809"/>
+								<MediaRef Id="831825527"/>
+								<MediaRef Id="862585494"/>
+							</MediaRefs>
+						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3072116243" Id="2852503135"/>
 							<MediaRefs>
@@ -1173,6 +1304,7 @@
 					<Switches>
 						<Switch Id="841620460" Name="Concrete"/>
 						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2412606308" Name="Carpet"/>
 						<Switch Id="2852503135" Name="Ethereal"/>
 						<Switch Id="3316001432" Name="Tiles"/>
 						<Switch Id="4248645337" Name="Grass"/>
@@ -1202,6 +1334,7 @@
 					<Switches>
 						<Switch Id="841620460" Name="Concrete"/>
 						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2412606308" Name="Carpet"/>
 						<Switch Id="2852503135" Name="Ethereal"/>
 						<Switch Id="3316001432" Name="Tiles"/>
 						<Switch Id="4248645337" Name="Grass"/>
@@ -1227,5 +1360,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7137E188-3DF3-2A89-D6AB-DA7B7D258B17}</FileHash>
+	<FileHash>{97312804-4008-02D1-DB59-69B2AD1A17B4}</FileHash>
 </SoundBanksInfo>
