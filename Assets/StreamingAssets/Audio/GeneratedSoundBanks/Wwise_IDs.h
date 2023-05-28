@@ -23,14 +23,18 @@ namespace AK
         static const AkUniqueID PLAY_FLIPL = 1725616313U;
         static const AkUniqueID PLAY_FLIPNL = 2776012301U;
         static const AkUniqueID PLAY_HOUSEAMB = 4264221306U;
+        static const AkUniqueID PLAY_HOUSEAPPEARANCE = 2001310284U;
         static const AkUniqueID PLAY_HOUSECRY = 489065934U;
         static const AkUniqueID PLAY_LV2AMB = 2485884946U;
         static const AkUniqueID PLAY_LV3AMB = 3765338293U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_NOPICTURE = 3799346131U;
         static const AkUniqueID PLAY_PHONERING = 3447864244U;
+        static const AkUniqueID PLAY_PLACINGFEEDBACK = 4216061707U;
+        static const AkUniqueID PLAY_SHINKABLEWALL = 3523891125U;
         static const AkUniqueID PLAY_WALLSLIDE1 = 2047298186U;
         static const AkUniqueID PLAY_WALLSLIDE2 = 2047298185U;
+        static const AkUniqueID PLAY_WOODLAND = 228410470U;
         static const AkUniqueID STOP_DISTRICTAMBIENCE = 2077601938U;
     } // namespace EVENTS
 

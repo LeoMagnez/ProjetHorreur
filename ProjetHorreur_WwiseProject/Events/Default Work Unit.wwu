@@ -122,6 +122,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_PlacingFeedback" ID="{738B42A1-BB3C-4F4A-B26B-850703592D8A}">
+							<ChildrenList>
+								<Action Name="" ID="{61631B5B-CC85-4AA2-9A6B-C7B10E8F59FD}" ShortID="1004253784">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_ObjectPlacingFeedback" ID="{B5221D95-71B5-4B7B-97EC-7576CCF0837F}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Level 1" ID="{EF1C6A17-62BF-40CB-BF2A-BDDC9665CB5E}" ShortID="43936607">
@@ -165,6 +176,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="WallSlide1" ID="{30C2AE94-C121-47B3-9B18-1E8586A246C1}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_HouseAppearance" ID="{4A4768ED-3B70-4C4A-A470-8E2B033B9E6B}">
+							<ChildrenList>
+								<Action Name="" ID="{7DE64EF0-642A-40D1-9B44-A09AE3DD7ECF}" ShortID="811789839">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_HouseAppearance" ID="{2BEBE9C4-BC07-4D52-9A12-361B50524F87}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -228,6 +250,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="SFX_OS_HouseCry" ID="{AEF01F15-686F-4359-9EFC-6BA8FB5D91AD}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WoodLand" ID="{195DBA96-E7EA-467C-8F6A-C3D6277EAB04}">
+							<ChildrenList>
+								<Action Name="" ID="{D1889EDC-8F9B-427C-B126-43E29D68D8C2}" ShortID="509452288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_WoodLanding" ID="{BE84F406-9432-465C-A1BF-86BA8335D9DC}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ShinkableWall" ID="{8B2A9416-69CB-42DF-BA4F-8266F32BED80}">
+							<ChildrenList>
+								<Action Name="" ID="{5E0BC849-7134-47BF-BAC5-5521515C3583}" ShortID="902426823">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_OS_ShrinkableWall" ID="{197EF99D-00DA-433A-A67D-C65C2A882A83}" WorkUnitID="{9ED9DF1A-1295-42FD-9DAC-848DBFB8E6F7}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

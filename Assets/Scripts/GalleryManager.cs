@@ -8,6 +8,7 @@ possibilité de sélectionner n'importe quelle photo et de zoomer dessus.
 /!\ Ce script est directement relié au script "CameraManager.cs" /!\
 */
 
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +70,7 @@ public class GalleryManager : MonoBehaviour
     public GameObject renderTexture;
     public GameObject photoCamera;
     public GameObject viseurCamera;
+    [SerializeField] Animator galleryAnimator;
 
 
 
@@ -108,6 +110,10 @@ public class GalleryManager : MonoBehaviour
 
                     if (CameraManager.instance._spriteList[curSelectedImage.index] != null)
                     {
+                        if (galleryAnimator != null)
+                        {
+                            StartCoroutine(GalleryAnimation());
+                        }
                         //curSelectedImage.animator.SetTrigger("ZoomIn");
                         curSelectedImage.image.rectTransform.localPosition = new Vector2(-276f, -210f);
                         curSelectedImage.image.rectTransform.localScale = Vector2.one * 0.8f;
@@ -159,6 +165,10 @@ public class GalleryManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && curSelectedImage != null && zoomedOnPhoto)
         {
+            if (galleryAnimator != null)
+            {
+                StartCoroutine(GalleryAnimation());
+            }
             curSelectedImage.animator.SetTrigger("ZoomOut");
             zoomedOnPhoto = false;
             curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
@@ -181,6 +191,12 @@ public class GalleryManager : MonoBehaviour
 
         if (!CameraManager.instance._isUIup && curSelectedImage != null)
         {
+            if (galleryAnimator != null)
+            {
+                StartCoroutine(GalleryAnimation());
+            }
+
+
             curSelectedImage.animator.SetTrigger("ZoomOut");
             zoomedOnPhoto = false;
             curSelectedImage.image.rectTransform.localPosition = OriginalPos[curSelectedImage.index];
@@ -188,6 +204,14 @@ public class GalleryManager : MonoBehaviour
             StartCoroutine(CameraManager.instance.WaitBeforeDisablingCamera());
         }
 
+        
+    }
+
+    public IEnumerator GalleryAnimation()
+    {
+        galleryAnimator.SetTrigger("GalleryButton");
+        yield return new WaitForSeconds(0.2f);
+        galleryAnimator.SetTrigger("IdleGallery");
     }
 
 
