@@ -104,6 +104,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject SFX;
     [SerializeField] private AK.Wwise.Event cameraShutterSFX;
     [SerializeField] private AK.Wwise.Event forbiddenCameraSFX;
+    [SerializeField] private AK.Wwise.Event appearSFX;
 
     public bool cameraTuto = false;
     public bool firstTimeOpeningGallery;
@@ -277,6 +278,7 @@ public class CameraManager : MonoBehaviour
     public IEnumerator WaitForHouse()
     {
         yield return new WaitForSeconds(0.5f);
+        appearSFX.Post(SFX);
         maison.SetActive(true);
         maison_exterieur.SetActive(true);
         poubelles.SetActive(true);
