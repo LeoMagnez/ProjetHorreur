@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{D914B00E-468B-457B-D06F-1A15378F74B5}">
+		<SoundBank Id="987635873" Type="User" Language="SFX" Hash="{0FE77F99-4E15-11DF-68FC-7F2824FAEF73}">
 			<ShortName>Level_01</ShortName>
 			<Path>Level_01.bnk</Path>
 			<Media>
@@ -152,6 +152,10 @@
 				<File Id="387387092" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Carpet-005.wav</ShortName>
 					<CachePath>SFX/SFX_OS_FT_Carpet-005_10C4C929.wem</CachePath>
+				</File>
+				<File Id="411812323" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OS_HouseAppearance.wav</ShortName>
+					<CachePath>SFX/SFX_OS_HouseAppearance_10C4C929.wem</CachePath>
 				</File>
 				<File Id="426996222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OS_FT_Wood-008.wav</ShortName>
@@ -437,6 +441,11 @@
 						<MediaRef Id="238355549"/>
 						<MediaRef Id="796389985"/>
 						<MediaRef Id="965573518"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2001310284" Name="Play_HouseAppearance" DurationType="OneShot" DurationMin="7.8391385" DurationMax="7.8391385">
+					<MediaRefs>
+						<MediaRef Id="411812323"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3799346131" Name="Play_NoPicture" DurationType="OneShot" DurationMin="0.5019048" DurationMax="0.5019048">
@@ -1396,5 +1405,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{268F5952-20EF-2ECD-642F-33BC1CE5A0C2}</FileHash>
+	<FileHash>{811520CF-A3D4-3BAE-076B-6437D04C29B1}</FileHash>
 </SoundBanksInfo>
