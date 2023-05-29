@@ -6,7 +6,7 @@ using UnityEngine;
 public class OutlineScript : MonoBehaviour
 {
     public static OutlineScript instance;
-    [SerializeField] private Material outlineMaterial;
+    [SerializeField] public Material outlineMaterial;
     [SerializeField] private Vector3 outlineScaleFactor;
     [SerializeField] private Color outlineColor;
 
@@ -18,6 +18,7 @@ public class OutlineScript : MonoBehaviour
     }
     private void Start()
     {
+
         outlineRenderer = CreateOutline(outlineMaterial, outlineScaleFactor, outlineColor);
     }
 
@@ -31,10 +32,14 @@ public class OutlineScript : MonoBehaviour
             }
                 
         }
+
+
+
     }
 
     Renderer CreateOutline(Material outlineMat, Vector3 scaleFactor, Color color)
     {
+
         GameObject outlinedObject = Instantiate(this.gameObject, transform.position, transform.rotation, transform);
         outlinedObject.transform.localScale = new Vector3(outlineScaleFactor.x, outlineScaleFactor.y, outlineScaleFactor.z);
 
@@ -58,6 +63,7 @@ public class OutlineScript : MonoBehaviour
         }
         
         rend.enabled = true;
+
 
         return rend;
     }
