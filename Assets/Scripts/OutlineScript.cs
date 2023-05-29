@@ -51,6 +51,12 @@ public class OutlineScript : MonoBehaviour
         outlinedObject.GetComponent<OutlineScript>().enabled = false;
         outlinedObject.GetComponent<MeshCollider>().enabled = false;
         outlinedObject.GetComponent<BoxCollider>().enabled = false;
+
+        if(outlinedObject.GetComponent<Rigidbody>() != null)
+        {
+            outlinedObject.GetComponent<Rigidbody>().isKinematic = true;
+        }
+        
         rend.enabled = true;
 
         return rend;
