@@ -97,6 +97,7 @@ public class ObjectMover : MonoBehaviour
             }
         }
 
+
         gameObject.GetComponent<Collider>().enabled = true;
         objPlaceFeedback.Post(sfxObj);
     }
