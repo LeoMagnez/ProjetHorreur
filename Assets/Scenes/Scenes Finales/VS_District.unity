@@ -6265,11 +6265,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8a1a98a0a06c2394aa9da4b99ee334ae, type: 2}
+    - target: {fileID: 2380356201914212799, guid: fe15bd045d2027a4d8f879c928702caf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 976b6c84bd475d44a8c6f0f47a442773, type: 2}
     - target: {fileID: 3068315283797160844, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8a1a98a0a06c2394aa9da4b99ee334ae, type: 2}
+    - target: {fileID: 3549845334893091536, guid: fe15bd045d2027a4d8f879c928702caf,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3380237
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549845334893091536, guid: fe15bd045d2027a4d8f879c928702caf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -41.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549845334893091536, guid: fe15bd045d2027a4d8f879c928702caf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.38
+      objectReference: {fileID: 0}
     - target: {fileID: 3556228840933754989, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6280,6 +6300,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e60c7a19a95d9bd47ad604650067065b, type: 2}
+    - target: {fileID: 4181668303578660970, guid: fe15bd045d2027a4d8f879c928702caf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4627629806755032774, guid: fe15bd045d2027a4d8f879c928702caf,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -19851,7 +19876,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1613952102}
-  m_RootOrder: 36
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &668178982
 MeshCollider:
