@@ -125,7 +125,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_1ad5507af6514bb18dc2cbd50cea507a_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 34d0fd4e727c076408cc29c6f84c11f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: d6777ad694eb2d0469121e71d9ccbbe1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5a8df7aa09f648a385458044918489f3_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 66280eeb7470c3f49b97d16618f0c08f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_c65acab4e922409090e83728a4520009_Texture_1:
@@ -133,7 +137,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_e94a5c21448141bcb3a4f2d4c324e436_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 89646aacdbd728e44b614b632ba795d0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 22273fb0ce9a16c4a92e1c08aef054ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -192,6 +196,7 @@ Material:
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
     - _BlendMode: 0
+    - _Brightness: 1
     - _CoatMask: 0
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
@@ -238,7 +243,7 @@ Material:
     - _Metallic: 0
     - _MetallicRemapMax: 1
     - _MetallicRemapMin: 0
-    - _NoiseSpeed: 3
+    - _NoiseSpeed: 1.2
     - _NormalMapSpace: 0
     - _NormalScale: 0.2
     - _OpaqueCullMode: 2
@@ -290,7 +295,7 @@ Material:
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
     - _WobbleAmount: 8
-    - _WobbleDistance: 0.002
+    - _WobbleDistance: 0.003
     - _WobbleFrequency: 3
     - _WobbleSpeed: 1
     - _ZTestDepthEqualForOpaque: 3
@@ -300,17 +305,19 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
+    - _BrightnessAdjuster: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
-    - _InteriorColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FresnelColor: {r: 1.9999998, g: 1.9999998, b: 1.9999998, a: 1}
+    - _InteriorColor: {r: 8.47419, g: 8.47419, b: 8.47419, a: 1}
     - _InteriorPosition: {r: 0, g: 0, b: 0, a: 0}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _NormalAdjuster: {r: 2, g: 2, b: 1, a: 2}
     - _OffsetAmount: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}

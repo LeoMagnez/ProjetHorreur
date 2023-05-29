@@ -128,6 +128,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 34d0fd4e727c076408cc29c6f84c11f7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5a8df7aa09f648a385458044918489f3_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 66280eeb7470c3f49b97d16618f0c08f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_c65acab4e922409090e83728a4520009_Texture_1:
         m_Texture: {fileID: 2800000, guid: c33962da465ac864d9e795e4fa7d0816, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -192,6 +196,7 @@ Material:
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
     - _BlendMode: 0
+    - _Brightness: 0
     - _CoatMask: 0
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
@@ -300,6 +305,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
+    - _BrightnessAdjuster: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
@@ -311,6 +317,7 @@ Material:
     - _InteriorPosition: {r: 0, g: 0, b: 0, a: 0}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _NormalAdjuster: {r: 3, g: 3, b: 3, a: 3}
     - _OffsetAmount: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
