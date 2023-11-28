@@ -15,6 +15,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+
 using UnityEngine.VFX;
 
 public class CameraManager : MonoBehaviour

@@ -17,11 +17,11 @@ MonoBehaviour:
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
-  GUID: 48fa9363-5d73-445a-bcc1-c864be6c85db
+  GUID: 1e1717ec-736e-4663-9596-7a5b92ac73d2
   Index: 0
   Input:
-  - rid: 8520259028044480512
-  - rid: 8520259028044480513
+  - rid: 9000423478510747658
+  - rid: 9000423478510747659
   Output:
   - Index: 0
     VirtualOutputIndex: 7
@@ -140,9 +140,7 @@ MonoBehaviour:
   EnablePhysicalSize: 0
   Thumbnail: 
   HasThumbnail: 0
-  CurrentStatePreset: " <sbspreset pkgurl=\"pkg://Ceiling\" label=\"\" >\n  <presetinput
-    identifier=\"$outputsize\" uid=\"168888820\" type=\"8\" value=\"11,11\" />\n
-    </sbspreset>\n"
+  CurrentStatePreset: 
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
@@ -157,7 +155,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8520259028044480512
+    - rid: 9000423478510747658
       type: {class: SubstanceInputInt2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 0
@@ -168,7 +166,7 @@ MonoBehaviour:
           GuiDescription: 
           Type: 5
           WidgetType: 0
-        Data: {x: 11, y: 11}
+        Data: {x: 10, y: 10}
         NumericalDescription:
           DefaultValue: {x: 8, y: 8}
           MinValue: {x: 0, y: 0}
@@ -176,7 +174,7 @@ MonoBehaviour:
           SliderClamp: 0
           EnumValueCount: 0
           EnumValues: []
-    - rid: 8520259028044480513
+    - rid: 9000423478510747659
       type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 1
